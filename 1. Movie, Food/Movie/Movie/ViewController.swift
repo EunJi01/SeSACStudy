@@ -9,26 +9,27 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var thumbnail1: UIImageView!
-    @IBOutlet weak var thumbnail2: UIImageView!
-    @IBOutlet weak var thumbnail3: UIImageView!
-    
+    @IBOutlet weak var mainPoster: UIImageView!
+    @IBOutlet var thumbnail: [UIImageView]!
+    @IBOutlet weak var palyButton: UIButton!
+
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        thumbnail1.layer.cornerRadius = 60
-        thumbnail2.layer.cornerRadius = 60
-        thumbnail3.layer.cornerRadius = 60
+        for i in thumbnail {
+            i.layer.cornerRadius = 60
+            i.layer.borderWidth = 4.0
+            i.layer.borderColor = UIColor.blue.cgColor
+        }
+    }
+    
+    @IBAction func playButtonTapped(_ sender: UIButton) {
         
-        thumbnail1.layer.borderWidth = 5.0
-        thumbnail2.layer.borderWidth = 5.0
-        thumbnail3.layer.borderWidth = 5.0
+        movieList.shuffle()
+        mainPoster.image = UIImage(named: movieList[0])
         
-        thumbnail1.layer.borderColor = UIColor.gray.cgColor
-        thumbnail2.layer.borderColor = UIColor.gray.cgColor
-        thumbnail3.layer.borderColor = UIColor.gray.cgColor
+        for i in 0...thumbnail.count - 1 {
+            thumbnail[i].image = UIImage(named: movieList[i + 1])
+        }
     }
 }
-

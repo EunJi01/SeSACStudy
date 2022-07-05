@@ -33,15 +33,15 @@
                                 <buttonConfiguration key="configuration" style="plain" title="내가 찜한 컨텐츠">
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="12"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="R1o-8u-XJ9" kind="presentation" id="pEg-BI-KuI"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHq-7a-Tx8">
                                 <rect key="frame" x="147" y="662" width="121" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="play_normal"/>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hwq-w4-0Aj"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="2Uo-w1-Ojd">
                                 <rect key="frame" x="68" y="657" width="17" height="20"/>
@@ -92,9 +92,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="TV 프로그램">
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="13"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="R1o-8u-XJ9" kind="showDetail" id="hMe-XU-wTL"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cy9-6z-tce">
                                 <rect key="frame" x="8" y="57" width="39" height="63"/>
@@ -111,18 +108,17 @@
                                 <buttonConfiguration key="configuration" style="plain" title="영화">
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="13"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="R1o-8u-XJ9" kind="show" id="xqS-Si-hfb"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.12723187759952459" green="0.10774731425076611" blue="0.12067388377711195" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="thumbnail1" destination="UpO-C9-AUy" id="tRh-E4-Lhp"/>
-                        <outlet property="thumbnail2" destination="sEW-nB-Xx1" id="LhF-Yd-jRn"/>
-                        <outlet property="thumbnail3" destination="Y3h-RM-oHJ" id="A8u-BT-c5l"/>
+                        <outlet property="mainPoster" destination="WLV-Pz-9u4" id="LM3-ay-Yf8"/>
+                        <outlet property="palyButton" destination="sHq-7a-Tx8" id="Kw9-HV-X9w"/>
+                        <outletCollection property="thumbnail" destination="UpO-C9-AUy" collectionClass="NSMutableArray" id="XPh-BI-JQC"/>
+                        <outletCollection property="thumbnail" destination="sEW-nB-Xx1" collectionClass="NSMutableArray" id="A60-Nz-SPW"/>
+                        <outletCollection property="thumbnail" destination="Y3h-RM-oHJ" collectionClass="NSMutableArray" id="lIX-Es-lpu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -134,7 +130,7 @@
             <objects>
                 <viewController id="R1o-8u-XJ9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s9R-ls-ssE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="재미있는 영화가 한가득!" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQ5-wN-hhy">
@@ -171,12 +167,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbH-55-45Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942.02898550724649" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-823" y="139"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="pEg-BI-KuI"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="background" width="375" height="667"/>
         <image name="check" width="18" height="13"/>
