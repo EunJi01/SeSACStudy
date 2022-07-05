@@ -10,7 +10,7 @@ import UIKit
 class SecondViewController: UIViewController {
 
     // 아웃렛 변수
-    @IBOutlet weak var bannerImageView: UIImageView!
+    @IBOutlet weak var mainBannerImageView: UIImageView!
     @IBOutlet weak var nameLable: UILabel!
     
     // 뷰컨트롤러 생명주기 종류 중 하나
@@ -19,10 +19,10 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerImageView.image = UIImage(named: "banner3")
-        bannerImageView.layer.cornerRadius = 70
-        bannerImageView.layer.borderWidth = 5
-        bannerImageView.layer.borderColor = UIColor.blue.cgColor
+        mainBannerImageView.image = UIImage(named: "banner3")
+        mainBannerImageView.layer.cornerRadius = 70
+        mainBannerImageView.layer.borderWidth = 5
+        mainBannerImageView.layer.borderColor = UIColor.blue.cgColor
         
         nameLable.text = "홍길동"
         nameLable.backgroundColor = .lightGray
@@ -32,7 +32,7 @@ class SecondViewController: UIViewController {
     
     @IBAction func resultButtonClicked(_ sender: UIButton) {
         
-        bannerImageView.image = UIImage(named: "banner\(Int.random(in: 1...3))")
+        mainBannerImageView.image = UIImage(named: "banner\(Int.random(in: 1...3))")
         
     }
     

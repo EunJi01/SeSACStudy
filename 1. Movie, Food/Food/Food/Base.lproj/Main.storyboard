@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banner02" translatesAutoresizingMaskIntoConstraints="NO" id="frV-wY-Lfw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banner2" translatesAutoresizingMaskIntoConstraints="NO" id="frV-wY-Lfw">
                                 <rect key="frame" x="0.0" y="94" width="414" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -332,7 +332,7 @@
                                     <action selector="resultButtonClicked:" destination="FK3-jG-FEo" eventType="touchUpInside" id="yPp-PR-feO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banner01" translatesAutoresizingMaskIntoConstraints="NO" id="jS2-2c-9bp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="jS2-2c-9bp">
                                 <rect key="frame" x="19" y="142" width="375" height="285"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -341,7 +341,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="bannerImageView" destination="jS2-2c-9bp" id="H9T-Xg-C3r"/>
+                        <outlet property="mainBannerImageView" destination="jS2-2c-9bp" id="H9T-Xg-C3r"/>
                         <outlet property="nameLable" destination="xEO-XN-LA8" id="0bm-FP-UHG"/>
                     </connections>
                 </viewController>
@@ -351,8 +351,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="banner01" width="915" height="516"/>
-        <image name="banner02" width="909" height="510"/>
+        <image name="banner1" width="915" height="516"/>
+        <image name="banner2" width="909" height="510"/>
         <image name="mono_baedal01" width="112" height="62"/>
         <image name="mono_baedal02" width="69" height="94"/>
         <image name="mono_baedal03" width="92" height="92"/>
