@@ -13,6 +13,7 @@
 		B6440BAA287276690033645A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6440BA8287276690033645A /* Main.storyboard */; };
 		B6440BAC2872766B0033645A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6440BAB2872766B0033645A /* Assets.xcassets */; };
 		B6440BAF2872766B0033645A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6440BAD2872766B0033645A /* LaunchScreen.storyboard */; };
+		B64F953A2875A9E700360B42 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F95392875A9E700360B42 /* SignUpViewController.swift */; };
 		B6BBADCA2874281C001D1E87 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBADC92874281C001D1E87 /* MovieList.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		B6440BAB2872766B0033645A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6440BAE2872766B0033645A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6440BB02872766B0033645A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B64F95392875A9E700360B42 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B6BBADC92874281C001D1E87 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				B6440BA4287276690033645A /* SceneDelegate.swift */,
 				B6440BA6287276690033645A /* ViewController.swift */,
 				B6440BA8287276690033645A /* Main.storyboard */,
+				B64F95392875A9E700360B42 /* SignUpViewController.swift */,
 				B6440BAB2872766B0033645A /* Assets.xcassets */,
 				B6440BAD2872766B0033645A /* LaunchScreen.storyboard */,
 				B6440BB02872766B0033645A /* Info.plist */,
@@ -145,6 +148,7 @@
 				B6440BA3287276690033645A /* AppDelegate.swift in Sources */,
 				B6BBADCA2874281C001D1E87 /* MovieList.swift in Sources */,
 				B6440BA5287276690033645A /* SceneDelegate.swift in Sources */,
+				B64F953A2875A9E700360B42 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
