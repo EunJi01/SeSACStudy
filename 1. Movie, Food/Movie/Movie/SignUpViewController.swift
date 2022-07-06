@@ -36,20 +36,24 @@ class SignUpViewController: UIViewController {
         signUpButton.backgroundColor = .white
         signUpButton.layer.cornerRadius = 10
         
-        emailTextField.placeholder = "이메일 주소 또는 전화번호"
-        passwordTextField.placeholder = "비밀번호"
-        nicknameTextField.placeholder = "닉네임"
-        locationTextField.placeholder = "위치"
-        recommendedCodeTextField.placeholder = "추천 코드 입력"
+//        emailTextField.placeholder = "이메일 주소 또는 전화번호"
+//        passwordTextField.placeholder = "비밀번호"
+//        nicknameTextField.placeholder = "닉네임"
+//        locationTextField.placeholder = "위치"
+//        recommendedCodeTextField.placeholder = "추천 코드 입력"
         
         emailTextField.keyboardType = .emailAddress
         recommendedCodeTextField.keyboardType = .numberPad
         
-        for textField in textFieldList {
-            // placeholder 색상 변경
+        let textFieldPlaceholderList = ["이메일 주소 또는 전화번호", "비밀번호", "닉네임", "위치", "추천 코드 입력"]
+        
+        for (textField, text) in zip(textFieldList, textFieldPlaceholderList) {
+            
+            textField.attributedPlaceholder = NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
             textField.layer.cornerRadius = 10
             textField.backgroundColor = .darkGray
             textField.textAlignment = .center
+            
         }
         
         additionalInformationSwitch.onTintColor = .systemPink
