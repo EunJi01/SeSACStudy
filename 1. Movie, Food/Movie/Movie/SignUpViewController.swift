@@ -31,10 +31,11 @@ class SignUpViewController: UIViewController {
         titleLable.font = .boldSystemFont(ofSize: 40)
         
         signUpButton.setTitle("회원가입", for: .normal)
-        signUpButton.setTitle("가입 들어갑니다 슝슝~", for: .highlighted)
+//        signUpButton.setTitle("가입 들어갑니다 슝슝~", for: .highlighted)
         signUpButton.tintColor = .black
         signUpButton.backgroundColor = .white
         signUpButton.layer.cornerRadius = 10
+        signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
         
 //        emailTextField.placeholder = "이메일 주소 또는 전화번호"
 //        passwordTextField.placeholder = "비밀번호"
@@ -66,4 +67,13 @@ class SignUpViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func SignUpButtonTapped(_ sender: UIButton) {
+        
+        if (emailTextField.text?.isEmpty)! || (passwordTextField.text?.count)! < 5 {
+            signUpButton.setTitle("회원가입 실패...ㅠㅠ", for: .highlighted)
+        } else {
+            signUpButton.setTitle("회원가입 완료!", for: .normal)
+        }
+        
+    }
 }
