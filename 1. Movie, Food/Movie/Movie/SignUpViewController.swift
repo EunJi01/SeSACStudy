@@ -44,10 +44,13 @@ class SignUpViewController: UIViewController {
     @IBAction func SignUpButtonTapped(_ sender: UIButton) {
         
         if (emailTextField.text?.isEmpty)! || (passwordTextField.text?.count)! < 5 {
-            signUpButton.setTitle("회원가입 실패...ㅠㅠ", for: .highlighted)
+            signUpButton.setTitle("이메일 또는 비밀번호를 다시 입력해주세요", for: .highlighted)
+            // 회원가입에 실패했을 때 위의 highlighted 메세지가 바로 나오지 않는 현상 있음. 아래의 print는 정상 출력됨...ㅠ
+            print("회원가입 실패")
+        } else if (recommendedCodeTextField.text?.isEmpty == false) && Int(recommendedCodeTextField.text!) == nil {
+            signUpButton.setTitle("쿠폰번호는 숫자만 입력 가능합니다", for: .highlighted)
         } else {
             signUpButton.setTitle("회원가입 완료!", for: .normal)
-            
         }
     }
     
@@ -82,6 +85,6 @@ class SignUpViewController: UIViewController {
         signUpButton.tintColor = .black
         signUpButton.backgroundColor = .white
         signUpButton.layer.cornerRadius = 10
-        signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 18)
     }
 }
