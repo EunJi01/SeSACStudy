@@ -65,6 +65,7 @@ class SignUpViewController: UIViewController {
         
         emailTextField.keyboardType = .emailAddress
         recommendedCodeTextField.keyboardType = .numberPad
+        passwordTextField.isSecureTextEntry = true
         
     }
     
