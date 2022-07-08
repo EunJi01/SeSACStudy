@@ -26,7 +26,7 @@ class BoardViewController: UIViewController {
         // userTextField.delegate = self
 
         designTextField()
-        designButton(sendButton, buttonTitle: "전송", HightlightedTitle: "빨리!!", bgColor: .yellow)
+        designButton(sendButton, buttonTitle: "전송", HightlightedTitle: "빨리!", bgColor: .yellow)
         designButton(textColorButton, buttonTitle: "컬러", HightlightedTitle: "바뀐다!", bgColor: .white)
     }
     
