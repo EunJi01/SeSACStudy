@@ -54,4 +54,10 @@ class SearchViewController: UIViewController {
             item.tintColor = .gray
         }
     }
+    
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+        if !(searchTextField.text?.isEmpty)! {
+            resultLabel.text = newlyCoinedWordDic[searchTextField.text!]
+        }
+    }
 }
