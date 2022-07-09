@@ -30,7 +30,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         designSearchView()
-        
+        designNewlyCoinedWordButton()
+
     }
     
     func designSearchView() {
@@ -44,5 +45,13 @@ class SearchViewController: UIViewController {
         
         searchButton.backgroundColor = .black
         searchButton.tintColor = .white
+    }
+    
+    func designNewlyCoinedWordButton() {
+        for item in newlyCoinedWordButtonCollection {
+            item.layer.borderWidth = 1
+            item.layer.borderColor = UIColor.gray.cgColor
+            item.tintColor = .gray
+        }
     }
 }
