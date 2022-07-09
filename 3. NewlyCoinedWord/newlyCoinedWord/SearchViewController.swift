@@ -29,9 +29,20 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        designSearchView()
         
     }
     
-
+    func designSearchView() {
+        
+        let searchViewList: [UIView] = [searchTextField, searchButton]
+        
+        for item in searchViewList {
+            item.layer.borderWidth = 3
+            item.layer.borderColor = UIColor.black.cgColor
+        }
+        
+        searchButton.backgroundColor = .black
+        searchButton.tintColor = .white
+    }
 }
