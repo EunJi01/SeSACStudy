@@ -9,7 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-    let newlyCoinedWordDic: [String: String] = [
+    var newlyCoinedWordDic: [String: String] = [
         "진순": "진라면 순한맛",
         "다꾸": "다이어리 꾸미기",
         "스불재": "스스로 불러온 재앙",
@@ -31,6 +31,7 @@ class SearchViewController: UIViewController {
 
         designSearchView()
         designNewlyCoinedWordButton()
+        searchButtonTapped(searchButton)
 
     }
     
@@ -43,6 +44,7 @@ class SearchViewController: UIViewController {
             item.layer.borderColor = UIColor.black.cgColor
         }
         
+        searchTextField.placeholder = "어떤 신조어가 궁금하신가요?"
         searchButton.backgroundColor = .black
         searchButton.tintColor = .white
     }
@@ -50,14 +52,30 @@ class SearchViewController: UIViewController {
     func designNewlyCoinedWordButton() {
         for item in newlyCoinedWordButtonCollection {
             item.layer.borderWidth = 1
-            item.layer.borderColor = UIColor.gray.cgColor
-            item.tintColor = .gray
+            item.layer.borderColor = UIColor.darkGray.cgColor
+            item.tintColor = .darkGray
+            item.layer.cornerRadius = 12
         }
     }
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
+        
         if !(searchTextField.text?.isEmpty)! {
             resultLabel.text = newlyCoinedWordDic[searchTextField.text!]
+            }
+        
+        let newlyCoinedWord = newlyCoinedWordDic.keys.shuffled()
+        for (button, word) in zip(newlyCoinedWordButtonCollection, newlyCoinedWord) {
+            button.setTitle(word, for: .normal)
         }
     }
+    
+    @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func searchTextFieldReturn(_ sender: UITextField) {
+        searchButtonTapped(searchButton)
+    }
+    
 }
