@@ -32,9 +32,12 @@ class SearchViewController: UIViewController {
         designSearchView()
         designNewlyCoinedWordButton()
         searchButtonTapped(searchButton)
+        
+        resultLabel.font = .boldSystemFont(ofSize: 20)
 
     }
     
+    // 검색창, 검색버튼 레이아웃
     func designSearchView() {
         
         let searchViewList: [UIView] = [searchTextField, searchButton]
@@ -49,15 +52,17 @@ class SearchViewController: UIViewController {
         searchButton.tintColor = .white
     }
     
+    // 신조어 해쉬태그 버튼 레이아웃
     func designNewlyCoinedWordButton() {
         for item in newlyCoinedWordButtonCollection {
-            item.layer.borderWidth = 1
+            item.layer.borderWidth = 2
             item.layer.borderColor = UIColor.darkGray.cgColor
             item.tintColor = .darkGray
             item.layer.cornerRadius = 12
         }
     }
     
+    // 검색버튼 액션
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         
         if !(searchTextField.text?.isEmpty)! {
@@ -70,12 +75,13 @@ class SearchViewController: UIViewController {
         }
     }
     
+    // 탭제스쳐 액션
     @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     
+    // 리턴키 액션
     @IBAction func searchTextFieldReturn(_ sender: UITextField) {
         searchButtonTapped(searchButton)
     }
-    
 }
