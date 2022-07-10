@@ -790,7 +790,9 @@
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZmF-s1-adK" secondAttribute="trailing" constant="10" id="JhM-7L-lFS"/>
                                     <constraint firstItem="ZmF-s1-adK" firstAttribute="centerY" secondItem="t7y-Sq-3M2" secondAttribute="centerY" id="ViY-ir-oOe"/>
+                                    <constraint firstItem="ZmF-s1-adK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t7y-Sq-3M2" secondAttribute="leading" constant="10" id="eD9-aa-2jy"/>
                                     <constraint firstItem="ZmF-s1-adK" firstAttribute="centerX" secondItem="t7y-Sq-3M2" secondAttribute="centerX" id="tei-0A-UKF"/>
                                 </constraints>
                             </view>
