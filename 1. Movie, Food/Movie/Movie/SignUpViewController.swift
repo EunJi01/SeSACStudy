@@ -40,7 +40,7 @@ class SignUpViewController: UIViewController {
     @IBAction func tapGestureClicked(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-    
+
     @IBAction func SignUpButtonTapped(_ sender: UIButton) {
         
         if (emailTextField.text?.isEmpty)! || (passwordTextField.text?.count)! < 5 {
@@ -52,6 +52,7 @@ class SignUpViewController: UIViewController {
         } else {
             signUpButton.setTitle("회원가입 완료!", for: .normal)
         }
+        
     }
     
     func designtextField() {
@@ -85,6 +86,6 @@ class SignUpViewController: UIViewController {
         signUpButton.tintColor = .black
         signUpButton.backgroundColor = .white
         signUpButton.layer.cornerRadius = 10
-        signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 18)
+        signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
     }
 }

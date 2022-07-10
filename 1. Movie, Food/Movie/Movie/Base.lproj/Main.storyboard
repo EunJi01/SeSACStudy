@@ -201,7 +201,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="SignUpButtonTapped:" destination="8uf-5a-jnA" eventType="touchUpInside" id="6Fj-u6-nGt"/>
+                                    <action selector="SignUpButtonTapped:" destination="8uf-5a-jnA" eventType="touchDown" id="tNA-P9-Ag2"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ihj-Ad-Lv4">
