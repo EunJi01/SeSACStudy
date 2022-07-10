@@ -15,6 +15,7 @@
 		B6440BCF2872DE990033645A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6440BCD2872DE990033645A /* LaunchScreen.storyboard */; };
 		B6BBADC42873DA40001D1E87 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBADC32873DA40001D1E87 /* FirstViewController.swift */; };
 		B6CDD4AD2879D8D20053D71B /* KakaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDD4AC2879D8D20053D71B /* KakaoViewController.swift */; };
+		B6CDD4AF287AE6B00053D71B /* MP3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CDD4AE287AE6B00053D71B /* MP3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B6440BD02872DE990033645A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6BBADC32873DA40001D1E87 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		B6CDD4AC2879D8D20053D71B /* KakaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoViewController.swift; sourceTree = "<group>"; };
+		B6CDD4AE287AE6B00053D71B /* MP3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MP3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				B6440BC42872DE980033645A /* SceneDelegate.swift */,
 				B6440BC62872DE980033645A /* ViewController.swift */,
 				B6440BC82872DE980033645A /* Main.storyboard */,
+				B6CDD4AE287AE6B00053D71B /* MP3ViewController.swift */,
 				B6CDD4AC2879D8D20053D71B /* KakaoViewController.swift */,
 				B6BBADC32873DA40001D1E87 /* FirstViewController.swift */,
 				B6440BCB2872DE990033645A /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6440BC72872DE980033645A /* ViewController.swift in Sources */,
+				B6CDD4AF287AE6B00053D71B /* MP3ViewController.swift in Sources */,
 				B6440BC32872DE980033645A /* AppDelegate.swift in Sources */,
 				B6CDD4AD2879D8D20053D71B /* KakaoViewController.swift in Sources */,
 				B6440BC52872DE980033645A /* SceneDelegate.swift in Sources */,
