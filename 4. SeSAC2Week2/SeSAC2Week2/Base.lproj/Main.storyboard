@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="muZ-8R-yyq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--감정 다이어리-->
+        <scene sceneID="VjP-ER-Rj0">
+            <objects>
+                <viewController id="dll-aA-fog" customClass="ViewController" customModule="SeSAC2Week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G6Z-rJ-L4h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s0q-mI-mmx">
+                                <rect key="frame" x="41.5" y="395.5" width="331" height="105"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-G8-7ot">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0kh-G8-7ot" secondAttribute="height" multiplier="1:1" id="Ih8-sf-nz0"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                        <state key="normal" image="sesac_slime4">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="당황해">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" 0">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="eSS-Pt-6e5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYh-88-n9w">
+                                        <rect key="frame" x="113" y="0.0" width="105" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eYh-88-n9w" secondAttribute="height" multiplier="1:1" id="E9X-bW-z3D"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                        <state key="normal" image="sesac_slime5">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="속상해">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" 0">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="Vu7-Fq-ngl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEX-4K-sdB">
+                                        <rect key="frame" x="226" y="0.0" width="105" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fEX-4K-sdB" secondAttribute="height" multiplier="1:1" id="OIA-bX-9HO"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                        <state key="normal" image="sesac_slime6">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="우울해">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" 0">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="7Lk-JZ-pQT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VOB-Gu-e64">
+                                <rect key="frame" x="41.5" y="278.5" width="331" height="105"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaP-Mh-vba">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gaP-Mh-vba" secondAttribute="height" multiplier="1:1" id="uqg-49-t4A"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                        <state key="normal" image="sesac_slime1">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="행복해">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" 0">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="af9-qA-BDJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-Ko-Lch">
+                                        <rect key="frame" x="113" y="0.0" width="105" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZOe-Ko-Lch" secondAttribute="height" multiplier="1:1" id="jfy-8w-hFr"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                        <state key="normal" image="sesac_slime2">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="사랑해">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" 0">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="PUe-w6-dgN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-wf-YR0">
+                                        <rect key="frame" x="226" y="0.0" width="105" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Drf-wf-YR0" secondAttribute="height" multiplier="1:1" id="tD1-Do-yfi"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                        <state key="normal" image="sesac_slime3">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="좋아해 0">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="RVZ-g3-BcZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4DW-SW-wfS">
+                                <rect key="frame" x="41.5" y="512.5" width="331" height="105"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZUO-fM-nq6">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZUO-fM-nq6" secondAttribute="height" multiplier="1:1" id="MpQ-Te-EOV"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                        <state key="normal" image="sesac_slime7">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="심심해">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" 0">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="RVW-kI-uQT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rB3-bn-GUy">
+                                        <rect key="frame" x="113" y="0.0" width="105" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rB3-bn-GUy" secondAttribute="height" multiplier="1:1" id="fx6-sp-Phu"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                        <state key="normal" image="sesac_slime8">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="꿀꿀해">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" 0">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="Wch-rq-ZZf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9dl-ZL-j9n">
+                                        <rect key="frame" x="226" y="0.0" width="105" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9dl-ZL-j9n" secondAttribute="height" multiplier="1:1" id="bX3-EX-xkS"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                        <state key="normal" image="sesac_slime9">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="슬퍼해">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" 0">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="G7X-YO-KeG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XDo-7v-d8T"/>
+                        <color key="backgroundColor" red="1" green="0.94546683598517312" blue="0.88815599413131863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VOB-Gu-e64" firstAttribute="width" secondItem="XDo-7v-d8T" secondAttribute="width" multiplier="0.8" id="A7F-hb-Zet"/>
+                            <constraint firstItem="4DW-SW-wfS" firstAttribute="width" secondItem="XDo-7v-d8T" secondAttribute="width" multiplier="0.8" id="ABZ-Lm-75T"/>
+                            <constraint firstItem="s0q-mI-mmx" firstAttribute="centerY" secondItem="G6Z-rJ-L4h" secondAttribute="centerY" id="R4n-7L-c3w"/>
+                            <constraint firstItem="s0q-mI-mmx" firstAttribute="width" secondItem="XDo-7v-d8T" secondAttribute="width" multiplier="0.8" id="RvQ-n8-pGU"/>
+                            <constraint firstItem="4DW-SW-wfS" firstAttribute="top" secondItem="s0q-mI-mmx" secondAttribute="bottom" constant="12" id="Vzl-Ok-8wv"/>
+                            <constraint firstItem="s0q-mI-mmx" firstAttribute="centerX" secondItem="G6Z-rJ-L4h" secondAttribute="centerX" id="eGs-Vc-UVj"/>
+                            <constraint firstItem="VOB-Gu-e64" firstAttribute="centerX" secondItem="G6Z-rJ-L4h" secondAttribute="centerX" id="mHw-tL-bjy"/>
+                            <constraint firstItem="4DW-SW-wfS" firstAttribute="centerX" secondItem="G6Z-rJ-L4h" secondAttribute="centerX" id="oFh-El-yla"/>
+                            <constraint firstItem="s0q-mI-mmx" firstAttribute="top" secondItem="VOB-Gu-e64" secondAttribute="bottom" constant="12" id="rMG-iV-o2X"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="감정 다이어리" id="HW0-5U-GAY">
+                        <barButtonItem key="leftBarButtonItem" image="list.dash" catalog="system" id="L8d-Wb-ocz">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outletCollection property="emotionButtonCollection" destination="gaP-Mh-vba" collectionClass="NSMutableArray" id="5hn-eL-Rzg"/>
+                        <outletCollection property="emotionButtonCollection" destination="ZOe-Ko-Lch" collectionClass="NSMutableArray" id="PnE-Pe-PvM"/>
+                        <outletCollection property="emotionButtonCollection" destination="Drf-wf-YR0" collectionClass="NSMutableArray" id="lVE-7x-wJt"/>
+                        <outletCollection property="emotionButtonCollection" destination="0kh-G8-7ot" collectionClass="NSMutableArray" id="pik-11-Mvu"/>
+                        <outletCollection property="emotionButtonCollection" destination="eYh-88-n9w" collectionClass="NSMutableArray" id="3a0-eV-3Ju"/>
+                        <outletCollection property="emotionButtonCollection" destination="fEX-4K-sdB" collectionClass="NSMutableArray" id="cSV-EW-Je6"/>
+                        <outletCollection property="emotionButtonCollection" destination="ZUO-fM-nq6" collectionClass="NSMutableArray" id="Hqa-Hr-6D5"/>
+                        <outletCollection property="emotionButtonCollection" destination="rB3-bn-GUy" collectionClass="NSMutableArray" id="xf2-Yd-bvy"/>
+                        <outletCollection property="emotionButtonCollection" destination="9dl-ZL-j9n" collectionClass="NSMutableArray" id="bqp-XM-v9J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VB-7o-f30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392.753623188406" y="918.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pPX-Eb-rMS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="muZ-8R-yyq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HYz-L4-SS5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dll-aA-fog" kind="relationship" relationship="rootViewController" id="M2S-DY-vGb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0JU-fg-TZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="661" y="919"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="sesac_slime1" width="278" height="258"/>
+        <image name="sesac_slime2" width="278" height="258"/>
+        <image name="sesac_slime3" width="278" height="258"/>
+        <image name="sesac_slime4" width="278" height="258"/>
+        <image name="sesac_slime5" width="278" height="258"/>
+        <image name="sesac_slime6" width="278" height="258"/>
+        <image name="sesac_slime7" width="278" height="258"/>
+        <image name="sesac_slime8" width="278" height="258"/>
+        <image name="sesac_slime9" width="278" height="258"/>
+    </resources>
+</document>
