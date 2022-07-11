@@ -18,91 +18,52 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s0q-mI-mmx">
                                 <rect key="frame" x="41.5" y="395.5" width="331" height="105"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-G8-7ot">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kh-G8-7ot">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0kh-G8-7ot" secondAttribute="height" multiplier="1:1" id="Ih8-sf-nz0"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                        <state key="normal" image="sesac_slime4">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="당황해">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content=" 0">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="당황해 0" image="sesac_slime4">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
                                         </state>
                                         <connections>
-                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="eSS-Pt-6e5"/>
+                                            <action selector="emotionButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="yGB-Y7-6r7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYh-88-n9w">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYh-88-n9w">
                                         <rect key="frame" x="113" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="eYh-88-n9w" secondAttribute="height" multiplier="1:1" id="E9X-bW-z3D"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                        <state key="normal" image="sesac_slime5">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="속상해">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content=" 0">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="속상해 0" image="sesac_slime5">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
                                         </state>
                                         <connections>
-                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="Vu7-Fq-ngl"/>
+                                            <action selector="emotionButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="yHA-ct-MsI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEX-4K-sdB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEX-4K-sdB">
                                         <rect key="frame" x="226" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fEX-4K-sdB" secondAttribute="height" multiplier="1:1" id="OIA-bX-9HO"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                        <state key="normal" image="sesac_slime6">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="우울해">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content=" 0">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="우울해 0" image="sesac_slime6">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
                                         </state>
                                         <connections>
-                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="7Lk-JZ-pQT"/>
+                                            <action selector="emotionButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="AMW-CW-wfQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -110,85 +71,52 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VOB-Gu-e64">
                                 <rect key="frame" x="41.5" y="278.5" width="331" height="105"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaP-Mh-vba">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaP-Mh-vba">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gaP-Mh-vba" secondAttribute="height" multiplier="1:1" id="uqg-49-t4A"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                        <state key="normal" image="sesac_slime1">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="행복해">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content=" 0">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="행복해 0" image="sesac_slime1">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
                                         </state>
                                         <connections>
-                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="af9-qA-BDJ"/>
+                                            <action selector="emotionButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="FLI-34-8bv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-Ko-Lch">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-Ko-Lch">
                                         <rect key="frame" x="113" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZOe-Ko-Lch" secondAttribute="height" multiplier="1:1" id="jfy-8w-hFr"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                        <state key="normal" image="sesac_slime2">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="사랑해">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content=" 0">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="사랑해 0" image="sesac_slime2">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
                                         </state>
                                         <connections>
-                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="PUe-w6-dgN"/>
+                                            <action selector="emotionButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="49r-7G-SWR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-wf-YR0">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-wf-YR0">
                                         <rect key="frame" x="226" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Drf-wf-YR0" secondAttribute="height" multiplier="1:1" id="tD1-Do-yfi"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                        <state key="normal" image="sesac_slime3">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="좋아해 0">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="좋아해 0" image="sesac_slime3">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
                                         </state>
                                         <connections>
-                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="RVZ-g3-BcZ"/>
+                                            <action selector="emotionButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="Dmh-PE-ZzO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -196,91 +124,52 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4DW-SW-wfS">
                                 <rect key="frame" x="41.5" y="512.5" width="331" height="105"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZUO-fM-nq6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUO-fM-nq6">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZUO-fM-nq6" secondAttribute="height" multiplier="1:1" id="MpQ-Te-EOV"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                        <state key="normal" image="sesac_slime7">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="심심해">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content=" 0">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="심심해 0" image="sesac_slime7">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
                                         </state>
                                         <connections>
-                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="RVW-kI-uQT"/>
+                                            <action selector="emotionButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="gcc-KR-23F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rB3-bn-GUy">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB3-bn-GUy">
                                         <rect key="frame" x="113" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="rB3-bn-GUy" secondAttribute="height" multiplier="1:1" id="fx6-sp-Phu"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                        <state key="normal" image="sesac_slime8">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="꿀꿀해">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content=" 0">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="꿀꿀해 0" image="sesac_slime8">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
                                         </state>
                                         <connections>
-                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="Wch-rq-ZZf"/>
+                                            <action selector="emotionButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="fhG-h2-GSv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9dl-ZL-j9n">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dl-ZL-j9n">
                                         <rect key="frame" x="226" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9dl-ZL-j9n" secondAttribute="height" multiplier="1:1" id="bX3-EX-xkS"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="-80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                        <state key="normal" image="sesac_slime9">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="슬퍼해">
-                                                    <attributes>
-                                                        <font key="NSFont" size="15" name=".AppleSDGothicNeoI-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content=" 0">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title="슬퍼해 0" image="sesac_slime9">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16"/>
                                         </state>
                                         <connections>
-                                            <action selector="EmotionTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="G7X-YO-KeG"/>
+                                            <action selector="emotionButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="cIW-SU-2da"/>
                                         </connections>
                                     </button>
                                 </subviews>

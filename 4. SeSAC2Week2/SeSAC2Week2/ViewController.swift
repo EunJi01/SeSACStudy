@@ -11,9 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var emotionButtonCollection: [UIButton]!
     
-    let emotionList: [String] = [ "행복해", "사랑해", "좋아해", "당황해", "속상해", "우울해", "심심해", "꿀꿀해", "슬퍼해"]
-    var emotionCountList: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    
     var emotionDic: [String: Int] = [
         "행복해": 0,
         "사랑해": 0,
@@ -31,7 +28,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func emotionButtonTapped(_ sender: UIButton) {
+        let key: String = sender.titleLabel!.text!
         
+        let endIdx = key.index(key.startIndex, offsetBy: 2)
+        
+        let result = String(key[...endIdx])
+        print(result)
+        
+        emotionDic[result]! += 1
+        print(emotionDic[result]!)
+        
+        sender.setTitle("\(String(describing: result)) \(emotionDic[result]!)", for: .normal)
+        // 이렇게까지 비효율적으로 코드 쓴 사람은 나밖에 없을듯
     }
 }
 
