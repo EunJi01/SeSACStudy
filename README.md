@@ -11,7 +11,7 @@
 | **7회** |  | [📄](https://eun-dev.tistory.com/9) |  | **2022.07.12** |
 | **8회** |  | [📄](https://eun-dev.tistory.com/10) |  | **2022.07.13** |
 | **9회** |  | [📄](https://eun-dev.tistory.com/11) |  | **2022.07.14** |
-| **10회** |  | [📄](https://eun-dev.tistory.com/12) | [📄](https://eun-dev.tistory.com/7) | **2022.07.15** |
+| **10회** |  | [📄](https://eun-dev.tistory.com/12) | [📄](https://eun-dev.tistory.com/13) | **2022.07.15** |
 
 </br>
 </br>
