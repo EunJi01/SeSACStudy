@@ -49,11 +49,6 @@ class ViewController: UIViewController {
             imageViewCollection[i].layer.cornerRadius = 15
             imageViewCollection[i].contentMode = .scaleAspectFill
             imageViewCollection[i].image = UIImage(named: "\(i)")
-            
-            imageViewCollection[i].layer.shadowRadius = 5
-            imageViewCollection[i].layer.shadowColor = UIColor.black.cgColor
-            imageViewCollection[i].layer.shadowOpacity = 0.5
-            imageViewCollection[i].layer.shadowOffset = CGSize(width: 10, height: 10)
         }
     }
     
