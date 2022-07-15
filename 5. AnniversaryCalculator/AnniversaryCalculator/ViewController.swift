@@ -23,6 +23,9 @@ class ViewController: UIViewController {
         designDatePicker()
         designShadow()
         
+        for number in 0...3 {
+            resultDaysLabelCollection[number].text = UserDefaults.standard.string(forKey: "\(number)")
+        }
     }
     
     // 레이블 디자인
@@ -78,13 +81,13 @@ class ViewController: UIViewController {
         formatter.locale = Locale(identifier: "ko-KR")
         
         // 아니 이렇게까지 했는데 95줄은 왜 nil이 나오는거야...
-        let formatter2 = DateFormatter()
-        formatter2.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        formatter2.locale = Locale(identifier: "ko-KR")
+//        let formatter2 = DateFormatter()
+//        formatter2.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+//        formatter2.locale = Locale(identifier: "ko-KR")
         
         // 현재 한국시간
         let now = Date()
-        let koreanTime = formatter2.string(from: now)
+        let koreanTime = formatter.string(from: now)
         
         // 결과 확인
         let formattedDate = formatter.string(from: datePicker.date)
@@ -92,11 +95,14 @@ class ViewController: UIViewController {
         
         // String을 Date로 바꾸는 코드
         let resultDate = formatter.date(from: koreanTime)
-        print(resultDate) // 계속 nil이 뜸.......ㅠㅠㅠㅠㅠㅠㅠㅠ
+        print(resultDate!)
         // "33월 -2일, 0년" 처럼 Date Type으로 타입 변환이 불가능한 이상한 숫자가 들어올 수도 있기 때문에 옵셔널 타입이다.
         
         // 날짜 계산
         let resultDays = datePicker.calendar.dateComponents([.day], from: sender.date, to: now).day!
+
+        let resultDaysStr = resultDays >= 0 ? "D+\(resultDays + 1)" : "D\(resultDays - 1)"
+
         
         // 실제 동작 - Alert 호출
         askAlert(date: formattedDate)
@@ -104,7 +110,20 @@ class ViewController: UIViewController {
         // 저장 담당 함수
         func saveDate(number: Int) {
             anniversaryLabelCollection[number].text = formattedDate
-            resultDaysLabelCollection[number].text = resultDays > 0 ? "D+\(resultDays)" : "D\(resultDays)"
+            
+            // 이렇게 해도 case 0이 두번 나오네ㅠ ㅠ
+//            switch resultDays {
+//            case 0: resultDaysLabelCollection[number].text = "당일"
+//            case ..<0: resultDaysLabelCollection[number].text = "\(resultDays - 1)" & UserDefaults.standard.set("", forKey: "\(number)")
+//            case 0...: resultDaysLabelCollection[number].text = "\(resultDays + 1)"
+//            default: resultDaysLabelCollection[number].text = "오류"
+//            }
+            
+            UserDefaults.standard.set(resultDaysStr, forKey: "\(number)")
+            UserDefaults.standard.string(forKey: "\(number)")
+            resultDaysLabelCollection[number].text = resultDaysStr
+            
+            // resultDaysLabelCollection[number].text = resultDays > 0 ? "D+\(resultDays + 1)" : "D\(resultDays - 1)"
         }
         
         // 저장할건지 물어보는 Alert - 저장 함수로 넘김
@@ -126,3 +145,4 @@ class ViewController: UIViewController {
         }
     }
 }
+

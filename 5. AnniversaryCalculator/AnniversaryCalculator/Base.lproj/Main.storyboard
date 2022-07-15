@@ -19,7 +19,7 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7rr-dV-WkA">
                                 <rect key="frame" x="0.0" y="92" width="414" height="269"/>
                                 <connections>
-                                    <action selector="dateFickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="uXj-wC-SB1"/>
+                                    <action selector="datePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="4qx-OS-Vwz"/>
                                 </connections>
                             </datePicker>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISp-7k-K1O">
