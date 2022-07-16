@@ -43,16 +43,27 @@ class SignUpViewController: UIViewController {
 
     @IBAction func SignUpButtonTapped(_ sender: UIButton) {
         
-        if (emailTextField.text?.isEmpty)! || (passwordTextField.text?.count)! < 5 {
-            signUpButton.setTitle("이메일 또는 비밀번호를 다시 입력해주세요", for: .highlighted)
-            // 회원가입에 실패했을 때 위의 highlighted 메세지가 바로 나오지 않는 현상 있음. 아래의 print는 정상 출력됨...ㅠ
-            print("회원가입 실패")
-        } else if (recommendedCodeTextField.text?.isEmpty == false) && Int(recommendedCodeTextField.text!) == nil {
-            signUpButton.setTitle("쿠폰번호는 숫자만 입력 가능합니다", for: .highlighted)
-        } else {
-            signUpButton.setTitle("회원가입 완료!", for: .normal)
+        let emailFailAlert = UIAlertController(title: "회원가입 실패", message: "이메일은 필수 입력 사항입니다", preferredStyle: .alert)
+        let passwordFailAlert = UIAlertController(title: "회원가입 실패", message: "비밀번호는 6자리 이상 입력헤주세요", preferredStyle: .alert)
+        let recommendedCodeAlert = UIAlertController(title: "회원가입 실패", message: "쿠폰번호는 숫자만 입력 가능합니다", preferredStyle: .alert)
+        let successAlert = UIAlertController(title: "회원가입 성공!", message: "곧 메인 화면으로 이동합니다", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)
+        
+        let alertControllerList = [emailFailAlert, passwordFailAlert, recommendedCodeAlert, successAlert]
+        for i in alertControllerList {
+            i.addAction(ok)
         }
         
+        if (emailTextField.text?.isEmpty)! {
+            present(emailFailAlert, animated: true, completion: nil)
+        } else if  (passwordTextField.text?.count)! < 6 {
+            present(passwordFailAlert, animated: true, completion: nil)
+        } else if (recommendedCodeTextField.text?.isEmpty == false) && Int(recommendedCodeTextField.text!) == nil {
+            present(recommendedCodeAlert, animated: true, completion: nil)
+        } else {
+            present(successAlert, animated: true, completion: nil)
+        }
     }
     
     func designtextField() {
