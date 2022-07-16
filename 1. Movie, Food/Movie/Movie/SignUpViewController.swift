@@ -46,7 +46,7 @@ class SignUpViewController: UIViewController {
         let emailFailAlert = UIAlertController(title: "회원가입 실패", message: "이메일은 필수 입력 사항입니다", preferredStyle: .alert)
         let passwordFailAlert = UIAlertController(title: "회원가입 실패", message: "비밀번호는 6자리 이상 입력헤주세요", preferredStyle: .alert)
         let recommendedCodeAlert = UIAlertController(title: "회원가입 실패", message: "쿠폰번호는 숫자만 입력 가능합니다", preferredStyle: .alert)
-        let successAlert = UIAlertController(title: "회원가입 성공!", message: "곧 메인 화면으로 이동합니다", preferredStyle: .alert)
+        let successAlert = UIAlertController(title: "회원가입 성공!", message: "잠시 후 메인 화면으로 이동합니다", preferredStyle: .alert)
         
         let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)
         
@@ -55,6 +55,7 @@ class SignUpViewController: UIViewController {
             i.addAction(ok)
         }
         
+        // 조건에 따른 Alert 띄우기
         if (emailTextField.text?.isEmpty)! {
             present(emailFailAlert, animated: true, completion: nil)
         } else if  (passwordTextField.text?.count)! < 6 {
@@ -62,8 +63,16 @@ class SignUpViewController: UIViewController {
         } else if (recommendedCodeTextField.text?.isEmpty == false) && Int(recommendedCodeTextField.text!) == nil {
             present(recommendedCodeAlert, animated: true, completion: nil)
         } else {
-            present(successAlert, animated: true, completion: nil)
+            present(successAlert, animated: true, completion: {  seguePosterViewController() })
         }
+        
+        // 화면 전환
+        func seguePosterViewController() {
+            sleep(2)
+            
+            performSegue(withIdentifier: "signUpVCSegue", sender: nil)
+        }
+        
     }
     
     func designtextField() {

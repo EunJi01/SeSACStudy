@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PosterViewController: UIViewController {
     
     @IBOutlet weak var mainPoster: UIImageView!
     @IBOutlet var thumbnail: [UIImageView]!
