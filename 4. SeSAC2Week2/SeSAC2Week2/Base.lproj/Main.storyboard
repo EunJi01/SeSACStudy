@@ -184,6 +184,9 @@
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="감정 초기화"/>
+                                <connections>
+                                    <action selector="emotionResetButtonTapped:" destination="dll-aA-fog" eventType="touchUpInside" id="WY5-3O-IsP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XDo-7v-d8T"/>
@@ -208,6 +211,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emotionResetButton" destination="lJ9-Lf-4uc" id="27S-bO-rsq"/>
                         <outletCollection property="emotionButtonCollection" destination="gaP-Mh-vba" collectionClass="NSMutableArray" id="5hn-eL-Rzg"/>
                         <outletCollection property="emotionButtonCollection" destination="ZOe-Ko-Lch" collectionClass="NSMutableArray" id="PnE-Pe-PvM"/>
                         <outletCollection property="emotionButtonCollection" destination="Drf-wf-YR0" collectionClass="NSMutableArray" id="lVE-7x-wJt"/>

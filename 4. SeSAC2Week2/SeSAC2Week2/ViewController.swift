@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var emotionResetButton: UIButton!
     @IBOutlet var emotionButtonCollection: [UIButton]!
     
     var emotionDic: [String: Int] = [
@@ -35,8 +36,6 @@ class ViewController: UIViewController {
 //        emotionButtonCollection[1].setImage(UIImage(named: example().2), for: .normal)
     }
     
-
-    
     @IBAction func emotionButtonTapped(_ sender: UIButton) {
         let key: String = sender.titleLabel!.text!
         let endIdx = key.index(key.startIndex, offsetBy: 2)
@@ -53,6 +52,20 @@ class ViewController: UIViewController {
         
 //        showAlertController()
     }
+    
+    @IBAction func emotionResetButtonTapped(_ sender: UIButton) {
+        for i in emotionButtonCollection {
+            let key: String = i.titleLabel!.text!
+            let endIdx = key.index(key.startIndex, offsetBy: 2)
+            let result = String(key[...endIdx])
+            
+            UserDefaults.standard.removeObject(forKey: "\(result)")
+            emotionDic[result] = 0
+            
+            i.setTitle("\(String(describing: result)) \(String(emotionDic[result]!))", for: .normal)
+        }
+    }
+    
     
     func emotionCountLoad() {
         for i in emotionButtonCollection {
