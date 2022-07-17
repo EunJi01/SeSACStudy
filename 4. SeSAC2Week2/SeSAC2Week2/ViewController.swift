@@ -29,37 +29,23 @@ class ViewController: UIViewController {
         
         emotionCountLoad()
         
-//        emotionButtonCollection[0].setTitle(setUserNickname(), for: .normal)
-//
-//        view.backgroundColor = example().0
-//        emotionButtonCollection[1].setTitle(example().1, for: .normal)
-//        emotionButtonCollection[1].setImage(UIImage(named: example().2), for: .normal)
     }
     
     // 감정 버튼
     @IBAction func emotionButtonTapped(_ sender: UIButton) {
-        let key: String = sender.titleLabel!.text!
-        let endIdx = key.index(key.startIndex, offsetBy: 2)
-        let result = String(key[...endIdx])
+        let result = keyExtraction(button: sender)
         
         emotionDic[result]! += 1
-//        print(emotionDic[result]!)
 
         UserDefaults.standard.set(emotionDic[result], forKey: "\(result)")
-        
         sender.setTitle("\(String(describing: result)) \(String(describing: UserDefaults.standard.string(forKey: "\(result)")!))", for: .normal)
         
-        print(result, UserDefaults.standard.string(forKey: "\(result)")!)
-        
-//        showAlertController()
     }
     
     // 감정 초기화 버튼
     @IBAction func emotionResetButtonTapped(_ sender: UIButton) {
         for i in emotionButtonCollection {
-            let key: String = i.titleLabel!.text!
-            let endIdx = key.index(key.startIndex, offsetBy: 2)
-            let result = String(key[...endIdx])
+            let result = keyExtraction(button: i)
             
             UserDefaults.standard.removeObject(forKey: "\(result)")
             emotionDic[result] = 0
@@ -71,56 +57,20 @@ class ViewController: UIViewController {
     // viewDidLoad에 사용될 함수
     func emotionCountLoad() {
         for i in emotionButtonCollection {
-            let key: String = i.titleLabel!.text!
-            let endIdx = key.index(key.startIndex, offsetBy: 2)
-            let result = String(key[...endIdx])
+            let result = keyExtraction(button: i)
             
             emotionDic[result] = UserDefaults.standard.integer(forKey: result)
-            
             i.setTitle("\(String(describing: result)) \(emotionDic[result]!)", for: .normal)
+            
         }
-        print(emotionDic)
     }
     
-    
-    // 배경색, 레이블, 이미지
-//    func example() -> (UIColor, String, String){
-//
-//        let color: [UIColor] = [.darkGray, .blue, .green]
-//        let image: [String] = ["sesac_slime6", "sesac_slime7", "sesac_slime8", "sesac_slime5"]
-//
-//        return (color.randomElement()!, "고래밥", image.randomElement()!)
-//
-//    }
-    
-    
-//    func setUserNickname() -> String {
-//        let nickname = ["고래밥", "칙촉", "격투가"]
-//        let select = nickname.randomElement()!
-//
-//        return "\(select)이당"
-//    }
-    
-//    func showAlertController() {
-//
-//        // 1. 흰 바탕: UIAlertController
-//        let alert = UIAlertController(title: "타이틀", message: "여기는 메세지가 들어갑니다", preferredStyle: .alert)
-//
-//        // 2. 버튼
-//        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-//        let cancel = UIAlertAction(title: "취소버튼입니다", style: .cancel, handler: nil)
-//        let web = UIAlertAction(title: "새 창으로 열기", style: .destructive, handler: nil)
-//        let copy = UIAlertAction(title: "복사하기", style: .destructive, handler: nil)
-//
-//        // 3. 1+2(합치기)
-//        alert.addAction(copy)
-//        alert.addAction(cancel)
-//        alert.addAction(web)
-//        alert.addAction(ok)
-//
-//        // 4. 창 띄우기
-//        present(alert, animated: true, completion: nil)
-//    }
-    
+    // 키 값(ex. 사랑해 좋아해 꿀꿀해) 3글자를 emotionButton의 Title에서 추출하는 함수
+    func keyExtraction(button: UIButton) -> String {
+        let key: String = button.titleLabel!.text!
+        let endIdx = key.index(key.startIndex, offsetBy: 2)
+        
+        return String(key[...endIdx])
+    }
 }
 
