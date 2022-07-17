@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3nO-39-hCs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="muZ-8R-yyq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -175,10 +175,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ9-Lf-4uc">
+                                <rect key="frame" x="137" y="803" width="140" height="31"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="upX-WD-FaW"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="감정 초기화"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XDo-7v-d8T"/>
                         <color key="backgroundColor" red="1" green="0.94546683598517312" blue="0.88815599413131863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XDo-7v-d8T" firstAttribute="bottom" secondItem="lJ9-Lf-4uc" secondAttribute="bottom" constant="28" id="9cN-Md-oL2"/>
                             <constraint firstItem="VOB-Gu-e64" firstAttribute="width" secondItem="XDo-7v-d8T" secondAttribute="width" multiplier="0.8" id="A7F-hb-Zet"/>
                             <constraint firstItem="4DW-SW-wfS" firstAttribute="width" secondItem="XDo-7v-d8T" secondAttribute="width" multiplier="0.8" id="ABZ-Lm-75T"/>
                             <constraint firstItem="s0q-mI-mmx" firstAttribute="centerY" secondItem="G6Z-rJ-L4h" secondAttribute="centerY" id="R4n-7L-c3w"/>
@@ -187,6 +198,7 @@
                             <constraint firstItem="s0q-mI-mmx" firstAttribute="centerX" secondItem="G6Z-rJ-L4h" secondAttribute="centerX" id="eGs-Vc-UVj"/>
                             <constraint firstItem="VOB-Gu-e64" firstAttribute="centerX" secondItem="G6Z-rJ-L4h" secondAttribute="centerX" id="mHw-tL-bjy"/>
                             <constraint firstItem="4DW-SW-wfS" firstAttribute="centerX" secondItem="G6Z-rJ-L4h" secondAttribute="centerX" id="oFh-El-yla"/>
+                            <constraint firstItem="lJ9-Lf-4uc" firstAttribute="centerX" secondItem="G6Z-rJ-L4h" secondAttribute="centerX" id="op2-6u-g8r"/>
                             <constraint firstItem="s0q-mI-mmx" firstAttribute="top" secondItem="VOB-Gu-e64" secondAttribute="bottom" constant="12" id="rMG-iV-o2X"/>
                         </constraints>
                     </view>
@@ -283,6 +295,9 @@
         <image name="sesac_slime9" width="278" height="258"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
