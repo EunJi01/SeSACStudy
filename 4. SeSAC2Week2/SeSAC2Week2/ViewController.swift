@@ -36,6 +36,7 @@ class ViewController: UIViewController {
 //        emotionButtonCollection[1].setImage(UIImage(named: example().2), for: .normal)
     }
     
+    // 감정 버튼
     @IBAction func emotionButtonTapped(_ sender: UIButton) {
         let key: String = sender.titleLabel!.text!
         let endIdx = key.index(key.startIndex, offsetBy: 2)
@@ -53,6 +54,7 @@ class ViewController: UIViewController {
 //        showAlertController()
     }
     
+    // 감정 초기화 버튼
     @IBAction func emotionResetButtonTapped(_ sender: UIButton) {
         for i in emotionButtonCollection {
             let key: String = i.titleLabel!.text!
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    // viewDidLoad에 사용될 함수
     func emotionCountLoad() {
         for i in emotionButtonCollection {
             let key: String = i.titleLabel!.text!
@@ -75,11 +77,7 @@ class ViewController: UIViewController {
             
             emotionDic[result] = UserDefaults.standard.integer(forKey: result)
             
-            if UserDefaults.standard.string(forKey: "\(result)") == nil {
-                i.setTitle("\(String(describing: result)) \(String(describing: 0))", for: .normal)
-            } else {
-                i.setTitle("\(String(describing: result)) \(String(describing: UserDefaults.standard.string(forKey: "\(result)")!))", for: .normal)
-            }
+            i.setTitle("\(String(describing: result)) \(emotionDic[result]!)", for: .normal)
         }
         print(emotionDic)
     }
