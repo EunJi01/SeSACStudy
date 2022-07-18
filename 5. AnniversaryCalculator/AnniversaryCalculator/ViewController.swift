@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         designDatePicker()
         designShadow()
         
-        for number in 0...3 {
+        for number in 0...resultDaysLabelCollection.count - 1 {
             resultDaysLabelCollection[number].text = UserDefaults.standard.string(forKey: "\(number)")
         }
     }
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     // 이미지뷰 디자인
     func designImageView() {
-        for i in 0...3 {
+        for i in 0...imageViewCollection.count - 1 {
             imageViewCollection[i].layer.cornerRadius = 15
             imageViewCollection[i].contentMode = .scaleAspectFill
             imageViewCollection[i].image = UIImage(named: "\(i)")
@@ -80,11 +80,6 @@ class ViewController: UIViewController {
         formatter.dateFormat = "yyyy년MM월dd일"
         formatter.locale = Locale(identifier: "ko-KR")
         
-        // 아니 이렇게까지 했는데 95줄은 왜 nil이 나오는거야...
-//        let formatter2 = DateFormatter()
-//        formatter2.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-//        formatter2.locale = Locale(identifier: "ko-KR")
-        
         // 현재 한국시간
         let now = Date()
         let koreanTime = formatter.string(from: now)
@@ -111,19 +106,10 @@ class ViewController: UIViewController {
         func saveDate(number: Int) {
             anniversaryLabelCollection[number].text = formattedDate
             
-            // 이렇게 해도 case 0이 두번 나오네ㅠ ㅠ
-//            switch resultDays {
-//            case 0: resultDaysLabelCollection[number].text = "당일"
-//            case ..<0: resultDaysLabelCollection[number].text = "\(resultDays - 1)" & UserDefaults.standard.set("", forKey: "\(number)")
-//            case 0...: resultDaysLabelCollection[number].text = "\(resultDays + 1)"
-//            default: resultDaysLabelCollection[number].text = "오류"
-//            }
-            
             UserDefaults.standard.set(resultDaysStr, forKey: "\(number)")
             UserDefaults.standard.string(forKey: "\(number)")
             resultDaysLabelCollection[number].text = resultDaysStr
-            
-            // resultDaysLabelCollection[number].text = resultDays > 0 ? "D+\(resultDays + 1)" : "D\(resultDays - 1)"
+
         }
         
         // 저장할건지 물어보는 Alert - 저장 함수로 넘김
