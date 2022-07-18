@@ -7,7 +7,6 @@
 | **3회** | 2. LEDBoard | [📄](https://eun-dev.tistory.com/4) |  | **2022.07.06** |
 | **4회** |  | [📄](https://eun-dev.tistory.com/5) |  | **2022.07.07** |
 | **5회** | 3. NewlyCoinedWord | [📄](https://eun-dev.tistory.com/6) | [📄](https://eun-dev.tistory.com/7) | **2022.07.08** |
-|  |  |  |  |  |
 | **6회** | 4. SeSAC2Week2 | [📄](https://eun-dev.tistory.com/8) |  | **2022.07.11** |
 | **7회** |  | [📄](https://eun-dev.tistory.com/9) |  | **2022.07.12** |
 | **8회** | 5. AnniversaryCalculator  | [📄](https://eun-dev.tistory.com/10) |  | **2022.07.13** |
@@ -19,7 +18,6 @@
 | **13회** |  | [📄](https://eun-dev.tistory.com/16) |  | **2022.07.20** |
 | **14회** |  | [📄](https://eun-dev.tistory.com/17) |  | **2022.07.21** |
 | **15회** |  | [📄](https://eun-dev.tistory.com/18) | [📄](https://eun-dev.tistory.com/19) | **2022.07.22** |
-|  |  |  |  |  |
 | **16회** |  | [📄](https://eun-dev.tistory.com/8) |  | **2022.07.11** |
 | **17회** |  | [📄](https://eun-dev.tistory.com/9) |  | **2022.07.12** |
 | **18회** |   | [📄](https://eun-dev.tistory.com/10) |  | **2022.07.13** |
