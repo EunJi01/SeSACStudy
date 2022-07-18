@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         for i in emotionButtonCollection {
             let result = keyExtraction(button: i)
             
-            UserDefaults.standard.removeObject(forKey: "\(result)")
+            UserDefaults.standard.removeObject(forKey: result)
             emotionDic[result] = 0
             
             i.setTitle("\(String(describing: result)) \(String(emotionDic[result]!))", for: .normal)
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     
     // 키 값(ex. 사랑해 좋아해 꿀꿀해) 3글자를 emotionButton의 Title에서 추출하는 함수
     func keyExtraction(button: UIButton) -> String {
-        let key: String = button.titleLabel!.text!
+        let key: String = button.currentTitle!
         let endIdx = key.index(key.startIndex, offsetBy: 2)
         
         return String(key[...endIdx])
