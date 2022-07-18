@@ -43,27 +43,17 @@ class SignUpViewController: UIViewController {
 
     @IBAction func SignUpButtonTapped(_ sender: UIButton) {
         
-        let emailFailAlert = UIAlertController(title: "회원가입 실패", message: "이메일은 필수 입력 사항입니다", preferredStyle: .alert)
-        let passwordFailAlert = UIAlertController(title: "회원가입 실패", message: "비밀번호는 6자리 이상 입력헤주세요", preferredStyle: .alert)
-        let recommendedCodeAlert = UIAlertController(title: "회원가입 실패", message: "쿠폰번호는 숫자만 입력 가능합니다", preferredStyle: .alert)
-        let successAlert = UIAlertController(title: "회원가입 성공!", message: "잠시 후 메인 화면으로 이동합니다", preferredStyle: .alert)
         
-        let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)
-        
-        let alertControllerList = [emailFailAlert, passwordFailAlert, recommendedCodeAlert, successAlert]
-        for i in alertControllerList {
-            i.addAction(ok)
-        }
         
         // 조건에 따른 Alert 띄우기
         if (emailTextField.text?.isEmpty)! {
-            present(emailFailAlert, animated: true, completion: nil)
+            present(alertSetting(title: "회원가입 실패", message: "이메일은 필수 항목입니다"), animated: true, completion: nil)
         } else if  (passwordTextField.text?.count)! < 6 {
-            present(passwordFailAlert, animated: true, completion: nil)
+            present(alertSetting(title: "회원가입 실패", message: "비밀번호는 6자리 이상 입력해주세요"), animated: true, completion: nil)
         } else if (recommendedCodeTextField.text?.isEmpty == false) && Int(recommendedCodeTextField.text!) == nil {
-            present(recommendedCodeAlert, animated: true, completion: nil)
+            present(alertSetting(title: "회원가입 실패", message: "코드는 숫자만 입력 가능합니다"), animated: true, completion: nil)
         } else {
-            present(successAlert, animated: true, completion: {  seguePosterViewController() })
+            present(alertSetting(title: "회원가입 성공!", message: "잠시 후 메인 화면으로 이동합니다"), animated: true, completion: {  seguePosterViewController() })
         }
         
         // 화면 전환
@@ -107,5 +97,13 @@ class SignUpViewController: UIViewController {
         signUpButton.backgroundColor = .white
         signUpButton.layer.cornerRadius = 10
         signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 15)
+    }
+    
+    func alertSetting(title: String, message: String) -> UIViewController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)
+        alert.addAction(ok)
+        
+        return alert
     }
 }
