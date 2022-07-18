@@ -20,6 +20,7 @@ class SettingTableViewController: UITableViewController {
         return 3
     }
     
+    // 섹션의 헤더 타이틀
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         if section == 0 {
