@@ -6,6 +6,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Shopping-->
+        <scene sceneID="dqG-PI-FDo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shopping" id="kWn-2f-4tP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wBf-Ag-xtr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5K-rr-5Vy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="-277"/>
+        </scene>
         <!--Search-->
         <scene sceneID="yhC-T8-bFb">
             <objects>
@@ -50,6 +60,7 @@
                         <segue destination="1ou-R0-1OP" kind="relationship" relationship="viewControllers" id="ntg-NL-WQM"/>
                         <segue destination="XoS-bl-4hR" kind="relationship" relationship="viewControllers" id="HDQ-d9-bw4"/>
                         <segue destination="lBj-h8-QgO" kind="relationship" relationship="viewControllers" id="n4c-pP-60c"/>
+                        <segue destination="kWn-2f-4tP" kind="relationship" relationship="viewControllers" id="Q6S-c8-FKj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3H5-HU-jUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

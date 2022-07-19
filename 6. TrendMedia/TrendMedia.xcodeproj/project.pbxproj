@@ -25,6 +25,9 @@
 		B688BD942886478B006DBA97 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688BD932886478B006DBA97 /* UITextField+Extension.swift */; };
 		B688BD9628864B99006DBA97 /* BucketlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688BD9528864B99006DBA97 /* BucketlistTableViewController.swift */; };
 		B688BD9828864D95006DBA97 /* BucketlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688BD9728864D95006DBA97 /* BucketlistTableViewCell.swift */; };
+		B688BD9D2886AC12006DBA97 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688BD9C2886AC12006DBA97 /* ShoppingTableViewCell.swift */; };
+		B688BD9F2886AC25006DBA97 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688BD9E2886AC25006DBA97 /* ShoppingTableViewController.swift */; };
+		B688BDA12886B0F7006DBA97 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B688BDA02886B0F7006DBA97 /* Shopping.storyboard */; };
 		B6F9B1DD28850FD700F45F9C /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F9B1DC28850FD700F45F9C /* Setting.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		B688BD932886478B006DBA97 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		B688BD9528864B99006DBA97 /* BucketlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewController.swift; sourceTree = "<group>"; };
 		B688BD9728864D95006DBA97 /* BucketlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketlistTableViewCell.swift; sourceTree = "<group>"; };
+		B688BD9C2886AC12006DBA97 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
+		B688BD9E2886AC25006DBA97 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		B688BDA02886B0F7006DBA97 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
 		B6F9B1DC28850FD700F45F9C /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B609569A2886E4EC0004E05B /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				B688BD9E2886AC25006DBA97 /* ShoppingTableViewController.swift */,
+				B688BD9C2886AC12006DBA97 /* ShoppingTableViewCell.swift */,
+				B688BDA02886B0F7006DBA97 /* Shopping.storyboard */,
+			);
+			path = Shopping;
+			sourceTree = "<group>";
+		};
 		B679FAA12884DDCD0096EAEC = {
 			isa = PBXGroup;
 			children = (
@@ -82,21 +98,11 @@
 		B679FAAC2884DDCD0096EAEC /* TrendMedia */ = {
 			isa = PBXGroup;
 			children = (
-				B6F9B1DE2885101000F45F9C /* Study */,
 				B679FAAD2884DDCD0096EAEC /* AppDelegate.swift */,
 				B679FAAF2884DDCD0096EAEC /* SceneDelegate.swift */,
-				B688BD912886452A006DBA97 /* UIViewController+Extension.swift */,
-				B688BD932886478B006DBA97 /* UITextField+Extension.swift */,
-				B688BD8528857ACE006DBA97 /* Setting2TableViewController.swift */,
-				B6F9B1DC28850FD700F45F9C /* Setting.storyboard */,
-				B688BD8F28864409006DBA97 /* SearchViewController.swift */,
-				B688BD872886400E006DBA97 /* Search.storyboard */,
-				B688BD8D288643F7006DBA97 /* TrendViewController.swift */,
-				B688BD9528864B99006DBA97 /* BucketlistTableViewController.swift */,
-				B688BD9928866041006DBA97 /* New Group */,
-				B688BD8928864048006DBA97 /* Trend.storyboard */,
-				B688BD9728864D95006DBA97 /* BucketlistTableViewCell.swift */,
-				B688BD8B28864077006DBA97 /* Intro.storyboard */,
+				B6F9B1DE2885101000F45F9C /* Study */,
+				B688BD9928866041006DBA97 /* Setting, Search, Trend */,
+				B609569A2886E4EC0004E05B /* Shopping */,
 				B679FAB62884DDCE0096EAEC /* Assets.xcassets */,
 				B679FAB82884DDCE0096EAEC /* LaunchScreen.storyboard */,
 				B679FABB2884DDCE0096EAEC /* Info.plist */,
@@ -104,11 +110,22 @@
 			path = TrendMedia;
 			sourceTree = "<group>";
 		};
-		B688BD9928866041006DBA97 /* New Group */ = {
+		B688BD9928866041006DBA97 /* Setting, Search, Trend */ = {
 			isa = PBXGroup;
 			children = (
+				B688BD8B28864077006DBA97 /* Intro.storyboard */,
+				B688BD912886452A006DBA97 /* UIViewController+Extension.swift */,
+				B688BD932886478B006DBA97 /* UITextField+Extension.swift */,
+				B6F9B1DC28850FD700F45F9C /* Setting.storyboard */,
+				B688BD8528857ACE006DBA97 /* Setting2TableViewController.swift */,
+				B688BD872886400E006DBA97 /* Search.storyboard */,
+				B688BD8F28864409006DBA97 /* SearchViewController.swift */,
+				B688BD8928864048006DBA97 /* Trend.storyboard */,
+				B688BD8D288643F7006DBA97 /* TrendViewController.swift */,
+				B688BD9728864D95006DBA97 /* BucketlistTableViewCell.swift */,
+				B688BD9528864B99006DBA97 /* BucketlistTableViewController.swift */,
 			);
-			path = "New Group";
+			path = "Setting, Search, Trend";
 			sourceTree = "<group>";
 		};
 		B6F9B1DE2885101000F45F9C /* Study */ = {
@@ -186,6 +203,7 @@
 				B688BD8C28864077006DBA97 /* Intro.storyboard in Resources */,
 				B6F9B1DD28850FD700F45F9C /* Setting.storyboard in Resources */,
 				B679FAB52884DDCD0096EAEC /* Main.storyboard in Resources */,
+				B688BDA12886B0F7006DBA97 /* Shopping.storyboard in Resources */,
 				B688BD882886400E006DBA97 /* Search.storyboard in Resources */,
 				B679FAC22884F10D0096EAEC /* Home.storyboard in Resources */,
 			);
@@ -199,10 +217,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B688BD942886478B006DBA97 /* UITextField+Extension.swift in Sources */,
+				B688BD9D2886AC12006DBA97 /* ShoppingTableViewCell.swift in Sources */,
 				B688BD922886452A006DBA97 /* UIViewController+Extension.swift in Sources */,
 				B688BD8628857ACE006DBA97 /* Setting2TableViewController.swift in Sources */,
 				B688BD9028864409006DBA97 /* SearchViewController.swift in Sources */,
 				B679FAC42884FE350096EAEC /* SettingTableViewController.swift in Sources */,
+				B688BD9F2886AC25006DBA97 /* ShoppingTableViewController.swift in Sources */,
 				B679FAB22884DDCD0096EAEC /* ViewController.swift in Sources */,
 				B679FAAE2884DDCD0096EAEC /* AppDelegate.swift in Sources */,
 				B688BD9628864B99006DBA97 /* BucketlistTableViewController.swift in Sources */,

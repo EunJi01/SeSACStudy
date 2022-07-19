@@ -7,21 +7,12 @@
 
 import UIKit
 
-extension UIViewController {
-    
-    func setBackgroundColor() {
-        
-        view.backgroundColor = .orange
-        
-    }
-    
-    func showAlert(alrtTitle: String, alertMessage: String) {
-        
-        let alert = UIAlertController(title: alrtTitle, message: alertMessage, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
-        alert.addAction(ok)
-        present(alert, animated: true)
-        
-    }
-    
-}
+//extension UIViewController {
+//    
+//    func grayView() {
+//        
+//        view.backgroundColor = .systemGray
+//        view.layer.cornerRadius = 10
+//        
+//    }
+//}
