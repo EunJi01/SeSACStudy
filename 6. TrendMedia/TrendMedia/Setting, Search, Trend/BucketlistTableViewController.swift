@@ -9,26 +9,50 @@ import UIKit
 
 class BucketlistTableViewController: UITableViewController {
 
+    static let identifire = "BucketlistTableViewController"
+    
     @IBOutlet weak var userTextField: UITextField!
     
     var list = ["범죄도시2", "탑건", "토르"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "버킷리스트"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTapped))
 
         tableView.rowHeight = 80
         
         list.append("마녀")
-        list.append("대충 요즘 영화")
+        list.append("겨울왕국")
         
+    }
+    
+    @objc func closeButtonTapped() {
+        self.dismiss(animated: true)
     }
     
     @IBAction func userTextFieldReturn(_ sender: UITextField) {
         
-        list.append(sender.text!)
+//        // case 2. if let
+//        if let value = sender.text?.trimmingCharacters(in: .whitespacesAndNewlines), (2...6).contains(value.count) {
+//            list.append(value)
+//            tableView.reloadData()
+//        } else {
+//            // 토스트 메세지 띄우기
+//        }
         
-        // 중요! 데이터가 달라지는 시점에서 호출. 잘못하면 코드가 꼬이니 조심
+        // case 3. guard 구문으로 활용
+        guard let value = sender.text?.trimmingCharacters(in: .whitespacesAndNewlines), (2...6).contains(value.count) else {
+            // 얼럿 / 토스트 메세지 띄우기
+            return
+        }
+        list.append(value)
         tableView.reloadData()
+        
+        // case 1. 강제 해제
+//        list.append(sender.text!)
+//        tableView.reloadData() // 중요! 데이터가 달라지는 시점에서 호출. 잘못하면 코드가 꼬이니 조심
         
         // 전체 코드를 전부 리로드할 필요가 없을 때 사용
         // tableView.reloadSections(<#T##sections: IndexSet##IndexSet#>, with: <#T##UITableView.RowAnimation#>)
@@ -43,7 +67,7 @@ class BucketlistTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // as? 타입 캐스팅
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BucketlistTableViewCell", for: indexPath) as! BucketlistTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: BucketlistTableViewCell.identifire, for: indexPath) as! BucketlistTableViewCell
         // for: indexPath 부분은, 애플이 제공하는 indexPath를 그대로 사용할 예정이라면 제외해도 문제가 없다. (오류 없이 돌아감)
         
         cell.bucketlistLabel.text = list[indexPath.row]

@@ -33,4 +33,13 @@ class SearchMovieTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height / 8
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("didSelectRow") // 동작하지 않는다면? 1. TalbeView가 noSelection 2. 셀 위에 전체 버튼
+        let sb = UIStoryboard(name: "Trend", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "RecommandCollectionViewController") as! RecommandCollectionViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

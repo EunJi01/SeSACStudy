@@ -181,7 +181,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoZ-cv-35w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="-113"/>
+            <point key="canvasLocation" x="-257" y="-113"/>
         </scene>
         <!--Setting2 Table View Controller-->
         <scene sceneID="VdU-a4-jGj">
@@ -219,7 +219,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bx-LM-XpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="872" y="-113"/>
+            <point key="canvasLocation" x="465" y="-113"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="4x3-Tw-mAJ">
@@ -334,7 +334,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tg5-aF-TAa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618.840579710145" y="-113.16964285714285"/>
+            <point key="canvasLocation" x="1126" y="-113"/>
         </scene>
         <!--Search Movie Table View Controller-->
         <scene sceneID="gnu-ZR-9Os">
@@ -412,10 +412,11 @@
                             <outlet property="delegate" destination="yAI-PZ-ocx" id="Wbe-y7-RGh"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="eKH-3V-KYw"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lxW-UQ-jpj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392.753623188406" y="-121.20535714285714"/>
+            <point key="canvasLocation" x="1949" y="-106"/>
         </scene>
     </scenes>
     <resources>
