@@ -15,6 +15,9 @@
 		B60956D52887CD6C0004E05B /* LibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60956D42887CD6C0004E05B /* LibraryCollectionViewCell.swift */; };
 		B60956D72887CD7A0004E05B /* LibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60956D62887CD7A0004E05B /* LibraryCollectionViewController.swift */; };
 		B60956D92887CDA30004E05B /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60956D82887CDA30004E05B /* MovieInfo.swift */; };
+		B60956DD2889915B0004E05B /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60956DC2889915B0004E05B /* BookDetailViewController.swift */; };
+		B60956DF288993870004E05B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60956DE288993870004E05B /* WebViewController.swift */; };
+		B60956E12889939D0004E05B /* BookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60956E02889939D0004E05B /* BookSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		B60956D42887CD6C0004E05B /* LibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B60956D62887CD7A0004E05B /* LibraryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewController.swift; sourceTree = "<group>"; };
 		B60956D82887CDA30004E05B /* MovieInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieInfo.swift; path = "../../6. TrendMedia/TrendMedia/Setting, Search, Trend/MovieInfo.swift"; sourceTree = "<group>"; };
+		B60956DC2889915B0004E05B /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		B60956DE288993870004E05B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B60956E02889939D0004E05B /* BookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +70,10 @@
 				B60956C22887CCF20004E05B /* SceneDelegate.swift */,
 				B60956D42887CD6C0004E05B /* LibraryCollectionViewCell.swift */,
 				B60956D62887CD7A0004E05B /* LibraryCollectionViewController.swift */,
+				B60956DC2889915B0004E05B /* BookDetailViewController.swift */,
+				B60956E02889939D0004E05B /* BookSearchViewController.swift */,
 				B60956C62887CCF20004E05B /* Main.storyboard */,
+				B60956DE288993870004E05B /* WebViewController.swift */,
 				B60956D82887CDA30004E05B /* MovieInfo.swift */,
 				B60956C92887CCF40004E05B /* Assets.xcassets */,
 				B60956CB2887CCF40004E05B /* LaunchScreen.storyboard */,
@@ -145,8 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B60956D72887CD7A0004E05B /* LibraryCollectionViewController.swift in Sources */,
+				B60956E12889939D0004E05B /* BookSearchViewController.swift in Sources */,
 				B60956D92887CDA30004E05B /* MovieInfo.swift in Sources */,
+				B60956DD2889915B0004E05B /* BookDetailViewController.swift in Sources */,
 				B60956C12887CCF20004E05B /* AppDelegate.swift in Sources */,
+				B60956DF288993870004E05B /* WebViewController.swift in Sources */,
 				B60956D52887CD6C0004E05B /* LibraryCollectionViewCell.swift in Sources */,
 				B60956C32887CCF20004E05B /* SceneDelegate.swift in Sources */,
 			);
