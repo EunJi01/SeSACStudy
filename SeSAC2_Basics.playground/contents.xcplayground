@@ -4,6 +4,7 @@
         <page name='7회차'/>
         <page name='8회차(1) - enum'/>
         <page name='8회차(2) - class'/>
-        <page name='9회차 - class struct 비교'/>
+        <page name='9회차 - class struct 비교'/>
+        <page name='14회차 - Optional Binding'/>
     </pages>
 </playground>
