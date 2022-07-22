@@ -13,11 +13,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        //UserDefaults.standard.set(true , forKey: "First") // true이면 FirstSceneViewController를 띄우고, flase이면 SearchMovieTableViewController
+        
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
+        
+        if UserDefaults.standard.bool(forKey: "First") {
+            
+            let sb = UIStoryboard(name: "Trend", bundle: nil)
+            guard let vc = sb.instantiateViewController(withIdentifier: "FirstSceneViewController") as? FirstSceneViewController else {
+                return
+            }
+            
+            // 루트 뷰 컨트러로 vc를 채택(Info보다 나중에 실행되기 때문에 우선됨)
+            window?.rootViewController = vc
+            
+        } else {
+            
+            let sb = UIStoryboard(name: "Setting", bundle: nil)
+            guard let vc = sb.instantiateViewController(withIdentifier: "SearchMovieTableViewController") as? SearchMovieTableViewController else {
+                return
+            }
+            
+            // 루트 뷰 컨트러로 vc를 채택(Info보다 나중에 실행되기 때문에 우선됨)
+            //window?.rootViewController = vc
+            
+            // 네비게이션 뷰 컨트롤러를 띄우는 법 (탭바는 어려워서 나중에^^;)
+            window?.rootViewController = UINavigationController(rootViewController: vc)
+            
+        }
+        
+        // 실제로 windeo에 vc를 보여주는 코드
+        window?.makeKeyAndVisible()
+        
     }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

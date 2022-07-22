@@ -10,11 +10,11 @@
         <scene sceneID="dqG-PI-FDo">
             <objects>
                 <viewControllerPlaceholder storyboardName="Shopping" id="kWn-2f-4tP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wBf-Ag-xtr"/>
+                    <navigationItem key="navigationItem" id="oWx-au-flA"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5K-rr-5Vy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="-277"/>
+            <point key="canvasLocation" x="1120.2898550724638" y="-770.75892857142856"/>
         </scene>
         <!--Search-->
         <scene sceneID="yhC-T8-bFb">
@@ -60,18 +60,18 @@
                         <segue destination="yrT-g9-3ZJ" kind="relationship" relationship="viewControllers" id="ntg-NL-WQM"/>
                         <segue destination="Bej-vh-RaT" kind="relationship" relationship="viewControllers" id="HDQ-d9-bw4"/>
                         <segue destination="lBj-h8-QgO" kind="relationship" relationship="viewControllers" id="n4c-pP-60c"/>
-                        <segue destination="kWn-2f-4tP" kind="relationship" relationship="viewControllers" id="Q6S-c8-FKj"/>
+                        <segue destination="sgF-N3-bod" kind="relationship" relationship="viewControllers" id="Q6S-c8-FKj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3H5-HU-jUL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-617" y="167"/>
         </scene>
-        <!--Item-->
+        <!--Trend-->
         <scene sceneID="Wge-4V-ejs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lBj-h8-QgO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="L5t-75-LdA"/>
+                    <tabBarItem key="tabBarItem" title="Trend" id="L5t-75-LdA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c5C-9b-xMU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -86,11 +86,11 @@
             </objects>
             <point key="canvasLocation" x="254" y="527"/>
         </scene>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="hoV-09-aEC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bej-vh-RaT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="VXY-4O-bIQ"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="VXY-4O-bIQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2wl-5s-OFO">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -105,11 +105,11 @@
             </objects>
             <point key="canvasLocation" x="807" y="-159"/>
         </scene>
-        <!--Item-->
+        <!--Setting-->
         <scene sceneID="His-pS-Tle">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yrT-g9-3ZJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2fr-mW-tcP"/>
+                    <tabBarItem key="tabBarItem" title="Setting" id="2fr-mW-tcP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XoG-1t-t4K">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -123,6 +123,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJx-Sw-g4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2009" y="167"/>
+        </scene>
+        <!--Shopping-->
+        <scene sceneID="AXJ-VR-A6q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sgF-N3-bod" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shopping" id="wBf-Ag-xtr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="riD-ix-VJ9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kWn-2f-4tP" kind="relationship" relationship="rootViewController" id="54a-5o-q6L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bg7-Sz-DLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.69565217391306" y="-771.42857142857144"/>
         </scene>
     </scenes>
 </document>
