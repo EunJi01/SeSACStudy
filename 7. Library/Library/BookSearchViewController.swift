@@ -9,7 +9,7 @@ import UIKit
 
 class BookSearchViewController: UIViewController {
 
-    static let identifire = "BookSearchViewController"
+    static let identifier = "BookSearchViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,7 +11,7 @@ class BookDetailViewController: UIViewController {
 
     @IBOutlet weak var posterImageView: UIImageView!
     
-    static let identifire = "BookDetailViewController"
+    static let identifier = "BookDetailViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()

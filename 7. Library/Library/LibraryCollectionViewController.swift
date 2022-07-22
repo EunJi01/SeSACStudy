@@ -9,7 +9,7 @@ import UIKit
 
 class LibraryCollectionViewController: UICollectionViewController {
     
-    static let identifire = "LibraryCollectionViewController"
+    static let identifier = "LibraryCollectionViewController"
     
     var movieList = MovieInfo()
 
@@ -32,7 +32,7 @@ class LibraryCollectionViewController: UICollectionViewController {
     // 검색 버튼
     @objc func searchButtonTapped() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: BookSearchViewController.identifire) as? BookSearchViewController else {
+        guard let vc = sb.instantiateViewController(withIdentifier: BookSearchViewController.identifier) as? BookSearchViewController else {
             return
         }
         let nav = UINavigationController(rootViewController: vc)
@@ -44,7 +44,7 @@ class LibraryCollectionViewController: UICollectionViewController {
     // 셀 선택
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: BookDetailViewController.identifire) as? BookDetailViewController else {
+        guard let vc = sb.instantiateViewController(withIdentifier: BookDetailViewController.identifier) as? BookDetailViewController else {
             return
         }
         
@@ -58,7 +58,7 @@ class LibraryCollectionViewController: UICollectionViewController {
     
     // 셀 디자인/데이터
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LibraryCollectionViewCell.identifire, for: indexPath) as! LibraryCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LibraryCollectionViewCell.identifier, for: indexPath) as! LibraryCollectionViewCell
         
         let data = movieList.movie[indexPath.row]
         cell.configureCell(data: data)

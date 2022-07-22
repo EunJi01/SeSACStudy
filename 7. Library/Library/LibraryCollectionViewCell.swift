@@ -13,7 +13,7 @@ class LibraryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var rateLabel: UILabel!
  
-    static let identifire = "LibraryCollectionViewCell"
+    static let identifier = "LibraryCollectionViewCell"
     
     func configureCell(data: MovieStruct) {
         let colorList: [UIColor] = [.systemGray, .brown, .darkGray, .purple]
