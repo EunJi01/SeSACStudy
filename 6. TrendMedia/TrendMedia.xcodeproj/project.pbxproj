@@ -117,6 +117,21 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		B645499D288E17DA00722ED9 /* Taend */ = {
+			isa = PBXGroup;
+			children = (
+				B688BD8928864048006DBA97 /* Trend.storyboard */,
+				B60956E2288A3F830004E05B /* FirstSceneViewController.swift */,
+				B60956DA2888E7440004E05B /* TrendTableViewController.swift */,
+				B60956AC28879DF90004E05B /* RecommandCollectionViewCell.swift */,
+				B60956AA28879AA20004E05B /* RecommandCollectionViewController.swift */,
+				B688BD8D288643F7006DBA97 /* TrendViewController.swift */,
+				B688BD9728864D95006DBA97 /* BucketlistTableViewCell.swift */,
+				B688BD9528864B99006DBA97 /* BucketlistTableViewController.swift */,
+			);
+			path = Taend;
+			sourceTree = "<group>";
+		};
 		B679FAA12884DDCD0096EAEC = {
 			isa = PBXGroup;
 			children = (
@@ -161,14 +176,7 @@
 				B60956A628878CA00004E05B /* Movie.swift */,
 				B60956A82887951C0004E05B /* MovieInfo.swift */,
 				B609569F2886ED8C0004E05B /* Search */,
-				B688BD8928864048006DBA97 /* Trend.storyboard */,
-				B60956E2288A3F830004E05B /* FirstSceneViewController.swift */,
-				B60956DA2888E7440004E05B /* TrendTableViewController.swift */,
-				B60956AC28879DF90004E05B /* RecommandCollectionViewCell.swift */,
-				B60956AA28879AA20004E05B /* RecommandCollectionViewController.swift */,
-				B688BD8D288643F7006DBA97 /* TrendViewController.swift */,
-				B688BD9728864D95006DBA97 /* BucketlistTableViewCell.swift */,
-				B688BD9528864B99006DBA97 /* BucketlistTableViewController.swift */,
+				B645499D288E17DA00722ED9 /* Taend */,
 			);
 			path = "Setting, Search, Trend";
 			sourceTree = "<group>";

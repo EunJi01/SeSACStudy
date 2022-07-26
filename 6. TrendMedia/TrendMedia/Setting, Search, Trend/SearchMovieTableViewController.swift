@@ -17,7 +17,7 @@ class SearchMovieTableViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "처음으로", style: .plain, target: self, action: #selector(resetButtonTapped))
         
     }
-
+    
     @objc func resetButtonTapped() {
         
         // iOS13+ SceneDelegate 쓸 때 동작하는 코드

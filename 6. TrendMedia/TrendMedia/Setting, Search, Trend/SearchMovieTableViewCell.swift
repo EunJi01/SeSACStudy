@@ -19,7 +19,7 @@ class SearchMovieTableViewCell: UITableViewCell {
         
         titleLabel.font = .boldSystemFont(ofSize: 15)
         titleLabel.text = data.title
-        releaseLabel.text = "\(data.releaseDate) | \(data.runtime)분 | \(data.rate)점"
+        releaseLabel.text = data.movieDescription
         overviewLabel.text = data.overview
         overviewLabel.numberOfLines = 0
         

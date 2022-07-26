@@ -11,11 +11,14 @@ class SettingTableViewController: UITableViewController {
     
     var birthdayFriends = ["뽀로로", "신데렐라", "모구리", "스노기", "고래밥"]
     
+    //MARK: 뷰 컨트롤러의 생명주기
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    //MARK: 테이블뷰 메서드
     // 섹션의 갯수(옵션)
+    /// numberOfSection
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
