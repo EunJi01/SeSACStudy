@@ -17,12 +17,23 @@
 | **12회** |  | [📄](https://eun-dev.tistory.com/15) |  | **2022.07.19** |
 | **13회** | 7. Library | [📄](https://eun-dev.tistory.com/16) |  | **2022.07.20** |
 | **14회** |  | [📄](https://eun-dev.tistory.com/17) |  | **2022.07.21** |
-| **15회** |  | [📄](https://eun-dev.tistory.com/18) | [📄](https://eun-dev.tistory.com/19) | **2022.07.22** |
-| **16회** |  | [📄](https://eun-dev.tistory.com/8) |  | **2022.07.11** |
-| **17회** |  | [📄](https://eun-dev.tistory.com/9) |  | **2022.07.12** |
-| **18회** |  | [📄](https://eun-dev.tistory.com/10) |  | **2022.07.13** |
-| **19회** |  | [📄](https://eun-dev.tistory.com/11) |  | **2022.07.14** |
-| **20회** |  | [📄](https://eun-dev.tistory.com/12) | [📄](https://eun-dev.tistory.com/13) | **2022.07.15** |
+| **15회** | 평가과제 [TamagotchiProject](https://github.com/EunJi01/TamagotchiProject) | [📄](https://eun-dev.tistory.com/18) | [📄](https://eun-dev.tistory.com/19) | **2022.07.22** |
+| **16회** |  | [📄](https://eun-dev.tistory.com/8) |  | **2022.07.25** |
+| **17회** |  | [📄](https://eun-dev.tistory.com/9) |  | **2022.07.26** |
+| **18회** |  | [📄](https://eun-dev.tistory.com/10) |  | **2022.07.27** |
+| **19회** |  | [📄](https://eun-dev.tistory.com/11) |  | **2022.07.28** |
+| **20회** |  | [📄](https://eun-dev.tistory.com/12) | [📄](https://eun-dev.tistory.com/13) | **2022.07.29** |
+|  |  |  |  |  |
+| **21회** |  | [📄](https://eun-dev.tistory.com/14) |  | **2022.08.** |
+| **22회** |  | [📄](https://eun-dev.tistory.com/15) |  | **2022.08.** |
+| **23회** |  | [📄](https://eun-dev.tistory.com/16) |  | **2022.08.** |
+| **24회** |  | [📄](https://eun-dev.tistory.com/17) |  | **2022.08.** |
+| **25회** |  | [📄](https://eun-dev.tistory.com/18) | [📄](https://eun-dev.tistory.com/19) | **2022.08.** |
+| **26회** |  | [📄](https://eun-dev.tistory.com/8) |  | **2022.08.** |
+| **27회** |  | [📄](https://eun-dev.tistory.com/9) |  | **2022.08.** |
+| **28회** |  | [📄](https://eun-dev.tistory.com/10) |  | **2022.08.** |
+| **29회** |  | [📄](https://eun-dev.tistory.com/11) |  | **2022.08.** |
+| **30회** |  | [📄](https://eun-dev.tistory.com/12) | [📄](https://eun-dev.tistory.com/13) | **2022.08.** |
 
 </br>
 </br>
