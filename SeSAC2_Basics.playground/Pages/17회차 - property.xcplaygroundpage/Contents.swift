@@ -28,11 +28,18 @@ print(user4.nickname, User.originalName)
  */
 
 struct BMI {
-    var nickname: String
+    var nickname: String {
+        willSet(newNickname) {
+            print("유저 닉네임이 \(nickname)에서 \(newNickname)로 변경될 예정이에여")
+        }
+        didSet {
+            print("유저 닉네임 변경 완료!!! \(oldValue) -> \(nickname)으로 바뀜!")
+        }
+    }
     var weight: Double
     var height: Double
     
-    // 연산 프로퍼티 활용
+    // 연산 프로퍼티
     // 저장 프로퍼티는 메모리 O, 연산 프로퍼티는 저장 프로퍼티를 활용해서 원하는 값을 반환하는 용도로 주로 사용!
     // 읽기 전용(read-only) 프로퍼티이지만 계산하는 값에 따라 결과가 달라질 수 있기 때문!
     var BMIResult: String {
@@ -45,8 +52,6 @@ struct BMI {
             nickname = newValue
         }
     }
-    
-    
     
     var sample: String {
         return "\(Int.random(in: 1...100))"
@@ -67,7 +72,7 @@ print(bmi.BMIResult)
 
 class FoodRestaurant {
     let name = "잭치킨"
-    var totalOrderCount = 1 // 총 주문건수
+    var totalOrderCount = 10 // 총 주문건수
     
     var nowOrder: Int {
         get {
@@ -83,9 +88,9 @@ let food = FoodRestaurant()
 
 print(food.nowOrder)
 
-food.totalOrderCount += 5
-food.totalOrderCount += 20
-food.totalOrderCount += 100
+//food.totalOrderCount += 5
+//food.totalOrderCount += 20
+//food.totalOrderCount += 100
 
 food.nowOrder = 5
 food.nowOrder = 20
@@ -119,5 +124,61 @@ enum ViewType {
 // 타입 저장 프로퍼티, 타입 연산 프로퍼티, 인스턴스 저장 프로퍼티, 인스턴스 연산 프로퍼티
 
 ViewType.title
+ViewType.start.nickname
+
+class TypeFoodRestaurant {
+    static let name = "잭치킨" // 타입 상수 저장 프로퍼티
+    static var totalOrderCount = 10 {
+        willSet { // 변경되기 직전에 실행
+            print("총 주문 건수가 \(totalOrderCount)에서 \(newValue)로 변경될 예정입니다.")
+        }
+        didSet { // 변경 되고난 직후에 실행
+            print("총 주문 건수가 \(oldValue)에서 \(totalOrderCount)로 변경되었습니다.")
+        }
+    }
+    
+    static var nowOrder: Int {
+        get {
+            return totalOrderCount * 5000
+        }
+        set { // set은 옵션
+            totalOrderCount += newValue // 기본 파라미터 newValue, 변경 가능!
+        }
+    }
+}
+
+TypeFoodRestaurant.nowOrder // 타입 연산 프로퍼티 Get
+
+TypeFoodRestaurant.nowOrder = 15 // 타입 연산 프로퍼티 Set
+
+TypeFoodRestaurant.nowOrder
+
+// Property Observer : 저장 프로퍼티에서 주로 사용되고, 저장 프로퍼티 값을 관찰을 하다가 변경이 될 것 같을 때 또는 변경이 되었을 때 호출됨! (willSet / didSet)
+
+
+// 메서드 : 타입 메서드 & 인스턴스 메서드
+struct Coffee {
+    static var name = "아메리카노"
+    static var shot = 2
+    var price = 4900
+    
+    mutating func plusShot() {
+//        shot += 1
+        price += 300
+        // 구조체 내에서 프로퍼티를 변경하려고 하면 mutating 키워드를 붙여야 한다.
+    }
+    
+    static func minusShot() {
+        shot -= 1
+    }
+}
+
+//class Latte: Coffee {
+//
+//    override class func minusShot() { // 슈퍼클래스의 타입 메서드를 재정의해서 쓰고싶다면 static 대신 class 사용!
+//        <#code#>
+//    }
+//
+//}
 
 //: [Next](@next)
