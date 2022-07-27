@@ -20,7 +20,7 @@
 | **15회** | 평가과제 [TamagotchiProject](https://github.com/EunJi01/TamagotchiProject) | [📄](https://eun-dev.tistory.com/18) | [📄](https://eun-dev.tistory.com/19) | **2022.07.22** |
 | **16회** |  | [📄](https://eun-dev.tistory.com/20) |  | **2022.07.25** |
 | **17회** |  | [📄](https://eun-dev.tistory.com/21) |  | **2022.07.26** |
-| **18회** |  | [📄](https://eun-dev.tistory.com/22) |  | **2022.07.27** |
+| **18회** | 8. NetworkBasic | [📄](https://eun-dev.tistory.com/22) |  | **2022.07.27** |
 | **19회** |  | [📄](https://eun-dev.tistory.com/23) |  | **2022.07.28** |
 | **20회** |  | [📄](https://eun-dev.tistory.com/24) | [📄](https://eun-dev.tistory.com/25) | **2022.07.29** |
 |  |  |  |  |  |
