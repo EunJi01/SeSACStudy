@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B669D51728920CBB00E2D51C /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */; };
+		B669D51B2892236700E2D51C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51A2892236700E2D51C /* LottoViewController.swift */; };
+		B669D51D289225A800E2D51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51C289225A800E2D51C /* ViewController.swift */; };
+		B669D51F2892305200E2D51C /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51E2892305200E2D51C /* TranslateViewController.swift */; };
+		B669D52128923A9B00E2D51C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D52028923A9B00E2D51C /* WebViewController.swift */; };
 		B6BB77E52890DD750068CE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB77E42890DD750068CE32 /* AppDelegate.swift */; };
 		B6BB77E72890DD750068CE32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB77E62890DD750068CE32 /* SceneDelegate.swift */; };
-		B6BB77E92890DD750068CE32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB77E82890DD750068CE32 /* ViewController.swift */; };
 		B6BB77EC2890DD750068CE32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BB77EA2890DD750068CE32 /* Main.storyboard */; };
 		B6BB77EE2890DD760068CE32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BB77ED2890DD760068CE32 /* Assets.xcassets */; };
 		B6BB77F12890DD760068CE32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BB77EF2890DD760068CE32 /* LaunchScreen.storyboard */; };
@@ -19,10 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
+		B669D51A2892236700E2D51C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		B669D51C289225A800E2D51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Search, Lotto/ViewController.swift"; sourceTree = "<group>"; };
+		B669D51E2892305200E2D51C /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		B669D52028923A9B00E2D51C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B6BB77E12890DD750068CE32 /* NetworkBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BB77E42890DD750068CE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BB77E62890DD750068CE32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B6BB77E82890DD750068CE32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6BB77EB2890DD750068CE32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6BB77ED2890DD760068CE32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6BB77F02890DD760068CE32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B669D51528920CA700E2D51C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		B6BB77D82890DD750068CE32 = {
 			isa = PBXGroup;
 			children = (
@@ -64,16 +80,28 @@
 			children = (
 				B6BB77E42890DD750068CE32 /* AppDelegate.swift */,
 				B6BB77E62890DD750068CE32 /* SceneDelegate.swift */,
-				B6BB77E82890DD750068CE32 /* ViewController.swift */,
-				B6BB77EA2890DD750068CE32 /* Main.storyboard */,
-				B6BB77F82890E1F80068CE32 /* SearchViewController.swift */,
-				B6BB77FC2890E4F10068CE32 /* ListTableViewCell.swift */,
-				B6BB77FD2890E4F10068CE32 /* ListTableViewCell.xib */,
+				B669D51528920CA700E2D51C /* Protocol */,
+				B6BB780028913D550068CE32 /* Search, Lotto */,
+				B669D51C289225A800E2D51C /* ViewController.swift */,
 				B6BB77ED2890DD760068CE32 /* Assets.xcassets */,
 				B6BB77EF2890DD760068CE32 /* LaunchScreen.storyboard */,
 				B6BB77F22890DD760068CE32 /* Info.plist */,
 			);
 			path = NetworkBasic;
+			sourceTree = "<group>";
+		};
+		B6BB780028913D550068CE32 /* Search, Lotto */ = {
+			isa = PBXGroup;
+			children = (
+				B6BB77EA2890DD750068CE32 /* Main.storyboard */,
+				B669D52028923A9B00E2D51C /* WebViewController.swift */,
+				B669D51E2892305200E2D51C /* TranslateViewController.swift */,
+				B669D51A2892236700E2D51C /* LottoViewController.swift */,
+				B6BB77F82890E1F80068CE32 /* SearchViewController.swift */,
+				B6BB77FC2890E4F10068CE32 /* ListTableViewCell.swift */,
+				B6BB77FD2890E4F10068CE32 /* ListTableViewCell.xib */,
+			);
+			path = "Search, Lotto";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,10 +176,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6BB77E92890DD750068CE32 /* ViewController.swift in Sources */,
+				B669D51728920CBB00E2D51C /* ViewPresentableProtocol.swift in Sources */,
+				B669D52128923A9B00E2D51C /* WebViewController.swift in Sources */,
 				B6BB77E52890DD750068CE32 /* AppDelegate.swift in Sources */,
+				B669D51B2892236700E2D51C /* LottoViewController.swift in Sources */,
 				B6BB77F92890E1F80068CE32 /* SearchViewController.swift in Sources */,
 				B6BB77E72890DD750068CE32 /* SceneDelegate.swift in Sources */,
+				B669D51F2892305200E2D51C /* TranslateViewController.swift in Sources */,
+				B669D51D289225A800E2D51C /* ViewController.swift in Sources */,
 				B6BB77FE2890E4F10068CE32 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,14 +30,23 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        searchTableView.backgroundColor = .clear
+
         // 연결고리 작업 : 테이블뷰가 해야 할 역할을 뷰 컨트롤러에게 요청
         searchTableView.delegate = self
         searchTableView.dataSource = self
         // 테이블뷰가 사용할 테이블뷰 셀(XIB) 등록
         // XIB : xml interface builder <= Nib
         searchTableView.register(UINib(nibName: ListTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.identifier)
+    }
+    
+    func configureView() {
+        searchTableView.backgroundColor = .clear
+        searchTableView.separatorColor = .clear
+        searchTableView.rowHeight = 60
+    }
+    
+    func configureLabel() {
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
