@@ -24,6 +24,22 @@ class WebViewController: UIViewController {
         
     }
     
+    @IBAction func goBackButtonTapped(_ sender: UIBarButtonItem) {
+        if webView.canGoBack {
+            webView.goBack()
+        }
+    }
+    
+    @IBAction func reloadButtonTapped(_ sender: UIBarButtonItem) {
+        webView.reload()
+    }
+    
+    @IBAction func goForwardButtonTapped(_ sender: UIBarButtonItem) {
+        if webView.canGoForward {
+            webView.goForward()
+        }
+    }
+    
     func openWebPage(url: String) {
         guard let url = URL(string: url) else {
             print("Invalid URL")

@@ -200,9 +200,25 @@
                                     <constraint firstAttribute="height" constant="44" id="QSa-9R-gXn"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="hP0-CG-3vK"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xzc-WN-w5e"/>
-                                    <barButtonItem title="새로고침" id="Y1L-MQ-UhY"/>
+                                    <barButtonItem title="Item" image="xmark" catalog="system" id="bPO-6f-trh"/>
+                                    <barButtonItem width="60" style="plain" systemItem="fixedSpace" id="pVy-6c-ssI"/>
+                                    <barButtonItem title="Item" image="arrow.left" catalog="system" id="hP0-CG-3vK">
+                                        <connections>
+                                            <action selector="goBackButtonTapped:" destination="p8X-JT-zF5" id="M3O-NL-Kla"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="60" style="plain" systemItem="fixedSpace" id="nu2-zd-rEd"/>
+                                    <barButtonItem title="Item" image="arrow.triangle.2.circlepath" catalog="system" id="jXU-p1-jaP">
+                                        <connections>
+                                            <action selector="reloadButtonTapped:" destination="p8X-JT-zF5" id="Kqd-fe-dVy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="60" style="plain" systemItem="fixedSpace" id="eyY-K9-NcA"/>
+                                    <barButtonItem title="새로고침" image="arrow.right" catalog="system" id="Y1L-MQ-UhY">
+                                        <connections>
+                                            <action selector="goForwardButtonTapped:" destination="p8X-JT-zF5" id="PfL-F7-ZxQ"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem id="psW-Cw-tEY"/>
                                 </items>
                             </toolbar>
@@ -241,6 +257,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="arrow.triangle.2.circlepath" catalog="system" width="128" height="101"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
