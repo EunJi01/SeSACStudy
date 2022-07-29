@@ -12,6 +12,10 @@
 		B669D51D289225A800E2D51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51C289225A800E2D51C /* ViewController.swift */; };
 		B669D51F2892305200E2D51C /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51E2892305200E2D51C /* TranslateViewController.swift */; };
 		B669D52128923A9B00E2D51C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D52028923A9B00E2D51C /* WebViewController.swift */; };
+		B669D52328935D4500E2D51C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D52228935D4500E2D51C /* LocationViewController.swift */; };
+		B669D5282893850600E2D51C /* DalseoHealingMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B669D5252893850500E2D51C /* DalseoHealingMedium.otf */; };
+		B669D5292893850600E2D51C /* DalseoDarling.otf in Resources */ = {isa = PBXBuildFile; fileRef = B669D5262893850600E2D51C /* DalseoDarling.otf */; };
+		B669D52A2893850600E2D51C /* DalseoHealingBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B669D5272893850600E2D51C /* DalseoHealingBold.otf */; };
 		B6BB77E52890DD750068CE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB77E42890DD750068CE32 /* AppDelegate.swift */; };
 		B6BB77E72890DD750068CE32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB77E62890DD750068CE32 /* SceneDelegate.swift */; };
 		B6BB77EC2890DD750068CE32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BB77EA2890DD750068CE32 /* Main.storyboard */; };
@@ -28,6 +32,10 @@
 		B669D51C289225A800E2D51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Search, Lotto/ViewController.swift"; sourceTree = "<group>"; };
 		B669D51E2892305200E2D51C /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		B669D52028923A9B00E2D51C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B669D52228935D4500E2D51C /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		B669D5252893850500E2D51C /* DalseoHealingMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingMedium.otf; sourceTree = "<group>"; };
+		B669D5262893850600E2D51C /* DalseoDarling.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoDarling.otf; sourceTree = "<group>"; };
+		B669D5272893850600E2D51C /* DalseoHealingBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingBold.otf; sourceTree = "<group>"; };
 		B6BB77E12890DD750068CE32 /* NetworkBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BB77E42890DD750068CE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BB77E62890DD750068CE32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,16 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		B669D524289383F300E2D51C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B669D5262893850600E2D51C /* DalseoDarling.otf */,
+				B669D5272893850600E2D51C /* DalseoHealingBold.otf */,
+				B669D5252893850500E2D51C /* DalseoHealingMedium.otf */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		B6BB77D82890DD750068CE32 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +98,7 @@
 			children = (
 				B6BB77E42890DD750068CE32 /* AppDelegate.swift */,
 				B6BB77E62890DD750068CE32 /* SceneDelegate.swift */,
+				B669D524289383F300E2D51C /* Resource */,
 				B669D51528920CA700E2D51C /* Protocol */,
 				B6BB780028913D550068CE32 /* Search, Lotto */,
 				B669D51C289225A800E2D51C /* ViewController.swift */,
@@ -94,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				B6BB77EA2890DD750068CE32 /* Main.storyboard */,
+				B669D52228935D4500E2D51C /* LocationViewController.swift */,
 				B669D52028923A9B00E2D51C /* WebViewController.swift */,
 				B669D51E2892305200E2D51C /* TranslateViewController.swift */,
 				B669D51A2892236700E2D51C /* LottoViewController.swift */,
@@ -162,6 +182,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B669D5282893850600E2D51C /* DalseoHealingMedium.otf in Resources */,
+				B669D5292893850600E2D51C /* DalseoDarling.otf in Resources */,
+				B669D52A2893850600E2D51C /* DalseoHealingBold.otf in Resources */,
 				B6BB77F12890DD760068CE32 /* LaunchScreen.storyboard in Resources */,
 				B6BB77FF2890E4F10068CE32 /* ListTableViewCell.xib in Resources */,
 				B6BB77EE2890DD760068CE32 /* Assets.xcassets in Resources */,
@@ -181,6 +204,7 @@
 				B6BB77E52890DD750068CE32 /* AppDelegate.swift in Sources */,
 				B669D51B2892236700E2D51C /* LottoViewController.swift in Sources */,
 				B6BB77F92890E1F80068CE32 /* SearchViewController.swift in Sources */,
+				B669D52328935D4500E2D51C /* LocationViewController.swift in Sources */,
 				B6BB77E72890DD750068CE32 /* SceneDelegate.swift in Sources */,
 				B669D51F2892305200E2D51C /* TranslateViewController.swift in Sources */,
 				B669D51D289225A800E2D51C /* ViewController.swift in Sources */,

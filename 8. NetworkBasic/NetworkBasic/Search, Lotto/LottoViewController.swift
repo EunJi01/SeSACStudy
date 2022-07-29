@@ -20,6 +20,8 @@ class LottoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        numberTextField.textContentType = .oneTimeCode // 인증번호
+        
         numberTextField.inputView = lottoPickerView
         numberTextField.tintColor = .clear
 
