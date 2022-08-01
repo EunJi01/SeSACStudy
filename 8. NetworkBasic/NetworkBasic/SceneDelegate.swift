@@ -28,12 +28,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     // 앱이 액티브 상태가 되었을 때 호출되는 함수 (sceneWillEnterForeground와 비슷하지만 Foreground 메서드는 호출되지 않는 상황이 여럿 있다)
     func sceneDidBecomeActive(_ scene: UIScene) {
-        
         // Badge 제거
         UIApplication.shared.applicationIconBadgeNumber = 0
-        
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

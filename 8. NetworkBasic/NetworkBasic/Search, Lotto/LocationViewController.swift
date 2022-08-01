@@ -8,6 +8,8 @@
 import UIKit
 
 class LocationViewController: UIViewController {
+//    static var reuseIdentifier: String = String(describing: LocationViewController.self)
+//    // LocationViewController.self 메타 타입 => "LocationViewController"
 
     // Notification 1.
     let notificationCenter = UNUserNotificationCenter.current()

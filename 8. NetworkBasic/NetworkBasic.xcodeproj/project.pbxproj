@@ -16,6 +16,11 @@
 		B669D5282893850600E2D51C /* DalseoHealingMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B669D5252893850500E2D51C /* DalseoHealingMedium.otf */; };
 		B669D5292893850600E2D51C /* DalseoDarling.otf in Resources */ = {isa = PBXBuildFile; fileRef = B669D5262893850600E2D51C /* DalseoDarling.otf */; };
 		B669D52A2893850600E2D51C /* DalseoHealingBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B669D5272893850600E2D51C /* DalseoHealingBold.otf */; };
+		B669D52C2897527F00E2D51C /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D52B2897527F00E2D51C /* ReusableViewProtocol.swift */; };
+		B669D52F289757A400E2D51C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D52E289757A400E2D51C /* Constant.swift */; };
+		B669D53128975FB200E2D51C /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D53028975FB200E2D51C /* UserDefaultsHelper.swift */; };
+		B669D53428977CE200E2D51C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B669D53328977CE200E2D51C /* Alamofire */; };
+		B669D53728977CF300E2D51C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B669D53628977CF300E2D51C /* SwiftyJSON */; };
 		B6BB77E52890DD750068CE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB77E42890DD750068CE32 /* AppDelegate.swift */; };
 		B6BB77E72890DD750068CE32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BB77E62890DD750068CE32 /* SceneDelegate.swift */; };
 		B6BB77EC2890DD750068CE32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BB77EA2890DD750068CE32 /* Main.storyboard */; };
@@ -36,6 +41,9 @@
 		B669D5252893850500E2D51C /* DalseoHealingMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingMedium.otf; sourceTree = "<group>"; };
 		B669D5262893850600E2D51C /* DalseoDarling.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoDarling.otf; sourceTree = "<group>"; };
 		B669D5272893850600E2D51C /* DalseoHealingBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DalseoHealingBold.otf; sourceTree = "<group>"; };
+		B669D52B2897527F00E2D51C /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		B669D52E289757A400E2D51C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B669D53028975FB200E2D51C /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		B6BB77E12890DD750068CE32 /* NetworkBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BB77E42890DD750068CE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6BB77E62890DD750068CE32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B669D53728977CF300E2D51C /* SwiftyJSON in Frameworks */,
+				B669D53428977CE200E2D51C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */,
+				B669D52B2897527F00E2D51C /* ReusableViewProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -75,6 +86,15 @@
 				B669D5252893850500E2D51C /* DalseoHealingMedium.otf */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		B669D52D2897578A00E2D51C /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				B669D52E289757A400E2D51C /* Constant.swift */,
+				B669D53028975FB200E2D51C /* UserDefaultsHelper.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		B6BB77D82890DD750068CE32 = {
@@ -98,10 +118,11 @@
 			children = (
 				B6BB77E42890DD750068CE32 /* AppDelegate.swift */,
 				B6BB77E62890DD750068CE32 /* SceneDelegate.swift */,
+				B669D51C289225A800E2D51C /* ViewController.swift */,
+				B669D52D2897578A00E2D51C /* Constant */,
 				B669D524289383F300E2D51C /* Resource */,
 				B669D51528920CA700E2D51C /* Protocol */,
 				B6BB780028913D550068CE32 /* Search, Lotto */,
-				B669D51C289225A800E2D51C /* ViewController.swift */,
 				B6BB77ED2890DD760068CE32 /* Assets.xcassets */,
 				B6BB77EF2890DD760068CE32 /* LaunchScreen.storyboard */,
 				B6BB77F22890DD760068CE32 /* Info.plist */,
@@ -140,6 +161,10 @@
 			dependencies = (
 			);
 			name = NetworkBasic;
+			packageProductDependencies = (
+				B669D53328977CE200E2D51C /* Alamofire */,
+				B669D53628977CF300E2D51C /* SwiftyJSON */,
+			);
 			productName = NetworkBasic;
 			productReference = B6BB77E12890DD750068CE32 /* NetworkBasic.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +193,10 @@
 				Base,
 			);
 			mainGroup = B6BB77D82890DD750068CE32;
+			packageReferences = (
+				B669D53228977CE200E2D51C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B669D53528977CF300E2D51C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = B6BB77E22890DD750068CE32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B669D51728920CBB00E2D51C /* ViewPresentableProtocol.swift in Sources */,
+				B669D53128975FB200E2D51C /* UserDefaultsHelper.swift in Sources */,
 				B669D52128923A9B00E2D51C /* WebViewController.swift in Sources */,
 				B6BB77E52890DD750068CE32 /* AppDelegate.swift in Sources */,
 				B669D51B2892236700E2D51C /* LottoViewController.swift in Sources */,
@@ -208,7 +238,9 @@
 				B6BB77E72890DD750068CE32 /* SceneDelegate.swift in Sources */,
 				B669D51F2892305200E2D51C /* TranslateViewController.swift in Sources */,
 				B669D51D289225A800E2D51C /* ViewController.swift in Sources */,
+				B669D52C2897527F00E2D51C /* ReusableViewProtocol.swift in Sources */,
 				B6BB77FE2890E4F10068CE32 /* ListTableViewCell.swift in Sources */,
+				B669D52F289757A400E2D51C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +458,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B669D53228977CE200E2D51C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B669D53528977CF300E2D51C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B669D53328977CE200E2D51C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B669D53228977CE200E2D51C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B669D53628977CF300E2D51C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B669D53528977CF300E2D51C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6BB77D92890DD750068CE32 /* Project object */;
 }
