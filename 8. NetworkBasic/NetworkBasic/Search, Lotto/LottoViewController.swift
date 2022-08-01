@@ -14,6 +14,7 @@ class LottoViewController: UIViewController {
 
     @IBOutlet weak var numberTextField: UITextField!
 //    @IBOutlet weak var lottoPickerView: UIPickerView!
+    @IBOutlet var winningNumberLabelCollection: [UILabel]!
     
     var lottoPickerView = UIPickerView()
     // 코드로 뷰를 만드는 기능이 훨씬 더 많이 남아있음
@@ -37,19 +38,26 @@ class LottoViewController: UIViewController {
     func requestLotto(number: Int) {
         // AF: 200~299 status code 301
         let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
-        AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { response in
+        AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { [self] response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
-                let bonus = json["bnusNo"].intValue
+                let bonus = json["bnusNo"].stringValue
                 print(bonus)
                 
                 let date = json["drwNoDate"].stringValue
                 print(date)
                 
                 self.numberTextField.text = date
+                
+                self.winningNumberLabelCollection[6].text = bonus
+                for i in 1...6 {
+                    let num = json["drwtNo\(i)"].stringValue
+                    self.winningNumberLabelCollection[i - 1].text = num
+                }
+                
                 
             case .failure(let error):
                 print(error)
