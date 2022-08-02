@@ -16,20 +16,55 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBw-kO-OsT">
-                        <rect key="frame" x="139" y="11.5" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBw-kO-OsT">
+                        <rect key="frame" x="44" y="11.5" width="147.5" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oED-Jb-ye8">
+                        <rect key="frame" x="8" y="8" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="M4F-7Q-pTs"/>
+                            <constraint firstAttribute="width" constant="28" id="Td6-7A-k3a"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DnA-W1-zDq">
+                        <rect key="frame" x="199.5" y="5.5" width="108.5" height="33"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개봉일 : 8888.88.88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZv-uw-4sa">
+                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관객수 : 8888.88.88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwR-eh-PBE">
+                                <rect key="frame" x="0.0" y="18.5" width="108.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="TBw-kO-OsT" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kL5-XD-ZYX"/>
-                    <constraint firstItem="TBw-kO-OsT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mVv-N8-P9C"/>
+                    <constraint firstItem="TBw-kO-OsT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="15g-AJ-BAV"/>
+                    <constraint firstItem="oED-Jb-ye8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="D1D-Yg-DnB"/>
+                    <constraint firstItem="oED-Jb-ye8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HP9-cW-Vqv"/>
+                    <constraint firstItem="DnA-W1-zDq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eZe-B9-AOl"/>
+                    <constraint firstItem="TBw-kO-OsT" firstAttribute="leading" secondItem="oED-Jb-ye8" secondAttribute="trailing" constant="8" id="kFC-YR-D9k"/>
+                    <constraint firstAttribute="trailing" secondItem="DnA-W1-zDq" secondAttribute="trailing" constant="12" id="mH9-dA-ZLG"/>
+                    <constraint firstItem="DnA-W1-zDq" firstAttribute="leading" secondItem="TBw-kO-OsT" secondAttribute="trailing" constant="8" id="yPF-9s-sj2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="audienceLabel" destination="LwR-eh-PBE" id="9zN-cI-tQG"/>
+                <outlet property="rankLabel" destination="oED-Jb-ye8" id="7U9-TZ-FcI"/>
+                <outlet property="releaseLabel" destination="lZv-uw-4sa" id="h54-Q1-RRJ"/>
                 <outlet property="titleLabel" destination="TBw-kO-OsT" id="aBp-UC-svO"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>

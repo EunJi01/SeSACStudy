@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MFQ-6M-2VG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -192,18 +192,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-Y3-hTY">
-                                <rect key="frame" x="20" y="314" width="374" height="200"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jqB-bf-4la">
+                                <rect key="frame" x="20" y="344" width="374" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemBrownColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="z5H-Iv-c4K"/>
+                                    <constraint firstAttribute="height" constant="200" id="Mot-cS-rD1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemIndigoColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCj-XM-kiN">
-                                <rect key="frame" x="135" y="555" width="145" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="systemBrownColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCj-XM-kiN">
+                                <rect key="frame" x="171" y="594" width="72.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LTc-wY-GF8"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="번역하기"/>
                                 <connections>
@@ -216,18 +220,20 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="tyE-Ua-x1f" firstAttribute="trailing" secondItem="27e-mA-hEA" secondAttribute="trailing" constant="20" id="9Ox-N0-TIt"/>
-                            <constraint firstItem="Phq-Y3-hTY" firstAttribute="leading" secondItem="tyE-Ua-x1f" secondAttribute="leading" constant="20" id="COe-gf-doS"/>
-                            <constraint firstItem="Phq-Y3-hTY" firstAttribute="top" secondItem="27e-mA-hEA" secondAttribute="bottom" constant="20" id="Qag-VP-lTk"/>
+                            <constraint firstItem="jqB-bf-4la" firstAttribute="top" secondItem="27e-mA-hEA" secondAttribute="bottom" constant="50" id="Ftr-qY-u7C"/>
+                            <constraint firstItem="gCj-XM-kiN" firstAttribute="centerX" secondItem="Iah-J7-il0" secondAttribute="centerX" id="VKw-pb-hEP"/>
+                            <constraint firstItem="gCj-XM-kiN" firstAttribute="top" secondItem="jqB-bf-4la" secondAttribute="bottom" constant="50" id="XMj-c5-OKv"/>
                             <constraint firstItem="27e-mA-hEA" firstAttribute="top" secondItem="tyE-Ua-x1f" secondAttribute="top" constant="50" id="bPW-fP-t7s"/>
+                            <constraint firstItem="tyE-Ua-x1f" firstAttribute="trailing" secondItem="jqB-bf-4la" secondAttribute="trailing" constant="20" id="cWY-gt-c4r"/>
                             <constraint firstItem="27e-mA-hEA" firstAttribute="leading" secondItem="tyE-Ua-x1f" secondAttribute="leading" constant="20" id="dtB-7W-nOI"/>
-                            <constraint firstItem="tyE-Ua-x1f" firstAttribute="trailing" secondItem="Phq-Y3-hTY" secondAttribute="trailing" constant="20" id="rDo-kh-MfS"/>
+                            <constraint firstItem="jqB-bf-4la" firstAttribute="leading" secondItem="tyE-Ua-x1f" secondAttribute="leading" constant="20" id="vUV-QO-PIr"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="mxm-Sq-nKk" appends="YES" id="sUO-73-zIm"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="resultLabel" destination="Phq-Y3-hTY" id="SK4-Pd-d5m"/>
+                        <outlet property="resultTextView" destination="jqB-bf-4la" id="g5C-SG-JLr"/>
                         <outlet property="userInputTextView" destination="27e-mA-hEA" id="Dpi-Af-EFQ"/>
                     </connections>
                 </viewController>
@@ -438,11 +444,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

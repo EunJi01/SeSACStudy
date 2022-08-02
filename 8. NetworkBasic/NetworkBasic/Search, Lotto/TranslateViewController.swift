@@ -18,7 +18,7 @@ import SwiftyJSON
 class TranslateViewController: UIViewController {
 
     @IBOutlet weak var userInputTextView: UITextView!
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultTextView: UITextView!
     
     let textViewPlaceholderText = "번역하고 싶은 문장을 작성해보세요"
     
@@ -43,7 +43,7 @@ class TranslateViewController: UIViewController {
     func requestTranslateData(text: String) {
         let url = EndPoint.translateURL
         
-        let parameter = ["source": "ko", "target": "jaaaa", "text": text]
+        let parameter = ["source": "ko", "target": "ja", "text": text]
         
         let header: HTTPHeaders = ["X-Naver-Client-Id": APIKey.NAVER_ID, "X-Naver-Client-Secret": APIKey.NAVER_SECRET]
         
@@ -53,21 +53,22 @@ class TranslateViewController: UIViewController {
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
-                self.resultLabel.text = json["message"]["result"]["translatedText"].stringValue
+                let statusCode = response.self.response?.statusCode ?? 500
+
+                if statusCode == 200 {
+
+                } else {
+                    self.resultTextView.text = json["errorMessage"].stringValue
+                }
                 
-//                let statusCode = response.self.response?.statusCode ?? 500
-//
-//                if statusCode == 200 {
-//
-//                } else {
-//                    self.resultLabel.text = json["errorMessage"].stringValue
-//                }
-                
+                self.resultTextView.text = json["message"]["result"]["translatedText"].stringValue
+
             case .failure(let error):
                 print(error)
             }
         }
     }
+    
     @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }

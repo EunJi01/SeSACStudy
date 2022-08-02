@@ -53,7 +53,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
         
         searchBar.delegate = self
-        requestBoxOffice(text: "20220801")
+        requestBoxOffice(text: yesterday())
     }
     
     func configureView() {
@@ -76,19 +76,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
+                //print("JSON: \(json)")
                 
                 for movie in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
+                    let rank = movie["rank"].stringValue
                     let movieNm = movie["movieNm"].stringValue
                     let openDt = movie["openDt"].stringValue
                     let audiAcc = movie["audiAcc"].stringValue
                     
-                    let data = BoxOfficeModel(movieTitle: movieNm, releaseDate: openDt, totalCount: audiAcc)
+                    let data = BoxOfficeModel(movieTitle: movieNm, rank: rank, releaseDate: openDt, totalCount: audiAcc)
                     
                     self.list.append(data)
                 }
                 
-                print(self.list)
+                //print(self.list)
                 
                 // 테이블뷰 갱신
                 self.searchTableView.reloadData()
@@ -109,10 +110,27 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         cell.backgroundColor = .clear
-        cell.titleLabel.font = .boldSystemFont(ofSize: 22)
-        cell.titleLabel.text = "\(list[indexPath.row].movieTitle): \(list[indexPath.row].releaseDate)"
+        
+        cell.titleLabel.text = "\(list[indexPath.row].movieTitle)"
+        cell.releaseLabel.text = "개봉일 : \(list[indexPath.row].releaseDate)"
+        cell.rankLabel.text = "\(list[indexPath.row].rank)"
+        
+        if let totalAudience = Int(list[indexPath.row].totalCount) {
+            cell.audienceLabel.text = "관객수 : \(totalAudience.formatted())명"
+        }
         
         return cell
+    }
+    
+    func yesterday() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd"
+        
+        let currentDate = Int(formatter.string(from: Date()))!
+        let yesterday = currentDate - 1
+        print(yesterday)
+        
+        return String(yesterday)
     }
 }
 
