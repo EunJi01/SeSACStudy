@@ -82,5 +82,16 @@ extension LottoViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(numberList[row])회차"
     }
+    
+//    func lastSaturday() -> String {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyyMMdd"
+//        
+//        let currentDate = Int(formatter.string(from: Date()))!
+//        let yesterday = currentDate - 1
+//        print(yesterday)
+//        
+//        return String(lastSaturday)
+//    }
 }
 

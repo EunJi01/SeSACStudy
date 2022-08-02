@@ -14,3 +14,11 @@ struct BoxOfficeModel {
     let releaseDate: String
     let totalCount: String
 }
+
+struct beerListModel {
+    
+    let beerId: String
+    let beerName: String
+    let beerImage: String
+    let description: String
+}
