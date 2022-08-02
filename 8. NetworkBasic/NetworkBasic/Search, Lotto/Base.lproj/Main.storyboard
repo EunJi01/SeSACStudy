@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P4j-BR-4w4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MFQ-6M-2VG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-x7-mOP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="374"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="UQ1-rj-muO">
@@ -28,28 +28,21 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CI-Yj-f2W">
-                                <rect key="frame" x="0.0" y="462" width="414" height="400"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2CI-Yj-f2W" firstAttribute="top" secondItem="wtr-x7-mOP" secondAttribute="bottom" id="5Kk-fj-PJp"/>
-                            <constraint firstItem="2CI-Yj-f2W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6nH-6j-NeK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2CI-Yj-f2W" secondAttribute="trailing" id="7YR-ej-X12"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2CI-Yj-f2W" secondAttribute="bottom" id="95E-Gv-AIN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wtr-x7-mOP" secondAttribute="trailing" id="LJM-zS-ZtB"/>
                             <constraint firstItem="wtr-x7-mOP" firstAttribute="top" secondItem="UQ1-rj-muO" secondAttribute="bottom" id="QCd-Ts-9bx"/>
                             <constraint firstItem="UQ1-rj-muO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rpi-Xm-Op7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wtr-x7-mOP" secondAttribute="bottom" constant="400" id="XIZ-JA-1db"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wtr-x7-mOP" secondAttribute="bottom" id="XIZ-JA-1db"/>
                             <constraint firstItem="UQ1-rj-muO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="czn-Y1-S2t"/>
                             <constraint firstItem="wtr-x7-mOP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eI0-i3-zXo"/>
                             <constraint firstItem="UQ1-rj-muO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mjf-Pc-Mk0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="UQ1-rj-muO" id="OB1-h8-j4C"/>
                         <outlet property="searchTableView" destination="wtr-x7-mOP" id="eTs-De-4er"/>
                     </connections>
                 </viewController>
@@ -199,28 +192,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGy-3N-Zhi">
-                                <rect key="frame" x="174" y="396" width="97" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-Y3-hTY">
+                                <rect key="frame" x="20" y="314" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="z5H-Iv-c4K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCj-XM-kiN">
+                                <rect key="frame" x="135" y="555" width="145" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="번역하기"/>
+                                <connections>
+                                    <action selector="translateButtonTapped:" destination="MFQ-6M-2VG" eventType="touchUpInside" id="hfY-jH-eke"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tyE-Ua-x1f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="tyE-Ua-x1f" firstAttribute="trailing" secondItem="27e-mA-hEA" secondAttribute="trailing" constant="20" id="9Ox-N0-TIt"/>
+                            <constraint firstItem="Phq-Y3-hTY" firstAttribute="leading" secondItem="tyE-Ua-x1f" secondAttribute="leading" constant="20" id="COe-gf-doS"/>
+                            <constraint firstItem="Phq-Y3-hTY" firstAttribute="top" secondItem="27e-mA-hEA" secondAttribute="bottom" constant="20" id="Qag-VP-lTk"/>
                             <constraint firstItem="27e-mA-hEA" firstAttribute="top" secondItem="tyE-Ua-x1f" secondAttribute="top" constant="50" id="bPW-fP-t7s"/>
                             <constraint firstItem="27e-mA-hEA" firstAttribute="leading" secondItem="tyE-Ua-x1f" secondAttribute="leading" constant="20" id="dtB-7W-nOI"/>
+                            <constraint firstItem="tyE-Ua-x1f" firstAttribute="trailing" secondItem="Phq-Y3-hTY" secondAttribute="trailing" constant="20" id="rDo-kh-MfS"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mxm-Sq-nKk" appends="YES" id="sUO-73-zIm"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="resultLabel" destination="Phq-Y3-hTY" id="SK4-Pd-d5m"/>
                         <outlet property="userInputTextView" destination="27e-mA-hEA" id="Dpi-Af-EFQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwc-BN-wxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mxm-Sq-nKk">
+                    <connections>
+                        <action selector="tapGestureTapped:" destination="MFQ-6M-2VG" id="pgt-Oj-fnf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="135" y="1580"/>
+            <point key="canvasLocation" x="134.78260869565219" y="1579.6875"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="6Zz-sR-lA1">
@@ -422,6 +440,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

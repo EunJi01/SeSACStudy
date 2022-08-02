@@ -37,7 +37,7 @@ class LottoViewController: UIViewController {
     
     func requestLotto(number: Int) {
         // AF: 200~299 status code 301
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
+        let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
         AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { [self] response in
             switch response.result {
             case .success(let value):
@@ -57,8 +57,7 @@ class LottoViewController: UIViewController {
                     let num = json["drwtNo\(i)"].stringValue
                     self.winningNumberLabelCollection[i - 1].text = num
                 }
-                
-                
+
             case .failure(let error):
                 print(error)
             }

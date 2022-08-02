@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B63549AD2897C75B00C4B287 /* BeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63549AC2897C75B00C4B287 /* BeerViewController.swift */; };
 		B63549B02898072100C4B287 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B63549AF2898072100C4B287 /* Kingfisher */; };
+		B63549B22898BD2E00C4B287 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63549B12898BD2E00C4B287 /* BoxOfficeModel.swift */; };
 		B669D51728920CBB00E2D51C /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */; };
 		B669D51B2892236700E2D51C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51A2892236700E2D51C /* LottoViewController.swift */; };
 		B669D51D289225A800E2D51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51C289225A800E2D51C /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		B63549AC2897C75B00C4B287 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
+		B63549B12898BD2E00C4B287 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 		B669D51A2892236700E2D51C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		B669D51C289225A800E2D51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Search, Lotto/ViewController.swift"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				B669D51E2892305200E2D51C /* TranslateViewController.swift */,
 				B669D51A2892236700E2D51C /* LottoViewController.swift */,
 				B6BB77F82890E1F80068CE32 /* SearchViewController.swift */,
+				B63549B12898BD2E00C4B287 /* BoxOfficeModel.swift */,
 				B6BB77FC2890E4F10068CE32 /* ListTableViewCell.swift */,
 				B6BB77FD2890E4F10068CE32 /* ListTableViewCell.xib */,
 			);
@@ -238,6 +241,7 @@
 				B669D51728920CBB00E2D51C /* ViewPresentableProtocol.swift in Sources */,
 				B669D53128975FB200E2D51C /* UserDefaultsHelper.swift in Sources */,
 				B63549AD2897C75B00C4B287 /* BeerViewController.swift in Sources */,
+				B63549B22898BD2E00C4B287 /* BoxOfficeModel.swift in Sources */,
 				B669D52128923A9B00E2D51C /* WebViewController.swift in Sources */,
 				B6BB77E52890DD750068CE32 /* AppDelegate.swift in Sources */,
 				B669D51B2892236700E2D51C /* LottoViewController.swift in Sources */,

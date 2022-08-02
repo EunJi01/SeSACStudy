@@ -7,6 +7,9 @@
 
 import UIKit
 
+import Alamofire
+import SwiftyJSON
+
 // UIButton, UITextField -> Action 연결 가능
 // UITextView, UISearchBar, UIPickerView -> Action 연결 불가능
 // 왜? control을 상속받지 않았기 때문
@@ -15,6 +18,7 @@ import UIKit
 class TranslateViewController: UIViewController {
 
     @IBOutlet weak var userInputTextView: UITextView!
+    @IBOutlet weak var resultLabel: UILabel!
     
     let textViewPlaceholderText = "번역하고 싶은 문장을 작성해보세요"
     
@@ -27,7 +31,45 @@ class TranslateViewController: UIViewController {
         userInputTextView.textColor = .lightGray
         
         userInputTextView.font = UIFont(name: "Menlo-Bold", size: 20)
+        
+        requestTranslateData(text: "")
+    }
     
+    @IBAction func translateButtonTapped(_ sender: UIButton) {
+        guard let text = userInputTextView.text else { return }
+        requestTranslateData(text: text)
+    }
+    
+    func requestTranslateData(text: String) {
+        let url = EndPoint.translateURL
+        
+        let parameter = ["source": "ko", "target": "jaaaa", "text": text]
+        
+        let header: HTTPHeaders = ["X-Naver-Client-Id": APIKey.NAVER_ID, "X-Naver-Client-Secret": APIKey.NAVER_SECRET]
+        
+        AF.request(url, method: .post, parameters: parameter, headers: header).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+                self.resultLabel.text = json["message"]["result"]["translatedText"].stringValue
+                
+//                let statusCode = response.self.response?.statusCode ?? 500
+//
+//                if statusCode == 200 {
+//
+//                } else {
+//                    self.resultLabel.text = json["errorMessage"].stringValue
+//                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    @IBAction func tapGestureTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
 }
 
