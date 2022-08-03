@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60A177A289AB58E0084A658 /* ContentsCollectionView + LayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60A1779289AB58E0084A658 /* ContentsCollectionView + LayoutCell.swift */; };
 		B64391502899F6D60071463C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B643914F2899F6D60071463C /* AppDelegate.swift */; };
 		B64391522899F6D60071463C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64391512899F6D60071463C /* SceneDelegate.swift */; };
 		B64391572899F6D60071463C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64391552899F6D60071463C /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B60A1779289AB58E0084A658 /* ContentsCollectionView + LayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentsCollectionView + LayoutCell.swift"; sourceTree = "<group>"; };
 		B643914C2899F6D60071463C /* TMDBProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDBProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B643914F2899F6D60071463C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B64391512899F6D60071463C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				B69DA37F289A8BC80076843E /* ContentsCollectionViewCell.xib */,
 				B6743642289A5F6100F7BC03 /* TMDBViewController.swift */,
 				B69DA37E289A8BC80076843E /* ContentsCollectionViewCell.swift */,
+				B60A1779289AB58E0084A658 /* ContentsCollectionView + LayoutCell.swift */,
 				B64391582899F6D70071463C /* Assets.xcassets */,
 				B643915A2899F6D70071463C /* LaunchScreen.storyboard */,
 				B643915D2899F6D70071463C /* Info.plist */,
@@ -180,6 +183,7 @@
 			files = (
 				B6743643289A5F6100F7BC03 /* TMDBViewController.swift in Sources */,
 				B64391502899F6D60071463C /* AppDelegate.swift in Sources */,
+				B60A177A289AB58E0084A658 /* ContentsCollectionView + LayoutCell.swift in Sources */,
 				B64391692899FA4A0071463C /* Constant.swift in Sources */,
 				B69DA380289A8BC80076843E /* ContentsCollectionViewCell.swift in Sources */,
 				B64391662899F9430071463C /* APIKey.swift in Sources */,

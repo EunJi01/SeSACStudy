@@ -11,4 +11,18 @@ class ContentsCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "ContentsCollectionViewCell"
     
+    @IBOutlet weak var contentsBackgroundView: UIView!
+    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var contentsImageView: UIView!
+    
+    @IBOutlet weak var clipButton: UIButton!
+    @IBOutlet weak var viewMoreButton: UIButton!
+    @IBOutlet weak var viewMoreIconButton: UIButton!
+    
+    @IBOutlet weak var contentsReleaseLabel: UILabel!
+    @IBOutlet weak var contentsGradeTextLabel: UILabel!
+    @IBOutlet weak var contentsGradeScoreLabel: UILabel!
+    @IBOutlet weak var contentTitleLabel: UILabel!
+    @IBOutlet weak var contentsOverviewLabel: UILabel!
+    @IBOutlet weak var emptyLabel: UILabel!
 }
