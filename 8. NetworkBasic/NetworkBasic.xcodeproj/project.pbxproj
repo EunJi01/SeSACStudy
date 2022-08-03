@@ -12,6 +12,7 @@
 		B63549B22898BD2E00C4B287 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63549B12898BD2E00C4B287 /* Model.swift */; };
 		B643913C2899651A0071463C /* BeerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B643913B2899651A0071463C /* BeerListTableViewController.swift */; };
 		B64391422899655E0071463C /* BeerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64391412899655E0071463C /* BeerListTableViewCell.swift */; };
+		B643916B289A09420071463C /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B643916A289A09420071463C /* ImageSearchViewController.swift */; };
 		B669D51728920CBB00E2D51C /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */; };
 		B669D51B2892236700E2D51C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51A2892236700E2D51C /* LottoViewController.swift */; };
 		B669D51D289225A800E2D51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51C289225A800E2D51C /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		B63549B12898BD2E00C4B287 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B643913B2899651A0071463C /* BeerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewController.swift; sourceTree = "<group>"; };
 		B64391412899655E0071463C /* BeerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewCell.swift; sourceTree = "<group>"; };
+		B643916A289A09420071463C /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
 		B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 		B669D51A2892236700E2D51C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		B669D51C289225A800E2D51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Search, Lotto/ViewController.swift"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				B6BB77EA2890DD750068CE32 /* Main.storyboard */,
+				B643916A289A09420071463C /* ImageSearchViewController.swift */,
 				B643913B2899651A0071463C /* BeerListTableViewController.swift */,
 				B64391412899655E0071463C /* BeerListTableViewCell.swift */,
 				B63549AC2897C75B00C4B287 /* BeerViewController.swift */,
@@ -252,6 +255,7 @@
 				B6BB77E52890DD750068CE32 /* AppDelegate.swift in Sources */,
 				B669D51B2892236700E2D51C /* LottoViewController.swift in Sources */,
 				B643913C2899651A0071463C /* BeerListTableViewController.swift in Sources */,
+				B643916B289A09420071463C /* ImageSearchViewController.swift in Sources */,
 				B6BB77F92890E1F80068CE32 /* SearchViewController.swift in Sources */,
 				B669D52328935D4500E2D51C /* LocationViewController.swift in Sources */,
 				B6BB77E72890DD750068CE32 /* SceneDelegate.swift in Sources */,

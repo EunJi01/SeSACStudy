@@ -42,6 +42,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // BoxOffice 배열
     var list: [BoxOfficeModel] = []
     
+    // 타입 어노테이션 vs 타입 추론 => 누가 더 속도가 빠를까?
+    // What's new in Swift
+    var nickname: String = ""
+    var username = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,7 +58,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTableView.register(UINib(nibName: ListTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: ListTableViewCell.reuseIdentifier)
         
         searchBar.delegate = self
-        requestBoxOffice(text: yesterday())
+        //requestBoxOffice(text: yesterday())
+        
+        // Date DateFormatter Calendar
+        let format = DateFormatter()
+        format.dateFormat = "yyyyMMdd" // TMI -> "yyyyMMdd" "YYYYMMdd"
+        //let dateResult = Date(timeIntervalSinceNow: -86400)
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+        let dateResult = format.string(from: yesterday!)
+        
+        // 네트워크 통신 : 서버 점검 등에 대한 예외 처리
+        // 네트워크가 느린 환경 테스트
+        // 실기기 테스트 시 Condition 조절 가능!
+        
+        requestBoxOffice(text: dateResult)
     }
     
     func configureView() {
@@ -122,16 +140,16 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
-    func yesterday() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd"
-        
-        let currentDate = Int(formatter.string(from: Date()))!
-        let yesterday = currentDate - 1
-        print(yesterday)
-        
-        return String(yesterday)
-    }
+//    func yesterday() -> String {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyyMMdd"
+//
+//        let currentDate = Int(formatter.string(from: Date()))!
+//        let yesterday = currentDate - 1
+//        print(yesterday)
+//
+//        return String(yesterday)
+//    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
