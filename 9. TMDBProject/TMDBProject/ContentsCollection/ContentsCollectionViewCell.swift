@@ -23,5 +23,5 @@ class ContentsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var contentsGradeScoreLabel: UILabel!
     @IBOutlet weak var contentTitleLabel: UILabel!
     @IBOutlet weak var contentsOverviewLabel: UILabel!
-    @IBOutlet weak var emptyLabel: UILabel!
+    @IBOutlet weak var contentsGenreLabel: UILabel!
 }

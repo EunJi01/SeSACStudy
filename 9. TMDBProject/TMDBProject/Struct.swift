@@ -16,6 +16,7 @@ struct MovieValue {
     var release: String
     var grade: Double
     var backdrop: String
+    var genreId: Int
 }
 
 struct CastValue {

@@ -17,6 +17,7 @@ class TMDBViewController: UIViewController {
     
     var movieList: [MovieValue] = []
     var movieNumber = 5
+    var genreDictionary: [Int: String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class TMDBViewController: UIViewController {
         view.backgroundColor = CustomColor.apricot
         collectionView.backgroundColor = CustomColor.apricot
         requestContents()
+        requestGenre()
         layout()
     }
     
@@ -50,7 +52,7 @@ class TMDBViewController: UIViewController {
                 let json = JSON(value)
                 //print("JSON: \(json)")
                 //print(json["results"]["title"].stringValue)
-                for i in self.movieList.count...self.movieNumber {
+                for i in self.movieList.count ..< self.movieNumber {
                     let j = json["results"][i]
                     
                     let id = j["id"].intValue
@@ -60,12 +62,34 @@ class TMDBViewController: UIViewController {
                     let release = j["release_date"].stringValue
                     let grade = j["vote_average"].doubleValue
                     let backdrop = endPoint.tmdbImageURL + j["backdrop_path"].stringValue
-                    
-                    let data = MovieValue(id: id, title: title, image: image, overview: overview, release: release, grade: grade, backdrop: backdrop)
+                    let genreId = j["genre_ids"][0].intValue
+
+                    let data = MovieValue(id: id, title: title, image: image, overview: overview, release: release, grade: grade, backdrop: backdrop, genreId: genreId)
                     self.movieList.append(data)
                 }
-                self.collectionView.reloadData()
                 
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func requestGenre() {
+        
+        let url = endPoint.tmdbGenreURL + "api_key=" + APIKey.TMDB + "&language=ko-KR"
+        AF.request(url, method: .get).validate().responseData { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                //print("JSON: \(json)")
+                
+                for i in json["genres"].arrayValue {
+                    let genreId = i["id"].intValue
+                    let genre = i["name"].stringValue
+                    self.genreDictionary.updateValue(genre, forKey: genreId)
+                }
+                print("\(self.genreDictionary)")
+                self.collectionView.reloadData()
             case .failure(let error):
                 print(error)
             }
@@ -112,6 +136,7 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.contentsOverviewLabel.text = movieList[indexPath.row].overview
         cell.contentsReleaseLabel.text = movieList[indexPath.row].release
         cell.contentsGradeScoreLabel.text = String(format: "%.1f", movieList[indexPath.row].grade)
+        cell.contentsGenreLabel.text = "# " + genreDictionary[movieList[indexPath.row].genreId]!
         
         // =============================================나중에 밖으로 뺴기=================================================//
         
@@ -132,11 +157,11 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.contentsGradeTextLabel.textColor = .white
         cell.contentsGradeTextLabel.backgroundColor = .systemIndigo
         cell.contentsGradeScoreLabel.backgroundColor = .white
+        cell.contentsGenreLabel.font = .boldSystemFont(ofSize: 20)
         
         cell.contentsReleaseLabel.textColor = .lightGray
         cell.contentsOverviewLabel.textColor = .darkGray
         
-        cell.emptyLabel.font = .boldSystemFont(ofSize: 16)
         return cell
     }
     
@@ -147,7 +172,7 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = spacing
-        layout.sectionInset = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: 0, right: spacing)
         layout.itemSize = CGSize(width: width, height: width * 1.2)
         
         self.collectionView.collectionViewLayout = layout

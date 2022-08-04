@@ -150,12 +150,12 @@
                 <outlet property="clipButton" destination="b1i-Nz-Xvj" id="L5O-DR-sRl"/>
                 <outlet property="contentTitleLabel" destination="hJL-kb-RLO" id="lMa-4C-XdS"/>
                 <outlet property="contentsBackgroundView" destination="MhM-jk-7UL" id="rK2-cv-p9f"/>
+                <outlet property="contentsGenreLabel" destination="H4q-KX-gnC" id="X4j-oL-CPC"/>
                 <outlet property="contentsGradeScoreLabel" destination="Rbe-2O-8eH" id="FAx-hf-6YX"/>
                 <outlet property="contentsGradeTextLabel" destination="cWT-bC-DmG" id="xiB-oT-1ty"/>
                 <outlet property="contentsImageView" destination="8Yb-AS-38l" id="GPr-0R-g7s"/>
                 <outlet property="contentsOverviewLabel" destination="K3F-vp-fUb" id="vMC-ap-YAa"/>
                 <outlet property="contentsReleaseLabel" destination="E2k-oy-Dtw" id="g6V-s4-Fyw"/>
-                <outlet property="emptyLabel" destination="H4q-KX-gnC" id="X4j-oL-CPC"/>
                 <outlet property="viewMoreButton" destination="GH8-Qn-jtP" id="5sV-ps-6Si"/>
                 <outlet property="viewMoreIconButton" destination="Ysb-5g-pFH" id="iBE-uL-hcp"/>
             </connections>
