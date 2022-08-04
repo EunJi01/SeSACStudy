@@ -24,16 +24,16 @@
 | **19회** |  | [📄](https://eun-dev.tistory.com/23) |  | **2022.07.28** |
 | **20회** |  | [📄](https://eun-dev.tistory.com/24) | [📄](https://eun-dev.tistory.com/25) | **2022.07.29** |
 |  |  |  |  |  |
-| **21회** |  | [📄](https://eun-dev.tistory.com/26) |  | **2022.08.** |
-| **22회** |  | [📄](https://eun-dev.tistory.com/27) |  | **2022.08.** |
-| **23회** |  | [📄](https://eun-dev.tistory.com/28) |  | **2022.08.** |
-| **24회** |  | [📄](https://eun-dev.tistory.com/29) |  | **2022.08.** |
-| **25회** |  | [📄](https://eun-dev.tistory.com/30) | [📄](https://eun-dev.tistory.com/31) | **2022.08.** |
-| **26회** |  | [📄](https://eun-dev.tistory.com/32) |  | **2022.08.** |
-| **27회** |  | [📄](https://eun-dev.tistory.com/33) |  | **2022.08.** |
-| **28회** |  | [📄](https://eun-dev.tistory.com/34) |  | **2022.08.** |
-| **29회** |  | [📄](https://eun-dev.tistory.com/35) |  | **2022.08.** |
-| **30회** |  | [📄](https://eun-dev.tistory.com/36) | [📄](https://eun-dev.tistory.com/37) | **2022.08.** |
+| **21회** |  | [📄](https://eun-dev.tistory.com/26) |  | **2022.08.01** |
+| **22회** |  | [📄](https://eun-dev.tistory.com/27) |  | **2022.08.02** |
+| **23회** | 9. TMDBProject | [📄](https://eun-dev.tistory.com/28) |  | **2022.08.03** |
+| **24회** |  | [📄](https://eun-dev.tistory.com/29) |  | **2022.08.04** |
+| **25회** |  | [📄](https://eun-dev.tistory.com/30) | [📄](https://eun-dev.tistory.com/31) | **2022.08.05** |
+| **26회** |  | [📄](https://eun-dev.tistory.com/32) |  | **2022.08.06** |
+| **27회** |  | [📄](https://eun-dev.tistory.com/33) |  | **2022.08.07** |
+| **28회** |  | [📄](https://eun-dev.tistory.com/34) |  | **2022.08.08** |
+| **29회** |  | [📄](https://eun-dev.tistory.com/35) |  | **2022.08.09** |
+| **30회** |  | [📄](https://eun-dev.tistory.com/36) | [📄](https://eun-dev.tistory.com/37) | **2022.08.10** |
 
 </br>
 </br>
