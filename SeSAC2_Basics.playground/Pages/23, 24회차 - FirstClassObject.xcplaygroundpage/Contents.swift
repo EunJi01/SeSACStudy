@@ -7,7 +7,8 @@ import Foundation
 /*
  1급 객체
  1. 변수나 상수에 함수를 대입할 수 있다.
- 2. 함수의 인자값으로 함수를 사용할 수 있다.
+ 2. 함수의 반환 타입으로 함수를 사용할 수 있다.
+ 3. 함수의 인자로 함수를 사용할 수 있다.
  */
 
 func checkBankInformation(bank: String) -> Bool {
@@ -57,8 +58,62 @@ func hello(nickname: String) -> String {
 let result2 = hello(username:) // 함수 표기법
 result2("상어밥")
 
+// 2-1. Calculate
 
-// 2번 특성
+func plus(a: Int, b: Int) -> Int { // (Int, Int) -> Int
+    return a + b
+}
+
+func minus(a: Int, b: Int) -> Int {
+    return a - b
+}
+
+func multiply(a: Int, b: Int) -> Int {
+    return a * b
+}
+
+func divide(a: Int, b: Int) -> Int {
+    return a / b
+}
+
+func calculate(operand: String) -> (Int, Int) -> Int {
+    
+    switch operand {
+    case "+": return plus
+    case "-": return minus
+    case "*": return multiply
+    case "/": return divide
+    default: return plus
+    }
+}
+
+calculate(operand: "+") // 함수가 실행되고 있는 상태가 아님
+calculate(operand: "/")(10, 2)
+
+let resultCalculate = calculate(operand: "-")
+resultCalculate(12, 2)
+
+// 2. 함수의 반환 타입으로 함수를 사용할 수 있다.
+func currentAccount() -> String {
+    return "계좌 있음"
+}
+
+func noCurrentAccount() -> String {
+    return "계좌 없음"
+}
+
+// 가장 왼쪽에 위치한 -> 를 기준으로 오른쪽에 놓인 모든 타입은 반환값을 의미한다.
+func checkBank(bank: String) -> () -> String {
+    let bankArray = ["우리", "신한", "국민"]
+    return bankArray.contains(bank) ? currentAccount : noCurrentAccount // 함수를 호출하는 것은 아니고 함수를 던져줌!
+}
+
+let jack = checkBank(bank: "농협")
+jack()
+
+checkBank(bank: "우리")()
+
+// 3. 함수의 인자로 함수를 사용할 수 있다.
 // Function () -> ()
 func oddNumber() {
     print("홀수")
@@ -68,6 +123,14 @@ func evenNumber() {
     print("짝수")
 }
 
+func plusNumber() {
+    
+}
+
+func minusNumber() {
+    
+}
+
 func resultNumber(number: Int, odd: () -> (), even: () -> () ) {
     return number.isMultiple(of: 2) ? even() : odd()
 }
@@ -75,11 +138,12 @@ func resultNumber(number: Int, odd: () -> (), even: () -> () ) {
 // 매개변수로 함수를 전달한다.
 resultNumber(number: 9, odd: oddNumber, even: evenNumber)
 
-// 익명함수 = 클로저
-resultNumber(number: <#T##Int#>) {
-    <#code#>
+resultNumber(number: 10, odd: plusNumber, even: minusNumber) // 의도 하지 않은 함수가 들어갈 수 있음. 필요 이상의 함수가 자꾸 생김
+
+resultNumber(number: 11) { // 이름 없는 함수(익명함수) = 클로저
+    print("홀수")
 } even: {
-    <#code#>
+    print("짝수")
 }
 
 //: [Next](@next)
