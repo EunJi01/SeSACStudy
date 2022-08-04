@@ -88,8 +88,8 @@ class TMDBViewController: UIViewController {
                     let genre = i["name"].stringValue
                     self.genreDictionary.updateValue(genre, forKey: genreId)
                 }
-                print("\(self.genreDictionary)")
                 self.collectionView.reloadData()
+                
             case .failure(let error):
                 print(error)
             }
@@ -102,11 +102,12 @@ extension TMDBViewController: UIScrollViewDelegate {
         
         let contentOffset_y = scrollView.contentOffset.y
         let collectionViewContentSize = collectionView.contentSize.height
-        let pagination_y = collectionViewContentSize * 0.8
+        let pagination_y = collectionViewContentSize * 0.5
         
         if contentOffset_y > pagination_y {
             movieNumber += 5
             requestContents()
+            collectionView.reloadData()
             print("moveiNumber\(movieNumber)")
         }
     }
@@ -136,7 +137,9 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.contentsOverviewLabel.text = movieList[indexPath.row].overview
         cell.contentsReleaseLabel.text = movieList[indexPath.row].release
         cell.contentsGradeScoreLabel.text = String(format: "%.1f", movieList[indexPath.row].grade)
-        cell.contentsGenreLabel.text = "# " + genreDictionary[movieList[indexPath.row].genreId]!
+        if let genreStr = genreDictionary[movieList[indexPath.row].genreId] {
+            cell.contentsGenreLabel.text = "# " + genreStr
+        }
         
         // =============================================나중에 밖으로 뺴기=================================================//
         
