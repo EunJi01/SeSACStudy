@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rainbow.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Jdc-X1-KUg">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jdc-X1-KUg">
                         <rect key="frame" x="8" y="8" width="34" height="34"/>
                     </imageView>
                 </subviews>
@@ -34,7 +34,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="rainbow.jpg" width="58.560001373291016" height="30.239999771118164"/>
-    </resources>
 </document>

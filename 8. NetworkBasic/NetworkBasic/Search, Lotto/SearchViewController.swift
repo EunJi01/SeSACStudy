@@ -9,6 +9,7 @@ import UIKit
 
 import Alamofire
 import SwiftyJSON
+import JGProgressHUD
 
 /*
  Swift Protocol
@@ -46,6 +47,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // What's new in Swift
     var nickname: String = ""
     var username = ""
+    
+    let hud = JGProgressHUD()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,11 +89,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func requestBoxOffice(text: String) {
         
+        hud.show(in: view)
         list.removeAll()
         
         // 인증키 제한
         let url = "\(EndPoint.boxOfficeURL)key=\(APIKey.BOXOFFICE)&targetDt=\(text)"
-        AF.request(url, method: .get).validate().responseJSON { response in
+        AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -111,9 +115,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 // 테이블뷰 갱신
                 self.searchTableView.reloadData()
+                self.hud.dismiss(animated: true)
                 
             case .failure(let error):
                 print(error)
+                self.hud.dismiss(animated: true)
+                // 시뮬레이터 실패 테스트 > 맥의 네트워크 상태에 따라감
             }
         }
     }
@@ -140,16 +147,16 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
-//    func yesterday() -> String {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyyyMMdd"
-//
-//        let currentDate = Int(formatter.string(from: Date()))!
-//        let yesterday = currentDate - 1
-//        print(yesterday)
-//
-//        return String(yesterday)
-//    }
+    func yesterday() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd"
+
+        let currentDate = Int(formatter.string(from: Date()))!
+        let yesterday = currentDate - 1
+        print(yesterday)
+
+        return String(yesterday)
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {

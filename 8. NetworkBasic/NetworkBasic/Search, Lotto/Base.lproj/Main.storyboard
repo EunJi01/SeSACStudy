@@ -184,7 +184,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sLm-iP-TVr">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pEd-UR-LWe">
                                     <size key="itemSize" width="128" height="128"/>
@@ -203,23 +203,34 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uOY-4k-2UF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vjb-6s-qLm"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W2D-oV-yeV"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="W2D-oV-yeV" firstAttribute="trailing" secondItem="sLm-iP-TVr" secondAttribute="trailing" id="NBx-2z-HbF"/>
+                            <constraint firstItem="uOY-4k-2UF" firstAttribute="leading" secondItem="W2D-oV-yeV" secondAttribute="leading" id="QKu-bU-ZRY"/>
+                            <constraint firstItem="uOY-4k-2UF" firstAttribute="top" secondItem="W2D-oV-yeV" secondAttribute="top" id="bj4-Qi-SA2"/>
                             <constraint firstItem="sLm-iP-TVr" firstAttribute="leading" secondItem="W2D-oV-yeV" secondAttribute="leading" id="enk-mo-Cy2"/>
                             <constraint firstItem="W2D-oV-yeV" firstAttribute="bottom" secondItem="sLm-iP-TVr" secondAttribute="bottom" id="etL-vh-61R"/>
-                            <constraint firstItem="sLm-iP-TVr" firstAttribute="top" secondItem="W2D-oV-yeV" secondAttribute="top" id="fyb-fK-Ncu"/>
+                            <constraint firstItem="sLm-iP-TVr" firstAttribute="top" secondItem="uOY-4k-2UF" secondAttribute="bottom" id="oxo-oq-Id4"/>
+                            <constraint firstItem="uOY-4k-2UF" firstAttribute="trailing" secondItem="W2D-oV-yeV" secondAttribute="trailing" id="uRE-UN-AU0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageResultCollectionView" destination="sLm-iP-TVr" id="Yfe-nA-lOi"/>
+                        <outlet property="searchBar" destination="uOY-4k-2UF" id="kvc-hC-2Kk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdq-e4-kDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3219" y="850"/>
+            <point key="canvasLocation" x="3226" y="910"/>
         </scene>
         <!--Translate View Controller-->
         <scene sceneID="5TU-fm-x8I">
