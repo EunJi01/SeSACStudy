@@ -13,7 +13,7 @@ class ContentsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var contentsBackgroundView: UIView!
     @IBOutlet weak var shadowView: UIView!
-    @IBOutlet weak var contentsImageView: UIView!
+    @IBOutlet weak var contentsImageView: UIImageView!
     
     @IBOutlet weak var clipButton: UIButton!
     @IBOutlet weak var viewMoreButton: UIButton!

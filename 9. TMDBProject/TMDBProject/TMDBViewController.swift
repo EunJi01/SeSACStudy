@@ -51,13 +51,12 @@ class TMDBViewController: UIViewController {
                     let j = json["results"][i]
                     
                     let title = j["title"].stringValue
-                    let image = url + j["poster_path"].stringValue
+                    let image = endPoint.tmdbImageURL + j["poster_path"].stringValue
                     let overview = j["overview"].stringValue
                     let release = j["release_date"].stringValue
                     let grade = j["vote_average"].doubleValue
                     
-                    //print(title)
-                    let data = ResponseValue(title: title, image: "", overview: overview, release: release, grade: grade)
+                    let data = ResponseValue(title: title, image: image, overview: overview, release: release, grade: grade)
                     self.movieList.append(data)
                 }
                 self.contentsCollectionView.reloadData()
@@ -76,9 +75,10 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContentsCollectionViewCell.identifier, for: indexPath) as? ContentsCollectionViewCell else { return UICollectionViewCell() }
+        let imageURL = URL(string: movieList[indexPath.row].image)
         
         cell.contentTitleLabel.text = movieList[indexPath.row].title
-        //cell.contentsImageView = movieList[indexPath.row].image
+        cell.contentsImageView.kf.setImage(with: imageURL)
         cell.contentsOverviewLabel.text = movieList[indexPath.row].overview
         cell.contentsReleaseLabel.text = movieList[indexPath.row].release
         cell.contentsGradeScoreLabel.text = String(format: "%.1f", movieList[indexPath.row].grade)
