@@ -15,7 +15,7 @@ class TMDBViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var movieList: [ResponseValue] = []
+    var movieList: [MovieValue] = []
     var movieNumber = 5
     
     override func viewDidLoad() {
@@ -28,6 +28,8 @@ class TMDBViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: .plain, target: self, action: #selector(leftBarButtonTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(rightBarButtonTapped))
         
+        view.backgroundColor = CustomColor.apricot
+        collectionView.backgroundColor = CustomColor.apricot
         requestContents()
         layout()
     }
@@ -51,13 +53,15 @@ class TMDBViewController: UIViewController {
                 for i in self.movieList.count...self.movieNumber {
                     let j = json["results"][i]
                     
+                    let id = j["id"].intValue
                     let title = j["title"].stringValue
                     let image = endPoint.tmdbImageURL + j["poster_path"].stringValue
                     let overview = j["overview"].stringValue
                     let release = j["release_date"].stringValue
                     let grade = j["vote_average"].doubleValue
+                    let backdrop = endPoint.tmdbImageURL + j["backdrop_path"].stringValue
                     
-                    let data = ResponseValue(title: title, image: image, overview: overview, release: release, grade: grade)
+                    let data = MovieValue(id: id, title: title, image: image, overview: overview, release: release, grade: grade, backdrop: backdrop)
                     self.movieList.append(data)
                 }
                 self.collectionView.reloadData()
@@ -85,6 +89,16 @@ extension TMDBViewController: UIScrollViewDelegate {
 }
 
 extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: StoryboardName.main, bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: CastViewController.reuseIdentifier) as? CastViewController else { return }
+        
+        vc.movieData = movieList[indexPath.row]
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         movieList.count
     }
