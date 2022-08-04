@@ -102,17 +102,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psS-eC-LfJ">
-                                <rect key="frame" x="0.0" y="0.0" width="242" height="327.5"/>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="GH8-Qn-jtP" firstAttribute="top" secondItem="YKN-kr-Hil" secondAttribute="bottom" constant="16" id="49M-BQ-yu8"/>
                             <constraint firstAttribute="trailing" secondItem="Ysb-5g-pFH" secondAttribute="trailing" constant="12" id="6M5-BV-f8N"/>
                             <constraint firstItem="hJL-kb-RLO" firstAttribute="leading" secondItem="MhM-jk-7UL" secondAttribute="leading" constant="12" id="7ea-Yw-SNV"/>
-                            <constraint firstItem="psS-eC-LfJ" firstAttribute="top" secondItem="MhM-jk-7UL" secondAttribute="top" id="8na-O2-BD8"/>
                             <constraint firstItem="8Yb-AS-38l" firstAttribute="top" secondItem="MhM-jk-7UL" secondAttribute="top" id="8qd-ky-acy"/>
                             <constraint firstItem="cWT-bC-DmG" firstAttribute="bottom" secondItem="8Yb-AS-38l" secondAttribute="bottom" constant="-16" id="Fxp-L5-wS2"/>
                             <constraint firstItem="8Yb-AS-38l" firstAttribute="leading" secondItem="MhM-jk-7UL" secondAttribute="leading" id="HID-S4-zaG"/>
@@ -130,13 +125,10 @@
                             <constraint firstItem="Rbe-2O-8eH" firstAttribute="leading" secondItem="cWT-bC-DmG" secondAttribute="trailing" id="dDq-xr-Zbj"/>
                             <constraint firstAttribute="bottom" secondItem="Ysb-5g-pFH" secondAttribute="bottom" constant="12" id="epc-oX-gOX"/>
                             <constraint firstItem="Rbe-2O-8eH" firstAttribute="bottom" secondItem="8Yb-AS-38l" secondAttribute="bottom" constant="-16" id="gRr-N4-Blc"/>
-                            <constraint firstAttribute="bottom" secondItem="psS-eC-LfJ" secondAttribute="bottom" id="lbv-m0-umO"/>
                             <constraint firstItem="b1i-Nz-Xvj" firstAttribute="top" secondItem="MhM-jk-7UL" secondAttribute="top" constant="16" id="nH9-Rq-xTa"/>
                             <constraint firstItem="GH8-Qn-jtP" firstAttribute="leading" secondItem="MhM-jk-7UL" secondAttribute="leading" constant="12" id="oM9-Kf-Csc"/>
-                            <constraint firstItem="psS-eC-LfJ" firstAttribute="leading" secondItem="MhM-jk-7UL" secondAttribute="leading" id="oqd-3Y-3DE"/>
                             <constraint firstAttribute="trailing" secondItem="8Yb-AS-38l" secondAttribute="trailing" id="qKP-iw-Xc7"/>
                             <constraint firstItem="cWT-bC-DmG" firstAttribute="leading" secondItem="MhM-jk-7UL" secondAttribute="leading" constant="16" id="uUH-GT-GIz"/>
-                            <constraint firstAttribute="trailing" secondItem="psS-eC-LfJ" secondAttribute="trailing" id="zKw-AK-LuB"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -163,7 +155,6 @@
                 <outlet property="contentsOverviewLabel" destination="K3F-vp-fUb" id="vMC-ap-YAa"/>
                 <outlet property="contentsReleaseLabel" destination="E2k-oy-Dtw" id="g6V-s4-Fyw"/>
                 <outlet property="emptyLabel" destination="H4q-KX-gnC" id="X4j-oL-CPC"/>
-                <outlet property="shadowView" destination="psS-eC-LfJ" id="wNj-mo-4RT"/>
                 <outlet property="viewMoreButton" destination="GH8-Qn-jtP" id="5sV-ps-6Si"/>
                 <outlet property="viewMoreIconButton" destination="Ysb-5g-pFH" id="iBE-uL-hcp"/>
             </connections>
@@ -171,9 +162,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

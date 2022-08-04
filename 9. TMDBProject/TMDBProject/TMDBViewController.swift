@@ -13,16 +13,17 @@ import SwiftyJSON
 
 class TMDBViewController: UIViewController {
 
-    @IBOutlet weak var contentsCollectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var movieList: [ResponseValue] = []
+    var movieNumber = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        contentsCollectionView.delegate = self
-        contentsCollectionView.dataSource = self
-        contentsCollectionView.register(UINib(nibName: ContentsCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ContentsCollectionViewCell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: ContentsCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ContentsCollectionViewCell.identifier)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: .plain, target: self, action: #selector(leftBarButtonTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(rightBarButtonTapped))
@@ -41,13 +42,13 @@ class TMDBViewController: UIViewController {
     
     func requestContents() {
         let url = endPoint.tmdbURL + "api_key=" + APIKey.TMDB
-        AF.request(url, method: .get).validate().responseJSON { response in
+        AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
-                print(json["results"]["title"].stringValue)
-                for i in 0...9 {
+                //print("JSON: \(json)")
+                //print(json["results"]["title"].stringValue)
+                for i in self.movieList.count...self.movieNumber {
                     let j = json["results"][i]
                     
                     let title = j["title"].stringValue
@@ -59,11 +60,26 @@ class TMDBViewController: UIViewController {
                     let data = ResponseValue(title: title, image: image, overview: overview, release: release, grade: grade)
                     self.movieList.append(data)
                 }
-                self.contentsCollectionView.reloadData()
+                self.collectionView.reloadData()
                 
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+}
+
+extension TMDBViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let contentOffset_y = scrollView.contentOffset.y
+        let collectionViewContentSize = collectionView.contentSize.height
+        let pagination_y = collectionViewContentSize * 0.8
+        
+        if contentOffset_y > pagination_y {
+            movieNumber += 5
+            requestContents()
+            print("moveiNumber\(movieNumber)")
         }
     }
 }
@@ -84,9 +100,6 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.contentsGradeScoreLabel.text = String(format: "%.1f", movieList[indexPath.row].grade)
         
         // =============================================나중에 밖으로 뺴기=================================================//
-        cell.insertSubview(cell.shadowView, belowSubview: cell.contentsImageView)
-        cell.shadowView.backgroundColor = .black
-        cell.shadowView.layer.shadowRadius = 10
         
         cell.contentsBackgroundView.backgroundColor = .white
         cell.contentsBackgroundView.layer.cornerRadius = 10
@@ -123,6 +136,6 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
         layout.sectionInset = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
         layout.itemSize = CGSize(width: width, height: width * 1.2)
         
-        self.contentsCollectionView.collectionViewLayout = layout
+        self.collectionView.collectionViewLayout = layout
     }
 }

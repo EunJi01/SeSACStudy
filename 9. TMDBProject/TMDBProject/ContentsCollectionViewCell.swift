@@ -12,7 +12,6 @@ class ContentsCollectionViewCell: UICollectionViewCell {
     static let identifier = "ContentsCollectionViewCell"
     
     @IBOutlet weak var contentsBackgroundView: UIView!
-    @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var contentsImageView: UIImageView!
     
     @IBOutlet weak var clipButton: UIButton!
