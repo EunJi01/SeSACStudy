@@ -13,7 +13,6 @@ class UserDefaultsHelper {
     
     static let standard = UserDefaultsHelper()
     // singleton patton 자기 자신의 인스턴스를 타입 프로퍼티 형태로 가지고 있음
-    
     let userDefaults = UserDefaults.standard
     
     enum Key: String {

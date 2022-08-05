@@ -37,29 +37,10 @@ class ImageSearchViewController: UIViewController {
     
     // fetchImage, requestImage, callRequestImage, getImage... -> response에 따라 네이밍을 설정해주기도 함.
     func fetchImage(query: String) {
-        let text = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        let url = EndPoint.imageSearchURL + "query=\(text!)&display=30&start=\(startPage)" // 왜 한글만 안되지?
-        
-        let header: HTTPHeaders = ["X-Naver-Client-Id": APIKey.NAVER_ID, "X-Naver-Client-Secret": APIKey.NAVER_SECRET]
-        
-        AF.request(url, method: .get, headers: header).validate().responseData { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                //print("JSON: \(json)")
-                
-                self.totalCount = json["total"].intValue
-                print(json["total"].intValue)
-                
-                for i in json["items"].arrayValue {
-                    let thumbnail = i["thumbnail"].stringValue
-                    self.thumbnailList.append(thumbnail)
-                }
-
-                self.imageResultCollectionView.reloadData()
-            case .failure(let error):
-                print(error)
-            }
+        ImageSearchAPIManager.shared.fetchImageData(query: query, startPage: startPage) { totalCount, thumbnailList in
+            self.totalCount = totalCount
+            self.thumbnailList.append(contentsOf: thumbnailList)
+            self.imageResultCollectionView.reloadData()
         }
     }
     
