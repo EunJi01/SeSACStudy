@@ -8,6 +8,7 @@
 import UIKit
 
 import Alamofire
+import JGProgressHUD
 import SwiftyJSON
 
 class ImageSearchViewController: UIViewController {
@@ -17,8 +18,9 @@ class ImageSearchViewController: UIViewController {
     
     // 네트워크 요청할 시작 페이지 넘버
     var startPage = 1
-    // 총 검색 결과 갯수
     var totalCount = 0
+    var thumbnailList: [String] = []
+    let hud = JGProgressHUD()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,17 +32,21 @@ class ImageSearchViewController: UIViewController {
         imageResultCollectionView.register(UINib(nibName: ImageSearchCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ImageSearchCollectionViewCell.identifier)
         
         layout()
-        fetchImage(query: "")
     }
-    
-    var thumbnailList: [String] = []
     
     // fetchImage, requestImage, callRequestImage, getImage... -> response에 따라 네이밍을 설정해주기도 함.
     func fetchImage(query: String) {
+        hud.show(in: self.view)
+        
         ImageSearchAPIManager.shared.fetchImageData(query: query, startPage: startPage) { totalCount, thumbnailList in
             self.totalCount = totalCount
             self.thumbnailList.append(contentsOf: thumbnailList)
-            self.imageResultCollectionView.reloadData()
+            print(totalCount, thumbnailList)
+            
+            DispatchQueue.main.async {
+                self.imageResultCollectionView.reloadData()
+                self.hud.dismiss()
+            }
         }
     }
     
@@ -81,7 +87,7 @@ extension ImageSearchViewController: UISearchBarDelegate {
         if let text = searchBar.text {
             thumbnailList.removeAll()
             startPage = 1
-            fetchImage(query: text)
+            //fetchImage(query: text)
         }
     }
     

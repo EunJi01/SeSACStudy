@@ -33,25 +33,42 @@ class LottoViewController: UIViewController {
         lottoPickerView.dataSource = self
         
         requestLotto(number: 1025)
+        print(lastSaturday())
+    }
+    
+    func lastSaturday() -> String {
+        let dayFormatter = DateFormatter()
+        dayFormatter.dateFormat = "E"
+        let currentDay = dayFormatter.string(from: Date())
+        
+        let time: Double = 86400
+        let getLastSaturdayDic: [String: Double] = [
+            "월": time * 2, "화": time * 3 , "수": time * 4, "목": time * 5, "금": time * 6,"토": time * 7, "일": time
+        ]
+        
+        let timeInterval = getLastSaturdayDic.filter { $0.key == currentDay }.map { $0.value }
+        let timeCalculated = Date(timeIntervalSinceNow: -timeInterval[0])
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let lastSaturday = formatter.string(from: timeCalculated)
+        
+        return lastSaturday
     }
     
     func requestLotto(number: Int) {
         // AF: 200~299 status code 301
         let url = "\(EndPoint.lottoURL)&drwNo=\(number)"
-        AF.request(url, method: .get).validate(statusCode: 200..<400).responseJSON { [self] response in
+        AF.request(url, method: .get).validate(statusCode: 200..<400).responseData { [self] response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
+                //print("JSON: \(json)")
                 
                 let bonus = json["bnusNo"].stringValue
-                print(bonus)
-                
                 let date = json["drwNoDate"].stringValue
-                print(date)
                 
                 self.numberTextField.text = date
-                
                 self.winningNumberLabelCollection[6].text = bonus
                 for i in 1...6 {
                     let num = json["drwtNo\(i)"].stringValue
@@ -82,16 +99,4 @@ extension LottoViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(numberList[row])회차"
     }
-    
-//    func lastSaturday() -> String {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyyyMMdd"
-//        
-//        let currentDate = Int(formatter.string(from: Date()))!
-//        let yesterday = currentDate - 1
-//        print(yesterday)
-//        
-//        return String(lastSaturday)
-//    }
 }
-
