@@ -32,28 +32,20 @@ class LottoViewController: UIViewController {
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
         
-        requestLotto(number: 1025)
-        print(lastSaturday())
+        requestLotto(number: currentDrwNo())
     }
     
-    func lastSaturday() -> String {
-        let dayFormatter = DateFormatter()
-        dayFormatter.dateFormat = "E"
-        let currentDay = dayFormatter.string(from: Date())
-        
-        let time: Double = 86400
-        let getLastSaturdayDic: [String: Double] = [
-            "월": time * 2, "화": time * 3 , "수": time * 4, "목": time * 5, "금": time * 6,"토": time * 7, "일": time
-        ]
-        
-        let timeInterval = getLastSaturdayDic.filter { $0.key == currentDay }.map { $0.value }
-        let timeCalculated = Date(timeIntervalSinceNow: -timeInterval[0])
-        
+    func currentDrwNo() -> Int {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let lastSaturday = formatter.string(from: timeCalculated)
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let firstDate = formatter.date(from: "2002-12-07 21:00")!
         
-        return lastSaturday
+        let dateInterval = Calendar.current.dateComponents([.day], from: firstDate, to: Date()).day!
+        print(dateInterval)
+        let currentDrwNo = 1 + dateInterval / 7
+        
+        print(currentDrwNo)
+        return currentDrwNo
     }
     
     func requestLotto(number: Int) {
