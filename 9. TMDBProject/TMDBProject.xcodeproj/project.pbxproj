@@ -11,7 +11,6 @@
 		B60A1783289BAF530084A658 /* CastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60A1782289BAF530084A658 /* CastViewController.swift */; };
 		B60A1787289BAF950084A658 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60A1786289BAF950084A658 /* CastTableViewCell.swift */; };
 		B60A1789289BB77F0084A658 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60A1788289BB77F0084A658 /* ReusableViewProtocol.swift */; };
-		B60A178B289BDAE50084A658 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60A178A289BDAE50084A658 /* UIColor + Extension.swift */; };
 		B64391502899F6D60071463C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B643914F2899F6D60071463C /* AppDelegate.swift */; };
 		B64391522899F6D60071463C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64391512899F6D60071463C /* SceneDelegate.swift */; };
 		B64391572899F6D60071463C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64391552899F6D60071463C /* Main.storyboard */; };
@@ -24,6 +23,7 @@
 		B6743648289A6BD600F7BC03 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B6743647289A6BD600F7BC03 /* Alamofire */; };
 		B674364B289A6BF400F7BC03 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B674364A289A6BF400F7BC03 /* SwiftyJSON */; };
 		B674364E289A6C0200F7BC03 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B674364D289A6C0200F7BC03 /* Kingfisher */; };
+		B691B53C289D43670064F987 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B691B53B289D43670064F987 /* WebViewController.swift */; };
 		B69DA380289A8BC80076843E /* ContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DA37E289A8BC80076843E /* ContentsCollectionViewCell.swift */; };
 		B69DA381289A8BC80076843E /* ContentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69DA37F289A8BC80076843E /* ContentsCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -33,7 +33,6 @@
 		B60A1782289BAF530084A658 /* CastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewController.swift; sourceTree = "<group>"; };
 		B60A1786289BAF950084A658 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
 		B60A1788289BB77F0084A658 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
-		B60A178A289BDAE50084A658 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		B643914C2899F6D60071463C /* TMDBProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDBProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B643914F2899F6D60071463C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B64391512899F6D60071463C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		B64391682899FA4A0071463C /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B6743642289A5F6100F7BC03 /* TMDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBViewController.swift; sourceTree = "<group>"; };
 		B6743644289A650700F7BC03 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		B691B53B289D43670064F987 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B69DA37E289A8BC80076843E /* ContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		B69DA37F289A8BC80076843E /* ContentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentsCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,8 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				B6743642289A5F6100F7BC03 /* TMDBViewController.swift */,
-				B69DA37E289A8BC80076843E /* ContentsCollectionViewCell.swift */,
 				B69DA37F289A8BC80076843E /* ContentsCollectionViewCell.xib */,
+				B69DA37E289A8BC80076843E /* ContentsCollectionViewCell.swift */,
 				B60A1779289AB58E0084A658 /* ContentsCollectionView + LayoutCell.swift */,
 			);
 			path = ContentsCollection;
@@ -107,10 +107,10 @@
 				B64391672899FA270071463C /* Resource */,
 				B64391552899F6D60071463C /* Main.storyboard */,
 				B6743644289A650700F7BC03 /* Struct.swift */,
-				B60A178A289BDAE50084A658 /* UIColor + Extension.swift */,
 				B60A1788289BB77F0084A658 /* ReusableViewProtocol.swift */,
 				B60A1780289BAEC20084A658 /* ContentsCollection */,
 				B60A1781289BAF1B0084A658 /* CastList */,
+				B691B53D289D437B0064F987 /* webView */,
 				B64391582899F6D70071463C /* Assets.xcassets */,
 				B643915A2899F6D70071463C /* LaunchScreen.storyboard */,
 				B643915D2899F6D70071463C /* Info.plist */,
@@ -125,6 +125,14 @@
 				B64391682899FA4A0071463C /* Constant.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		B691B53D289D437B0064F987 /* webView */ = {
+			isa = PBXGroup;
+			children = (
+				B691B53B289D43670064F987 /* WebViewController.swift */,
+			);
+			path = webView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +226,8 @@
 				B60A1787289BAF950084A658 /* CastTableViewCell.swift in Sources */,
 				B64391662899F9430071463C /* APIKey.swift in Sources */,
 				B6743645289A650700F7BC03 /* Struct.swift in Sources */,
-				B60A178B289BDAE50084A658 /* UIColor + Extension.swift in Sources */,
 				B60A1789289BB77F0084A658 /* ReusableViewProtocol.swift in Sources */,
+				B691B53C289D43670064F987 /* WebViewController.swift in Sources */,
 				B64391522899F6D60071463C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

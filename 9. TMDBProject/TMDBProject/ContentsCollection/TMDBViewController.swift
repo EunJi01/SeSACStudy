@@ -66,6 +66,7 @@ class TMDBViewController: UIViewController {
 
                     let data = MovieValue(id: id, title: title, image: image, overview: overview, release: release, grade: grade, backdrop: backdrop, genreId: genreId)
                     self.movieList.append(data)
+                    self.collectionView.reloadData()
                 }
                 
             case .failure(let error):
@@ -75,7 +76,6 @@ class TMDBViewController: UIViewController {
     }
     
     func requestGenre() {
-        
         let url = endPoint.tmdbGenreURL + "api_key=" + APIKey.TMDB + "&language=ko-KR"
         AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
@@ -130,6 +130,11 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContentsCollectionViewCell.identifier, for: indexPath) as? ContentsCollectionViewCell else { return UICollectionViewCell() }
+        // 위치 : VC cellForItemAt
+        // 3. 위임하기
+        cell.delegate = self
+        cell.index = indexPath.row
+        
         let imageURL = URL(string: movieList[indexPath.row].image)
         
         cell.contentTitleLabel.text = movieList[indexPath.row].title
@@ -147,9 +152,9 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.contentsBackgroundView.layer.cornerRadius = 10
         cell.contentsBackgroundView.clipsToBounds = true
         
-        cell.clipButton.setTitle("", for: .normal)
-        cell.clipButton.setImage(UIImage(systemName: "paperclip.circle.fill"), for: .normal)
-        cell.clipButton.tintColor = .white
+        cell.webButton.setTitle("", for: .normal)
+        cell.webButton.setImage(UIImage(systemName: "paperclip.circle.fill"), for: .normal)
+        cell.webButton.tintColor = .white
         cell.viewMoreButton.setTitle("자세히 보기", for: .normal)
         cell.viewMoreButton.titleLabel?.tintColor = .darkGray
         cell.viewMoreIconButton.setTitle("", for: .normal)
@@ -179,5 +184,18 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
         layout.itemSize = CGSize(width: width, height: width * 1.2)
         
         self.collectionView.collectionViewLayout = layout
+    }
+}
+
+// 위치 : VC
+// 4. 버튼 동작 구현하기
+extension TMDBViewController: WebButtonDelegate {
+    func webButtonTapped(index: Int) {
+        print("\(index)번째 웹버튼 탭됨")
+        
+        let sb = UIStoryboard(name: StoryboardName.main, bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: WebViewController.reuseIdentifier) as? WebViewController else { return }
+        vc.movidId = movieList[index].id
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

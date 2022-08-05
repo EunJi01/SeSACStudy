@@ -56,6 +56,40 @@
             </objects>
             <point key="canvasLocation" x="-593" y="139"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Bdu-Q0-u1p">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="XBI-RT-sVT" customClass="WebViewController" customModule="TMDBProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xcL-dt-wNH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxY-bV-Lph">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AP8-k7-f0r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AP8-k7-f0r" firstAttribute="bottom" secondItem="jxY-bV-Lph" secondAttribute="bottom" id="9PK-5y-QP0"/>
+                            <constraint firstItem="AP8-k7-f0r" firstAttribute="trailing" secondItem="jxY-bV-Lph" secondAttribute="trailing" id="9Xx-ds-mtl"/>
+                            <constraint firstItem="jxY-bV-Lph" firstAttribute="leading" secondItem="AP8-k7-f0r" secondAttribute="leading" id="DZm-a2-HdY"/>
+                            <constraint firstItem="jxY-bV-Lph" firstAttribute="top" secondItem="AP8-k7-f0r" secondAttribute="top" id="Zn7-gM-XTy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="jxY-bV-Lph" id="hpW-7i-BkX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZg-sh-iRc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594" y="824"/>
+        </scene>
         <!--Cast View Controller-->
         <scene sceneID="GUw-Hp-d2P">
             <objects>
@@ -90,13 +124,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bS2-eq-The">
                                                     <rect key="frame" x="112" y="24" width="121" height="46.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CastNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBd-9b-Biy">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CastNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBd-9b-Biy">
                                                             <rect key="frame" x="0.0" y="0.0" width="121" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CastPartLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-nH-fHQ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CastPartLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-nH-fHQ">
                                                             <rect key="frame" x="0.0" y="28.5" width="96.5" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
