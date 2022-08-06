@@ -19,7 +19,8 @@ class LottoViewController: UIViewController {
     var lottoPickerView = UIPickerView()
     // 코드로 뷰를 만드는 기능이 훨씬 더 많이 남아있음
     
-    lazy var numberList: [Int] = Array(1...currentDrwNo()).reversed()
+    lazy var drwNumberList: [Int] = Array(1...currentDrwNo()).reversed()
+    var winningList: [Int: [Int]] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,6 @@ class LottoViewController: UIViewController {
         print(currentDrwNo)
         return currentDrwNo
     }
-
     
     func requestLotto(number: Int) {
         // AF: 200~299 status code 301
@@ -58,15 +58,23 @@ class LottoViewController: UIViewController {
                 let json = JSON(value)
                 //print("JSON: \(json)")
                 
+                var winningNo: [String] = []
+                
                 let bonus = json["bnusNo"].stringValue
                 let date = json["drwNoDate"].stringValue
-                
+
                 self.numberTextField.text = date
                 self.winningNumberLabelCollection[6].text = bonus
+                
+                winningNo.append(date)
                 for i in 1...6 {
                     let num = json["drwtNo\(i)"].stringValue
+                    winningNo.append(num)
                     self.winningNumberLabelCollection[i - 1].text = num
                 }
+                winningNo.append(bonus)
+
+                UserDefaults.standard.set(winningNo, forKey: "\(number)")
 
             case .failure(let error):
                 print(error)
@@ -81,15 +89,26 @@ extension LottoViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return numberList.count
+        return drwNumberList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        requestLotto(number: numberList[row])
-        //numberTextField.text = "\(numberList[row])회차"
+        let winningNumbers = UserDefaults.standard.array(forKey: "\(drwNumberList[row])")
+        
+        if winningNumbers == nil {
+            requestLotto(number: drwNumberList[row])
+            print("서버 요청됨")
+        } else {
+            print("서버 요청 안함")
+            guard let winningNo = winningNumbers as? [String] else { return }
+            for i in 1...7 {
+                winningNumberLabelCollection[i - 1].text = winningNo[i]
+            }
+            numberTextField.text = winningNo[0]
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(numberList[row])회차"
+        return "\(drwNumberList[row])회차"
     }
 }
