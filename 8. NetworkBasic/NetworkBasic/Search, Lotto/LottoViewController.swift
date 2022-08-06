@@ -20,7 +20,6 @@ class LottoViewController: UIViewController {
     // 코드로 뷰를 만드는 기능이 훨씬 더 많이 남아있음
     
     lazy var drwNumberList: [Int] = Array(1...currentDrwNo()).reversed()
-    var winningList: [Int: [Int]] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()

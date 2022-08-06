@@ -87,7 +87,7 @@ extension ImageSearchViewController: UISearchBarDelegate {
         if let text = searchBar.text {
             thumbnailList.removeAll()
             startPage = 1
-            //fetchImage(query: text)
+            fetchImage(query: text)
         }
     }
     
