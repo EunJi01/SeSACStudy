@@ -19,7 +19,7 @@ class LottoViewController: UIViewController {
     var lottoPickerView = UIPickerView()
     // 코드로 뷰를 만드는 기능이 훨씬 더 많이 남아있음
     
-    let numberList: [Int] = Array(1...1025).reversed()
+    lazy var numberList: [Int] = Array(1...currentDrwNo()).reversed()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,7 @@ class LottoViewController: UIViewController {
         print(currentDrwNo)
         return currentDrwNo
     }
+
     
     func requestLotto(number: Int) {
         // AF: 200~299 status code 301
