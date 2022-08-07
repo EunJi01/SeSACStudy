@@ -8,20 +8,23 @@
 import UIKit
 
 import Alamofire
+import JGProgressHUD
 import Kingfisher
 import SwiftyJSON
 
 class TMDBViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    let hud = JGProgressHUD()
     
     var movieList: [MovieValue] = []
-    var movieNumber = 5
     var genreDictionary: [Int: String] = [:]
+    var movieNumber = 0
+    let lastMovieNumber = 20
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: ContentsCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ContentsCollectionViewCell.identifier)
@@ -45,54 +48,28 @@ class TMDBViewController: UIViewController {
     }
     
     func requestContents() {
-        let url = endPoint.tmdbURL + "api_key=" + APIKey.TMDB
-        AF.request(url, method: .get).validate().responseData { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                //print("JSON: \(json)")
-                //print(json["results"]["title"].stringValue)
-                for i in self.movieList.count ..< self.movieNumber {
-                    let j = json["results"][i]
-                    
-                    let id = j["id"].intValue
-                    let title = j["title"].stringValue
-                    let image = endPoint.tmdbImageURL + j["poster_path"].stringValue
-                    let overview = j["overview"].stringValue
-                    let release = j["release_date"].stringValue
-                    let grade = j["vote_average"].doubleValue
-                    let backdrop = endPoint.tmdbImageURL + j["backdrop_path"].stringValue
-                    let genreId = j["genre_ids"][0].intValue
-
-                    let data = MovieValue(id: id, title: title, image: image, overview: overview, release: release, grade: grade, backdrop: backdrop, genreId: genreId)
-                    self.movieList.append(data)
-                    self.collectionView.reloadData()
-                }
-                
-            case .failure(let error):
-                print(error)
+        hud.show(in: self.view)
+        
+        guard movieNumber != lastMovieNumber else { return }
+        self.movieNumber += 5
+        
+        TMDBAPIManager.shared.requestContentsData(movieNumber: movieNumber, movieList: movieList) { newMovieList in
+            self.movieList.append(contentsOf: newMovieList)
+            //print("무비리스트 업뎃")
+            
+            DispatchQueue.main.async {
+                //print("리로드")
+                print("=======moveiNumber\(self.movieNumber)=======")
+                self.collectionView.reloadData()
+                self.hud.dismiss()
             }
         }
     }
     
     func requestGenre() {
-        let url = endPoint.tmdbGenreURL + "api_key=" + APIKey.TMDB + "&language=ko-KR"
-        AF.request(url, method: .get).validate().responseData { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                //print("JSON: \(json)")
-                
-                for i in json["genres"].arrayValue {
-                    let genreId = i["id"].intValue
-                    let genre = i["name"].stringValue
-                    self.genreDictionary.updateValue(genre, forKey: genreId)
-                }
-                self.collectionView.reloadData()
-                
-            case .failure(let error):
-                print(error)
-            }
+        TMDBAPIManager.shared.requestGenreData { genreDictionary in
+            self.genreDictionary = genreDictionary
+            //print("장르 업뎃")
         }
     }
 }
@@ -104,11 +81,10 @@ extension TMDBViewController: UIScrollViewDelegate {
         let collectionViewContentSize = collectionView.contentSize.height
         let pagination_y = collectionViewContentSize * 0.5
         
-        if contentOffset_y > pagination_y {
-            movieNumber += 5
+        if contentOffset_y > pagination_y && movieNumber < lastMovieNumber {
             requestContents()
             collectionView.reloadData()
-            print("moveiNumber\(movieNumber)")
+            //print("=======moveiNumber\(movieNumber)=======")
         }
     }
 }
@@ -118,14 +94,18 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: StoryboardName.main, bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: CastViewController.reuseIdentifier) as? CastViewController else { return }
-        
+
         vc.movieData = movieList[indexPath.row]
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        movieList.count
+        if movieNumber < lastMovieNumber {
+            return movieList.count
+        } else {
+            return lastMovieNumber
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

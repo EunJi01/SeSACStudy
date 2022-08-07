@@ -33,3 +33,9 @@ struct StoryboardName {
 struct CustomColor {
     static let apricot = UIColor(named: "Apricot")
 }
+
+struct UserDefaultsKey {
+    enum Key: String {
+        case genreDictionary
+    }
+}
