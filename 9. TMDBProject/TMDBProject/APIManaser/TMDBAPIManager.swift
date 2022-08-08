@@ -18,9 +18,9 @@ class TMDBAPIManager {
     
     typealias completionHadndler = ([MovieValue]) -> Void
     
-    func requestContentsData(movieNumber: Int, movieList: [MovieValue], completionHandler: @escaping completionHadndler) {
+    func requestContentsData(movieNumber: Int, movieList: [MovieValue], page: Int, completionHandler: @escaping completionHadndler) {
         
-        let url = endPoint.tmdbURL + "api_key=" + APIKey.TMDB
+        let url = endPoint.tmdbURL + "api_key=" + APIKey.TMDB + "&page=\(page)"
         var newMovieList: [MovieValue] = []
         
         AF.request(url, method: .get).validate().responseData { response in
@@ -29,8 +29,7 @@ class TMDBAPIManager {
                 let json = JSON(value)
                 //print("JSON: \(json)")
                 
-                for i in movieList.count ..< movieNumber {
-                    let j = json["results"][i]
+                for j in json["results"].arrayValue {
                     
                     let id = j["id"].intValue
                     let title = j["title"].stringValue

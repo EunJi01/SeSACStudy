@@ -20,7 +20,7 @@ class TMDBViewController: UIViewController {
     var movieList: [MovieValue] = []
     var genreDictionary: [Int: String] = [:]
     var movieNumber = 0
-    let lastMovieNumber = 20
+    var page = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,12 +50,12 @@ class TMDBViewController: UIViewController {
     func requestContents() {
         hud.show(in: self.view)
         
-        guard movieNumber != lastMovieNumber else { return }
-        self.movieNumber += 5
+        self.movieNumber += 20
+        self.page += 1
+        print("current Page: \(self.page)")
         
-        TMDBAPIManager.shared.requestContentsData(movieNumber: movieNumber, movieList: movieList) { newMovieList in
+        TMDBAPIManager.shared.requestContentsData(movieNumber: movieNumber, movieList: movieList, page: self.page) { newMovieList in
             self.movieList.append(contentsOf: newMovieList)
-            //print("무비리스트 업뎃")
             
             DispatchQueue.main.async {
                 //print("리로드")
@@ -81,10 +81,8 @@ extension TMDBViewController: UIScrollViewDelegate {
         let collectionViewContentSize = collectionView.contentSize.height
         let pagination_y = collectionViewContentSize * 0.5
         
-        if contentOffset_y > pagination_y && movieNumber < lastMovieNumber {
+        if contentOffset_y > pagination_y {
             requestContents()
-            collectionView.reloadData()
-            //print("=======moveiNumber\(movieNumber)=======")
         }
     }
 }
@@ -94,18 +92,14 @@ extension TMDBViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: StoryboardName.main, bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: CastViewController.reuseIdentifier) as? CastViewController else { return }
-
+        
         vc.movieData = movieList[indexPath.row]
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if movieNumber < lastMovieNumber {
-            return movieList.count
-        } else {
-            return lastMovieNumber
-        }
+        return movieList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
