@@ -29,7 +29,7 @@
 | **23회** | 9. TMDBProject | [📄](https://eun-dev.tistory.com/28) |  | **2022.08.03** |
 | **24회** |  | [📄](https://eun-dev.tistory.com/29) |  | **2022.08.04** |
 | **25회** |  | [📄](https://eun-dev.tistory.com/30) | [📄](https://eun-dev.tistory.com/31) | **2022.08.05** |
-| **26회** |  | [📄](https://eun-dev.tistory.com/32) |  | **2022.08.08** |
+| **26회** | 10. SeSACWeek6 | [📄](https://eun-dev.tistory.com/32) |  | **2022.08.08** |
 | **27회** |  | [📄](https://eun-dev.tistory.com/33) |  | **2022.08.09** |
 | **28회** |  | [📄](https://eun-dev.tistory.com/34) |  | **2022.08.10** |
 | **29회** |  | [📄](https://eun-dev.tistory.com/35) |  | **2022.08.11** |
