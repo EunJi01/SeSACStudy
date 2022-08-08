@@ -17,9 +17,13 @@ class CastViewController: UIViewController {
     @IBOutlet weak var backdropPosterImageView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var overView: UIView!
+    @IBOutlet weak var overViewLabel: UILabel!
+    @IBOutlet weak var overViewExpandButton: UIButton!
     
     var movieData: MovieValue?
     var castList: [CastValue] = []
+    var isExpanded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +35,21 @@ class CastViewController: UIViewController {
         designView()
         
         self.navigationController?.navigationBar.topItem?.backButtonTitle = "MY MEDIA"
+    }
+    
+    @IBAction func expandButtonTapped(_ sender: UIButton) {
+        isExpanded = !isExpanded
+
+        if isExpanded == true {
+            overView.frame.size.height = 270
+            overViewLabel.numberOfLines = 0
+            overViewExpandButton.setImage(UIImage(systemName: "chevron.up"), for: .normal)
+            
+        } else {
+            overView.frame.size.height = 200
+            overViewExpandButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+            overViewLabel.numberOfLines = 2
+        }
     }
     
     func requestCredits() {
@@ -67,8 +86,15 @@ class CastViewController: UIViewController {
         backdropPosterImageView.kf.setImage(with: backdropImageURL)
         
         movieTitleLabel.text = movieData.title
+        overViewLabel.text = movieData.overview
+        
+        overViewExpandButton.setTitle("", for: .normal)
+        overViewExpandButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+        overViewExpandButton.tintColor = .darkGray
         
         view.backgroundColor = CustomColor.apricot
+        tableView.backgroundColor = CustomColor.apricot
+        overView.backgroundColor = CustomColor.apricot
     }
 }
 
