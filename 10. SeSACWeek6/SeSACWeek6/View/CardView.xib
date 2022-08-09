@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="SeSACWeek6" customModuleProvider="target">
+            <connections>
+                <outlet property="contentLabel" destination="pRM-Z4-PoF" id="ygS-CK-bhc"/>
+                <outlet property="likeButton" destination="fIm-e9-Amg" id="bSG-wd-9fZ"/>
+                <outlet property="posterImageView" destination="qfZ-Cr-zkI" id="HSp-Ws-Rg0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="265" height="295"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qfZ-Cr-zkI">
+                    <rect key="frame" x="8" y="8" width="249" height="279"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIm-e9-Amg">
+                    <rect key="frame" x="209" y="8" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="fVU-Kh-fHT"/>
+                        <constraint firstAttribute="width" constant="48" id="p2p-FF-WMT"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="28"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRM-Z4-PoF">
+                    <rect key="frame" x="111.5" y="137" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fIm-e9-Amg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="0Tt-eF-LW8"/>
+                <constraint firstItem="qfZ-Cr-zkI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="3zF-Al-XGg"/>
+                <constraint firstAttribute="bottom" secondItem="qfZ-Cr-zkI" secondAttribute="bottom" constant="8" id="8CR-oJ-omS"/>
+                <constraint firstItem="pRM-Z4-PoF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QQg-cA-ypH"/>
+                <constraint firstItem="pRM-Z4-PoF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Yku-ki-C0c"/>
+                <constraint firstAttribute="trailing" secondItem="qfZ-Cr-zkI" secondAttribute="trailing" constant="8" id="eKl-5G-q99"/>
+                <constraint firstAttribute="trailing" secondItem="fIm-e9-Amg" secondAttribute="trailing" constant="8" id="rac-9f-gyD"/>
+                <constraint firstItem="qfZ-Cr-zkI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="tUi-oG-9W4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="170.28985507246378" y="133.92857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

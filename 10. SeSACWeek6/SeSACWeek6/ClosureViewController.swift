@@ -9,8 +9,18 @@ import UIKit
 
 class ClosureViewController: UIViewController {
     
+    @IBOutlet weak var cardView: CardView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cardView.posterImageView.backgroundColor = .red
+        cardView.likeButton.backgroundColor = .yellow
+        cardView.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func likeButtonTapped() {
+        print("버튼 클릭")
     }
     
     @IBAction func colorPickerButtonTapped(_ sender: UIButton) {
