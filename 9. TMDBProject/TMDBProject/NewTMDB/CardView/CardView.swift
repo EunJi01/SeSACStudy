@@ -10,7 +10,6 @@ import UIKit
 class CardView: UIView {
 
     @IBOutlet weak var posterImageView: UIImageView!
-    @IBOutlet weak var testLabel: UILabel!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

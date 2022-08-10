@@ -16,6 +16,16 @@ class TMDBAPIManager {
     
     private init() {}
     
+    let movieList = [
+        ("An Egg Rescue", 573164),
+        ("Elvis", 614934),
+        ("Ishq Vishk", 41901),
+        ("Jurassic World Dominion", 507086),
+        ("The Gray Man", 725201),
+        ("The Black Phone", 756999),
+        ("Quicksand", 871693)
+    ]
+    
     typealias completionHadndler = ([MovieValue]) -> Void
     
     func requestContentsData(movieNumber: Int, movieList: [MovieValue], page: Int, completionHandler: @escaping completionHadndler) {
@@ -73,6 +83,57 @@ class TMDBAPIManager {
                 
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    func requestRecommendations(movieId: Int, completionHandler: @escaping ([String]) -> () ) {
+        let url = endPoint.tmdbrecommendations + "\(movieId)/recommendations?api_key=" + APIKey.TMDB + "&language=ko-KR"
+        AF.request(url, method: .get).validate().responseData { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                //print("JSON: \(json)")
+                
+                let value = json["results"].arrayValue.map { $0["poster_path"].stringValue }
+                completionHandler(value)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func requestImage(completionHandler: @escaping ([[String]]) -> () ) {
+        
+        var posterList: [[String]] = []
+        
+        TMDBAPIManager.shared.requestRecommendations(movieId: movieList[0].1) { value in
+            posterList.append(value)
+            
+            TMDBAPIManager.shared.requestRecommendations(movieId: self.movieList[1].1) { value in
+                posterList.append(value)
+                
+                TMDBAPIManager.shared.requestRecommendations(movieId: self.movieList[2].1) { value in
+                    posterList.append(value)
+                    
+                    TMDBAPIManager.shared.requestRecommendations(movieId: self.movieList[3].1) { value in
+                        posterList.append(value)
+                        
+                        TMDBAPIManager.shared.requestRecommendations(movieId: self.movieList[4].1) { value in
+                            posterList.append(value)
+                            
+                            TMDBAPIManager.shared.requestRecommendations(movieId: self.movieList[5].1) { value in
+                                posterList.append(value)
+                                
+                                TMDBAPIManager.shared.requestRecommendations(movieId: self.movieList[6].1) { value in
+                                    posterList.append(value)
+                                    completionHandler(posterList)
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

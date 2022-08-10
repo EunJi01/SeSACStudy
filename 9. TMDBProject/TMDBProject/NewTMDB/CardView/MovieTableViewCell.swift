@@ -21,9 +21,8 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     func setupUI() {
-        titleLabel.font = .boldSystemFont(ofSize: 20)
-        titleLabel.text = "인기 시리즈"
-        titleLabel.textColor = .white
+        titleLabel.font = .boldSystemFont(ofSize: 17)
+        titleLabel.textColor = .lightGray
         
         movieCollectionView.backgroundColor = .clear
         movieCollectionView.collectionViewLayout = collectionViewLayout()
@@ -34,7 +33,7 @@ class MovieTableViewCell: UITableViewCell {
         
         layout.itemSize = CGSize(width: 100, height: 141)
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 4
+        layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
         return layout
