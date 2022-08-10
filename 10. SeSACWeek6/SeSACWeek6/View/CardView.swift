@@ -36,7 +36,12 @@ class CardView: UIView {
         
         let view = UINib(nibName: "CardView", bundle: nil).instantiate(withOwner: self).first as! UIView
         view.frame = bounds
+        //view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .lightGray
         self.addSubview(view)
+        
+        // 카드뷰를 인퍼테이스 빌더 기반으로 만들고, 레이아웃도 설정했는데 false가 아닌 true로 나온다
+        // self.addSubview 를 통해 코드 기반으로 뷰를 추가했기 때문
+        print(view.translatesAutoresizingMaskIntoConstraints)
     }
 }

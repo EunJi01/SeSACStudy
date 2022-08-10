@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B644DE8328A1FE4D007010EC /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644DE8228A1FE4D007010EC /* MainTableViewCell.swift */; };
+		B644DE9428A3307E007010EC /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644DE9328A3307E007010EC /* ReusableViewProtocol.swift */; };
+		B644DE9628A343E3007010EC /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644DE9528A343E3007010EC /* TMDBAPIManager.swift */; };
 		B692710728A08FE300ACA4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710628A08FE300ACA4D3 /* AppDelegate.swift */; };
 		B692710928A08FE300ACA4D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710828A08FE300ACA4D3 /* SceneDelegate.swift */; };
 		B692710B28A08FE300ACA4D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710A28A08FE300ACA4D3 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		B644DE8228A1FE4D007010EC /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		B644DE9328A3307E007010EC /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		B644DE9528A343E3007010EC /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		B692710328A08FE300ACA4D3 /* SeSACWeek6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B692710628A08FE300ACA4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B692710828A08FE300ACA4D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B644DE9228A33067007010EC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B644DE9328A3307E007010EC /* ReusableViewProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		B69270FA28A08FE300ACA4D3 = {
 			isa = PBXGroup;
 			children = (
@@ -88,10 +100,11 @@
 			children = (
 				B692710628A08FE300ACA4D3 /* AppDelegate.swift */,
 				B692710828A08FE300ACA4D3 /* SceneDelegate.swift */,
-				B692712C28A0ABEC00ACA4D3 /* ClosureViewController.swift */,
 				B692710A28A08FE300ACA4D3 /* ViewController.swift */,
-				B692712E28A1DFE400ACA4D3 /* View */,
+				B692712C28A0ABEC00ACA4D3 /* ClosureViewController.swift */,
+				B644DE9228A33067007010EC /* Protocol */,
 				B692712528A0948100ACA4D3 /* Network */,
+				B692712E28A1DFE400ACA4D3 /* View */,
 				B692710C28A08FE300ACA4D3 /* Main.storyboard */,
 				B692713928A1F64D00ACA4D3 /* MainViewController.swift */,
 				B692710F28A08FE400ACA4D3 /* Assets.xcassets */,
@@ -108,6 +121,7 @@
 				B692712828A0951400ACA4D3 /* URL + Extension.swift */,
 				B692712628A094A200ACA4D3 /* Endpoint.swift */,
 				B692712A28A0A78400ACA4D3 /* KakaoAPIManager.swift */,
+				B644DE9528A343E3007010EC /* TMDBAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -219,7 +233,9 @@
 				B692713028A1E05700ACA4D3 /* SeSACButton.swift in Sources */,
 				B644DE8328A1FE4D007010EC /* MainTableViewCell.swift in Sources */,
 				B692712728A094A200ACA4D3 /* Endpoint.swift in Sources */,
+				B644DE9428A3307E007010EC /* ReusableViewProtocol.swift in Sources */,
 				B692712928A0951400ACA4D3 /* URL + Extension.swift in Sources */,
+				B644DE9628A343E3007010EC /* TMDBAPIManager.swift in Sources */,
 				B692712B28A0A78400ACA4D3 /* KakaoAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
