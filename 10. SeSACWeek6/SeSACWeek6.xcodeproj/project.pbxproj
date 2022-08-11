@@ -30,6 +30,7 @@
 		B692713728A1F36C00ACA4D3 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692713528A1F36C00ACA4D3 /* CardCollectionViewCell.swift */; };
 		B692713828A1F36C00ACA4D3 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B692713628A1F36C00ACA4D3 /* CardCollectionViewCell.xib */; };
 		B692713A28A1F64D00ACA4D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692713928A1F64D00ACA4D3 /* MainViewController.swift */; };
+		B6C2888D28A4939D00CCCEF9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2888C28A4939D00CCCEF9 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		B692713528A1F36C00ACA4D3 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		B692713628A1F36C00ACA4D3 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		B692713928A1F64D00ACA4D3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B6C2888C28A4939D00CCCEF9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B692712528A0948100ACA4D3 /* Network */,
 				B692712E28A1DFE400ACA4D3 /* View */,
 				B692710C28A08FE300ACA4D3 /* Main.storyboard */,
+				B6C2888C28A4939D00CCCEF9 /* MapViewController.swift */,
 				B692713928A1F64D00ACA4D3 /* MainViewController.swift */,
 				B692710F28A08FE400ACA4D3 /* Assets.xcassets */,
 				B692711128A08FE400ACA4D3 /* LaunchScreen.storyboard */,
@@ -237,6 +240,7 @@
 				B692712928A0951400ACA4D3 /* URL + Extension.swift in Sources */,
 				B644DE9628A343E3007010EC /* TMDBAPIManager.swift in Sources */,
 				B692712B28A0A78400ACA4D3 /* KakaoAPIManager.swift in Sources */,
+				B6C2888D28A4939D00CCCEF9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
