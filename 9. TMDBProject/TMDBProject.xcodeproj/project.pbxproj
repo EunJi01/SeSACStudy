@@ -33,6 +33,9 @@
 		B691B542289E68040064F987 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B691B541289E68040064F987 /* JGProgressHUD */; };
 		B69DA380289A8BC80076843E /* ContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DA37E289A8BC80076843E /* ContentsCollectionViewCell.swift */; };
 		B69DA381289A8BC80076843E /* ContentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69DA37F289A8BC80076843E /* ContentsCollectionViewCell.xib */; };
+		B6C2888F28A4F55500CCCEF9 /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2888E28A4F55500CCCEF9 /* TheaterMapViewController.swift */; };
+		B6C2889228A5033500CCCEF9 /* Theater Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2889128A5033500CCCEF9 /* Theater Model.swift */; };
+		B6C2889428A5213F00CCCEF9 /* Theater Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2889328A5213F00CCCEF9 /* Theater Annotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		B691B53E289E66460064F987 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		B69DA37E289A8BC80076843E /* ContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		B69DA37F289A8BC80076843E /* ContentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentsCollectionViewCell.xib; sourceTree = "<group>"; };
+		B6C2888E28A4F55500CCCEF9 /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
+		B6C2889128A5033500CCCEF9 /* Theater Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theater Model.swift"; sourceTree = "<group>"; };
+		B6C2889328A5213F00CCCEF9 /* Theater Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theater Annotation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 				B60A1781289BAF1B0084A658 /* CastList */,
 				B691B53D289D437B0064F987 /* WebView */,
 				B644DE8428A245B0007010EC /* NewTMDB */,
+				B6C2889028A4F56700CCCEF9 /* TheaterMap */,
 				B64391582899F6D70071463C /* Assets.xcassets */,
 				B643915A2899F6D70071463C /* LaunchScreen.storyboard */,
 				B643915D2899F6D70071463C /* Info.plist */,
@@ -193,6 +200,16 @@
 				B691B53E289E66460064F987 /* TMDBAPIManager.swift */,
 			);
 			path = APIManaser;
+			sourceTree = "<group>";
+		};
+		B6C2889028A4F56700CCCEF9 /* TheaterMap */ = {
+			isa = PBXGroup;
+			children = (
+				B6C2888E28A4F55500CCCEF9 /* TheaterMapViewController.swift */,
+				B6C2889128A5033500CCCEF9 /* Theater Model.swift */,
+				B6C2889328A5213F00CCCEF9 /* Theater Annotation.swift */,
+			);
+			path = TheaterMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,14 +305,17 @@
 				B69DA380289A8BC80076843E /* ContentsCollectionViewCell.swift in Sources */,
 				B644DE8F28A24B37007010EC /* MovieTableViewCell.swift in Sources */,
 				B60A1783289BAF530084A658 /* CastViewController.swift in Sources */,
+				B6C2889428A5213F00CCCEF9 /* Theater Annotation.swift in Sources */,
 				B60A1787289BAF950084A658 /* CastTableViewCell.swift in Sources */,
 				B64391662899F9430071463C /* APIKey.swift in Sources */,
 				B6743645289A650700F7BC03 /* Struct.swift in Sources */,
 				B60A1789289BB77F0084A658 /* ReusableViewProtocol.swift in Sources */,
 				B644DE8828A2462A007010EC /* NewTMDBViewController.swift in Sources */,
 				B691B53F289E66460064F987 /* TMDBAPIManager.swift in Sources */,
+				B6C2888F28A4F55500CCCEF9 /* TheaterMapViewController.swift in Sources */,
 				B691B53C289D43670064F987 /* WebViewController.swift in Sources */,
 				B64391522899F6D60071463C /* SceneDelegate.swift in Sources */,
+				B6C2889228A5033500CCCEF9 /* Theater Model.swift in Sources */,
 				B644DE9128A24B4E007010EC /* MovieCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
