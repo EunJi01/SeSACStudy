@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+
 // Location1. import
 import CoreLocation
 
@@ -139,10 +140,11 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(#function, locations)
         
-        // ex. 위도 경도 기반으로 날씨 정보르 조회
+        // ex. 위도 경도 기반으로 날씨 정보를 조회
         // ex. 지도를 다시 셋팅
-        if let coordinage = locations.last?.coordinate {
-            setRegionAndAnnotation(center: coordinage)
+        if let coordinate = locations.last?.coordinate {
+            setRegionAndAnnotation(center: coordinate)
+            // 날씨 API 요청
         }
 
         // 위치 업데이트 멈춰! 너무 자주 업데이트 하지 않아도 돼!
@@ -176,7 +178,7 @@ extension MapViewController: MKMapViewDelegate {
 //        <#code#>
 //    }
     
-    // 위치가 변경됐을 때 다시 띄우기
+    // 위치가 변경됐을 때 다시 띄우기 (갱신)
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         locationManager.startUpdatingLocation()
     }

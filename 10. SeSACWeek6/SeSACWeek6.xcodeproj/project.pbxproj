@@ -10,6 +10,8 @@
 		B644DE8328A1FE4D007010EC /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644DE8228A1FE4D007010EC /* MainTableViewCell.swift */; };
 		B644DE9428A3307E007010EC /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644DE9328A3307E007010EC /* ReusableViewProtocol.swift */; };
 		B644DE9628A343E3007010EC /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644DE9528A343E3007010EC /* TMDBAPIManager.swift */; };
+		B648B7E428A5D80E00786281 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B648B7E328A5D80E00786281 /* YPImagePicker */; };
+		B648B7E628A5DD1300786281 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B7E528A5DD1300786281 /* CameraViewController.swift */; };
 		B692710728A08FE300ACA4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710628A08FE300ACA4D3 /* AppDelegate.swift */; };
 		B692710928A08FE300ACA4D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710828A08FE300ACA4D3 /* SceneDelegate.swift */; };
 		B692710B28A08FE300ACA4D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710A28A08FE300ACA4D3 /* ViewController.swift */; };
@@ -31,12 +33,14 @@
 		B692713828A1F36C00ACA4D3 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B692713628A1F36C00ACA4D3 /* CardCollectionViewCell.xib */; };
 		B692713A28A1F64D00ACA4D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692713928A1F64D00ACA4D3 /* MainViewController.swift */; };
 		B6C2888D28A4939D00CCCEF9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2888C28A4939D00CCCEF9 /* MapViewController.swift */; };
+		B6C2889728A5D6D300CCCEF9 /* TLPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = B6C2889628A5D6D300CCCEF9 /* TLPhotoPicker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B644DE8228A1FE4D007010EC /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		B644DE9328A3307E007010EC /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		B644DE9528A343E3007010EC /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
+		B648B7E528A5DD1300786281 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B692710328A08FE300ACA4D3 /* SeSACWeek6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B692710628A08FE300ACA4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B692710828A08FE300ACA4D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B692712228A0909100ACA4D3 /* SwiftyJSON in Frameworks */,
+				B648B7E428A5D80E00786281 /* YPImagePicker in Frameworks */,
+				B6C2889728A5D6D300CCCEF9 /* TLPhotoPicker in Frameworks */,
 				B692711F28A0908800ACA4D3 /* Kingfisher in Frameworks */,
 				B692711C28A0907100ACA4D3 /* Alamofire in Frameworks */,
 			);
@@ -100,20 +106,21 @@
 		B692710528A08FE300ACA4D3 /* SeSACWeek6 */ = {
 			isa = PBXGroup;
 			children = (
+				B692712328A0913300ACA4D3 /* APIKey.swift */,
 				B692710628A08FE300ACA4D3 /* AppDelegate.swift */,
 				B692710828A08FE300ACA4D3 /* SceneDelegate.swift */,
 				B692710A28A08FE300ACA4D3 /* ViewController.swift */,
 				B692712C28A0ABEC00ACA4D3 /* ClosureViewController.swift */,
+				B6C2888C28A4939D00CCCEF9 /* MapViewController.swift */,
+				B692713928A1F64D00ACA4D3 /* MainViewController.swift */,
 				B644DE9228A33067007010EC /* Protocol */,
 				B692712528A0948100ACA4D3 /* Network */,
 				B692712E28A1DFE400ACA4D3 /* View */,
 				B692710C28A08FE300ACA4D3 /* Main.storyboard */,
-				B6C2888C28A4939D00CCCEF9 /* MapViewController.swift */,
-				B692713928A1F64D00ACA4D3 /* MainViewController.swift */,
+				B648B7E528A5DD1300786281 /* CameraViewController.swift */,
 				B692710F28A08FE400ACA4D3 /* Assets.xcassets */,
 				B692711128A08FE400ACA4D3 /* LaunchScreen.storyboard */,
 				B692711428A08FE400ACA4D3 /* Info.plist */,
-				B692712328A0913300ACA4D3 /* APIKey.swift */,
 			);
 			path = SeSACWeek6;
 			sourceTree = "<group>";
@@ -162,6 +169,8 @@
 				B692711B28A0907100ACA4D3 /* Alamofire */,
 				B692711E28A0908800ACA4D3 /* Kingfisher */,
 				B692712128A0909100ACA4D3 /* SwiftyJSON */,
+				B6C2889628A5D6D300CCCEF9 /* TLPhotoPicker */,
+				B648B7E328A5D80E00786281 /* YPImagePicker */,
 			);
 			productName = SeSACWeek6;
 			productReference = B692710328A08FE300ACA4D3 /* SeSACWeek6.app */;
@@ -195,6 +204,8 @@
 				B692711A28A0907100ACA4D3 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B692711D28A0908800ACA4D3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B692712028A0909100ACA4D3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				B6C2889528A5D6D300CCCEF9 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */,
+				B648B7E228A5D80E00786281 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = B692710428A08FE300ACA4D3 /* Products */;
 			projectDirPath = "";
@@ -228,6 +239,7 @@
 				B692710B28A08FE300ACA4D3 /* ViewController.swift in Sources */,
 				B692710728A08FE300ACA4D3 /* AppDelegate.swift in Sources */,
 				B692712D28A0ABEC00ACA4D3 /* ClosureViewController.swift in Sources */,
+				B648B7E628A5DD1300786281 /* CameraViewController.swift in Sources */,
 				B692713A28A1F64D00ACA4D3 /* MainViewController.swift in Sources */,
 				B692713728A1F36C00ACA4D3 /* CardCollectionViewCell.swift in Sources */,
 				B692712428A0913300ACA4D3 /* APIKey.swift in Sources */,
@@ -460,6 +472,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B648B7E228A5D80E00786281 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		B692711A28A0907100ACA4D3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -484,9 +504,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		B6C2889528A5D6D300CCCEF9 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tilltue/TLPhotoPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B648B7E328A5D80E00786281 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B648B7E228A5D80E00786281 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
+		};
 		B692711B28A0907100ACA4D3 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B692711A28A0907100ACA4D3 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -501,6 +534,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B692712028A0909100ACA4D3 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		B6C2889628A5D6D300CCCEF9 /* TLPhotoPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6C2889528A5D6D300CCCEF9 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */;
+			productName = TLPhotoPicker;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
