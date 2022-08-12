@@ -11,6 +11,7 @@ class ClosureViewController: UIViewController {
     
     @IBOutlet weak var cardView: CardView!
     @IBOutlet weak var greenButton: UIButton!
+    @IBOutlet weak var configurationTestButton: UIButton!
     
     // Frame Based
     var sampleButton = UIButton()
@@ -38,6 +39,8 @@ class ClosureViewController: UIViewController {
         cardView.posterImageView.backgroundColor = .red
         cardView.likeButton.backgroundColor = .yellow
         cardView.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+        
+        buttonConfiguration()
     }
     
     @objc func likeButtonTapped() {
@@ -54,6 +57,25 @@ class ClosureViewController: UIViewController {
     @IBAction func backgroundColorChanged(_ sender: UIButton) {
         showAlert(title: "배경색 변경", message: "배경색을 바꾸시겠습니까?", okTitle: "바꾸기") {
             self.view.backgroundColor = .gray
+        }
+    }
+    
+    func buttonConfiguration() {
+        var config = UIButton.Configuration.filled()
+        config.baseBackgroundColor = .lightGray
+        config.baseForegroundColor = .systemIndigo
+        config.title = "테스트 버튼 타이틀"
+        config.subtitle = "서브 타이틀~~서브 타이틀~~서브 타이틀~~서브 타이틀~~"
+        config.image = UIImage(systemName: "star.fill")
+        config.cornerStyle = .capsule
+        config.imagePadding = CGFloat(24)
+        
+        configurationTestButton.configuration = config
+        
+        configurationTestButton.configurationUpdateHandler = { button in
+            if button.isHighlighted {
+                button.backgroundColor = .red
+            }
         }
     }
 }

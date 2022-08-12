@@ -14,6 +14,8 @@ import YPImagePicker
 class CameraViewController: UIViewController {
 
     @IBOutlet weak var resultImageView: UIImageView!
+    @IBOutlet weak var resultNameLabel: UILabel!
+    @IBOutlet weak var resultConfidenceLabel: UILabel!
     
     // UIImagePickerController 1.
     let picker = UIImagePickerController()
@@ -23,6 +25,9 @@ class CameraViewController: UIViewController {
         
         // UIImagePickerController 2.
         picker.delegate = self
+        
+        resultNameLabel.text = ""
+        resultConfidenceLabel.text = ""
     }
     
     // OpenSource
@@ -51,7 +56,7 @@ class CameraViewController: UIViewController {
             return
         }
         picker.sourceType = .camera
-        picker.allowsEditing = true
+        picker.allowsEditing = true // 편집 화면 띄우기
         present(picker, animated: true)
     }
     
@@ -62,7 +67,7 @@ class CameraViewController: UIViewController {
             return
         }
         picker.sourceType = .photoLibrary
-        picker.allowsEditing = false // 편집 화면
+        picker.allowsEditing = false
         present(picker, animated: true)
     }
     
@@ -76,29 +81,10 @@ class CameraViewController: UIViewController {
     // 문자열이 아닌 파일, 이미지, PDF 파일 자체가 그대로 전송 되지 않음 => 텍스트 형태로 인코딩
     // 어떤 파일의 종류가 서버에게 전달이 되는지 명시해야 함 = Content-Type
     @IBAction func clovaFaceButtonTapped(_ sender: UIButton) {
-        let url = "https://openapi.naver.com/v1/vision/celebrity"
-        let header: HTTPHeaders = [
-            "X-Naver-Client-Id": APIKey.NAVER_ID,
-            "X-Naver-Client-Secret": APIKey.NAVER_SECRET,
-            //"Content-Type": "multipart/form-data" 라이브러리에 내장되어 있기 때문에 안해도 됨
-        ]
-        
-        // UIImage를 텍스트 형태 (바이너리 타입) 로 변환해서 전달
-        guard let imageData = resultImageView.image?.pngData() else { return }
-        
-        AF.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(imageData, withName: "image")
-        }, to: url, headers: header)
-            .validate().responseData { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-                
-                //completionHandler(json) 과제
-            case .failure(let error):
-                print(error)
-            }
+        ClovaAPIManager.shared.clovaImageUpload(image: resultImageView.image) { json in
+            
+            self.resultNameLabel.text = json["value"].stringValue
+            self.resultConfidenceLabel.text = "정확도 : \(json["confidence"].doubleValue * 100)%"
         }
     }
 }

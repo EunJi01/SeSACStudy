@@ -12,6 +12,7 @@
 		B644DE9628A343E3007010EC /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644DE9528A343E3007010EC /* TMDBAPIManager.swift */; };
 		B648B7E428A5D80E00786281 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B648B7E328A5D80E00786281 /* YPImagePicker */; };
 		B648B7E628A5DD1300786281 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B7E528A5DD1300786281 /* CameraViewController.swift */; };
+		B648B7E828A6C41E00786281 /* ClovaAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B7E728A6C41E00786281 /* ClovaAPIManager.swift */; };
 		B692710728A08FE300ACA4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710628A08FE300ACA4D3 /* AppDelegate.swift */; };
 		B692710928A08FE300ACA4D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710828A08FE300ACA4D3 /* SceneDelegate.swift */; };
 		B692710B28A08FE300ACA4D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710A28A08FE300ACA4D3 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		B644DE9328A3307E007010EC /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		B644DE9528A343E3007010EC /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		B648B7E528A5DD1300786281 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B648B7E728A6C41E00786281 /* ClovaAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClovaAPIManager.swift; sourceTree = "<group>"; };
 		B692710328A08FE300ACA4D3 /* SeSACWeek6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B692710628A08FE300ACA4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B692710828A08FE300ACA4D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				B692712628A094A200ACA4D3 /* Endpoint.swift */,
 				B692712A28A0A78400ACA4D3 /* KakaoAPIManager.swift */,
 				B644DE9528A343E3007010EC /* TMDBAPIManager.swift */,
+				B648B7E728A6C41E00786281 /* ClovaAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				B692713428A1E64900ACA4D3 /* CardView.swift in Sources */,
 				B692710928A08FE300ACA4D3 /* SceneDelegate.swift in Sources */,
 				B692713028A1E05700ACA4D3 /* SeSACButton.swift in Sources */,
+				B648B7E828A6C41E00786281 /* ClovaAPIManager.swift in Sources */,
 				B644DE8328A1FE4D007010EC /* MainTableViewCell.swift in Sources */,
 				B692712728A094A200ACA4D3 /* Endpoint.swift in Sources */,
 				B644DE9428A3307E007010EC /* ReusableViewProtocol.swift in Sources */,
