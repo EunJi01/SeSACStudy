@@ -18,7 +18,7 @@ class KakaoAPIManager {
     
     let header: HTTPHeaders = ["Authorization": "KakaoAK \(APIKey.kakao)"]
     
-    func callRequest(type: Endpoint, query: String, completionHandler: @escaping (JSON) -> () ) {
+    func callRequest(type: KakaoEndpoint, query: String, completionHandler: @escaping (JSON) -> () ) {
         print(#function)
         guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
         let url = type.requestURL + query

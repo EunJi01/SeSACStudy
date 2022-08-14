@@ -7,8 +7,16 @@
 
 import Foundation
 
+struct EndPoint {
+    private init() {}
+    
+    static let clova = "https://openapi.naver.com/v1/vision/celebrity"
+    static let openWeatherMap = "https://api.openweathermap.org/data/2.5/weather?"
+    static let weatherImage = "https://openweathermap.org/img/wn/"
+}
+
 // enum에서 저장 프로퍼티는 못 쓰고 연산 프로퍼티는 쓸 수 있는 이유?
-enum Endpoint {
+enum KakaoEndpoint {
     case blog
     case cafe
     

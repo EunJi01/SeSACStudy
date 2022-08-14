@@ -7,9 +7,10 @@
 
 import UIKit
 import MapKit
-
 // Location1. import
 import CoreLocation
+
+import Kingfisher
 
 /*
  MapView
@@ -26,9 +27,18 @@ import CoreLocation
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var windLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var reloadButton: UIButton!
     
     // Location2. 위치에 대한 대부분을 담당 (말 그대로 매니저)
     let locationManager = CLLocationManager()
+    
+    let campus = CLLocationCoordinate2D(latitude: 37.517829, longitude: 126.886270)
+    let currentAnnotation = MKPointAnnotation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,14 +49,11 @@ class MapViewController: UIViewController {
         //checkUserDeviceLocationServiceAuthorization() 제거 가능한 이유 명확히 알기!
 
         // 지도 중심 설정 : 애플맵 활용해 좌표 복사
-        let center = CLLocationCoordinate2D(latitude: 37.517829, longitude: 126.886270)
-        setRegionAndAnnotation(center: center)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+//        let center = CLLocationCoordinate2D(latitude: 37.517829, longitude: 126.886270)
+//        setRegionAndAnnotation(center: center)
         
-        showRequestLocationServiceAlert()
+        designUI()
+        setDate()
     }
     
     func setRegionAndAnnotation(center: CLLocationCoordinate2D) {
@@ -54,13 +61,33 @@ class MapViewController: UIViewController {
         // 지도 중심 기반으로 보여질 범위 설정
         let region = MKCoordinateRegion(center: center, latitudinalMeters: 100, longitudinalMeters: 100)
         mapView.setRegion(region, animated: true)
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = center
-        annotation.title = "이곳이 나의 캠퍼스다"
+
+        currentAnnotation.coordinate = center
+        currentAnnotation.title = "현재 위치"
         
         // 지도에 핀 추가
-        mapView.addAnnotation(annotation)
+        mapView.addAnnotation(currentAnnotation)
+    }
+    
+    @IBAction func reloadButtonTapped(_ sender: UIButton) {
+        checkUserDeviceLocationServiceAuthorization()
+    }
+    
+    func setDate() {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko")
+        formatter.dateFormat = "yyyy년 MM월 dd일 (E)"
+        let date = formatter.string(from: Date())
+        dateLabel.text = date
+    }
+    
+    func designUI() {
+        view.backgroundColor = .lightGray
+        tempLabel.customDesign()
+        windLabel.customDesign()
+        humidityLabel.customDesign()
+        weatherImageView.customDesign()
+        reloadButton.reloadDesign()
     }
 }
 
@@ -144,7 +171,16 @@ extension MapViewController: CLLocationManagerDelegate {
         // ex. 지도를 다시 셋팅
         if let coordinate = locations.last?.coordinate {
             setRegionAndAnnotation(center: coordinate)
-            // 날씨 API 요청
+            OpenWeatherMapAPIManager.shared.requestWeather(coordinate: coordinate) { json in
+                let imageURL = EndPoint.weatherImage + json["weather"][0]["icon"].stringValue + "@2x.png"
+                let url = URL(string: imageURL)
+                self.weatherImageView.kf.setImage(with: url)
+                
+                let temp = String(format: "%.1f", (json["main"]["temp"].doubleValue - 273.15))
+                self.tempLabel.text = "   온도는 \(temp)°C 입니다   "
+                self.windLabel.text = "   풍속은 \(json["wind"]["speed"].doubleValue)m/s 입니다   "
+                self.humidityLabel.text = "   습도는 \(json["main"]["humidity"].intValue)% 입니다   "
+            }
         }
 
         // 위치 업데이트 멈춰! 너무 자주 업데이트 하지 않아도 돼!

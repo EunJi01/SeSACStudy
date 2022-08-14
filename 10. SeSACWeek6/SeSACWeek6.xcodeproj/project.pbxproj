@@ -13,6 +13,8 @@
 		B648B7E428A5D80E00786281 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B648B7E328A5D80E00786281 /* YPImagePicker */; };
 		B648B7E628A5DD1300786281 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B7E528A5DD1300786281 /* CameraViewController.swift */; };
 		B648B7E828A6C41E00786281 /* ClovaAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B7E728A6C41E00786281 /* ClovaAPIManager.swift */; };
+		B648B7EA28A760BB00786281 /* OpenWeatherMapAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B7E928A760BB00786281 /* OpenWeatherMapAPIManager.swift */; };
+		B648B7EC28A79FA000786281 /* UI + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B7EB28A79FA000786281 /* UI + Extension.swift */; };
 		B692710728A08FE300ACA4D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710628A08FE300ACA4D3 /* AppDelegate.swift */; };
 		B692710928A08FE300ACA4D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710828A08FE300ACA4D3 /* SceneDelegate.swift */; };
 		B692710B28A08FE300ACA4D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692710A28A08FE300ACA4D3 /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 		B644DE9528A343E3007010EC /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		B648B7E528A5DD1300786281 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		B648B7E728A6C41E00786281 /* ClovaAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClovaAPIManager.swift; sourceTree = "<group>"; };
+		B648B7E928A760BB00786281 /* OpenWeatherMapAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapAPIManager.swift; sourceTree = "<group>"; };
+		B648B7EB28A79FA000786281 /* UI + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI + Extension.swift"; sourceTree = "<group>"; };
 		B692710328A08FE300ACA4D3 /* SeSACWeek6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B692710628A08FE300ACA4D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B692710828A08FE300ACA4D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,25 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		B648B7ED28A7BDB600786281 /* OtherViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B692710A28A08FE300ACA4D3 /* ViewController.swift */,
+				B648B7E528A5DD1300786281 /* CameraViewController.swift */,
+				B692712C28A0ABEC00ACA4D3 /* ClosureViewController.swift */,
+			);
+			path = OtherViewController;
+			sourceTree = "<group>";
+		};
+		B648B7EE28A7BDED00786281 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				B6C2888C28A4939D00CCCEF9 /* MapViewController.swift */,
+				B648B7EB28A79FA000786281 /* UI + Extension.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
 		B69270FA28A08FE300ACA4D3 = {
 			isa = PBXGroup;
 			children = (
@@ -111,15 +134,12 @@
 				B692712328A0913300ACA4D3 /* APIKey.swift */,
 				B692710628A08FE300ACA4D3 /* AppDelegate.swift */,
 				B692710828A08FE300ACA4D3 /* SceneDelegate.swift */,
-				B692710A28A08FE300ACA4D3 /* ViewController.swift */,
-				B692712C28A0ABEC00ACA4D3 /* ClosureViewController.swift */,
-				B6C2888C28A4939D00CCCEF9 /* MapViewController.swift */,
-				B692713928A1F64D00ACA4D3 /* MainViewController.swift */,
+				B692710C28A08FE300ACA4D3 /* Main.storyboard */,
+				B648B7ED28A7BDB600786281 /* OtherViewController */,
 				B644DE9228A33067007010EC /* Protocol */,
 				B692712528A0948100ACA4D3 /* Network */,
 				B692712E28A1DFE400ACA4D3 /* View */,
-				B692710C28A08FE300ACA4D3 /* Main.storyboard */,
-				B648B7E528A5DD1300786281 /* CameraViewController.swift */,
+				B648B7EE28A7BDED00786281 /* MapView */,
 				B692710F28A08FE400ACA4D3 /* Assets.xcassets */,
 				B692711128A08FE400ACA4D3 /* LaunchScreen.storyboard */,
 				B692711428A08FE400ACA4D3 /* Info.plist */,
@@ -135,6 +155,7 @@
 				B692712A28A0A78400ACA4D3 /* KakaoAPIManager.swift */,
 				B644DE9528A343E3007010EC /* TMDBAPIManager.swift */,
 				B648B7E728A6C41E00786281 /* ClovaAPIManager.swift */,
+				B648B7E928A760BB00786281 /* OpenWeatherMapAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -142,10 +163,11 @@
 		B692712E28A1DFE400ACA4D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B692712F28A1E05700ACA4D3 /* SeSACButton.swift */,
 				B692713128A1E5FC00ACA4D3 /* CardView.xib */,
-				B692713328A1E64900ACA4D3 /* CardView.swift */,
 				B692713628A1F36C00ACA4D3 /* CardCollectionViewCell.xib */,
+				B692713928A1F64D00ACA4D3 /* MainViewController.swift */,
+				B692713328A1E64900ACA4D3 /* CardView.swift */,
+				B692712F28A1E05700ACA4D3 /* SeSACButton.swift */,
 				B692713528A1F36C00ACA4D3 /* CardCollectionViewCell.swift */,
 				B644DE8228A1FE4D007010EC /* MainTableViewCell.swift */,
 			);
@@ -239,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B648B7EC28A79FA000786281 /* UI + Extension.swift in Sources */,
 				B692710B28A08FE300ACA4D3 /* ViewController.swift in Sources */,
 				B692710728A08FE300ACA4D3 /* AppDelegate.swift in Sources */,
 				B692712D28A0ABEC00ACA4D3 /* ClosureViewController.swift in Sources */,
@@ -247,6 +270,7 @@
 				B692713728A1F36C00ACA4D3 /* CardCollectionViewCell.swift in Sources */,
 				B692712428A0913300ACA4D3 /* APIKey.swift in Sources */,
 				B692713428A1E64900ACA4D3 /* CardView.swift in Sources */,
+				B648B7EA28A760BB00786281 /* OpenWeatherMapAPIManager.swift in Sources */,
 				B692710928A08FE300ACA4D3 /* SceneDelegate.swift in Sources */,
 				B692713028A1E05700ACA4D3 /* SeSACButton.swift in Sources */,
 				B648B7E828A6C41E00786281 /* ClovaAPIManager.swift in Sources */,

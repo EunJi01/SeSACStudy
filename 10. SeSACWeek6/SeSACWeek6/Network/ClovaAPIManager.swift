@@ -18,7 +18,7 @@ class ClovaAPIManager {
     private init() {}
     
     func clovaImageUpload(image: UIImage?, completionHandler: @escaping (JSON)-> () ) {
-        let url = "https://openapi.naver.com/v1/vision/celebrity"
+        let url = EndPoint.clova
         let header: HTTPHeaders = [
             "X-Naver-Client-Id": APIKey.NAVER_ID,
             "X-Naver-Client-Secret": APIKey.NAVER_SECRET,
