@@ -28,6 +28,7 @@ struct CastValue {
 struct StoryboardName {
     private init() {}
     static let main = "Main"
+    static let intro = "Intro"
 }
 
 struct CustomColor {
@@ -37,5 +38,6 @@ struct CustomColor {
 struct UserDefaultsKey {
     enum Key: String {
         case genreDictionary
+        case isMain
     }
 }
