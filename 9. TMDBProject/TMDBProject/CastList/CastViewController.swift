@@ -54,7 +54,7 @@ class CastViewController: UIViewController {
     
     func requestCredits() {
         
-        let url = "\(endPoint.tmdbCastURL)/\((movieData?.id)!)/credits?api_key=\(APIKey.TMDB)&language=ko-KR"
+        let url = "\(EndPoint.tmdbCastURL)/\((movieData?.id)!)/credits?api_key=\(APIKey.TMDB)&language=ko-KR"
         AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
             case .success(let value):
@@ -63,7 +63,7 @@ class CastViewController: UIViewController {
                 
                 for cast in json["cast"].arrayValue {
                     let name = cast["name"].stringValue
-                    let profileImage = endPoint.tmdbImageURL + cast["profile_path"].stringValue
+                    let profileImage = EndPoint.tmdbImageURL + cast["profile_path"].stringValue
                     let character = cast["character"].stringValue
                     
                     let data = CastValue(name: name, profileImage: profileImage, character: character)

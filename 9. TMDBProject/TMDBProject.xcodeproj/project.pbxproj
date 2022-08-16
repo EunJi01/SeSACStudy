@@ -23,6 +23,8 @@
 		B644DE8D28A2476C007010EC /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B644DE8C28A2476C007010EC /* CardView.xib */; };
 		B644DE8F28A24B37007010EC /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644DE8E28A24B37007010EC /* MovieTableViewCell.swift */; };
 		B644DE9128A24B4E007010EC /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644DE9028A24B4E007010EC /* MovieCollectionViewCell.swift */; };
+		B648B7DE28A5D72D00786281 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = B648B7DD28A5D72D00786281 /* YPImagePicker */; };
+		B648B7E128A5D75900786281 /* TLPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = B648B7E028A5D75900786281 /* TLPhotoPicker */; };
 		B6743643289A5F6100F7BC03 /* TMDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6743642289A5F6100F7BC03 /* TMDBViewController.swift */; };
 		B6743645289A650700F7BC03 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6743644289A650700F7BC03 /* Struct.swift */; };
 		B6743648289A6BD600F7BC03 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B6743647289A6BD600F7BC03 /* Alamofire */; };
@@ -34,8 +36,8 @@
 		B69DA380289A8BC80076843E /* ContentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DA37E289A8BC80076843E /* ContentsCollectionViewCell.swift */; };
 		B69DA381289A8BC80076843E /* ContentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69DA37F289A8BC80076843E /* ContentsCollectionViewCell.xib */; };
 		B6C2888F28A4F55500CCCEF9 /* TheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2888E28A4F55500CCCEF9 /* TheaterMapViewController.swift */; };
-		B6C2889228A5033500CCCEF9 /* Theater Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2889128A5033500CCCEF9 /* Theater Model.swift */; };
-		B6C2889428A5213F00CCCEF9 /* Theater Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2889328A5213F00CCCEF9 /* Theater Annotation.swift */; };
+		B6C2889228A5033500CCCEF9 /* TheaterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2889128A5033500CCCEF9 /* TheaterModel.swift */; };
+		B6C2889428A5213F00CCCEF9 /* TheaterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C2889328A5213F00CCCEF9 /* TheaterAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +66,8 @@
 		B69DA37E289A8BC80076843E /* ContentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		B69DA37F289A8BC80076843E /* ContentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentsCollectionViewCell.xib; sourceTree = "<group>"; };
 		B6C2888E28A4F55500CCCEF9 /* TheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapViewController.swift; sourceTree = "<group>"; };
-		B6C2889128A5033500CCCEF9 /* Theater Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theater Model.swift"; sourceTree = "<group>"; };
-		B6C2889328A5213F00CCCEF9 /* Theater Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theater Annotation.swift"; sourceTree = "<group>"; };
+		B6C2889128A5033500CCCEF9 /* TheaterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterModel.swift; sourceTree = "<group>"; };
+		B6C2889328A5213F00CCCEF9 /* TheaterAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B691B542289E68040064F987 /* JGProgressHUD in Frameworks */,
+				B648B7E128A5D75900786281 /* TLPhotoPicker in Frameworks */,
+				B648B7DE28A5D72D00786281 /* YPImagePicker in Frameworks */,
 				B674364E289A6C0200F7BC03 /* Kingfisher in Frameworks */,
 				B674364B289A6BF400F7BC03 /* SwiftyJSON in Frameworks */,
 				B6743648289A6BD600F7BC03 /* Alamofire in Frameworks */,
@@ -206,8 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				B6C2888E28A4F55500CCCEF9 /* TheaterMapViewController.swift */,
-				B6C2889128A5033500CCCEF9 /* Theater Model.swift */,
-				B6C2889328A5213F00CCCEF9 /* Theater Annotation.swift */,
+				B6C2889128A5033500CCCEF9 /* TheaterModel.swift */,
+				B6C2889328A5213F00CCCEF9 /* TheaterAnnotation.swift */,
 			);
 			path = TheaterMap;
 			sourceTree = "<group>";
@@ -233,6 +237,8 @@
 				B674364A289A6BF400F7BC03 /* SwiftyJSON */,
 				B674364D289A6C0200F7BC03 /* Kingfisher */,
 				B691B541289E68040064F987 /* JGProgressHUD */,
+				B648B7DD28A5D72D00786281 /* YPImagePicker */,
+				B648B7E028A5D75900786281 /* TLPhotoPicker */,
 			);
 			productName = TMDBProject;
 			productReference = B643914C2899F6D60071463C /* TMDBProject.app */;
@@ -267,6 +273,8 @@
 				B6743649289A6BF400F7BC03 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				B674364C289A6C0200F7BC03 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B691B540289E68040064F987 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				B648B7DC28A5D72D00786281 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
+				B648B7DF28A5D75800786281 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */,
 			);
 			productRefGroup = B643914D2899F6D60071463C /* Products */;
 			projectDirPath = "";
@@ -305,7 +313,7 @@
 				B69DA380289A8BC80076843E /* ContentsCollectionViewCell.swift in Sources */,
 				B644DE8F28A24B37007010EC /* MovieTableViewCell.swift in Sources */,
 				B60A1783289BAF530084A658 /* CastViewController.swift in Sources */,
-				B6C2889428A5213F00CCCEF9 /* Theater Annotation.swift in Sources */,
+				B6C2889428A5213F00CCCEF9 /* TheaterAnnotation.swift in Sources */,
 				B60A1787289BAF950084A658 /* CastTableViewCell.swift in Sources */,
 				B64391662899F9430071463C /* APIKey.swift in Sources */,
 				B6743645289A650700F7BC03 /* Struct.swift in Sources */,
@@ -315,7 +323,7 @@
 				B6C2888F28A4F55500CCCEF9 /* TheaterMapViewController.swift in Sources */,
 				B691B53C289D43670064F987 /* WebViewController.swift in Sources */,
 				B64391522899F6D60071463C /* SceneDelegate.swift in Sources */,
-				B6C2889228A5033500CCCEF9 /* Theater Model.swift in Sources */,
+				B6C2889228A5033500CCCEF9 /* TheaterModel.swift in Sources */,
 				B644DE9128A24B4E007010EC /* MovieCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +544,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B648B7DC28A5D72D00786281 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		B648B7DF28A5D75800786281 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tilltue/TLPhotoPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		B6743646289A6BD600F7BC03 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -571,6 +595,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B648B7DD28A5D72D00786281 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B648B7DC28A5D72D00786281 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
+		};
+		B648B7E028A5D75900786281 /* TLPhotoPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B648B7DF28A5D75800786281 /* XCRemoteSwiftPackageReference "TLPhotoPicker" */;
+			productName = TLPhotoPicker;
+		};
 		B6743647289A6BD600F7BC03 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B6743646289A6BD600F7BC03 /* XCRemoteSwiftPackageReference "Alamofire" */;

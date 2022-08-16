@@ -30,7 +30,7 @@ class TMDBAPIManager {
     
     func requestContentsData(movieNumber: Int, movieList: [MovieValue], page: Int, completionHandler: @escaping completionHadndler) {
         
-        let url = endPoint.tmdbURL + "api_key=" + APIKey.TMDB + "&page=\(page)"
+        let url = EndPoint.tmdbURL + "api_key=" + APIKey.TMDB + "&page=\(page)"
         var newMovieList: [MovieValue] = []
         
         AF.request(url, method: .get).validate().responseData { response in
@@ -43,11 +43,11 @@ class TMDBAPIManager {
                     
                     let id = j["id"].intValue
                     let title = j["title"].stringValue
-                    let image = endPoint.tmdbImageURL + j["poster_path"].stringValue
+                    let image = EndPoint.tmdbImageURL + j["poster_path"].stringValue
                     let overview = j["overview"].stringValue
                     let release = j["release_date"].stringValue
                     let grade = j["vote_average"].doubleValue
-                    let backdrop = endPoint.tmdbImageURL + j["backdrop_path"].stringValue
+                    let backdrop = EndPoint.tmdbImageURL + j["backdrop_path"].stringValue
                     let genreId = j["genre_ids"][0].intValue
                     
                     let data = MovieValue(id: id, title: title, image: image, overview: overview, release: release, grade: grade, backdrop: backdrop, genreId: genreId)
@@ -64,7 +64,7 @@ class TMDBAPIManager {
     }
     
     func requestGenreData(completionHandler: @escaping ([Int: String]) -> Void) {
-        let url = endPoint.tmdbGenreURL + "api_key=" + APIKey.TMDB + "&language=ko-KR"
+        let url = EndPoint.tmdbGenreURL + "api_key=" + APIKey.TMDB + "&language=ko-KR"
         var genreDictionary: [Int: String] = [:]
         
         AF.request(url, method: .get).validate().responseData { response in
@@ -88,7 +88,7 @@ class TMDBAPIManager {
     }
     
     func requestRecommendations(movieId: Int, completionHandler: @escaping ([String]) -> () ) {
-        let url = endPoint.tmdbrecommendations + "\(movieId)/recommendations?api_key=" + APIKey.TMDB + "&language=ko-KR"
+        let url = EndPoint.tmdbrecommendations + "\(movieId)/recommendations?api_key=" + APIKey.TMDB + "&language=ko-KR"
         AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
             case .success(let value):

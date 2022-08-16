@@ -64,7 +64,7 @@ extension NewTMDBViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.identifier, for: indexPath) as? MovieCollectionViewCell else { return UICollectionViewCell() }
         
-        let url = endPoint.tmdbImageURL + recommendationsList[collectionView.tag][indexPath.item]
+        let url = EndPoint.tmdbImageURL + recommendationsList[collectionView.tag][indexPath.item]
         cell.cardView.posterImageView.kf.setImage(with: URL(string: url))
         
         return cell

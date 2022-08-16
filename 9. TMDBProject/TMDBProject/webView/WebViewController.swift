@@ -27,7 +27,7 @@ class WebViewController: UIViewController {
     }
     
     func openWebPage(videoId: String) {
-        guard let url = URL(string: endPoint.youtubeVideoURL + videoId) else {
+        guard let url = URL(string: EndPoint.youtubeVideoURL + videoId) else {
             print("Invalid URL")
             return
         }
@@ -36,7 +36,7 @@ class WebViewController: UIViewController {
     }
     
     func requestVideo(movieId: Int) {
-        let url = endPoint.tmdbVideoURL + "\(movidId)/" + "videos?api_key=" + APIKey.TMDB + "&language=en-US"
+        let url = EndPoint.tmdbVideoURL + "\(movidId)/" + "videos?api_key=" + APIKey.TMDB + "&language=en-US"
         
         AF.request(url, method: .get).validate().responseData { response in
             switch response.result {
