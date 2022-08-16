@@ -26,7 +26,7 @@ class WebViewController: UIViewController {
         view.backgroundColor = CustomColor.apricot
     }
     
-    func openWebPage(videoId: String) {
+    private func openWebPage(videoId: String) {
         guard let url = URL(string: EndPoint.youtubeVideoURL + videoId) else {
             print("Invalid URL")
             return
@@ -35,7 +35,7 @@ class WebViewController: UIViewController {
         webView.load(URLRequest(url: url))
     }
     
-    func requestVideo(movieId: Int) {
+    private func requestVideo(movieId: Int) {
         let url = EndPoint.tmdbVideoURL + "\(movidId)/" + "videos?api_key=" + APIKey.TMDB + "&language=en-US"
         
         AF.request(url, method: .get).validate().responseData { response in

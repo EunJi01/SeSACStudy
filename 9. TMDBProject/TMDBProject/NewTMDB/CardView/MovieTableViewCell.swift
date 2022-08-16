@@ -20,7 +20,7 @@ class MovieTableViewCell: UITableViewCell {
         setupUI()
     }
     
-    func setupUI() {
+    private func setupUI() {
         titleLabel.font = .boldSystemFont(ofSize: 17)
         titleLabel.textColor = .lightGray
         
@@ -28,7 +28,7 @@ class MovieTableViewCell: UITableViewCell {
         movieCollectionView.collectionViewLayout = collectionViewLayout()
     }
     
-    func collectionViewLayout() -> UICollectionViewFlowLayout {
+    private func collectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         
         layout.itemSize = CGSize(width: 100, height: 141)

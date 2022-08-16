@@ -206,16 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				B60A1788289BB77F0084A658 /* ReusableViewProtocol.swift */,
-				B691B544289E79EC0064F987 /* New Group */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		B691B544289E79EC0064F987 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		B691B545289E7A170064F987 /* APIManaser */ = {

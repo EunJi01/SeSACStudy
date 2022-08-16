@@ -9,7 +9,7 @@ import UIKit
 
 class IntroPageViewController: UIPageViewController {
 
-    var pageViewControllerList: [UIViewController] = []
+    private var pageViewControllerList: [UIViewController] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +18,14 @@ class IntroPageViewController: UIPageViewController {
         configurePageViewController()
     }
     
-    func createPageViewController() {
+    private func createPageViewController() {
         let sb = UIStoryboard(name: "Intro", bundle: nil)
         let vc1 = sb.instantiateViewController(withIdentifier: FirstViewController.reuseIdentifier) as! FirstViewController
         let vc2 = sb.instantiateViewController(withIdentifier: SecondViewController.reuseIdentifier) as! SecondViewController
         pageViewControllerList = [vc1, vc2]
     }
     
-    func configurePageViewController() {
+    private func configurePageViewController() {
         delegate = self
         dataSource = self
         

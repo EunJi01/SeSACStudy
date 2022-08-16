@@ -19,7 +19,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
         setupUI()
     }
     
-    func setupUI() {
+    private func setupUI() {
         cardView.posterImageView.backgroundColor = .clear
         cardView.posterImageView.layer.cornerRadius = 15
     }

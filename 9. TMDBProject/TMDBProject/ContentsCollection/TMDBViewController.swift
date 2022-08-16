@@ -15,12 +15,12 @@ import SwiftyJSON
 class TMDBViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    let hud = JGProgressHUD()
+    private let hud = JGProgressHUD()
     
-    var movieList: [MovieValue] = []
-    var genreDictionary: [Int: String] = [:]
-    var movieNumber = 0
-    var page = 0
+    private var movieList: [MovieValue] = []
+    private var genreDictionary: [Int: String] = [:]
+    private var movieNumber = 0
+    private var page = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +40,14 @@ class TMDBViewController: UIViewController {
     }
     
     @objc
-    func leftBarButtonTapped() {
+    private func leftBarButtonTapped() {
     }
     
     @objc
-    func rightBarButtonTapped() {
+    private func rightBarButtonTapped() {
     }
     
-    func requestContents() {
+    private func requestContents() {
         hud.show(in: self.view)
         
         self.movieNumber += 20
@@ -66,7 +66,7 @@ class TMDBViewController: UIViewController {
         }
     }
     
-    func requestGenre() {
+    private func requestGenre() {
         TMDBAPIManager.shared.requestGenreData { genreDictionary in
             self.genreDictionary = genreDictionary
             //print("장르 업뎃")

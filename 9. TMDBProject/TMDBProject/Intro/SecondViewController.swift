@@ -19,7 +19,6 @@ class SecondViewController: UIViewController {
         let vc = sb.instantiateViewController(withIdentifier: TMDBViewController.reuseIdentifier) as! TMDBViewController
         let nav = UINavigationController(rootViewController: vc)
         
-        
         UserDefaults.standard.set(true, forKey: UserDefaultsKey.Key.isMain.rawValue)
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true)

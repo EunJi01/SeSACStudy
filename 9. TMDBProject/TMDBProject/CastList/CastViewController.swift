@@ -22,8 +22,8 @@ class CastViewController: UIViewController {
     @IBOutlet weak var overViewExpandButton: UIButton!
     
     var movieData: MovieValue?
-    var castList: [CastValue] = []
-    var isExpanded = false
+    private var castList: [CastValue] = []
+    private var isExpanded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,7 @@ class CastViewController: UIViewController {
         }
     }
     
-    func requestCredits() {
+    private func requestCredits() {
         
         let url = "\(EndPoint.tmdbCastURL)/\((movieData?.id)!)/credits?api_key=\(APIKey.TMDB)&language=ko-KR"
         AF.request(url, method: .get).validate().responseData { response in
@@ -77,7 +77,7 @@ class CastViewController: UIViewController {
         }
     }
     
-    func designView() {
+    private func designView() {
         guard let movieData = movieData else { return }
         
         let imageURL = URL(string: movieData.image)
