@@ -13,7 +13,7 @@ import UIKit
  2. 명시적으로 루트뷰에 추가
  3. 크기와 위치 및 속성 정의
     => Frame 기반 한계 (iPhone5)
-    => AutoResizingMask, AutoLayouy 등장!
+    => AutoResizingMask, AutoLayout 등장!
     => NSLayoutConstraints
  */
 

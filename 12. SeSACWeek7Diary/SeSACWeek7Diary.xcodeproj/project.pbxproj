@@ -24,6 +24,7 @@
 		B648B89528AC81B100786281 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B648B89428AC81B100786281 /* SnapKit */; };
 		B648B89728AC822B00786281 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B89628AC822B00786281 /* CodeSnapViewController.swift */; };
 		B648B89928AC8C1200786281 /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B89828AC8C1200786281 /* CodeSnap2ViewController.swift */; };
+		B648B89D28ACE55700786281 /* KakaoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B89C28ACE55700786281 /* KakaoLayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		B648B89128AC71AE00786281 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		B648B89628AC822B00786281 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		B648B89828AC8C1200786281 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
+		B648B89C28ACE55700786281 /* KakaoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +113,12 @@
 		B648B84028AB200500786281 /* SeSACWeek7Diary */ = {
 			isa = PBXGroup;
 			children = (
-				B648B87528AB3A9F00786281 /* WalkThrough */,
 				B648B84128AB200500786281 /* AppDelegate.swift */,
 				B648B84328AB200500786281 /* SceneDelegate.swift */,
 				B648B84528AB200500786281 /* ViewController.swift */,
 				B648B84728AB200500786281 /* Main.storyboard */,
+				B648B8A128AD328300786281 /* WalkThrough */,
+				B648B88E28AC719300786281 /* CodeBase */,
 				B648B84A28AB200600786281 /* Assets.xcassets */,
 				B648B84C28AB200600786281 /* LaunchScreen.storyboard */,
 				B648B84F28AB200600786281 /* Info.plist */,
@@ -139,10 +142,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B648B87528AB3A9F00786281 /* WalkThrough */ = {
+		B648B88E28AC719300786281 /* CodeBase */ = {
 			isa = PBXGroup;
 			children = (
-				B648B88E28AC719300786281 /* CodeBase */,
+				B648B89128AC71AE00786281 /* CodeViewController.swift */,
+				B648B89628AC822B00786281 /* CodeSnapViewController.swift */,
+				B648B89828AC8C1200786281 /* CodeSnap2ViewController.swift */,
+				B648B89C28ACE55700786281 /* KakaoLayoutViewController.swift */,
+			);
+			path = CodeBase;
+			sourceTree = "<group>";
+		};
+		B648B8A128AD328300786281 /* WalkThrough */ = {
+			isa = PBXGroup;
+			children = (
 				B648B87628AB3ABD00786281 /* WalkThrough.storyboard */,
 				B648B87F28AB410200786281 /* WalkThroughViewController.swift */,
 				B648B87328AB3A9600786281 /* FirstViewController.swift */,
@@ -150,16 +163,6 @@
 				B648B87D28AB40D200786281 /* ThirdViewController.swift */,
 			);
 			path = WalkThrough;
-			sourceTree = "<group>";
-		};
-		B648B88E28AC719300786281 /* CodeBase */ = {
-			isa = PBXGroup;
-			children = (
-				B648B89128AC71AE00786281 /* CodeViewController.swift */,
-				B648B89628AC822B00786281 /* CodeSnapViewController.swift */,
-				B648B89828AC8C1200786281 /* CodeSnap2ViewController.swift */,
-			);
-			path = CodeBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +270,7 @@
 				B648B84628AB200500786281 /* ViewController.swift in Sources */,
 				B648B84228AB200500786281 /* AppDelegate.swift in Sources */,
 				B648B89928AC8C1200786281 /* CodeSnap2ViewController.swift in Sources */,
+				B648B89D28ACE55700786281 /* KakaoLayoutViewController.swift in Sources */,
 				B648B84428AB200500786281 /* SceneDelegate.swift in Sources */,
 				B648B87A28AB40CB00786281 /* SecondViewController.swift in Sources */,
 				B648B89728AC822B00786281 /* CodeSnapViewController.swift in Sources */,

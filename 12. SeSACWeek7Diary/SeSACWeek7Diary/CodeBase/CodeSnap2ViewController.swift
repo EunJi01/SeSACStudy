@@ -46,8 +46,16 @@ class CodeSnap2ViewController: UIViewController {
         }
         
         // RTL (Right To Left)
+        
         blackView.snp.makeConstraints { make in
             make.edges.equalTo(redView).inset(50) //.offset(50)
+        }
+        
+        yellowView.snp.makeConstraints {
+            $0.width.equalTo(50)
+            $0.height.equalTo(50)
+            $0.top.equalTo(50)
+            $0.centerX.equalTo(view)
         }
     }
 }
