@@ -21,6 +21,10 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        let vc = CodeSnap2ViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
+        
         testOpen()
         
 //        showSesacAlert(title: "테스트 얼럿", message: "테스트 메세지", buttonTitle: "변경") { _ in
@@ -32,6 +36,6 @@ class ViewController: UIViewController {
 //        let text = "WWDC What's New!!!"
 //        sesacShowActivityViewController(shareImage: image, shareURL: shareURL, shareText: text)
         
-        OpenWebView.presentWebViewController(self, url: "https://www.naver.com", transitionStyle: .present)
+        //OpenWebView.presentWebViewController(self, url: "https://www.naver.com", transitionStyle: .present)
     }
 }

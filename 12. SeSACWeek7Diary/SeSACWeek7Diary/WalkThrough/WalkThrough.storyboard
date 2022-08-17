@@ -42,7 +42,7 @@
         <!--Walk Through View Controller-->
         <scene sceneID="UOE-X0-reI">
             <objects>
-                <pageViewController storyboardIdentifier="WalkThroughViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="B84-Vi-qDf" customClass="WalkThroughViewController" customModule="SeSACWeek7Diary" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkThroughViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="B84-Vi-qDf" customClass="WalkThroughViewController" customModule="SeSACWeek7Diary" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSC-ap-1R3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-991" y="-94"/>
@@ -72,6 +72,13 @@
                                     <constraint firstAttribute="width" constant="100" id="MiC-H2-3Fb"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jfi-qK-lpD">
+                                <rect key="frame" x="334" y="74" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Fy0-UF-Vje"/>
+                                    <constraint firstAttribute="height" constant="50" id="aIY-qO-sGx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,12 +86,15 @@
                             <constraint firstItem="yEN-y4-XUO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="6Pj-dH-wyc"/>
                             <constraint firstItem="ZxO-io-73U" firstAttribute="top" secondItem="yEN-y4-XUO" secondAttribute="bottom" constant="8" id="Cgp-FY-fHN"/>
                             <constraint firstItem="ZxO-io-73U" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Klg-qa-ymA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jfi-qK-lpD" secondAttribute="trailing" constant="30" id="TAY-cf-HT2"/>
                             <constraint firstItem="yEN-y4-XUO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="c5t-Xr-LeL"/>
+                            <constraint firstItem="jfi-qK-lpD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="r1P-Xw-zc1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yEN-y4-XUO" secondAttribute="trailing" constant="30" id="tsY-PD-UsO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="blackView" destination="ZxO-io-73U" id="0ug-VD-d67"/>
+                        <outlet property="starImageView" destination="jfi-qK-lpD" id="Rtl-lZ-dPj"/>
                         <outlet property="tutorialLabel" destination="yEN-y4-XUO" id="QRF-pE-w1P"/>
                     </connections>
                 </viewController>
