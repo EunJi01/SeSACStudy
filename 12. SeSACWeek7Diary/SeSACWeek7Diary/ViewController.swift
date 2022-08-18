@@ -7,35 +7,41 @@
 
 import UIKit
 import SeSAC2UIFramework
+import SnapKit
 
 class ViewController: UIViewController {
     
-    var name = "고래밥" // 명시하지 않으면 자동으로 internal로 제한됨
-    private var age = 22
-
+    let nameButton: UIButton = {
+        let view = UIButton()
+        view.setTitle("닉네임", for: .normal)
+        view.backgroundColor = .black
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configure()
+        
+        nameButton.addTarget(self, action: #selector(nameButtonTapped), for: .touchUpInside)
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    
+    @objc func nameButtonTapped() {
+        let vc = ProfileViewController()
         
-        let vc = KakaoLayoutViewController()
-        vc.modalPresentationStyle = .overFullScreen
+        vc.saveButtonActionHandler = {
+            self.nameButton.setTitle(vc.nameTextField.text, for: .normal)
+        }
+        
         present(vc, animated: true)
+    }
+    
+    func configure() {
+        view.addSubview(nameButton)
         
-        testOpen()
-        
-//        showSesacAlert(title: "테스트 얼럿", message: "테스트 메세지", buttonTitle: "변경") { _ in
-//            self.view.backgroundColor = .lightGray
-//        }
-        
-//        let image = UIImage(systemName: "star.fill")!
-//        let shareURL = "https://www.apple.com"
-//        let text = "WWDC What's New!!!"
-//        sesacShowActivityViewController(shareImage: image, shareURL: shareURL, shareText: text)
-        
-        //OpenWebView.presentWebViewController(self, url: "https://www.naver.com", transitionStyle: .present)
+        nameButton.snp.remakeConstraints { make in
+            make.width.height.equalTo(200)
+            make.center.equalTo(view)
+        }
     }
 }
