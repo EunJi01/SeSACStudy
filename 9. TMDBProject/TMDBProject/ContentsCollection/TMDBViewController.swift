@@ -15,8 +15,9 @@ import SwiftyJSON
 class TMDBViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    private let hud = JGProgressHUD()
     
+    private let hud = JGProgressHUD()
+
     private var movieList: [MovieValue] = []
     private var genreDictionary: [Int: String] = [:]
     private var movieNumber = 0
@@ -169,7 +170,12 @@ extension TMDBViewController: WebButtonDelegate {
         
         let sb = UIStoryboard(name: StoryboardName.main, bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: WebViewController.reuseIdentifier) as? WebViewController else { return }
+        
         vc.movidId = movieList[index].id
+        
+        let webButtonHandler = { vc.navigationItem.title = "\(self.movieList[index].title) 예고편" }
+        webButtonHandler()
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

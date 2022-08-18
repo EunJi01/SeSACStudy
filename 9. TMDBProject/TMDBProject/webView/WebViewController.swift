@@ -20,10 +20,10 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = CustomColor.apricot
         requestVideo(movieId: movidId)
         
         self.navigationController?.navigationBar.topItem?.backButtonTitle = "MT MEDIA"
-        view.backgroundColor = CustomColor.apricot
     }
     
     private func openWebPage(videoId: String) {
