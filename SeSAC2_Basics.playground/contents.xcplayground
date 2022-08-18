@@ -5,10 +5,11 @@
         <page name='15회차 - lazy'/>
         <page name='17회차 - property'/>
         <page name='23~24회차 - FirstClassObject'/>
+        <page name='25회차 - Closure'/>
         <page name='7회차'/>
         <page name='8회차(1) - enum'/>
         <page name='8회차(2) - class'/>
         <page name='9회차 - class struct 비교'/>
-        <page name='25회차 - Closuer'/>
+        <page name='33회차 - TypeCasting'/>
     </pages>
 </playground>
