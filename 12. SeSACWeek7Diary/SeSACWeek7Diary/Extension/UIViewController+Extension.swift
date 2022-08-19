@@ -8,10 +8,9 @@
 import UIKit
 
 extension UIViewController {
-    
     func transitionViewController<T: UIViewController>(storyboard: String, viewController vc: T) {
         let sb = UIStoryboard(name: storyboard, bundle: nil)
-        guard let controller = sb.instantiateViewController(identifier: String(describing: vc)) as? T else { return }
+        guard let controller = sb.instantiateViewController(identifier: T.reuseIdentifier) as? T else { return }
         self.present(controller, animated: true)
     }
 }
