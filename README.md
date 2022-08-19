@@ -38,13 +38,13 @@
 | **31회** |  | [📄](https://eun-dev.tistory.com/38) |  | **2022.08.16** |
 | **32회** |  | [📄](https://eun-dev.tistory.com/39) |  | **2022.08.17** |
 | **33회** |  | [📄](https://eun-dev.tistory.com/40) |  | **2022.08.18** |
-| **34회** |  | [📄](https://eun-dev.tistory.com/41) | [📄](https://eun-dev.tistory.com/42) | **2022.08.19** |
-| **35회** |  | [📄](https://eun-dev.tistory.com/43) |  | **2022.08.22** |
-| **36회** |  | [📄](https://eun-dev.tistory.com/44) |  | **2022.08.23** |
-| **37회** |  | [📄](https://eun-dev.tistory.com/45) |  | **2022.08.24** |
-| **38회** |  | [📄](https://eun-dev.tistory.com/46) |  | **2022.08.25** |
-| **39회** |  | [📄](https://eun-dev.tistory.com/47) |  | **2022.08.26** |
-| **40회** |  | [📄](https://eun-dev.tistory.com/48) | [📄](https://eun-dev.tistory.com/49) | **2022.08.29** |
+| **34회** |  | [📄](https://eun-dev.tistory.com/42) | [📄](https://eun-dev.tistory.com/43) | **2022.08.19** |
+| **35회** |  | [📄](https://eun-dev.tistory.com/44) |  | **2022.08.22** |
+| **36회** |  | [📄](https://eun-dev.tistory.com/45) |  | **2022.08.23** |
+| **37회** |  | [📄](https://eun-dev.tistory.com/46) |  | **2022.08.24** |
+| **38회** |  | [📄](https://eun-dev.tistory.com/47) |  | **2022.08.25** |
+| **39회** |  | [📄](https://eun-dev.tistory.com/48) |  | **2022.08.26** |
+| **40회** |  | [📄](https://eun-dev.tistory.com/49) | [📄](https://eun-dev.tistory.com/50) | **2022.08.29** |
 
 </br>
 </br>
