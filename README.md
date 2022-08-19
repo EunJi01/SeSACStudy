@@ -35,8 +35,8 @@
 | **29회** |  | [📄](https://eun-dev.tistory.com/35) |  | **2022.08.11** |
 | **30회** |  | [📄](https://eun-dev.tistory.com/36) | [📄](https://eun-dev.tistory.com/37) | **2022.08.12** |
 |  |  |  |  |  |
-| **31회** | 11. SeSAC2UIFramework, 12. SeSACWeek7Diary | [📄](https://eun-dev.tistory.com/38) |  | **2022.08.16** |
-| **32회** |  | [📄](https://eun-dev.tistory.com/39) |  | **2022.08.17** |
+| **31회** | 11. SeSAC2UIFramework | [📄](https://eun-dev.tistory.com/38) |  | **2022.08.16** |
+| **32회** | 12. SeSACWeek7Diary | [📄](https://eun-dev.tistory.com/39) |  | **2022.08.17** |
 | **33회** |  | [📄](https://eun-dev.tistory.com/40) |  | **2022.08.18** |
 | **34회** |  | [📄](https://eun-dev.tistory.com/42) | [📄](https://eun-dev.tistory.com/43) | **2022.08.19** |
 | **35회** |  | [📄](https://eun-dev.tistory.com/44) |  | **2022.08.22** |
