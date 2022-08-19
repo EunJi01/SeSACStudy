@@ -15,6 +15,16 @@
 		B6440BAF2872766B0033645A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6440BAD2872766B0033645A /* LaunchScreen.storyboard */; };
 		B64F953A2875A9E700360B42 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F95392875A9E700360B42 /* SignUpViewController.swift */; };
 		B6BBADCA2874281C001D1E87 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BBADC92874281C001D1E87 /* MovieList.swift */; };
+		B6F3D39428AFC0E700908EA4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D39328AFC0E700908EA4 /* BaseViewController.swift */; };
+		B6F3D39628AFC0FA00908EA4 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D39528AFC0FA00908EA4 /* BaseView.swift */; };
+		B6F3D39828AFC10B00908EA4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D39728AFC10B00908EA4 /* MainView.swift */; };
+		B6F3D39A28AFC11800908EA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D39928AFC11800908EA4 /* MainViewController.swift */; };
+		B6F3D39C28AFC12B00908EA4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D39B28AFC12A00908EA4 /* LoginView.swift */; };
+		B6F3D39E28AFC14700908EA4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D39D28AFC14700908EA4 /* LoginViewController.swift */; };
+		B6F3D3A128AFC6CD00908EA4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D3A028AFC6CD00908EA4 /* CustomButton.swift */; };
+		B6F3D3A528AFD66C00908EA4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B6F3D3A428AFD66C00908EA4 /* SnapKit */; };
+		B6F3D3A728AFD9C100908EA4 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D3A628AFD9C100908EA4 /* CircleImageView.swift */; };
+		B6F3D3AA28B000A200908EA4 /* UserTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D3A928B000A200908EA4 /* UserTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +38,15 @@
 		B6440BB02872766B0033645A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B64F95392875A9E700360B42 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B6BBADC92874281C001D1E87 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
+		B6F3D39328AFC0E700908EA4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B6F3D39528AFC0FA00908EA4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B6F3D39728AFC10B00908EA4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B6F3D39928AFC11800908EA4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B6F3D39B28AFC12A00908EA4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B6F3D39D28AFC14700908EA4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B6F3D3A028AFC6CD00908EA4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B6F3D3A628AFD9C100908EA4 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		B6F3D3A928B000A200908EA4 /* UserTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F3D3A528AFD66C00908EA4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,16 +81,65 @@
 			isa = PBXGroup;
 			children = (
 				B6440BA2287276690033645A /* AppDelegate.swift */,
-				B6BBADC92874281C001D1E87 /* MovieList.swift */,
 				B6440BA4287276690033645A /* SceneDelegate.swift */,
-				B6440BA6287276690033645A /* PosterViewController.swift */,
-				B6440BA8287276690033645A /* Main.storyboard */,
-				B64F95392875A9E700360B42 /* SignUpViewController.swift */,
+				B6BBADC92874281C001D1E87 /* MovieList.swift */,
+				B6F3D38B28AFBF4700908EA4 /* StoryboardUI */,
+				B6F3D38C28AFBF8C00908EA4 /* CodeBaseUI */,
 				B6440BAB2872766B0033645A /* Assets.xcassets */,
 				B6440BAD2872766B0033645A /* LaunchScreen.storyboard */,
 				B6440BB02872766B0033645A /* Info.plist */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		B6F3D38B28AFBF4700908EA4 /* StoryboardUI */ = {
+			isa = PBXGroup;
+			children = (
+				B6440BA8287276690033645A /* Main.storyboard */,
+				B6440BA6287276690033645A /* PosterViewController.swift */,
+				B64F95392875A9E700360B42 /* SignUpViewController.swift */,
+			);
+			path = StoryboardUI;
+			sourceTree = "<group>";
+		};
+		B6F3D38C28AFBF8C00908EA4 /* CodeBaseUI */ = {
+			isa = PBXGroup;
+			children = (
+				B6F3D3A228AFD35900908EA4 /* CustomView */,
+				B6F3D39F28AFC14E00908EA4 /* UIView */,
+				B6F3D3A828AFF7EB00908EA4 /* ViewController */,
+			);
+			path = CodeBaseUI;
+			sourceTree = "<group>";
+		};
+		B6F3D39F28AFC14E00908EA4 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				B6F3D39528AFC0FA00908EA4 /* BaseView.swift */,
+				B6F3D39728AFC10B00908EA4 /* MainView.swift */,
+				B6F3D39B28AFC12A00908EA4 /* LoginView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		B6F3D3A228AFD35900908EA4 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B6F3D3A028AFC6CD00908EA4 /* CustomButton.swift */,
+				B6F3D3A628AFD9C100908EA4 /* CircleImageView.swift */,
+				B6F3D3A928B000A200908EA4 /* UserTextField.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		B6F3D3A828AFF7EB00908EA4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B6F3D39328AFC0E700908EA4 /* BaseViewController.swift */,
+				B6F3D39928AFC11800908EA4 /* MainViewController.swift */,
+				B6F3D39D28AFC14700908EA4 /* LoginViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +158,9 @@
 			dependencies = (
 			);
 			name = Movie;
+			packageProductDependencies = (
+				B6F3D3A428AFD66C00908EA4 /* SnapKit */,
+			);
 			productName = Movie;
 			productReference = B6440B9F287276690033645A /* Movie.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +189,9 @@
 				Base,
 			);
 			mainGroup = B6440B96287276690033645A;
+			packageReferences = (
+				B6F3D3A328AFD66C00908EA4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = B6440BA0287276690033645A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,10 +220,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6440BA7287276690033645A /* PosterViewController.swift in Sources */,
+				B6F3D39C28AFC12B00908EA4 /* LoginView.swift in Sources */,
+				B6F3D39828AFC10B00908EA4 /* MainView.swift in Sources */,
 				B6440BA3287276690033645A /* AppDelegate.swift in Sources */,
+				B6F3D3AA28B000A200908EA4 /* UserTextField.swift in Sources */,
 				B6BBADCA2874281C001D1E87 /* MovieList.swift in Sources */,
 				B6440BA5287276690033645A /* SceneDelegate.swift in Sources */,
+				B6F3D3A728AFD9C100908EA4 /* CircleImageView.swift in Sources */,
+				B6F3D39628AFC0FA00908EA4 /* BaseView.swift in Sources */,
+				B6F3D39A28AFC11800908EA4 /* MainViewController.swift in Sources */,
+				B6F3D3A128AFC6CD00908EA4 /* CustomButton.swift in Sources */,
 				B64F953A2875A9E700360B42 /* SignUpViewController.swift in Sources */,
+				B6F3D39428AFC0E700908EA4 /* BaseViewController.swift in Sources */,
+				B6F3D39E28AFC14700908EA4 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +456,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6F3D3A328AFD66C00908EA4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6F3D3A428AFD66C00908EA4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6F3D3A328AFD66C00908EA4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6440B97287276690033645A /* Project object */;
 }
