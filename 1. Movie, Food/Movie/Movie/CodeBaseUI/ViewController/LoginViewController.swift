@@ -17,7 +17,9 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func configure() {
         let tapGustureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
         mainView.addGestureRecognizer(tapGustureRecognizer)
     }
