@@ -55,7 +55,7 @@ class LoginView: BaseView {
         view.setTitle("회원가입", for: .normal)
         view.titleLabel?.font = .boldSystemFont(ofSize: 17)
         view.tintColor = .black
-        view.titleLabel?.textColor = .black
+        view.setTitleColor(UIColor.black, for: .normal)
         view.layer.cornerRadius = 5
         return view
     }()
@@ -73,12 +73,6 @@ class LoginView: BaseView {
         view.onTintColor = .red
         return view
     }()
-    
-//    let tapGesture: UITapGestureRecognizer = {
-//        let view = UITapGestureRecognizer()
-//        view.
-//        return view
-//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

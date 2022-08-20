@@ -22,6 +22,6 @@ class MainViewController: BaseViewController {
     }
     
     @objc func playButtonTapped() {
-        present(LoginViewController(), animated: true)
+        showAlertMessage(title: "회원가입을 먼저 진행해주세요", button: "확인", handler: { _ in self.present(LoginViewController(), animated: true) })
     }
 }

@@ -16,4 +16,11 @@ class BaseViewController: UIViewController {
     }
     
     func configure() {}
+    
+    func showAlertMessage(title: String, button: String, handler: @escaping ((UIAlertAction) -> Void)) {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: button, style: .cancel, handler: handler)
+        alert.addAction(ok)
+        present(alert, animated: true)
+    }
 }

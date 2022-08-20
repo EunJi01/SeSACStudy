@@ -61,10 +61,9 @@ class MainView: BaseView {
         view.setImage(UIImage(systemName: "play.fill"), for: .normal)
         view.setTitle("  재생", for: .normal)
         view.backgroundColor = .white
-        view.titleLabel?.textColor = .black
+        view.setTitleColor(UIColor.black, for: .normal)
         view.tintColor = .black
         view.layer.cornerRadius = 5
-        view.titleLabel?.font = .systemFont(ofSize: 14)
         return view
     }()
     
