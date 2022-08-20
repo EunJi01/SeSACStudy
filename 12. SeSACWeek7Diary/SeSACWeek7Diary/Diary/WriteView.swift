@@ -12,8 +12,11 @@ class WriteView: BaseView {
     
     let photoImageView: UIImageView = {
         let view = UIImageView()
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 10
         view.contentMode = .scaleAspectFill
         view.backgroundColor = .lightGray
+        view.layer.borderWidth = 1
         return view
     }()
     
@@ -36,6 +39,15 @@ class WriteView: BaseView {
         return view
     }()
     
+    let imageSearchButton: UIButton = {
+        let view = UIButton()
+        view.setImage(UIImage(systemName: "photo.on.rectangle.angled"), for: .normal)
+        view.contentMode = .scaleAspectFit
+        view.contentHorizontalAlignment = .fill
+        view.contentVerticalAlignment = .fill
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -45,7 +57,7 @@ class WriteView: BaseView {
     }
     
     override func configure() {
-        [photoImageView, titleTextField, dateTextField, contentTextView].forEach {
+        [photoImageView, titleTextField, dateTextField, contentTextView, imageSearchButton].forEach {
             self.addSubview($0)
         }
     }
@@ -77,6 +89,12 @@ class WriteView: BaseView {
             make.leadingMargin.equalTo(20)
             make.trailingMargin.equalTo(-20)
             make.bottom.equalTo(self.safeAreaLayoutGuide)
+        }
+        
+        imageSearchButton.snp.makeConstraints { make in
+            make.height.width.equalTo(44)
+            make.bottom.equalTo(photoImageView).inset(12)
+            make.trailing.equalTo(photoImageView).inset(12)
         }
     }
 }

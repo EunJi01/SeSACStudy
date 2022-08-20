@@ -21,11 +21,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configure()
+        //configure()
         
-        nameButton.addTarget(self, action: #selector(nameButtonTapped), for: .touchUpInside)
+        //nameButton.addTarget(self, action: #selector(nameButtonTapped), for: .touchUpInside)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name: NSNotification.Name("saveButtonNotification"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name: NSNotification.Name("saveButtonNotification"), object: nil)
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presentWriteViewController()
+    }
+    
+    // 과제진행용 화면전환
+    func presentWriteViewController() {
+        let vc = WriteViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true)
     }
     
     @objc func saveButtonNotificationObserver(notification: NSNotification) {
@@ -36,9 +50,8 @@ class ViewController: UIViewController {
     }
     
     @objc func nameButtonTapped() {
-        NotificationCenter.default.post(name: NSNotification.Name("TEST"), object: nil, userInfo: ["name": "\(Int.random(in: 1...100))", "vlaue": 123456])
+//        NotificationCenter.default.post(name: NSNotification.Name("TEST"), object: nil, userInfo: ["name": "\(Int.random(in: 1...100))", "vlaue": 123456])
         
-        //let vc = WriteViewController()
         let vc = ProfileViewController()
         
         vc.saveButtonActionHandler = { name in

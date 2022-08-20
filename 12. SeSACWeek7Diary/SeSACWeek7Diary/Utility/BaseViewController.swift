@@ -11,9 +11,20 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .white
+        
         configure()
+        tapGesture()
+    }
+    
+    func tapGesture() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
+        tapGestureRecognizer.cancelsTouchesInView = false // 중요!
+        view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func viewTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     func configure() {}

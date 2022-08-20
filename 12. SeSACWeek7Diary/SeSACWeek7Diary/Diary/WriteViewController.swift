@@ -23,6 +23,20 @@ class WriteViewController: BaseViewController {
     
     override func configure() {
         mainView.titleTextField.addTarget(self, action: #selector(titleTextFieldTapped(_:)), for: .editingDidEndOnExit)
+        mainView.imageSearchButton.addTarget(self, action: #selector(imageSearchButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func imageSearchButtonTapped() {
+        let vc = ImageSearchViewController()
+        vc.selectButtonActionHandler = { value in
+            if let image = value {
+                let url = URL(string: image)
+                self.mainView.photoImageView.kf.setImage(with: url)
+            } else {
+                self.showAlertMessage(title: "이미지를 선택해주세요!", button: "확인")
+            }
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func titleTextFieldTapped(_ textField: UITextField) {
