@@ -20,6 +20,9 @@
 		B60956B32887AE5C0004E05B /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = B60956B22887AE5C0004E05B /* Toast */; };
 		B60956DB2888E7440004E05B /* TrendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60956DA2888E7440004E05B /* TrendTableViewController.swift */; };
 		B60956E3288A3F830004E05B /* FirstSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60956E2288A3F830004E05B /* FirstSceneViewController.swift */; };
+		B645B27628B3C6E900A8CBE2 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645B27528B3C6E900A8CBE2 /* RealmModel.swift */; };
+		B645B27928B3C75800A8CBE2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B645B27828B3C75800A8CBE2 /* Realm */; };
+		B645B27B28B3C75800A8CBE2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B645B27A28B3C75800A8CBE2 /* RealmSwift */; };
 		B679FAAE2884DDCD0096EAEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B679FAAD2884DDCD0096EAEC /* AppDelegate.swift */; };
 		B679FAB02884DDCD0096EAEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B679FAAF2884DDCD0096EAEC /* SceneDelegate.swift */; };
 		B679FAB22884DDCD0096EAEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B679FAB12884DDCD0096EAEC /* ViewController.swift */; };
@@ -56,6 +59,7 @@
 		B60956AC28879DF90004E05B /* RecommandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommandCollectionViewCell.swift; sourceTree = "<group>"; };
 		B60956DA2888E7440004E05B /* TrendTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewController.swift; sourceTree = "<group>"; };
 		B60956E2288A3F830004E05B /* FirstSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSceneViewController.swift; sourceTree = "<group>"; };
+		B645B27528B3C6E900A8CBE2 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		B679FAAA2884DDCD0096EAEC /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B679FAAD2884DDCD0096EAEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B679FAAF2884DDCD0096EAEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B645B27B28B3C75800A8CBE2 /* RealmSwift in Frameworks */,
+				B645B27928B3C75800A8CBE2 /* Realm in Frameworks */,
 				B60956B32887AE5C0004E05B /* Toast in Frameworks */,
 				B60956B02887AE510004E05B /* Kingfisher in Frameworks */,
 			);
@@ -98,9 +104,10 @@
 		B609569A2886E4EC0004E05B /* Shopping */ = {
 			isa = PBXGroup;
 			children = (
+				B688BDA02886B0F7006DBA97 /* Shopping.storyboard */,
+				B645B27528B3C6E900A8CBE2 /* RealmModel.swift */,
 				B688BD9E2886AC25006DBA97 /* ShoppingTableViewController.swift */,
 				B688BD9C2886AC12006DBA97 /* ShoppingTableViewCell.swift */,
-				B688BDA02886B0F7006DBA97 /* Shopping.storyboard */,
 			);
 			path = Shopping;
 			sourceTree = "<group>";
@@ -211,6 +218,8 @@
 			packageProductDependencies = (
 				B60956AF2887AE510004E05B /* Kingfisher */,
 				B60956B22887AE5C0004E05B /* Toast */,
+				B645B27828B3C75800A8CBE2 /* Realm */,
+				B645B27A28B3C75800A8CBE2 /* RealmSwift */,
 			);
 			productName = TrendMedia;
 			productReference = B679FAAA2884DDCD0096EAEC /* TrendMedia.app */;
@@ -243,6 +252,7 @@
 			packageReferences = (
 				B60956AE2887AE510004E05B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B60956B12887AE5C0004E05B /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				B645B27728B3C75800A8CBE2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = B679FAAB2884DDCD0096EAEC /* Products */;
 			projectDirPath = "";
@@ -300,6 +310,7 @@
 				B688BD9628864B99006DBA97 /* BucketlistTableViewController.swift in Sources */,
 				B688BD8E288643F7006DBA97 /* TrendViewController.swift in Sources */,
 				B688BD9828864D95006DBA97 /* BucketlistTableViewCell.swift in Sources */,
+				B645B27628B3C6E900A8CBE2 /* RealmModel.swift in Sources */,
 				B679FAB02884DDCD0096EAEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +547,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		B645B27728B3C75800A8CBE2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -548,6 +567,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B60956B12887AE5C0004E05B /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		B645B27828B3C75800A8CBE2 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B645B27728B3C75800A8CBE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		B645B27A28B3C75800A8CBE2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B645B27728B3C75800A8CBE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

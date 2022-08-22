@@ -88,6 +88,9 @@
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system"/>
+                                            <connections>
+                                                <action selector="completeButtonTapped:" destination="tZQ-uv-HpS" eventType="touchUpInside" id="VLD-CI-snX"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJK-fg-ijc">
                                             <rect key="frame" x="324" y="16" width="18" height="18"/>
@@ -97,6 +100,9 @@
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="star" catalog="system"/>
+                                            <connections>
+                                                <action selector="starButtonTapped:" destination="tZQ-uv-HpS" eventType="touchUpInside" id="1CP-Uz-e8S"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRw-Qb-30h">
                                             <rect key="frame" x="82" y="15" width="210" height="20.5"/>
@@ -118,7 +124,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="completeButton" destination="R1g-eN-Ek2" id="qr7-fB-ePP"/>
                                     <outlet property="shoppingListLabel" destination="dRw-Qb-30h" id="TsG-2M-SPt"/>
+                                    <outlet property="starButton" destination="JJK-fg-ijc" id="w7I-t7-LWb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

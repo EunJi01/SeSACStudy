@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ShoppingTableViewController: UITableViewController {
 
@@ -13,49 +14,66 @@ class ShoppingTableViewController: UITableViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var addBackgroundView: UIView!
     
-    
-    var shoppingList: [String] = ["테스트1", "테스트2", "테스트3"]
+    let localRealm = try! Realm()
+    var tasks: Results<UserShopList>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         designUIView()
-        
         tableView.rowHeight = 50
         
+        tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: "shopTitle", ascending: true)
+        tableView.reloadData()
+    }
+    
+    @IBAction func completeButtonTapped(_ sender: UIButton) {
+        try! localRealm.write {
+            tasks[sender.tag].complete = !tasks[sender.tag].complete
+        }
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
+    }
+    
+    @IBAction func starButtonTapped(_ sender: UIButton) {
+        try! localRealm.write {
+            tasks[sender.tag].star = !tasks[sender.tag].star
+        }
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .fade)
     }
     
     // 텍스트필드 리턴
     @IBAction func addTextFieldReturn(_ sender: UITextField) {
-        
-        shoppingList.append(addTextField.text!)
-        tableView.reloadData()
-        
+        addButtonTapped(addButton)
     }
     
     // 추가버튼 눌렸을 때
     @IBAction func addButtonTapped(_ sender: UIButton) {
+        let task = UserShopList(shopTitle: addTextField.text!)
         
-        shoppingList.append(addTextField.text!)
-        tableView.reloadData()
-        
+        try! localRealm.write {
+            localRealm.add(task)
+            tableView.reloadData()
+        }
     }
     
     //셀의 수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shoppingList.count
+        return tasks.count
     }
-    
     
     // 셀 디자인/데이터
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell") as! ShoppingTableViewCell
-        
-        cell.shoppingListLabel.text = shoppingList[indexPath.row]
-        
+        cell.shoppingListLabel.text = tasks[indexPath.row].shopTitle
         cell.backgroundColor = .systemGray6
         cell.layer.cornerRadius = 10
+        
+        cell.completeButton.tag = indexPath.row
+        let complete = tasks[indexPath.row].complete ? "checkmark.square.fill" : "checkmark.square"
+        cell.completeButton.setImage(UIImage(systemName: complete), for: .normal)
+        
+        cell.starButton.tag = indexPath.row
+        let star = tasks[indexPath.row].star ? "star.fill" : "star"
+        cell.starButton.setImage(UIImage(systemName: star), for: .normal)
         
         return cell
     }
@@ -65,9 +83,10 @@ class ShoppingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
         if editingStyle == .delete {
-            shoppingList.remove(at: indexPath.row)
+            try! localRealm.write {
+                localRealm.delete(tasks[indexPath.row])
+            }
             tableView.reloadData()
         }
     }
