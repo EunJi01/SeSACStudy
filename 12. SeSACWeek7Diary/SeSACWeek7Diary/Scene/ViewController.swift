@@ -31,15 +31,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presentWriteViewController()
-    }
-    
-    // 과제진행용 화면전환
-    func presentWriteViewController() {
-        let vc = WriteViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: true)
     }
     
     @objc func saveButtonNotificationObserver(notification: NSNotification) {

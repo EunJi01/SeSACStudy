@@ -48,6 +48,12 @@ class WriteView: BaseView {
         return view
     }()
     
+    let sampleButton: UIButton = {
+        let view = UIButton()
+        view.backgroundColor = .green
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -57,12 +63,17 @@ class WriteView: BaseView {
     }
     
     override func configure() {
-        [photoImageView, titleTextField, dateTextField, contentTextView, imageSearchButton].forEach {
+        [photoImageView, titleTextField, dateTextField, contentTextView, imageSearchButton, sampleButton].forEach {
             self.addSubview($0)
         }
     }
     
     override func setConstraints() {
+        sampleButton.snp.makeConstraints { make in
+            make.width.height.equalTo(50)
+            make.trailing.top.equalTo(self.safeAreaLayoutGuide)
+        }
+        
         photoImageView.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide)
             make.leadingMargin.equalTo(20)

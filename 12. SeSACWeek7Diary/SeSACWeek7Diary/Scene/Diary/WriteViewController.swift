@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class WriteViewController: BaseViewController {
     
     var mainView = WriteView()
+    let localRealm = try! Realm() // Realm 테이블에 데이터를 CRUD할 때, Realm 테이블 경로에 접근
     
     // viewDidLoad보다 먼저 호출
     override func loadView() { // super.loadView 호출 금지
@@ -18,12 +20,25 @@ class WriteViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Realm is located at:", localRealm.configuration.fileURL!)
         
     }
     
     override func configure() {
         mainView.titleTextField.addTarget(self, action: #selector(titleTextFieldTapped(_:)), for: .editingDidEndOnExit)
         mainView.imageSearchButton.addTarget(self, action: #selector(imageSearchButtonTapped), for: .touchUpInside)
+        mainView.sampleButton.addTarget(self, action: #selector(sampleButtonTapped), for: .touchUpInside)
+    }
+    
+    // Realm Create Sample
+    @objc func sampleButtonTapped() {
+        let task = UserDiary(diaryTitle: mainView.titleTextField.text!, diaryContent: mainView.contentTextView.text!, diaryDate: Date(), regdate: Date(), photo: nil) // => Record
+        
+        try! localRealm.write {
+            localRealm.add(task) // Create
+            print("Realm Succeed")
+            dismiss(animated: true)
+        }
     }
     
     @objc func imageSearchButtonTapped() {
