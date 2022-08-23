@@ -182,7 +182,6 @@
 			children = (
 				B648B84128AB200500786281 /* AppDelegate.swift */,
 				B648B84328AB200500786281 /* SceneDelegate.swift */,
-				B648B84728AB200500786281 /* Main.storyboard */,
 				B645B27328B32AD200A8CBE2 /* Scene */,
 				B645B26D28B319CD00A8CBE2 /* Realm */,
 				B6931C0628B0F294005FE80D /* APIManager */,
@@ -191,6 +190,7 @@
 				B648B8A128AD328300786281 /* WalkThrough */,
 				B6F3D37628AF125D00908EA4 /* Utility */,
 				B648B84A28AB200600786281 /* Assets.xcassets */,
+				B648B84728AB200500786281 /* Main.storyboard */,
 				B648B84C28AB200600786281 /* LaunchScreen.storyboard */,
 				B648B84F28AB200600786281 /* Info.plist */,
 			);

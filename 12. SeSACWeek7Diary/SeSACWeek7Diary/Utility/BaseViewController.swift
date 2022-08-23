@@ -14,6 +14,7 @@ class BaseViewController: UIViewController {
         view.backgroundColor = .white
         
         configure()
+        setConstraints()
         tapGesture()
     }
     
