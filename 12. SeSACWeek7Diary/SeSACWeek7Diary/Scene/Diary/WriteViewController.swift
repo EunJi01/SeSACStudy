@@ -12,6 +12,7 @@ class WriteViewController: BaseViewController {
     
     var mainView = WriteView()
     let localRealm = try! Realm() // Realm 테이블에 데이터를 CRUD할 때, Realm 테이블 경로에 접근
+    var imageURL: String?
     
     // viewDidLoad보다 먼저 호출
     override func loadView() { // super.loadView 호출 금지
@@ -27,17 +28,16 @@ class WriteViewController: BaseViewController {
     override func configure() {
         mainView.titleTextField.addTarget(self, action: #selector(titleTextFieldTapped(_:)), for: .editingDidEndOnExit)
         mainView.imageSearchButton.addTarget(self, action: #selector(imageSearchButtonTapped), for: .touchUpInside)
-        mainView.sampleButton.addTarget(self, action: #selector(sampleButtonTapped), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveButtonTapped))
     }
     
-    // Realm Create Sample
-    @objc func sampleButtonTapped() {
-        let task = UserDiary(diaryTitle: mainView.titleTextField.text!, diaryContent: mainView.contentTextView.text!, diaryDate: Date(), regdate: Date(), photo: nil) // => Record
-        
+    @objc func saveButtonTapped() {
+        let task = UserDiary(diaryTitle: mainView.titleTextField.text!, diaryContent: mainView.contentTextView.text!, diaryDate: Date(), regdate: Date(), photo: imageURL) // => Record
+
         try! localRealm.write {
             localRealm.add(task) // Create
             print("Realm Succeed")
-            dismiss(animated: true)
+            navigationController?.popViewController(animated: true)
         }
     }
     
@@ -45,6 +45,7 @@ class WriteViewController: BaseViewController {
         let vc = ImageSearchViewController()
         vc.selectButtonActionHandler = { value in
             if let image = value {
+                self.imageURL = image
                 let url = URL(string: image)
                 self.mainView.photoImageView.kf.setImage(with: url)
             } else {

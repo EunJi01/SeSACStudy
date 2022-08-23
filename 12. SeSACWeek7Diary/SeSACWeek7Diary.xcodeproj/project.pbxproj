@@ -38,6 +38,7 @@
 		B6931C1528B125FF005FE80D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B6931C1428B125FF005FE80D /* Kingfisher */; };
 		B6931C1828B12633005FE80D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B6931C1728B12633005FE80D /* Alamofire */; };
 		B6931C1B28B1264E005FE80D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B6931C1A28B1264E005FE80D /* SwiftyJSON */; };
+		B694415D28B51470003AC0DA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694415C28B51470003AC0DA /* HomeTableViewCell.swift */; };
 		B6F3D37028ADDF1100908EA4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */; };
 		B6F3D37228ADE60400908EA4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */; };
 		B6F3D37A28AF127900908EA4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37928AF127900908EA4 /* BaseViewController.swift */; };
@@ -105,6 +106,7 @@
 		B6931C0428B0F27E005FE80D /* ImageSearchAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchAPIManager.swift; sourceTree = "<group>"; };
 		B6931C0C28B0F323005FE80D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B6931C0E28B0F4DF005FE80D /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		B694415C28B51470003AC0DA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F3D37928AF127900908EA4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		B645B27028B32A9200A8CBE2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B694415C28B51470003AC0DA /* HomeTableViewCell.swift */,
 				B645B27128B32AB400A8CBE2 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -418,6 +421,7 @@
 				B6931BFF28B0D80A005FE80D /* ImageSearchView.swift in Sources */,
 				B648B87A28AB40CB00786281 /* SecondViewController.swift in Sources */,
 				B6F3D38728AF2CFB00908EA4 /* BlackRadiusTextField.swift in Sources */,
+				B694415D28B51470003AC0DA /* HomeTableViewCell.swift in Sources */,
 				B648B89728AC822B00786281 /* CodeSnapViewController.swift in Sources */,
 				B648B87E28AB40D200786281 /* ThirdViewController.swift in Sources */,
 				B648B89228AC71AE00786281 /* CodeViewController.swift in Sources */,

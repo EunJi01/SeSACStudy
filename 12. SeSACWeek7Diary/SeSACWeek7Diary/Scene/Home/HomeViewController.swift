@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import RealmSwift
+import SeSAC2UIFramework
 
 import RealmSwift // Realm 1. import
 
@@ -17,9 +19,7 @@ class HomeViewController: BaseViewController {
     lazy var tableView: UITableView = {
         let view = UITableView()
         view.backgroundColor = .lightGray
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        view.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.reuseIdentifier)
         return view
     }() // 즉시 실행 클로저
     
@@ -34,7 +34,8 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,8 +75,7 @@ class HomeViewController: BaseViewController {
     
     @objc func plusButtonTapped() {
         let vc = WriteViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -85,8 +85,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = tasks[indexPath.row].diaryTitle
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.reuseIdentifier) as? HomeTableViewCell else { return UITableViewCell() }
+        
+        if let photo = tasks[indexPath.row].photo {
+            print("+++\(tasks[indexPath.row].photo)+++")
+            let url = URL(string: photo)
+            cell.photoImageView.kf.setImage(with: url)
+            print("\(url) === \(indexPath.row)")
+        }
+        
+        cell.titleLabel.text = tasks[indexPath.row].diaryTitle
+//        cell.dateLabel.text = tasks[indexPath.row].diaryDate
+        
         return cell
     }
     
@@ -121,5 +131,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         favorite.backgroundColor = .systemPink
         
         return UISwipeActionsConfiguration(actions: [favorite])
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }
