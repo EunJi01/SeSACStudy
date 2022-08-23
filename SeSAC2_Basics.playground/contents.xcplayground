@@ -10,6 +10,7 @@
         <page name='8회차(1) - enum'/>
         <page name='8회차(2) - class'/>
         <page name='9회차 - class struct 비교'/>
-        <page name='33회차 - TypeCasting'/>
+        <page name='33회차 - TypeCasting,Generic'/>
+        <page name='36회차 - Try'/>
     </pages>
 </playground>
