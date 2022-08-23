@@ -10,16 +10,20 @@ import RealmSwift
 
 class ShoppingDetailViewController: UIViewController {
     
-    var objectID: ObjectId?
     let localRealm = try! Realm()
-    var tasks: Results<UserShopList>!
-
+    var task: UserShopList?
     
     lazy var detailLabel: UILabel = {
         let view = UILabel()
-        view.backgroundColor = .red
-        //let task = localRealm.object(ofType: tasks, forPrimaryKey: objectID)
-        view.text = "asdf"
+        view.numberOfLines = 0
+        view.font = .boldSystemFont(ofSize: 24)
+        if let task = task {
+            view.text = """
+                        Title : \(task.shopTitle)
+                        Star : \(task.star)
+                        Complete : \(task.complete)
+                        """
+        }
         return view
     }()
     

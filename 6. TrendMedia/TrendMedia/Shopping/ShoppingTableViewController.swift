@@ -125,7 +125,7 @@ class ShoppingTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ShoppingDetailViewController()
-        vc.objectID = tasks[indexPath.row].objectID
+        vc.task = tasks[indexPath.row]
         present(vc, animated: true)
     }
     
