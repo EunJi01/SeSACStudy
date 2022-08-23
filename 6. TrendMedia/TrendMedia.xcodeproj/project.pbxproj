@@ -44,6 +44,7 @@
 		B688BD9D2886AC12006DBA97 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688BD9C2886AC12006DBA97 /* ShoppingTableViewCell.swift */; };
 		B688BD9F2886AC25006DBA97 /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B688BD9E2886AC25006DBA97 /* ShoppingTableViewController.swift */; };
 		B688BDA12886B0F7006DBA97 /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B688BDA02886B0F7006DBA97 /* Shopping.storyboard */; };
+		B694415A28B4CA09003AC0DA /* ShoppingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694415928B4CA09003AC0DA /* ShoppingDetailViewController.swift */; };
 		B6F9B1DD28850FD700F45F9C /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F9B1DC28850FD700F45F9C /* Setting.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		B688BD9C2886AC12006DBA97 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		B688BD9E2886AC25006DBA97 /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
 		B688BDA02886B0F7006DBA97 /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
+		B694415928B4CA09003AC0DA /* ShoppingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingDetailViewController.swift; sourceTree = "<group>"; };
 		B6F9B1DC28850FD700F45F9C /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				B645B27528B3C6E900A8CBE2 /* RealmModel.swift */,
 				B688BD9E2886AC25006DBA97 /* ShoppingTableViewController.swift */,
 				B688BD9C2886AC12006DBA97 /* ShoppingTableViewCell.swift */,
+				B694415928B4CA09003AC0DA /* ShoppingDetailViewController.swift */,
 			);
 			path = Shopping;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				B60956A3288787150004E05B /* SearchMovieTableViewController.swift in Sources */,
 				B679FAAE2884DDCD0096EAEC /* AppDelegate.swift in Sources */,
 				B688BD9628864B99006DBA97 /* BucketlistTableViewController.swift in Sources */,
+				B694415A28B4CA09003AC0DA /* ShoppingDetailViewController.swift in Sources */,
 				B688BD8E288643F7006DBA97 /* TrendViewController.swift in Sources */,
 				B688BD9828864D95006DBA97 /* BucketlistTableViewCell.swift in Sources */,
 				B645B27628B3C6E900A8CBE2 /* RealmModel.swift in Sources */,

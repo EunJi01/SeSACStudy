@@ -16,7 +16,5 @@ class ShoppingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
     }
-
 }

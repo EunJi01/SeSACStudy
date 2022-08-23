@@ -24,6 +24,38 @@ class ShoppingTableViewController: UITableViewController {
         
         tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: "shopTitle", ascending: true)
         tableView.reloadData()
+        
+        // UIMenu 1. 버튼 등록
+       self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, image: UIImage(systemName: "list.bullet"), primaryAction: nil, menu: menu())
+    }
+    
+    // UIMenu 2. UIAction 생성 후 배열에 담아 UIMenu에 넣기
+    @objc func menu() -> UIMenu {
+        let menuItems = [
+                UIAction(title: "제목 기준 정렬", image: UIImage(systemName: "pencil"), handler: { _ in self.sortShoppingList(Key: "shopTitle")}),
+                UIAction(title: "즐겨찾기 기준 정렬", image: UIImage(systemName: "star"), handler: { _ in self.sortShoppingList(Key: "star")}),
+                UIAction(title: "할 일 기준 정렬", image: UIImage(systemName: "checkmark.square"), handler: { _ in self.sortShoppingList(Key: "complete")}),
+                UIAction(title: "전체 삭제", image: UIImage(systemName: "trash"), attributes: .destructive,  handler: { _ in self.resetData()})
+            ]
+
+        let menu = UIMenu(title: "", image: nil, identifier: nil, options: [], children: menuItems)
+        return menu
+    }
+    
+    func sortShoppingList(Key: String) {
+        if Key == "shopTitle" || Key == "complete" {
+            tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: Key, ascending: true)
+        } else {
+            tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: Key, ascending: false)
+        }
+        tableView.reloadData()
+    }
+    
+    func resetData() {
+        try! localRealm.write {
+            localRealm.delete(tasks)
+        }
+        tableView.reloadData()
     }
     
     @IBAction func completeButtonTapped(_ sender: UIButton) {
@@ -91,6 +123,12 @@ class ShoppingTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ShoppingDetailViewController()
+        vc.objectID = tasks[indexPath.row].objectID
+        present(vc, animated: true)
+    }
+    
     // 셀 밖 객체 디자인
     func designUIView() {
         
@@ -107,5 +145,4 @@ class ShoppingTableViewController: UITableViewController {
         addBackgroundView.layer.cornerRadius = 10
         
     }
-    
 }
