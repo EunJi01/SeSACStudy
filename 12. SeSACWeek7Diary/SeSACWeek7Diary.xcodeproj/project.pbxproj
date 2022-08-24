@@ -39,6 +39,7 @@
 		B6931C1828B12633005FE80D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B6931C1728B12633005FE80D /* Alamofire */; };
 		B6931C1B28B1264E005FE80D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B6931C1A28B1264E005FE80D /* SwiftyJSON */; };
 		B694415D28B51470003AC0DA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694415C28B51470003AC0DA /* HomeTableViewCell.swift */; };
+		B69DB3AD28B5D29F00F87A81 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DB3AC28B5D29F00F87A81 /* FileManager+Extension.swift */; };
 		B6F3D37028ADDF1100908EA4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */; };
 		B6F3D37228ADE60400908EA4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */; };
 		B6F3D37A28AF127900908EA4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37928AF127900908EA4 /* BaseViewController.swift */; };
@@ -107,6 +108,7 @@
 		B6931C0C28B0F323005FE80D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B6931C0E28B0F4DF005FE80D /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		B694415C28B51470003AC0DA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		B69DB3AC28B5D29F00F87A81 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F3D37928AF127900908EA4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */,
+				B69DB3AC28B5D29F00F87A81 /* FileManager+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				B648B84228AB200500786281 /* AppDelegate.swift in Sources */,
 				B6931C0328B0E32E005FE80D /* ImageCollectionViewCell.swift in Sources */,
 				B6F3D37D28AF144300908EA4 /* WriteViewController.swift in Sources */,
+				B69DB3AD28B5D29F00F87A81 /* FileManager+Extension.swift in Sources */,
 				B648B89928AC8C1200786281 /* CodeSnap2ViewController.swift in Sources */,
 				B648B89D28ACE55700786281 /* KakaoLayoutViewController.swift in Sources */,
 				B6931C0128B0D816005FE80D /* ImageSearchViewController.swift in Sources */,

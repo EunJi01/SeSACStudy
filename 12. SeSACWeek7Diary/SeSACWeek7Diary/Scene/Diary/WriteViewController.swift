@@ -8,6 +8,10 @@
 import UIKit
 import RealmSwift
 
+protocol SelectImageDelegate {
+    func sendImageData(Image: UIImage)
+}
+
 class WriteViewController: BaseViewController {
     
     var mainView = WriteView()
@@ -28,31 +32,71 @@ class WriteViewController: BaseViewController {
     override func configure() {
         mainView.titleTextField.addTarget(self, action: #selector(titleTextFieldTapped(_:)), for: .editingDidEndOnExit)
         mainView.imageSearchButton.addTarget(self, action: #selector(imageSearchButtonTapped), for: .touchUpInside)
+        mainView.imageSearchButton.menu = menu()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(cancelButtonTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveButtonTapped))
     }
     
+    @objc func cancelButtonTapped() {
+        dismiss(animated: true)
+    }
+    
+    // Realm + 이미지 도큐먼트 저장
     @objc func saveButtonTapped() {
-        let task = UserDiary(diaryTitle: mainView.titleTextField.text!, diaryContent: mainView.contentTextView.text!, diaryDate: Date(), regdate: Date(), photo: imageURL) // => Record
-
-        try! localRealm.write {
-            localRealm.add(task) // Create
-            print("Realm Succeed")
-            navigationController?.popViewController(animated: true)
+        guard let title = mainView.titleTextField.text else { // else 실행안됨
+            showAlertMessage(title: "제목을 입력해주세요", button: "확인")
+            return
         }
+
+        let task = UserDiary(diaryTitle: title, diaryContent: mainView.contentTextView.text!, diaryDate: Date(), regdate: Date(), photo: nil) // => Record
+        
+        do {
+            try localRealm.write {
+                localRealm.add(task)
+            }
+        } catch let error {
+            print(error)
+        }
+        
+        if let image = mainView.photoImageView.image {
+            saveImageToDocument(fileName: "\(task.objectID).jpg", image: image)
+        }
+        
+        dismiss(animated: true)
+    }
+    
+    @objc func menu() -> UIMenu {
+        let menuItems = [
+                UIAction(title: "사진 촬영하기", image: nil, handler: { _ in self.cameraButtonTapped() }),
+                UIAction(title: "갤러리에서 선택하기", image: nil, handler: { _ in self.galleryButtonTapped() }),
+                UIAction(title: "사진 검색하기", image: nil, handler: { _ in self.imageSearchButtonTapped() })
+            ]
+
+        let menu = UIMenu(title: "", image: nil, identifier: nil, options: [], children: menuItems)
+        return menu
+    }
+    
+    @objc func cameraButtonTapped() {
+        print(#function)
+    }
+    
+    @objc func galleryButtonTapped() {
+        print(#function)
     }
     
     @objc func imageSearchButtonTapped() {
         let vc = ImageSearchViewController()
-        vc.selectButtonActionHandler = { value in
-            if let image = value {
-                self.imageURL = image
-                let url = URL(string: image)
-                self.mainView.photoImageView.kf.setImage(with: url)
-            } else {
-                self.showAlertMessage(title: "이미지를 선택해주세요!", button: "확인")
-            }
-        }
-        self.navigationController?.pushViewController(vc, animated: true)
+//        vc.selectButtonActionHandler = { value in
+//            if let image = value {
+//                self.imageURL = image
+//                let url = URL(string: image)
+//                self.mainView.photoImageView.kf.setImage(with: url)
+//            } else {
+//                vc.showAlertMessage(title: "이미지를 선택해주세요!", button: "확인")
+//            }
+//        }
+        vc.delegate = self
+        transition(vc, transitionStyle: .presentNavigation)
     }
     
     @objc func titleTextFieldTapped(_ textField: UITextField) {
@@ -60,5 +104,13 @@ class WriteViewController: BaseViewController {
             showAlertMessage(title: "제목을 입력해주세요", button: "확인")
             return
         }
+    }
+}
+
+extension WriteViewController:SelectImageDelegate {
+    // 선택 버튼을 눌렀을 때 실행되도록
+    func sendImageData(Image: UIImage) {
+        mainView.photoImageView.image = Image
+        print(#function)
     }
 }

@@ -75,7 +75,7 @@ class HomeViewController: BaseViewController {
     
     @objc func plusButtonTapped() {
         let vc = WriteViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        transition(vc, transitionStyle: .presentFullNavigation)
     }
 }
 
@@ -87,15 +87,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.reuseIdentifier) as? HomeTableViewCell else { return UITableViewCell() }
         
-        if let photo = tasks[indexPath.row].photo {
-            print("+++\(tasks[indexPath.row].photo)+++")
-            let url = URL(string: photo)
-            cell.photoImageView.kf.setImage(with: url)
-            print("\(url) === \(indexPath.row)")
-        }
-        
         cell.titleLabel.text = tasks[indexPath.row].diaryTitle
-//        cell.dateLabel.text = tasks[indexPath.row].diaryDate
+        cell.photoImageView.image = loadImageFormDocument(fileName: "\(tasks[indexPath.row].objectID).jpg")
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yy/MM/dd\nhh:mm"
+        let date = formatter.string(from: tasks[indexPath.row].diaryDate)
+        
+        cell.dateLabel.text = date
         
         return cell
     }
@@ -112,10 +111,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
                 self.tasks[indexPath.row].favorite = !self.tasks[indexPath.row].favorite
                 
 //                // 2. 하나의 테이블에서 특정 컬럼 전체 값을 변경
-                self.tasks.setValue(true, forKey: "favorite")
+//                self.tasks.setValue(true, forKey: "favorite")
 //
 //                // 3. 하나의 레코드에서 여러 컬럼들이 변경
-                self.localRealm.create(UserDiary.self, value: ["objectID": self.tasks[indexPath.row].objectID, "diaryContent": "변경 테스트", "diaryTitle": "제목임"], update: .modified)
+//                self.localRealm.create(UserDiary.self, value: ["objectID": self.tasks[indexPath.row].objectID, "diaryContent": "변경 테스트", "diaryTitle": "제목임"], update: .modified)
                 
                 print("Realm Update Succeed, reloadRows 필요")
             }

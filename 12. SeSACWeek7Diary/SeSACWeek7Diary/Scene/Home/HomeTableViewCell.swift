@@ -11,7 +11,7 @@ class HomeTableViewCell: UITableViewCell {
     
     let photoImageView: UIImageView = {
         let view = UIImageView()
-        view.backgroundColor = .black
+        view.backgroundColor = .lightGray
         return view
     }()
     
@@ -23,6 +23,9 @@ class HomeTableViewCell: UITableViewCell {
     
     let dateLabel: UILabel = {
         let view = UILabel()
+        view.numberOfLines = 2
+        view.font = .systemFont(ofSize: 13)
+        view.textAlignment = .right
         return view
     }()
     
@@ -54,9 +57,9 @@ class HomeTableViewCell: UITableViewCell {
             make.leadingMargin.equalTo(photoImageView.snp_trailingMargin).offset(28)
         }
         
-//        dateLabel.snp.makeConstraints { make in
-//            make.centerY.equalTo(self.snp.centerY)
-//            make.trailing.equalTo(self).inset(8)
-//        }
+        dateLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(self.snp.centerY)
+            make.trailing.equalTo(self).inset(8)
+        }
     }
 }

@@ -14,8 +14,10 @@ class ImageSearchViewController: BaseViewController {
     var mainView = ImageSearchView()
     var imageList: [String] = []
     var startPage: Int = 1
-    var selectedImageURL: String?
-    var selectButtonActionHandler: ((String?) -> ())?
+    //var selectButtonActionHandler: ((String?) -> ())?
+    var selectImage: UIImage?
+    var delegate: SelectImageDelegate?
+    var selectIndexPath: IndexPath? // 셀 선택했을 때 UI 바꿔주는 또 다른 방법
     
     override func loadView() {
         self.view = mainView
@@ -29,7 +31,12 @@ class ImageSearchViewController: BaseViewController {
         mainView.imageCollectionView.delegate = self
         mainView.imageCollectionView.dataSource = self
         mainView.searchBar.delegate = self
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(cancelButtonTapped))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "선택", style: .plain, target: self, action: #selector(selectButtonTapped))
+        
+        // 팁 - 서버 통신이 완료되기 전 클릭 방지, 완료된 후 true로 전환
+//        view.isUserInteractionEnabled = false
+//        mainView.imageCollectionView.isUserInteractionEnabled = false
     }
     
     func fetchData(query: String) {
@@ -42,9 +49,18 @@ class ImageSearchViewController: BaseViewController {
         }
     }
     
+    @objc func cancelButtonTapped() {
+        dismiss(animated: true)
+    }
+    
     @objc func selectButtonTapped() {
-        selectButtonActionHandler?(selectedImageURL)
-        self.navigationController?.popViewController(animated: true)
+        //selectButtonActionHandler?(selectedImageURL)
+        guard let selectImage = selectImage else {
+            showAlertMessage(title: "사진을 선택해주세요", button: "확인")
+            return
+        }
+        delegate?.sendImageData(Image: selectImage)
+        dismiss(animated: true)
     }
 }
 
@@ -58,12 +74,27 @@ extension ImageSearchViewController: UICollectionViewDelegate, UICollectionViewD
         
         let url = URL(string: imageList[indexPath.item])
         cell.resultImageView.kf.setImage(with: url)
+        cell.layer.borderWidth = selectIndexPath == indexPath ? 4 : 0
+        cell.layer.borderColor = selectIndexPath == indexPath ? UIColor.systemPink.cgColor : nil
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedImageURL = imageList[indexPath.item]
+        //selectedImageURL = imageList[indexPath.item]
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ImageCollectionViewCell else { return }
+        selectImage = cell.resultImageView.image
+        
+        selectIndexPath = indexPath
+        collectionView.reloadData()
+    }
+    
+    // 과제...?????
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print(#function)
+        selectIndexPath = nil
+        selectImage = nil
+        collectionView.reloadData()
     }
 }
 
@@ -71,7 +102,7 @@ extension ImageSearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text {
             imageList.removeAll()
-            selectedImageURL = nil
+            //selectedImageURL = nil
             startPage = 1
             fetchData(query: text)
             view.endEditing(true)
