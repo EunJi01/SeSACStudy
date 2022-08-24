@@ -40,6 +40,8 @@
 		B6931C1B28B1264E005FE80D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B6931C1A28B1264E005FE80D /* SwiftyJSON */; };
 		B694415D28B51470003AC0DA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B694415C28B51470003AC0DA /* HomeTableViewCell.swift */; };
 		B69DB3AD28B5D29F00F87A81 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DB3AC28B5D29F00F87A81 /* FileManager+Extension.swift */; };
+		B69DB3B928B624AC00F87A81 /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DB3B828B624AC00F87A81 /* BackupView.swift */; };
+		B69DB3BB28B624BD00F87A81 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DB3BA28B624BD00F87A81 /* BackupViewController.swift */; };
 		B6F3D37028ADDF1100908EA4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */; };
 		B6F3D37228ADE60400908EA4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */; };
 		B6F3D37A28AF127900908EA4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37928AF127900908EA4 /* BaseViewController.swift */; };
@@ -109,6 +111,8 @@
 		B6931C0E28B0F4DF005FE80D /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		B694415C28B51470003AC0DA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B69DB3AC28B5D29F00F87A81 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		B69DB3B828B624AC00F87A81 /* BackupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
+		B69DB3BA28B624BD00F87A81 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F3D37928AF127900908EA4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +162,6 @@
 			children = (
 				B648B84528AB200500786281 /* ViewController.swift */,
 				B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */,
-				B645B27028B32A9200A8CBE2 /* Home */,
 				B6F3D37B28AF142200908EA4 /* Diary */,
 			);
 			path = Scene;
@@ -259,6 +262,34 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		B69DB3B528B6240F00F87A81 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				B6F3D38028AF179800908EA4 /* WriteView.swift */,
+				B6F3D37C28AF144300908EA4 /* WriteViewController.swift */,
+			);
+			path = Write;
+			sourceTree = "<group>";
+		};
+		B69DB3B628B6242200F87A81 /* ImageSearch */ = {
+			isa = PBXGroup;
+			children = (
+				B6931BFE28B0D80A005FE80D /* ImageSearchView.swift */,
+				B6931C0228B0E32E005FE80D /* ImageCollectionViewCell.swift */,
+				B6931C0028B0D816005FE80D /* ImageSearchViewController.swift */,
+			);
+			path = ImageSearch;
+			sourceTree = "<group>";
+		};
+		B69DB3B728B6244700F87A81 /*  Backup */ = {
+			isa = PBXGroup;
+			children = (
+				B69DB3B828B624AC00F87A81 /* BackupView.swift */,
+				B69DB3BA28B624BD00F87A81 /* BackupViewController.swift */,
+			);
+			path = " Backup";
+			sourceTree = "<group>";
+		};
 		B6F3D36C28ADDEF600908EA4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,11 +312,10 @@
 		B6F3D37B28AF142200908EA4 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				B6F3D38028AF179800908EA4 /* WriteView.swift */,
-				B6F3D37C28AF144300908EA4 /* WriteViewController.swift */,
-				B6931BFE28B0D80A005FE80D /* ImageSearchView.swift */,
-				B6931C0228B0E32E005FE80D /* ImageCollectionViewCell.swift */,
-				B6931C0028B0D816005FE80D /* ImageSearchViewController.swift */,
+				B645B27028B32A9200A8CBE2 /* Home */,
+				B69DB3B528B6240F00F87A81 /* Write */,
+				B69DB3B628B6242200F87A81 /* ImageSearch */,
+				B69DB3B728B6244700F87A81 /*  Backup */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -423,6 +453,7 @@
 				B6931C0F28B0F4DF005FE80D /* APIKey.swift in Sources */,
 				B645B27228B32AB400A8CBE2 /* HomeViewController.swift in Sources */,
 				B6931BFF28B0D80A005FE80D /* ImageSearchView.swift in Sources */,
+				B69DB3B928B624AC00F87A81 /* BackupView.swift in Sources */,
 				B648B87A28AB40CB00786281 /* SecondViewController.swift in Sources */,
 				B6F3D38728AF2CFB00908EA4 /* BlackRadiusTextField.swift in Sources */,
 				B694415D28B51470003AC0DA /* HomeTableViewCell.swift in Sources */,
@@ -434,6 +465,7 @@
 				B648B88028AB410200786281 /* WalkThroughViewController.swift in Sources */,
 				B648B87428AB3A9600786281 /* FirstViewController.swift in Sources */,
 				B6F3D37F28AF169D00908EA4 /* BaseView.swift in Sources */,
+				B69DB3BB28B624BD00F87A81 /* BackupViewController.swift in Sources */,
 				B6931C0528B0F27E005FE80D /* ImageSearchAPIManager.swift in Sources */,
 				B645B26F28B319DF00A8CBE2 /* RealmModel.swift in Sources */,
 				B6F3D38128AF179800908EA4 /* WriteView.swift in Sources */,

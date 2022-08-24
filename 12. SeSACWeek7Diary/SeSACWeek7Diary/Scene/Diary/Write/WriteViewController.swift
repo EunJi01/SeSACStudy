@@ -86,17 +86,8 @@ class WriteViewController: BaseViewController {
     
     @objc func imageSearchButtonTapped() {
         let vc = ImageSearchViewController()
-//        vc.selectButtonActionHandler = { value in
-//            if let image = value {
-//                self.imageURL = image
-//                let url = URL(string: image)
-//                self.mainView.photoImageView.kf.setImage(with: url)
-//            } else {
-//                vc.showAlertMessage(title: "이미지를 선택해주세요!", button: "확인")
-//            }
-//        }
         vc.delegate = self
-        transition(vc, transitionStyle: .presentNavigation)
+        transition(ImageSearchViewController(), transitionStyle: .presentNavigation)
     }
     
     @objc func titleTextFieldTapped(_ textField: UITextField) {
