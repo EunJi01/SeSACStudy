@@ -42,6 +42,7 @@
 		B69DB3AD28B5D29F00F87A81 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DB3AC28B5D29F00F87A81 /* FileManager+Extension.swift */; };
 		B69DB3B928B624AC00F87A81 /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DB3B828B624AC00F87A81 /* BackupView.swift */; };
 		B69DB3BB28B624BD00F87A81 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69DB3BA28B624BD00F87A81 /* BackupViewController.swift */; };
+		B69DB3BF28B701D800F87A81 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = B69DB3BE28B701D800F87A81 /* Zip */; };
 		B6F3D37028ADDF1100908EA4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */; };
 		B6F3D37228ADE60400908EA4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */; };
 		B6F3D37A28AF127900908EA4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37928AF127900908EA4 /* BaseViewController.swift */; };
@@ -133,6 +134,7 @@
 				B6931C1828B12633005FE80D /* Alamofire in Frameworks */,
 				B648B87128AB2C7A00786281 /* SeSAC2UIFramework.framework in Frameworks */,
 				B6931C1B28B1264E005FE80D /* SwiftyJSON in Frameworks */,
+				B69DB3BF28B701D800F87A81 /* Zip in Frameworks */,
 				B648B89528AC81B100786281 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +354,7 @@
 				B6931C1A28B1264E005FE80D /* SwiftyJSON */,
 				B645B26728B316CD00A8CBE2 /* Realm */,
 				B645B26928B316CD00A8CBE2 /* RealmSwift */,
+				B69DB3BE28B701D800F87A81 /* Zip */,
 			);
 			productName = SeSACWeek7Diary;
 			productReference = B648B83E28AB200500786281 /* SeSACWeek7Diary.app */;
@@ -387,6 +390,7 @@
 				B6931C1628B12633005FE80D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B6931C1928B1264E005FE80D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				B645B26628B316CD00A8CBE2 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				B69DB3BD28B701D800F87A81 /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = B648B83F28AB200500786281 /* Products */;
 			projectDirPath = "";
@@ -728,6 +732,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		B69DB3BD28B701D800F87A81 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -760,6 +772,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B6931C1928B1264E005FE80D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		B69DB3BE28B701D800F87A81 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B69DB3BD28B701D800F87A81 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

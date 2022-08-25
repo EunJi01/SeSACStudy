@@ -26,7 +26,6 @@ class WriteViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Realm is located at:", localRealm.configuration.fileURL!)
-        
     }
     
     override func configure() {
@@ -43,7 +42,7 @@ class WriteViewController: BaseViewController {
     
     // Realm + 이미지 도큐먼트 저장
     @objc func saveButtonTapped() {
-        guard let title = mainView.titleTextField.text else { // else 실행안됨
+        guard let title = mainView.titleTextField.text, title != "" else { // else 실행안됨
             showAlertMessage(title: "제목을 입력해주세요", button: "확인")
             return
         }

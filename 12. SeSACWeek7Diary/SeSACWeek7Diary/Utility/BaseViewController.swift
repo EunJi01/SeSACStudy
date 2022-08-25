@@ -32,7 +32,7 @@ class BaseViewController: UIViewController {
     
     func setConstraints() {}
     
-    func showAlertMessage(title: String, button: String) {
+    func showAlertMessage(title: String, button: String = "확인") { // 매개변수 기본값
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         let ok = UIAlertAction(title: button, style: .cancel)
         alert.addAction(ok)

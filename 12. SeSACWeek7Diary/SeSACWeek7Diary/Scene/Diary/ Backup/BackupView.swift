@@ -48,7 +48,7 @@ class BackupView: BaseView {
     
     override func setConstraints() {
         backupButton.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide)
+            make.top.equalTo(safeAreaLayoutGuide).inset(20)
             make.leading.trailing.equalTo(safeAreaLayoutGuide).inset(20)
             make.height.equalTo(44)
         }

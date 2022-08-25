@@ -36,6 +36,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        fetchDocumentZipFile()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,13 +56,19 @@ class HomeViewController: BaseViewController {
         
         let sortButton = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(sortButtonTapped))
         let filterButton = UIBarButtonItem(title: "필터", style: .plain, target: self, action: #selector(filterButtonTapped))
-        navigationItem.leftBarButtonItems = [sortButton, filterButton]
+        let backupButton = UIBarButtonItem(title: "백업", style: .plain, target: self, action: #selector(backupButton))
+        navigationItem.leftBarButtonItems = [sortButton, filterButton, backupButton]
     }
     
     override func setConstraints() {
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+    
+    @objc func backupButton() {
+        let vc = BackupViewController()
+        transition(vc, transitionStyle: .present)
     }
     
     @objc func sortButtonTapped() {
