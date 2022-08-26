@@ -12,10 +12,11 @@ protocol SelectImageDelegate {
     func sendImageData(Image: UIImage)
 }
 
-class WriteViewController: BaseViewController {
+// 컴파일러가 상관관계를 판단할 수 있도록 접근 제어 - 컴파일 타임에 호출될 함수를 결정, 성능 향상 (Static Dispatch)
+final class WriteViewController: BaseViewController {
     
-    var mainView = WriteView()
-    let localRealm = try! Realm() // Realm 테이블에 데이터를 CRUD할 때, Realm 테이블 경로에 접근
+    let mainView = WriteView()
+    private let localRealm = try! Realm()
     var imageURL: String?
     
     // viewDidLoad보다 먼저 호출
@@ -41,7 +42,7 @@ class WriteViewController: BaseViewController {
     }
     
     // Realm + 이미지 도큐먼트 저장
-    @objc func saveButtonTapped() {
+    @objc private func saveButtonTapped() {
         guard let title = mainView.titleTextField.text, title != "" else { // else 실행안됨
             showAlertMessage(title: "제목을 입력해주세요", button: "확인")
             return
@@ -86,7 +87,7 @@ class WriteViewController: BaseViewController {
     @objc func imageSearchButtonTapped() {
         let vc = ImageSearchViewController()
         vc.delegate = self
-        transition(ImageSearchViewController(), transitionStyle: .presentNavigation)
+        transition(vc, transitionStyle: .presentNavigation)
     }
     
     @objc func titleTextFieldTapped(_ textField: UITextField) {
