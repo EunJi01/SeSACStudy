@@ -52,5 +52,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "917F06A7-88DE-4F92-AD22-5B35DB8DA282"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SeSACWeek7Diary/Diary/Home/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "HomeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "917F06A7-88DE-4F92-AD22-5B35DB8DA282 - c6bef617bb5c4221"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSACWeek7Diary.HomeViewController.tasks.getter : Swift.Optional&lt;RealmSwift.Results&lt;SeSACWeek7Diary.UserDiary&gt;&gt;"
+                  moduleName = "SeSACWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eunji/Desktop/SeSACStudy/12.%20SeSACWeek7Diary/SeSACWeek7Diary/Diary/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "917F06A7-88DE-4F92-AD22-5B35DB8DA282 - e7c96b50c78f9e2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSACWeek7Diary.HomeViewController.tasks.setter : Swift.Optional&lt;RealmSwift.Results&lt;SeSACWeek7Diary.UserDiary&gt;&gt;"
+                  moduleName = "SeSACWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eunji/Desktop/SeSACStudy/12.%20SeSACWeek7Diary/SeSACWeek7Diary/Diary/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "917F06A7-88DE-4F92-AD22-5B35DB8DA282 - 12deea5aa875993e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSACWeek7Diary.HomeViewController.tasks.modify : Swift.Optional&lt;RealmSwift.Results&lt;SeSACWeek7Diary.UserDiary&gt;&gt;"
+                  moduleName = "SeSACWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eunji/Desktop/SeSACStudy/12.%20SeSACWeek7Diary/SeSACWeek7Diary/Diary/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "917F06A7-88DE-4F92-AD22-5B35DB8DA282 - 33c43731bfe36a49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSACWeek7Diary.HomeViewController.tasks.modify : Swift.Optional&lt;RealmSwift.Results&lt;SeSACWeek7Diary.UserDiary&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SeSACWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eunji/Desktop/SeSACStudy/12.%20SeSACWeek7Diary/SeSACWeek7Diary/Diary/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "917F06A7-88DE-4F92-AD22-5B35DB8DA282 - 533118f258b80051"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSACWeek7Diary.HomeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SeSACWeek7Diary.HomeViewController"
+                  moduleName = "SeSACWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eunji/Desktop/SeSACStudy/12.%20SeSACWeek7Diary/SeSACWeek7Diary/Diary/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "917F06A7-88DE-4F92-AD22-5B35DB8DA282 - 108a84028b708205"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SeSACWeek7Diary.HomeViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SeSACWeek7Diary.HomeViewController&gt;"
+                  moduleName = "SeSACWeek7Diary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eunji/Desktop/SeSACStudy/12.%20SeSACWeek7Diary/SeSACWeek7Diary/Diary/Home/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

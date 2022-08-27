@@ -45,6 +45,11 @@
 		B69DB3BF28B701D800F87A81 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = B69DB3BE28B701D800F87A81 /* Zip */; };
 		B6AB2B8F28B8558F006D477F /* UserDiaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2B8E28B8558F006D477F /* UserDiaryRepository.swift */; };
 		B6AB2B9428B8616F006D477F /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B6AB2B9328B8616F006D477F /* FSCalendar */; };
+		B6AB2B9B28B91414006D477F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2B9A28B91414006D477F /* SearchView.swift */; };
+		B6AB2B9D28B9141D006D477F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2B9C28B9141D006D477F /* SearchViewController.swift */; };
+		B6AB2B9F28B91429006D477F /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2B9E28B91429006D477F /* SettingView.swift */; };
+		B6AB2BA128B91438006D477F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2BA028B91438006D477F /* SettingViewController.swift */; };
+		B6AB2BA328B918F4006D477F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2BA228B918F4006D477F /* TabBarController.swift */; };
 		B6F3D37028ADDF1100908EA4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */; };
 		B6F3D37228ADE60400908EA4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */; };
 		B6F3D37A28AF127900908EA4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37928AF127900908EA4 /* BaseViewController.swift */; };
@@ -117,6 +122,11 @@
 		B69DB3B828B624AC00F87A81 /* BackupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
 		B69DB3BA28B624BD00F87A81 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
 		B6AB2B8E28B8558F006D477F /* UserDiaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDiaryRepository.swift; sourceTree = "<group>"; };
+		B6AB2B9A28B91414006D477F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		B6AB2B9C28B9141D006D477F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B6AB2B9E28B91429006D477F /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		B6AB2BA028B91438006D477F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B6AB2BA228B918F4006D477F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F3D37928AF127900908EA4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -164,16 +174,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		B645B27328B32AD200A8CBE2 /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				B648B84528AB200500786281 /* ViewController.swift */,
-				B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */,
-				B6F3D37B28AF142200908EA4 /* Diary */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
 		B648B83528AB200500786281 = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +197,9 @@
 			children = (
 				B648B84128AB200500786281 /* AppDelegate.swift */,
 				B648B84328AB200500786281 /* SceneDelegate.swift */,
-				B645B27328B32AD200A8CBE2 /* Scene */,
+				B648B84528AB200500786281 /* ViewController.swift */,
+				B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */,
+				B6F3D37B28AF142200908EA4 /* Diary */,
 				B645B26D28B319CD00A8CBE2 /* Realm */,
 				B6F3D37628AF125D00908EA4 /* Utility */,
 				B6931C0628B0F294005FE80D /* APIManager */,
@@ -288,13 +290,31 @@
 			path = ImageSearch;
 			sourceTree = "<group>";
 		};
-		B69DB3B728B6244700F87A81 /*  Backup */ = {
+		B69DB3B728B6244700F87A81 /* Backup */ = {
 			isa = PBXGroup;
 			children = (
 				B69DB3B828B624AC00F87A81 /* BackupView.swift */,
 				B69DB3BA28B624BD00F87A81 /* BackupViewController.swift */,
 			);
-			path = " Backup";
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		B6AB2B9628B913A8006D477F /* DiarySearch */ = {
+			isa = PBXGroup;
+			children = (
+				B6AB2B9A28B91414006D477F /* SearchView.swift */,
+				B6AB2B9C28B9141D006D477F /* SearchViewController.swift */,
+			);
+			path = DiarySearch;
+			sourceTree = "<group>";
+		};
+		B6AB2B9928B913F0006D477F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				B6AB2B9E28B91429006D477F /* SettingView.swift */,
+				B6AB2BA028B91438006D477F /* SettingViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		B6F3D36C28ADDEF600908EA4 /* Extension */ = {
@@ -319,10 +339,13 @@
 		B6F3D37B28AF142200908EA4 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				B6AB2BA228B918F4006D477F /* TabBarController.swift */,
 				B645B27028B32A9200A8CBE2 /* Home */,
 				B69DB3B528B6240F00F87A81 /* Write */,
+				B6AB2B9628B913A8006D477F /* DiarySearch */,
+				B6AB2B9928B913F0006D477F /* Setting */,
 				B69DB3B628B6242200F87A81 /* ImageSearch */,
-				B69DB3B728B6244700F87A81 /*  Backup */,
+				B69DB3B728B6244700F87A81 /* Backup */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -454,7 +477,9 @@
 				B648B84628AB200500786281 /* ViewController.swift in Sources */,
 				B648B84228AB200500786281 /* AppDelegate.swift in Sources */,
 				B6931C0328B0E32E005FE80D /* ImageCollectionViewCell.swift in Sources */,
+				B6AB2BA328B918F4006D477F /* TabBarController.swift in Sources */,
 				B6F3D37D28AF144300908EA4 /* WriteViewController.swift in Sources */,
+				B6AB2BA128B91438006D477F /* SettingViewController.swift in Sources */,
 				B69DB3AD28B5D29F00F87A81 /* FileManager+Extension.swift in Sources */,
 				B648B89928AC8C1200786281 /* CodeSnap2ViewController.swift in Sources */,
 				B648B89D28ACE55700786281 /* KakaoLayoutViewController.swift in Sources */,
@@ -467,6 +492,7 @@
 				B6931BFF28B0D80A005FE80D /* ImageSearchView.swift in Sources */,
 				B69DB3B928B624AC00F87A81 /* BackupView.swift in Sources */,
 				B648B87A28AB40CB00786281 /* SecondViewController.swift in Sources */,
+				B6AB2B9D28B9141D006D477F /* SearchViewController.swift in Sources */,
 				B6F3D38728AF2CFB00908EA4 /* BlackRadiusTextField.swift in Sources */,
 				B694415D28B51470003AC0DA /* HomeTableViewCell.swift in Sources */,
 				B648B89728AC822B00786281 /* CodeSnapViewController.swift in Sources */,
@@ -478,8 +504,10 @@
 				B648B87428AB3A9600786281 /* FirstViewController.swift in Sources */,
 				B6F3D37F28AF169D00908EA4 /* BaseView.swift in Sources */,
 				B69DB3BB28B624BD00F87A81 /* BackupViewController.swift in Sources */,
+				B6AB2B9B28B91414006D477F /* SearchView.swift in Sources */,
 				B6931C0528B0F27E005FE80D /* ImageSearchAPIManager.swift in Sources */,
 				B645B26F28B319DF00A8CBE2 /* RealmModel.swift in Sources */,
+				B6AB2B9F28B91429006D477F /* SettingView.swift in Sources */,
 				B6F3D38128AF179800908EA4 /* WriteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

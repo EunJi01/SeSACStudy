@@ -11,7 +11,7 @@ import FSCalendar
 import SeSAC2UIFramework
 import RealmSwift // Realm 1. import
 
-class HomeViewController: BaseViewController {
+final class HomeViewController: BaseViewController {
     
     let repository = UserDiaryRepository()
     
@@ -49,7 +49,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        fetchDocumentZipFile()
+        //fetchDocumentZipFile()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,9 +70,8 @@ class HomeViewController: BaseViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusButtonTapped))
         
         let sortButton = UIBarButtonItem(title: "정렬", style: .plain, target: self, action: #selector(sortButtonTapped))
-        let filterButton = UIBarButtonItem(title: "필터", style: .plain, target: self, action: #selector(filterButtonTapped))
         let backupButton = UIBarButtonItem(title: "백업", style: .plain, target: self, action: #selector(backupButton))
-        navigationItem.leftBarButtonItems = [sortButton, filterButton, backupButton]
+        navigationItem.leftBarButtonItems = [sortButton, backupButton]
     }
     
     override func setConstraints() {
@@ -94,11 +93,6 @@ class HomeViewController: BaseViewController {
     
     @objc func sortButtonTapped() {
         tasks = repository.fetchSort()
-    }
-    
-    // realm filter query, NSPredicate
-    @objc func filterButtonTapped() {
-        tasks = repository.fetchFilter()
     }
     
     @objc func plusButtonTapped() {
@@ -153,8 +147,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let delete = UIContextualAction(style: .normal, title: "삭제") { action, view, completionHandler in
 
             self.repository.deleteItem(item: self.tasks[indexPath.row])
-
-//            self.fetchRealm()
+            self.fetchRealm()
 //            tableView.beginUpdates()
 //            tableView.endUpdates()
         }

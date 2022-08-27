@@ -14,7 +14,7 @@ protocol UserDiaryRepositoryType {
     func addItem(item: UserDiary)
     func fetch() -> Results<UserDiary>!
     func fetchSort() -> Results<UserDiary>!
-    func fetchFilter() -> Results<UserDiary>!
+    func fetchFilter(text: String) -> Results<UserDiary>!
     func fetchDate(date: Date) -> Results<UserDiary>!
     func updateFavorite(item: UserDiary)
     func deleteItem(item: UserDiary)
@@ -27,7 +27,7 @@ class UserDiaryRepository: UserDiaryRepositoryType {
         
     }
     
-    func fetch() -> Results<UserDiary>! { // 매개변수 활용해서 개선하기
+    func fetch() -> Results<UserDiary>! {
         return localRealm.objects(UserDiary.self).sorted(byKeyPath: "diaryDate", ascending: false)
     }
     
@@ -35,8 +35,8 @@ class UserDiaryRepository: UserDiaryRepositoryType {
         return localRealm.objects(UserDiary.self).sorted(byKeyPath: "regdate", ascending: false)
     }
     
-    func fetchFilter() -> Results<UserDiary>! {
-        return localRealm.objects(UserDiary.self).filter("diaryTitle CONTAINS[c] '일기'")
+    func fetchFilter(text: String) -> Results<UserDiary>! {
+        return localRealm.objects(UserDiary.self).filter("diaryTitle CONTAINS[c] '\(text)'")
     }
     
     func fetchDate(date: Date) -> Results<UserDiary>! {
@@ -61,10 +61,10 @@ class UserDiaryRepository: UserDiaryRepositoryType {
     }
     
     func deleteItem(item: UserDiary) {
+        removeImageFromDocument(fileName: "\(item.objectID).jpg")
         try! localRealm.write {
             localRealm.delete(item)
         }
-        removeImageFromDocument(fileName: "\(item.objectID).jpg")
     }
     
     func removeImageFromDocument(fileName: String) {
