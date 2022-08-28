@@ -29,6 +29,7 @@
 		B648B89728AC822B00786281 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B89628AC822B00786281 /* CodeSnapViewController.swift */; };
 		B648B89928AC8C1200786281 /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B89828AC8C1200786281 /* CodeSnap2ViewController.swift */; };
 		B648B89D28ACE55700786281 /* KakaoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B648B89C28ACE55700786281 /* KakaoLayoutViewController.swift */; };
+		B674A5FB28BB827500CD48EF /* Alert2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674A5FA28BB827500CD48EF /* Alert2.swift */; };
 		B6931BFF28B0D80A005FE80D /* ImageSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6931BFE28B0D80A005FE80D /* ImageSearchView.swift */; };
 		B6931C0128B0D816005FE80D /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6931C0028B0D816005FE80D /* ImageSearchViewController.swift */; };
 		B6931C0328B0E32E005FE80D /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6931C0228B0E32E005FE80D /* ImageCollectionViewCell.swift */; };
@@ -50,6 +51,7 @@
 		B6AB2B9F28B91429006D477F /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2B9E28B91429006D477F /* SettingView.swift */; };
 		B6AB2BA128B91438006D477F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2BA028B91438006D477F /* SettingViewController.swift */; };
 		B6AB2BA328B918F4006D477F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2BA228B918F4006D477F /* TabBarController.swift */; };
+		B6AB2BAA28BA530E006D477F /* BackupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AB2BA928BA530E006D477F /* BackupTableViewCell.swift */; };
 		B6F3D37028ADDF1100908EA4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */; };
 		B6F3D37228ADE60400908EA4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */; };
 		B6F3D37A28AF127900908EA4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3D37928AF127900908EA4 /* BaseViewController.swift */; };
@@ -111,6 +113,7 @@
 		B648B89628AC822B00786281 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		B648B89828AC8C1200786281 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
 		B648B89C28ACE55700786281 /* KakaoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLayoutViewController.swift; sourceTree = "<group>"; };
+		B674A5FA28BB827500CD48EF /* Alert2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert2.swift; sourceTree = "<group>"; };
 		B6931BFE28B0D80A005FE80D /* ImageSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchView.swift; sourceTree = "<group>"; };
 		B6931C0028B0D816005FE80D /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
 		B6931C0228B0E32E005FE80D /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 		B6AB2B9E28B91429006D477F /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		B6AB2BA028B91438006D477F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B6AB2BA228B918F4006D477F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B6AB2BA928BA530E006D477F /* BackupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupTableViewCell.swift; sourceTree = "<group>"; };
 		B6F3D36F28ADDF1100908EA4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B6F3D37128ADE60400908EA4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6F3D37928AF127900908EA4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 		B69DB3B728B6244700F87A81 /* Backup */ = {
 			isa = PBXGroup;
 			children = (
+				B6AB2BA928BA530E006D477F /* BackupTableViewCell.swift */,
 				B69DB3B828B624AC00F87A81 /* BackupView.swift */,
 				B69DB3BA28B624BD00F87A81 /* BackupViewController.swift */,
 			);
@@ -332,6 +337,7 @@
 				B6F3D38328AF2CD800908EA4 /* CustomView */,
 				B6F3D37E28AF169D00908EA4 /* BaseView.swift */,
 				B6F3D37928AF127900908EA4 /* BaseViewController.swift */,
+				B674A5FA28BB827500CD48EF /* Alert2.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6F3D37028ADDF1100908EA4 /* UIViewController+Extension.swift in Sources */,
+				B674A5FB28BB827500CD48EF /* Alert2.swift in Sources */,
 				B648B84628AB200500786281 /* ViewController.swift in Sources */,
 				B648B84228AB200500786281 /* AppDelegate.swift in Sources */,
 				B6931C0328B0E32E005FE80D /* ImageCollectionViewCell.swift in Sources */,
@@ -481,6 +488,7 @@
 				B6F3D37D28AF144300908EA4 /* WriteViewController.swift in Sources */,
 				B6AB2BA128B91438006D477F /* SettingViewController.swift in Sources */,
 				B69DB3AD28B5D29F00F87A81 /* FileManager+Extension.swift in Sources */,
+				B6AB2BAA28BA530E006D477F /* BackupTableViewCell.swift in Sources */,
 				B648B89928AC8C1200786281 /* CodeSnap2ViewController.swift in Sources */,
 				B648B89D28ACE55700786281 /* KakaoLayoutViewController.swift in Sources */,
 				B6931C0128B0D816005FE80D /* ImageSearchViewController.swift in Sources */,

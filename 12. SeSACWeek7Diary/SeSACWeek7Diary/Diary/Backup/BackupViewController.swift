@@ -7,6 +7,7 @@
 
 import UIKit
 import Zip
+import SeSAC2UIFramework
 
 class BackupViewController: BaseViewController {
     
@@ -25,6 +26,8 @@ class BackupViewController: BaseViewController {
     }
     
     override func configure() {
+        mainView.backupTableView.delegate = self
+        mainView.backupTableView.dataSource = self
         mainView.backupButton.addTarget(self, action: #selector(backupButtonTapped), for: .touchUpInside)
         mainView.restoreButton.addTarget(self, action: #selector(restoreButtonTapped), for: .touchUpInside)
     }
@@ -129,5 +132,60 @@ extension BackupViewController: UIDocumentPickerDelegate {
                 showAlertMessage(title: "압축 해제에 실패했습니다")
             }
         }
+    }
+}
+
+extension BackupViewController: UITableViewDelegate, UITableViewDataSource {
+    func zipList() -> [String] {
+        var zipList: [String] = []
+        do {
+            guard let path = documentDirectoryPath() else { return zipList }
+            let docs = try FileManager.default.contentsOfDirectory(at: path, includingPropertiesForKeys: nil)
+            let zip = docs.filter { $0.pathExtension == "zip" }
+            zip.forEach {
+                zipList.append($0.lastPathComponent)
+            }
+        } catch {
+            print("Error")
+        }
+        return zipList
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return zipList().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BackupTableViewCell.reuseIdentifier) as? BackupTableViewCell else { return UITableViewCell() }
+        
+        cell.fileNameLabel.text = zipList()[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showAlertRestore { _ in
+            guard let path = self.documentDirectoryPath() else { return }
+            let fileURL = path.appendingPathComponent(self.zipList()[indexPath.row])
+            
+            do { // fileURL에 있는 파일을 path에 압축 해제할 건데, 덮어 씌울거고 패스워드는 없음
+                try Zip.unzipFile(fileURL, destination: path, overwrite: true, password: nil, progress: { progress in
+                    print("progress: \(progress)") // 현재 진행 상황 (로딩) 알려줌
+                }, fileOutputHandler: { unzippedFile in
+                    print("unzippedFile: \(unzippedFile)") // 복구가 완료된 다음 실행되는 클로저
+                })
+            } catch {
+                self.showAlertMessage(title: "압축 해제에 실패했습니다")
+            }
+        }
+    }
+    
+    func showAlertRestore(completionHandler: @escaping (UIAlertAction) -> Void) {
+        let alert = UIAlertController(title: "선택한 파일로 복구하시겠습니까?", message: "*주의* 기존 데이터는 사라집니다", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "결정", style: .default, handler: completionHandler)
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        self.present(alert, animated: true)
     }
 }

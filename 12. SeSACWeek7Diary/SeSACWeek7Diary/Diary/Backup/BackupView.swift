@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SeSAC2UIFramework
 
 class BackupView: BaseView {
     
@@ -28,6 +29,7 @@ class BackupView: BaseView {
     
     let backupTableView: UITableView = {
         let view = UITableView()
+        view.register(BackupTableViewCell.self, forCellReuseIdentifier: BackupTableViewCell.reuseIdentifier)
         view.backgroundColor = .lightGray
         return view
     }()
