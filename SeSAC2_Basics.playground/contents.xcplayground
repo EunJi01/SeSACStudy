@@ -6,11 +6,19 @@
         <page name='17회차 - property'/>
         <page name='23~24회차 - FirstClassObject'/>
         <page name='25회차 - Closure'/>
+        <page name='33회차 - TypeCasting,Generic'/>
+        <page name='36회차 - MetaType, Try'/>
+        <page name='40회차 - Codable example1'/>
+        <page name='40회차 - Codable example2'/>
+        <page name='40회차 - Codable example3'/>
+        <page name='40회차 - Codable example4'/>
+        <page name='40회차 - Codable example5'/>
+        <page name='40회차 - Codable example6'/>
+        <page name='40회차 - Codable example7'/>
         <page name='7회차'/>
         <page name='8회차(1) - enum'/>
         <page name='8회차(2) - class'/>
         <page name='9회차 - class struct 비교'/>
-        <page name='33회차 - TypeCasting,Generic'/>
-        <page name='36회차 - Try'/>
+        <page name='40회차 - Codable example8'/>
     </pages>
 </playground>
