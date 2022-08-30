@@ -45,6 +45,17 @@
 | **38회** |  | [📄](https://eun-dev.tistory.com/47) |  | **2022.08.25** |
 | **39회** |  | [📄](https://eun-dev.tistory.com/48) | [📄](https://eun-dev.tistory.com/49) | **2022.08.26** |
 | **40회** |  | [📄](https://eun-dev.tistory.com/50) |  | **2022.08.29** |
+|  |  |  |  |  |
+| **41회** | 13. SeSACWeek9 | [📄](https://eun-dev.tistory.com/51) |  | **2022.08.30** |
+| **42회** |  | [📄](https://eun-dev.tistory.com/52) |  | **2022.08.31** |
+| **43회** |  | [📄](https://eun-dev.tistory.com/53) |  | **2022.09.01** |
+| **44회** |  | [📄](https://eun-dev.tistory.com/54) | [📄](https://eun-dev.tistory.com/55) | **2022.09.02** |
+| **45회** |  | [📄](https://eun-dev.tistory.com/56) |  | **2022.09.05** |
+| **46회** |  | [📄](https://eun-dev.tistory.com/57) |  | **2022.09.06** |
+| **47회** |  | [📄](https://eun-dev.tistory.com/58) |  | **2022.09.13** |
+| **48회** |  | [📄](https://eun-dev.tistory.com/59) |  | **2022.09.14** |
+| **49회** |  | [📄](https://eun-dev.tistory.com/60) | [📄](https://eun-dev.tistory.com/61) | **2022.09.15** |
+| **50회** |  | [📄](https://eun-dev.tistory.com/62) |  | **2022.09.16** |
 
 </br>
 </br>
