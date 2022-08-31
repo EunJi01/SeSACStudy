@@ -19,6 +19,8 @@
 		B65F778028BDA879006D41B7 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F777F28BDA879006D41B7 /* PersonModel.swift */; };
 		B65F778228BDAA6D006D41B7 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F778128BDAA6D006D41B7 /* APIKey.swift */; };
 		B65F778428BDB788006D41B7 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F778328BDB788006D41B7 /* URLSession+Extension.swift */; };
+		B65F778728BEF8D0006D41B7 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F778628BEF8D0006D41B7 /* Observable.swift */; };
+		B65F778928BEFC0D006D41B7 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F778828BEFC0D006D41B7 /* PersonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		B65F777F28BDA879006D41B7 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		B65F778128BDAA6D006D41B7 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		B65F778328BDB788006D41B7 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		B65F778628BEF8D0006D41B7 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		B65F778828BEFC0D006D41B7 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,17 +72,18 @@
 		B65F776228BD973B006D41B7 /* SeSACWeek9 */ = {
 			isa = PBXGroup;
 			children = (
-				B65F777C28BDA71D006D41B7 /* Person */,
-				B65F777728BD9753006D41B7 /* Lotto */,
 				B65F776328BD973B006D41B7 /* AppDelegate.swift */,
 				B65F776528BD973B006D41B7 /* SceneDelegate.swift */,
 				B65F776728BD973B006D41B7 /* ViewController.swift */,
+				B65F777C28BDA71D006D41B7 /* Person */,
+				B65F777728BD9753006D41B7 /* Lotto */,
 				B65F776928BD973B006D41B7 /* Main.storyboard */,
 				B65F776C28BD973C006D41B7 /* Assets.xcassets */,
 				B65F776E28BD973C006D41B7 /* LaunchScreen.storyboard */,
 				B65F777128BD973C006D41B7 /* Info.plist */,
 				B65F778128BDAA6D006D41B7 /* APIKey.swift */,
 				B65F778328BDB788006D41B7 /* URLSession+Extension.swift */,
+				B65F778628BEF8D0006D41B7 /* Observable.swift */,
 			);
 			path = SeSACWeek9;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 			children = (
 				B65F777D28BDA72E006D41B7 /* PersonAPIManager.swift */,
 				B65F777F28BDA879006D41B7 /* PersonModel.swift */,
+				B65F778828BEFC0D006D41B7 /* PersonViewModel.swift */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -175,9 +181,11 @@
 				B65F776828BD973B006D41B7 /* ViewController.swift in Sources */,
 				B65F778028BDA879006D41B7 /* PersonModel.swift in Sources */,
 				B65F778228BDAA6D006D41B7 /* APIKey.swift in Sources */,
+				B65F778928BEFC0D006D41B7 /* PersonViewModel.swift in Sources */,
 				B65F776428BD973B006D41B7 /* AppDelegate.swift in Sources */,
 				B65F777B28BD9BB5006D41B7 /* LottoModel.swift in Sources */,
 				B65F778428BDB788006D41B7 /* URLSession+Extension.swift in Sources */,
+				B65F778728BEF8D0006D41B7 /* Observable.swift in Sources */,
 				B65F777E28BDA72E006D41B7 /* PersonAPIManager.swift in Sources */,
 				B65F776628BD973B006D41B7 /* SceneDelegate.swift in Sources */,
 				B65F777928BD976F006D41B7 /* LottoAPIManager.swift in Sources */,

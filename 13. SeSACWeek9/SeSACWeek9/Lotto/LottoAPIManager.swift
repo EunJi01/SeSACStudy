@@ -8,7 +8,7 @@
 import Foundation
 
 // shared - 단순한. 커스텀X. 응답 클로저. 백그라운드 X
-// default configuration - shared 설정 유사. 커스텀 O (셀룰러 연결 여부, 타임 아웃 간격). 응답 클로저 + 딜리게이트 Lotto
+// default configuration - shared 설정 유사. 커스텀 O (셀룰러 연결 여부, 타임 아웃 간격). 응답 클로저 + 딜리게이트
 
 enum APIError: Error {
     case invalidResponse
