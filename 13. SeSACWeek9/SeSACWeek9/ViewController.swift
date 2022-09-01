@@ -21,6 +21,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let example = User("고래밥")
+        example.bind { name in
+            print("이름이 \(name)으로 바뀌었습니다.")
+        }
+        example.value = "칙촉"
+        
+        let sample = User([1, 2, 3])
+        sample.bind { value in
+            print("list changed", value)
+        }
+        sample.value = [9, 8, 7]
         
 //        LottoAPIManager.requestLotto(drwNo: 1011) { lotto, error in
 //            guard let lotto = lotto else { return }

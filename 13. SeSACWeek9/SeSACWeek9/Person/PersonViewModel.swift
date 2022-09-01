@@ -13,7 +13,7 @@ class PersonViewModel { // 양방향 전달을 위해 Observable에 Person 담�
     func fetchPerson(query: String) {
         PersonAPIManager.requestPerson(query: query) { person, error in
             guard let person = person else { return }
-            dump(person)
+            //dump(person)
             self.list.value = person
         }
     }

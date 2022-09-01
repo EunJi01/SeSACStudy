@@ -26,18 +26,3 @@ class Observable<T> { // 양방향 바인딩
         listener = closure // 다음부터는 알아서 실행되도록 저장
     }
 }
-
-//class User {
-//    private var listener: ((String) -> Void)?
-//
-//    var value: String {
-//        didSet {
-//            print("데이터 바뀌었음")
-//            listener?(value)
-//        }
-//    }
-//
-//    init(value: String) {
-//        self.value = value
-//    }
-//}
