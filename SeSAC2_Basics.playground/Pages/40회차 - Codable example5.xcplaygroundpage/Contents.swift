@@ -24,7 +24,7 @@ struct Quote: Decodable {
         case like = "like_count"
     }
     
-    init(from decoder: Decoder) throws { // 사실 쓸 일 별로 없음
+    init(from decoder: Decoder) throws { // 사실 사용할 일이 많지는 않다
         let container = try decoder.container(keyedBy: CodingKeys.self)
         ment = try container.decode(String.self, forKey: .ment)
         author = try container.decodeIfPresent(String.self, forKey: .author) ?? "unknown"

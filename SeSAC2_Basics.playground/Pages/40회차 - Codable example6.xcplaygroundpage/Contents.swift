@@ -18,12 +18,11 @@ dump(users)
 
 let encoder = JSONEncoder()
 encoder.outputFormatting = .prettyPrinted // 이쁘게 프린트하기...^^
-//encoder.dateEncodingStrategy = .iso8601 // 국제 표준 규격
+encoder.dateEncodingStrategy = .iso8601 // 국제 표준 규격
 
 let format = DateFormatter()
 format.locale = Locale(identifier: "ko_KR")
 format.dateFormat = "MM월 dd일 hh:mm:ss EEEE" // 커스텀
-
 encoder.dateEncodingStrategy = .formatted(format)
 
 do {

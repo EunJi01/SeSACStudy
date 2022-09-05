@@ -15,10 +15,13 @@
         <page name='40회차 - Codable example5'/>
         <page name='40회차 - Codable example6'/>
         <page name='40회차 - Codable example7'/>
+        <page name='40회차 - Codable example8'/>
+        <page name='45회차 - ARC'/>
+        <page name='45회차 - delegate'/>
+        <page name='45회차 - capturelist'/>
         <page name='7회차'/>
         <page name='8회차(1) - enum'/>
         <page name='8회차(2) - class'/>
         <page name='9회차 - class struct 비교'/>
-        <page name='40회차 - Codable example8'/>
     </pages>
 </playground>
