@@ -54,8 +54,8 @@
 | **46회** |  | [📄](https://eun-dev.tistory.com/58) |  | **2022.09.06** |
 | **47회** |  | [📄](https://eun-dev.tistory.com/59) |  | **2022.09.13** |
 | **48회** |  | [📄](https://eun-dev.tistory.com/60) |  | **2022.09.14** |
-| **49회** |  | [📄](https://eun-dev.tistory.com/61) | [📄](https://eun-dev.tistory.com/62) | **2022.09.15** |
-| **50회** |  | [📄](https://eun-dev.tistory.com/63) |  | **2022.09.16** |
+| **49회** |  | [📄](https://eun-dev.tistory.com/61) |  | **2022.09.15** |
+| **50회** |  | [📄](https://eun-dev.tistory.com/62) | [📄](https://eun-dev.tistory.com/63) | **2022.09.16** |
 
 </br>
 </br>
