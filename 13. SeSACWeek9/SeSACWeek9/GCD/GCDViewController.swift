@@ -179,7 +179,7 @@ class GCDViewController: UIViewController {
         }
     }
     
-    func request(url: URL, completionHandler: @escaping (UIImage?) -> Void) { // 나중에 이해하기
+    func request(url: URL, completionHandler: @escaping (UIImage?) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {
                 completionHandler(UIImage(systemName: "star"))

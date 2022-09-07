@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  SeSACWeek9
+
+  Created by 황은지 on 2022/09/06.
+  
+*/
+
+"navigation_title" = "My Diary";
+
+"search_placeholder" = "Search Movie";
+
+"main_age_textfield_placeholder" = "How old are you?";
+
+"common_cancel" = "Cancel";
+
+"introduce" = "my nickname is %@"; // String 타입의 매개변수 기호
+
+"number_test" = "i am %lld years old"; // Int 타입의 매개변수 기호
