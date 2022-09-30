@@ -51,11 +51,6 @@
 | **43회** |  | [📄](https://eun-dev.tistory.com/54) |  | **2022.09.01** |
 | **44회** | 평가과제 [MemoProject](https://github.com/EunJi01/MemoProject) | [📄](https://eun-dev.tistory.com/55) | [📄](https://eun-dev.tistory.com/56) | **2022.09.02** |
 | **45회** | ---출시 프로젝트 시작--- | [📄](https://eun-dev.tistory.com/57) |  | **2022.09.05** |
-| **46회** |  | [📄](https://eun-dev.tistory.com/58) |  | **2022.09.06** |
-| **47회** |  | [📄](https://eun-dev.tistory.com/59) |  | **2022.09.13** |
-| **48회** |  | [📄](https://eun-dev.tistory.com/60) |  | **2022.09.14** |
-| **49회** |  | [📄](https://eun-dev.tistory.com/61) |  | **2022.09.15** |
-| **50회** |  | [📄](https://eun-dev.tistory.com/62) | [📄](https://eun-dev.tistory.com/63) | **2022.09.16** |
 
 </br>
 </br>
