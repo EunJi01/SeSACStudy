@@ -51,8 +51,13 @@
 | **43회** |  | [📄](https://eun-dev.tistory.com/54) |  | **2022.09.01** |
 | **44회** | 평가과제 [MemoProject](https://github.com/EunJi01/MemoProject) | [📄](https://eun-dev.tistory.com/55) | [📄](https://eun-dev.tistory.com/56) | **2022.09.02** |
 | **45회** |  | [📄](https://eun-dev.tistory.com/57) |  | **2022.09.05** |
-| **46회** | ---출시 프로젝트 시작--- |  |  | **2022.09.06** |
-| **0회** | ---출시 프로젝트 종료--- | [📄](https://eun-dev.tistory.com/60) |  | **2022.10.07** |
+| **46회** | ---출시 프로젝트--- | [📄](https://eun-dev.tistory.com/60) |  | **2022.09.06** |
+|  |  |  |  |  |
+| **67회** | 14. SeSACFirebaseExample | [📄](https://eun-dev.tistory.com/61) |  | **2022.10.11** |
+| **68회** |  | [📄](https://eun-dev.tistory.com/62) |  | **2022.10.12** |
+| **69회** |  | [📄](https://eun-dev.tistory.com/63) |  | **2022.10.13** |
+| **70회** |  | [📄](https://eun-dev.tistory.com/64) | [📄](https://eun-dev.tistory.com/65) | **2022.10.14** |
+|  |  |  |  |  |
 
 </br>
 </br>
