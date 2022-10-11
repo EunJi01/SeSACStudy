@@ -25,16 +25,15 @@ class ShoppingTableViewController: UITableViewController {
         tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: "shopTitle", ascending: true)
         tableView.reloadData()
         
-        // UIMenu 1. 버튼 등록
-       self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, image: UIImage(systemName: "list.bullet"), primaryAction: nil, menu: menu())
+        
+       navigationItem.rightBarButtonItem = UIBarButtonItem(title: nil, image: UIImage(systemName: "list.bullet"), primaryAction: nil, menu: menu())
     }
     
-    // UIMenu 2. UIAction 생성 후 배열에 담아 UIMenu에 넣기
     @objc func menu() -> UIMenu {
         let menuItems = [
-                UIAction(title: "제목 기준 정렬", image: UIImage(systemName: "pencil"), handler: { _ in self.sortShoppingList(Key: "shopTitle")}),
-                UIAction(title: "즐겨찾기 기준 정렬", image: UIImage(systemName: "star"), handler: { _ in self.sortShoppingList(Key: "star")}),
-                UIAction(title: "할 일 기준 정렬", image: UIImage(systemName: "checkmark.square"), handler: { _ in self.sortShoppingList(Key: "complete")}),
+                UIAction(title: "제목 기준 정렬", image: UIImage(systemName: "pencil"), handler: { _ in self.sortShoppingList(key: "shopTitle")}),
+                UIAction(title: "즐겨찾기 기준 정렬", image: UIImage(systemName: "star"), handler: { _ in self.sortShoppingList(key: "star")}),
+                UIAction(title: "할 일 기준 정렬", image: UIImage(systemName: "checkmark.square"), handler: { _ in self.sortShoppingList(key: "complete")}),
                 UIAction(title: "전체 삭제", image: UIImage(systemName: "trash"), attributes: .destructive,  handler: { _ in self.resetData()})
             ]
 
@@ -42,11 +41,11 @@ class ShoppingTableViewController: UITableViewController {
         return menu
     }
     
-    func sortShoppingList(Key: String) {
-        if Key == "shopTitle" || Key == "complete" {
-            tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: Key, ascending: true)
+    func sortShoppingList(key: String) {
+        if key == "shopTitle" || key == "complete" {
+            tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: key, ascending: true)
         } else {
-            tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: Key, ascending: false)
+            tasks = localRealm.objects(UserShopList.self).sorted(byKeyPath: key, ascending: false)
         }
         tableView.reloadData()
     }
@@ -127,6 +126,10 @@ class ShoppingTableViewController: UITableViewController {
         let vc = ShoppingDetailViewController()
         vc.task = tasks[indexPath.row]
         present(vc, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     // 셀 밖 객체 디자인

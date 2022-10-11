@@ -254,6 +254,11 @@
                                     <action selector="segmentControlValuedChanged:" destination="3nO-39-hCs" eventType="valueChanged" id="y7C-vq-S2z"/>
                                 </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hf2-o2-dmI">
+                                <rect key="frame" x="68" y="476" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wGg-Sh-6A2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

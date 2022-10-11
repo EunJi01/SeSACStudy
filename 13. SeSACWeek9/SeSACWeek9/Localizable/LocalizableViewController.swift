@@ -54,20 +54,20 @@ class LocalizableViewController: UIViewController, MFMailComposeViewControllerDe
         }
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) { // 메일로 문의 남기기 3.5 (UX 측면의 옵션)
-        
-        switch result {
-        case .cancelled: // 취소
-            <#code#>
-        case .saved: // 임시저장
-            <#code#>
-        case .sent: // 발송
-            <#code#>
-        case .failed: // 실패
-            <#code#>
-        }
-        controller.dismiss(animated: true)
-    }
+//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) { // 메일로 문의 남기기 3.5 (UX 측면의 옵션)
+//
+//        switch result {
+//        case .cancelled: // 취소
+//
+//        case .saved: // 임시저장
+//
+//        case .sent: // 발송
+//
+//        case .failed: // 실패
+//
+//        }
+//        controller.dismiss(animated: true)
+//    }
 }
 
 extension String {

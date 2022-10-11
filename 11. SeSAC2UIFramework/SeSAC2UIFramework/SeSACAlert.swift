@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIViewController {
-    open func testOpen() {}
     
     public func showSesacAlert(title: String, message: String, buttonTitle: String, buttonAction: @escaping (UIAlertAction) -> Void) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -18,6 +17,8 @@ extension UIViewController {
         alert.addAction(ok)
         self.present(alert, animated: true)
     }
+    
+    open func testOpen() {}
     
     internal func testInternal() {}
     fileprivate func testFileprivate() {}

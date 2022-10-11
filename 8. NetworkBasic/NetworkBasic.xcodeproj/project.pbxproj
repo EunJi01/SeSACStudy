@@ -14,6 +14,9 @@
 		B643913C2899651A0071463C /* BeerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B643913B2899651A0071463C /* BeerListTableViewController.swift */; };
 		B64391422899655E0071463C /* BeerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64391412899655E0071463C /* BeerListTableViewCell.swift */; };
 		B643916B289A09420071463C /* ImageSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B643916A289A09420071463C /* ImageSearchViewController.swift */; };
+		B645B27D28B3DC7100A8CBE2 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B645B27C28B3DC7100A8CBE2 /* RealmModel.swift */; };
+		B645B28028B3DD2B00A8CBE2 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B645B27F28B3DD2B00A8CBE2 /* Realm */; };
+		B645B28228B3DD2B00A8CBE2 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B645B28128B3DD2B00A8CBE2 /* RealmSwift */; };
 		B669D51728920CBB00E2D51C /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */; };
 		B669D51B2892236700E2D51C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51A2892236700E2D51C /* LottoViewController.swift */; };
 		B669D51D289225A800E2D51C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B669D51C289225A800E2D51C /* ViewController.swift */; };
@@ -47,6 +50,7 @@
 		B643913B2899651A0071463C /* BeerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewController.swift; sourceTree = "<group>"; };
 		B64391412899655E0071463C /* BeerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewCell.swift; sourceTree = "<group>"; };
 		B643916A289A09420071463C /* ImageSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewController.swift; sourceTree = "<group>"; };
+		B645B27C28B3DC7100A8CBE2 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		B669D51628920CBB00E2D51C /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 		B669D51A2892236700E2D51C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		B669D51C289225A800E2D51C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Search, Lotto/ViewController.swift"; sourceTree = "<group>"; };
@@ -79,10 +83,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B645B28228B3DD2B00A8CBE2 /* RealmSwift in Frameworks */,
 				B60A177F289B50670084A658 /* JGProgressHUD in Frameworks */,
 				B63549B02898072100C4B287 /* Kingfisher in Frameworks */,
 				B669D53728977CF300E2D51C /* SwiftyJSON in Frameworks */,
 				B669D53428977CE200E2D51C /* Alamofire in Frameworks */,
+				B645B28028B3DD2B00A8CBE2 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +119,7 @@
 			children = (
 				B669D52E289757A400E2D51C /* Constant.swift */,
 				B669D53028975FB200E2D51C /* UserDefaultsHelper.swift */,
+				B645B27C28B3DC7100A8CBE2 /* RealmModel.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 				B669D53628977CF300E2D51C /* SwiftyJSON */,
 				B63549AF2898072100C4B287 /* Kingfisher */,
 				B60A177E289B50670084A658 /* JGProgressHUD */,
+				B645B27F28B3DD2B00A8CBE2 /* Realm */,
+				B645B28128B3DD2B00A8CBE2 /* RealmSwift */,
 			);
 			productName = NetworkBasic;
 			productReference = B6BB77E12890DD750068CE32 /* NetworkBasic.app */;
@@ -236,6 +245,7 @@
 				B669D53528977CF300E2D51C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				B63549AE2898072100C4B287 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				B60A177D289B50670084A658 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				B645B27E28B3DD2B00A8CBE2 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = B6BB77E22890DD750068CE32 /* Products */;
 			projectDirPath = "";
@@ -270,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B669D51728920CBB00E2D51C /* ViewPresentableProtocol.swift in Sources */,
+				B645B27D28B3DC7100A8CBE2 /* RealmModel.swift in Sources */,
 				B669D53128975FB200E2D51C /* UserDefaultsHelper.swift in Sources */,
 				B63549AD2897C75B00C4B287 /* BeerViewController.swift in Sources */,
 				B63549B22898BD2E00C4B287 /* Model.swift in Sources */,
@@ -524,6 +535,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		B645B27E28B3DD2B00A8CBE2 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		B669D53228977CE200E2D51C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -552,6 +571,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B63549AE2898072100C4B287 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		B645B27F28B3DD2B00A8CBE2 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B645B27E28B3DD2B00A8CBE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		B645B28128B3DD2B00A8CBE2 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B645B27E28B3DD2B00A8CBE2 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		B669D53328977CE200E2D51C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

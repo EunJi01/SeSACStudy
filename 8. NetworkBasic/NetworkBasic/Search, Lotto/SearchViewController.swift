@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import JGProgressHUD
-
+import RealmSwift
 /*
  Swift Protocol
  - Delegate
@@ -42,6 +42,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // BoxOffice 배열
     var list: [BoxOfficeModel] = []
+    var localRealm = try! Realm()
     
     // 타입 어노테이션 vs 타입 추론 => 누가 더 속도가 빠를까?
     // What's new in Swift

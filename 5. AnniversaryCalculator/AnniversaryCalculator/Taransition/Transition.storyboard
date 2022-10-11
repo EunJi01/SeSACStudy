@@ -57,7 +57,7 @@
         <!--Item-->
         <scene sceneID="eEC-br-mmx">
             <objects>
-                <viewController id="LX3-Xv-Kdx" sceneMemberID="viewController">
+                <viewController id="LX3-Xv-Kdx" customClass="CycleViewController" customModule="AnniversaryCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s0S-87-w7M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,6 +229,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9Sd-ze-nKT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OZA-tA-y3S">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <tabBarAppearance key="scrollEdgeAppearance">

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6095732288D055B0004E05B /* CycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6095731288D055B0004E05B /* CycleViewController.swift */; };
 		B610EC24287FA73A00DE3F23 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B610EC23287FA73A00DE3F23 /* Setting.storyboard */; };
 		B610EC26287FA82700DE3F23 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B610EC25287FA82700DE3F23 /* Search.storyboard */; };
 		B610EC29287FAEF100DE3F23 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = B610EC28287FAEF100DE3F23 /* SideMenu */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B6095731288D055B0004E05B /* CycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleViewController.swift; sourceTree = "<group>"; };
 		B610EC23287FA73A00DE3F23 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		B610EC25287FA82700DE3F23 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		B679FA9B2880E8560096EAEC /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				B679FA9B2880E8560096EAEC /* Transition.storyboard */,
+				B6095731288D055B0004E05B /* CycleViewController.swift */,
 				B679FA9D2880EFB80096EAEC /* TransitionFirstViewController.swift */,
 				B679FA9F2880FE000096EAEC /* TransitionSecondViewController.swift */,
 			);
@@ -195,6 +198,7 @@
 				B679FA9E2880EFB80096EAEC /* TransitionFirstViewController.swift in Sources */,
 				B6A932D8287EC9A9005D898F /* ViewController.swift in Sources */,
 				B6A932D4287EC9A9005D898F /* AppDelegate.swift in Sources */,
+				B6095732288D055B0004E05B /* CycleViewController.swift in Sources */,
 				B6A932D6287EC9A9005D898F /* SceneDelegate.swift in Sources */,
 				B679FAA02880FE000096EAEC /* TransitionSecondViewController.swift in Sources */,
 			);
