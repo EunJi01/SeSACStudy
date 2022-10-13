@@ -8,12 +8,15 @@
 import UIKit
 import FirebaseCore
 import FirebaseMessaging
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        aboutRealmMigration()
         
         UIViewController.swizzleMethod()
         
@@ -58,6 +61,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    func aboutRealmMigration() {
+        // deleteRealmIfMigrationNeeded: 마이그레이션이 필요한 경우 기존 렘 삭제
+        // 주의: 이 때 Realm Browser (스튜디오) 가 열려 있으면 에러가 발생하기 떄문에, 닫고 다시 열기!
+        // let config = Realm.Configuration(schemaVersion: 1, deleteRealmIfMigrationNeeded: true)
+        
+        let config = Realm.Configuration(schemaVersion: 6) { migration, oldSchemaVersion in
+            
+            // 컬럼/테이블의 단순 추가/삭제의 경우에는 별도의 코드가 필요 X
+            if oldSchemaVersion < 1 { }
+            
+            if oldSchemaVersion < 2 { }
+            
+            if oldSchemaVersion < 3 { // 프로퍼티 이름 변경
+                migration.renameProperty(onType: Todo.className(), from: "importance", to: "favorite")
+            }
+            
+            if oldSchemaVersion < 4 { // userDescription 프로퍼티 추가 -> 기존 프로퍼티를 활용한 기본값 설정
+                migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
+                    guard let new = newObject else { return }
+                    guard let old = oldObject else { return }
+                    
+                    new["userDescription"] = "안녕하세요. \(old["title"]!)의 즁요도는 \(old["favorite"]!)입니다."
+                }
+            }
+            
+            if oldSchemaVersion < 5 { // count 프로퍼티 추가 -> 기본값 100으로 설정
+                migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
+                    guard let new = newObject else { return }
+                    new["count"] = 100
+                }
+            }
+            
+            if oldSchemaVersion < 6 { // favorite 프로퍼티의 타입 변경
+                migration.enumerateObjects(ofType: Todo.className()) { oldObject, newObject in
+                    guard let new = newObject else { return }
+                    guard let old = oldObject else { return }
+                    
+                    new["favorite"] = old["favorite"]
+                    // new와 old가 둘 다 옵셔널이거나, 둘 다 옵셔널이 아닐 경우 위의 코드 한줄로 대응 가능!
+                    // 하지만 둘 중 하나만 옵셔널일 경우, nil 값에 대한 타입 변환을 따로 해주어야 한다.
+                }
+            }
+        }
+        Realm.Configuration.defaultConfiguration = config
+    }
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
