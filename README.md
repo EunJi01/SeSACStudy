@@ -56,7 +56,18 @@
 | **67회** | 14. SeSACFirebaseExample | [📄](https://eun-dev.tistory.com/61) |  | **2022.10.11** |
 | **68회** |  | [📄](https://eun-dev.tistory.com/62) |  | **2022.10.12** |
 | **69회** |  | [📄](https://eun-dev.tistory.com/63) |  | **2022.10.13** |
-| **70회** |  | [📄](https://eun-dev.tistory.com/64) | [📄](https://eun-dev.tistory.com/65) | **2022.10.14** |
+| **70회** |  | [📄](https://eun-dev.tistory.com/64) |  | **2022.10.14** |
+|  |  |  |  |  |
+| **71회** |  | [📄](https://eun-dev.tistory.com/65) |  | **2022.10.17** |
+| **72회** |  | [📄](https://eun-dev.tistory.com/66) |  | **2022.10.18** |
+| **73회** |  | [📄](https://eun-dev.tistory.com/67) |  | **2022.10.19** |
+| **74회** |  | [📄](https://eun-dev.tistory.com/68) |  | **2022.10.20** |
+| **75회** |  | [📄](https://eun-dev.tistory.com/69) |  | **2022.10.21** |
+| **76회** |  | [📄](https://eun-dev.tistory.com/70) |  | **2022.10.24** |
+| **77회** |  | [📄](https://eun-dev.tistory.com/71) |  | **2022.10.25** |
+| **78회** |  | [📄](https://eun-dev.tistory.com/72) |  | **2022.10.26** |
+| **79회** |  | [📄](https://eun-dev.tistory.com/73) |  | **2022.10.27** |
+| **80회** |  | [📄](https://eun-dev.tistory.com/74) |  | **2022.10.28** |
 |  |  |  |  |  |
 
 </br>
