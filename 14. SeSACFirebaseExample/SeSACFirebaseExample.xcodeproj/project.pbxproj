@@ -21,6 +21,7 @@
 		B6C93E2128F7941600F2F96F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B6C93E2028F7941600F2F96F /* RealmSwift */; };
 		B6C93E2328F799FE00F2F96F /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E2228F799FE00F2F96F /* Todo.swift */; };
 		B6C93E2528F79BB300F2F96F /* MigrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E2428F79BB300F2F96F /* MigrationViewController.swift */; };
+		B6C93E4B28FE4DD500F2F96F /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E4A28FE4DD500F2F96F /* SampleCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B6AAC7AF28F4F6B400B3C3DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6C93E2228F799FE00F2F96F /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		B6C93E2428F79BB300F2F96F /* MigrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationViewController.swift; sourceTree = "<group>"; };
+		B6C93E4A28FE4DD500F2F96F /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				B666DF6B28ED157D001F6741 /* ViewController.swift */,
 				B6C93E2428F79BB300F2F96F /* MigrationViewController.swift */,
 				B6C93E2228F799FE00F2F96F /* Todo.swift */,
+				B6C93E4A28FE4DD500F2F96F /* SampleCollectionViewController.swift */,
 				B666DF6D28ED157D001F6741 /* Main.storyboard */,
 				B666DF7028ED157E001F6741 /* Assets.xcassets */,
 				B666DF7228ED157E001F6741 /* LaunchScreen.storyboard */,
@@ -175,6 +178,7 @@
 				B666DF6828ED157D001F6741 /* AppDelegate.swift in Sources */,
 				B6C93E2528F79BB300F2F96F /* MigrationViewController.swift in Sources */,
 				B666DF6A28ED157D001F6741 /* SceneDelegate.swift in Sources */,
+				B6C93E4B28FE4DD500F2F96F /* SampleCollectionViewController.swift in Sources */,
 				B6C93E2328F799FE00F2F96F /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
