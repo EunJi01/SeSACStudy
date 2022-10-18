@@ -59,7 +59,7 @@
 | **70회** |  | [📄](https://eun-dev.tistory.com/64) |  | **2022.10.14** |
 |  |  |  |  |  |
 | **71회** |  | [📄](https://eun-dev.tistory.com/65) |  | **2022.10.17** |
-| **72회** |  | [📄](https://eun-dev.tistory.com/66) |  | **2022.10.18** |
+| **72회** | 15. SeSACWeek1617 | [📄](https://eun-dev.tistory.com/66) |  | **2022.10.18** |
 | **73회** |  | [📄](https://eun-dev.tistory.com/67) |  | **2022.10.19** |
 | **74회** |  | [📄](https://eun-dev.tistory.com/68) |  | **2022.10.20** |
 | **75회** |  | [📄](https://eun-dev.tistory.com/69) |  | **2022.10.21** |

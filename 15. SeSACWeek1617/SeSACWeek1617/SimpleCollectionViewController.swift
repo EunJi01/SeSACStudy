@@ -15,6 +15,7 @@ struct User {
 class SimpleCollectionViewController: UICollectionViewController {
     
     //let list = ["닭곰탕", "삼계탕", "들기름김", "삼분카레", "콘소메 치킨"]
+    
     var list = [
         User(name: "뽀로로", age: 3),
         User(name: "에디", age: 13),
@@ -22,6 +23,7 @@ class SimpleCollectionViewController: UICollectionViewController {
         User(name: "도라에몽", age: 5)
     ]
     
+    // 1. cellRegistration 선언
     // dequeueConfiguredReusableCell 에서 사용할 해당 변수는 cellForItemAt 함수 밖에 선언해야 한다.
     var cellRegistration: UICollectionView.CellRegistration<UICollectionViewListCell, User>!
     
@@ -36,6 +38,7 @@ class SimpleCollectionViewController: UICollectionViewController {
         let layout = UICollectionViewCompositionalLayout.list(using: configration)
         collectionView.collectionViewLayout = layout
         
+        // 2. cellRegistration 등록
         cellRegistration = UICollectionView.CellRegistration { cell, indexPath, itemIdentifier in
             //var content = cell.defaultContentConfiguration()
             var content = UIListContentConfiguration.valueCell()
@@ -58,6 +61,7 @@ class SimpleCollectionViewController: UICollectionViewController {
         return list.count
     }
     
+    // 3. cellRegistration 호출
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = list[indexPath.item]
         let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
