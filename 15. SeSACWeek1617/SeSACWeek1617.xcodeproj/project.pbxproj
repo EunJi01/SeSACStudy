@@ -14,6 +14,7 @@
 		B6C93E3E28FE2DA500F2F96F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C93E3D28FE2DA500F2F96F /* Assets.xcassets */; };
 		B6C93E4128FE2DA500F2F96F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C93E3F28FE2DA500F2F96F /* LaunchScreen.storyboard */; };
 		B6C93E4928FE390B00F2F96F /* SimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E4828FE390B00F2F96F /* SimpleCollectionViewController.swift */; };
+		B6C93E5028FF906800F2F96F /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E4F28FF906800F2F96F /* DiffableCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B6C93E4028FE2DA500F2F96F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6C93E4228FE2DA500F2F96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6C93E4828FE390B00F2F96F /* SimpleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewController.swift; sourceTree = "<group>"; };
+		B6C93E4F28FF906800F2F96F /* DiffableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +63,9 @@
 				B6C93E3428FE2DA400F2F96F /* AppDelegate.swift */,
 				B6C93E3628FE2DA400F2F96F /* SceneDelegate.swift */,
 				B6C93E3A28FE2DA400F2F96F /* Main.storyboard */,
-				B6C93E3828FE2DA400F2F96F /* SimpleTableViewController.swift */,
+				B6C93E4F28FF906800F2F96F /* DiffableCollectionViewController.swift */,
 				B6C93E4828FE390B00F2F96F /* SimpleCollectionViewController.swift */,
+				B6C93E3828FE2DA400F2F96F /* SimpleTableViewController.swift */,
 				B6C93E3D28FE2DA500F2F96F /* Assets.xcassets */,
 				B6C93E3F28FE2DA500F2F96F /* LaunchScreen.storyboard */,
 				B6C93E4228FE2DA500F2F96F /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C93E5028FF906800F2F96F /* DiffableCollectionViewController.swift in Sources */,
 				B6C93E4928FE390B00F2F96F /* SimpleCollectionViewController.swift in Sources */,
 				B6C93E3928FE2DA400F2F96F /* SimpleTableViewController.swift in Sources */,
 				B6C93E3528FE2DA400F2F96F /* AppDelegate.swift in Sources */,

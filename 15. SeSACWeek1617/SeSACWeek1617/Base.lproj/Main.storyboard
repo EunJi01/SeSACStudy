@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -69,6 +70,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2e-V6-Q3x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1800" y="4"/>
+        </scene>
+        <!--Diffable Collection View Controller-->
+        <scene sceneID="fLQ-X5-3mR">
+            <objects>
+                <viewController id="35f-ZJ-01F" customClass="DiffableCollectionViewController" customModule="SeSACWeek1617" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PZK-cn-itf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ry7-e2-J8N">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X6R-1V-J8o">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eSW-1r-hMh">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5Y0-3F-hjT">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Qhx-lW-V7B">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wb8-Dn-NWS"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="35f-ZJ-01F" id="p7p-h1-A13"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Rb-RO-HJP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ry7-e2-J8N" firstAttribute="leading" secondItem="1Rb-RO-HJP" secondAttribute="leading" id="HLh-Jr-Sv5"/>
+                            <constraint firstItem="Qhx-lW-V7B" firstAttribute="top" secondItem="1Rb-RO-HJP" secondAttribute="top" id="ItO-ks-twc"/>
+                            <constraint firstItem="1Rb-RO-HJP" firstAttribute="trailing" secondItem="Ry7-e2-J8N" secondAttribute="trailing" id="bvw-rq-w7k"/>
+                            <constraint firstItem="Qhx-lW-V7B" firstAttribute="trailing" secondItem="1Rb-RO-HJP" secondAttribute="trailing" id="ggJ-O6-P6m"/>
+                            <constraint firstItem="Qhx-lW-V7B" firstAttribute="leading" secondItem="1Rb-RO-HJP" secondAttribute="leading" id="gh4-cC-4lh"/>
+                            <constraint firstItem="1Rb-RO-HJP" firstAttribute="bottom" secondItem="Ry7-e2-J8N" secondAttribute="bottom" id="h5z-qc-DSs"/>
+                            <constraint firstItem="Ry7-e2-J8N" firstAttribute="top" secondItem="Qhx-lW-V7B" secondAttribute="bottom" id="sdV-YU-Oi7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Ry7-e2-J8N" id="kOf-dT-YLp"/>
+                        <outlet property="searchBar" destination="Qhx-lW-V7B" id="afa-7A-o3A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4a-3m-bwE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2645" y="4"/>
         </scene>
     </scenes>
     <resources>
