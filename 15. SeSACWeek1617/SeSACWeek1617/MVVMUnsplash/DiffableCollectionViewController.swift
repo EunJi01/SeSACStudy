@@ -6,17 +6,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DiffableCollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var list = ["아이폰", "아이패드", "에어팟", "맥북", "애플워치"]
-    
-    //private var cellRegsteration: UICollectionView.CellRegistration<UICollectionViewListCell, String>!
-    
-    private var dataSource: UICollectionViewDiffableDataSource<Int, String>! // = <섹션, 데이터> 에 대한 정보
+    var viewModel = DiffableViewModel()
+    private var dataSource: UICollectionViewDiffableDataSource<Int, SearchResult>! // = <섹션, 데이터> 에 대한 정보
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,28 +22,32 @@ class DiffableCollectionViewController: UIViewController {
         collectionView.collectionViewLayout = createLayout()
         configureDataSource()
         collectionView.delegate = self
-        
         searchBar.delegate = self
+        
+        viewModel.photoList.bind { photo in
+            var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
+            snapshot.appendSections([0])
+            snapshot.appendItems(photo.results)
+            self.dataSource.apply(snapshot)
+        }
     }
 }
 
 extension DiffableCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // dataSource.itemIdentifier 를 활용해 현재 snapshot 에 대응하는 정보를 자동으로 가져오기
-        guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
-        
-        let alert = UIAlertController(title: item, message: "클릭!", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "확인", style: .cancel)
-        alert.addAction(ok)
-        present(alert, animated: true)
+//        guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
+//
+//        let alert = UIAlertController(title: item, message: "클릭!", preferredStyle: .alert)
+//        let ok = UIAlertAction(title: "확인", style: .cancel)
+//        alert.addAction(ok)
+//        present(alert, animated: true)
     }
 }
 
 extension DiffableCollectionViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        var snapshot = dataSource.snapshot()
-        snapshot.appendItems([searchBar.text!])
-        dataSource.apply(snapshot, animatingDifferences: true)
+        viewModel.requestSearchPhoto(query: searchBar.text!)
     }
 }
 
@@ -58,13 +60,22 @@ extension DiffableCollectionViewController {
     
     private func configureDataSource() {
         // cellRegsteration 을 전역에 선언하지 않고, 바로 초기화 하면서 handler 앞에 제네릭 명시
-        let cellRegsteration = UICollectionView.CellRegistration<UICollectionViewListCell, String>(handler: { cell, indexPath, itemIdentifier in
+        let cellRegsteration = UICollectionView.CellRegistration<UICollectionViewListCell, SearchResult>(handler: { cell, indexPath, itemIdentifier in
             
             var content = UIListContentConfiguration.valueCell()
-            content.text = itemIdentifier
-            content.secondaryText = "\(itemIdentifier.count)"
-            cell.contentConfiguration = content
+            content.text = "\(itemIdentifier.likes)"
             
+            // String -> URL -> Data -> Image
+            DispatchQueue.global().async {
+                let url = URL(string: itemIdentifier.urls.thumb)!
+                let data = try? Data(contentsOf: url)
+                
+                DispatchQueue.main.async {
+                    content.image = UIImage(data: data!)
+                    cell.contentConfiguration = content
+                }
+            }
+
             var background = UIBackgroundConfiguration.listPlainCell()
             background.strokeWidth = 2
             background.strokeColor = .brown
@@ -77,11 +88,5 @@ extension DiffableCollectionViewController {
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegsteration, for: indexPath, item: itemIdentifier)
             return cell
         })
-        
-        // Initial
-        var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
-        snapshot.appendSections([0])
-        snapshot.appendItems(list)
-        dataSource.apply(snapshot)
     }
 }
