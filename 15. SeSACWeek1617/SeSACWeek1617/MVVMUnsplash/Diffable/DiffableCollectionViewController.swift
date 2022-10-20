@@ -35,6 +35,10 @@ class DiffableCollectionViewController: UIViewController {
 
 extension DiffableCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailsViewController()
+        vc.id = viewModel.photoList.value.results[indexPath.row].id
+        present(vc, animated: true)
+        
         // dataSource.itemIdentifier 를 활용해 현재 snapshot 에 대응하는 정보를 자동으로 가져오기
 //        guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
 //
