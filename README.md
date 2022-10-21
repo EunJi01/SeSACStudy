@@ -62,12 +62,12 @@
 | **72회** | 15. SeSACWeek1617 | [📄](https://eun-dev.tistory.com/66) |  | **2022.10.18** |
 | **73회** |  | [📄](https://eun-dev.tistory.com/67) |  | **2022.10.19** |
 | **74회** |  | [📄](https://eun-dev.tistory.com/68) |  | **2022.10.20** |
-| **75회** |  | [📄](https://eun-dev.tistory.com/69) |  | **2022.10.21** |
-| **76회** |  | [📄](https://eun-dev.tistory.com/70) |  | **2022.10.24** |
-| **77회** |  | [📄](https://eun-dev.tistory.com/71) |  | **2022.10.25** |
-| **78회** |  | [📄](https://eun-dev.tistory.com/72) |  | **2022.10.26** |
+| **75회** | ---Weekly Conference--- |  |  | **2022.10.21** |
+| **76회** |  | [📄](https://eun-dev.tistory.com/69) |  | **2022.10.24** |
+| **77회** |  | [📄](https://eun-dev.tistory.com/70) |  | **2022.10.25** |
+| **78회** |  | [📄](https://eun-dev.tistory.com/71) |  | **2022.10.26** |
 | **79회** |  | [📄](https://eun-dev.tistory.com/73) |  | **2022.10.27** |
-| **80회** |  | [📄](https://eun-dev.tistory.com/74) |  | **2022.10.28** |
+| **80회** | ---Weekly Conference--- |  |  | **2022.10.28** |
 |  |  |  |  |  |
 
 </br>
