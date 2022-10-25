@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import RxSwift
 
 class NewsViewModel {
-    var pageNumber: CObservable<String> = CObservable("3000")
-    var sample: CObservable<[News.NewsItem]> = CObservable(News.items)
+    var pageNumber = BehaviorSubject(value: "3000")
+    var sample = BehaviorSubject(value: News.items)
     
     func changePageNumberFormat(text: String) {
         let numberFormatter = NumberFormatter()
@@ -17,16 +18,16 @@ class NewsViewModel {
         
         let text = text.replacingOccurrences(of: ",", with: "")
         guard let number = Int(text) else { return }
-        let result = numberFormatter.string(for: number)!
+        guard let result = numberFormatter.string(for: number) else { return }
         
-        pageNumber.value = result
+        pageNumber.onNext(result)
     }
     
     func resetSample() {
-        sample.value = []
+        sample.onNext([])
     }
     
     func loadSample() {
-        sample.value = News.items
+        sample.onNext(News.items)
     }
 }
