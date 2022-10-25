@@ -7,11 +7,11 @@
 
 import Foundation
 
-class DetailsViewModel{
+class DetailsViewModel {
     var details: CObservable<PhotoDetails> = CObservable(PhotoDetails(id: "", description: "", likes: nil))
     
     func requestPhotoDetails(id: String) {
-        APIService.photoDetails(id: "gKXKBY-C-Dk") { details, statusCode, error in
+        APIService.photoDetails(id: id) { details, statusCode, error in
             guard let details = details else { return }
             self.details.value = details
         }
