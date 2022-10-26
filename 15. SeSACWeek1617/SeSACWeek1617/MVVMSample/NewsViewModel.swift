@@ -7,10 +7,13 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class NewsViewModel {
-    var pageNumber = BehaviorSubject(value: "3000")
-    var sample = BehaviorSubject(value: News.items)
+    var pageNumber = BehaviorSubject(value: "3,000")
+    
+    //var sample = BehaviorSubject(value: News.items)
+    var sample = BehaviorRelay(value: News.items)
     
     func changePageNumberFormat(text: String) {
         let numberFormatter = NumberFormatter()
@@ -24,10 +27,12 @@ class NewsViewModel {
     }
     
     func resetSample() {
-        sample.onNext([])
+        //sample.onNext([])
+        sample.accept([])
     }
     
     func loadSample() {
-        sample.onNext(News.items)
+        //sample.onNext(News.items)
+        sample.accept(News.items)
     }
 }

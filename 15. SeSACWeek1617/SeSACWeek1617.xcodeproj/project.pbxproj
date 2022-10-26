@@ -26,6 +26,7 @@
 		B678A455290625BE000358BA /* RxCocoaExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A454290625BE000358BA /* RxCocoaExampleViewController.swift */; };
 		B678A45729077A4E000358BA /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A45629077A4E000358BA /* SubjectViewController.swift */; };
 		B678A459290788A1000358BA /* SubjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A458290788A1000358BA /* SubjectViewModel.swift */; };
+		B678A45C2908CBAE000358BA /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A45B2908CBAE000358BA /* SubscribeViewController.swift */; };
 		B6C93E3528FE2DA400F2F96F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E3428FE2DA400F2F96F /* AppDelegate.swift */; };
 		B6C93E3728FE2DA400F2F96F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E3628FE2DA400F2F96F /* SceneDelegate.swift */; };
 		B6C93E3928FE2DA400F2F96F /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C93E3828FE2DA400F2F96F /* SimpleTableViewController.swift */; };
@@ -51,6 +52,7 @@
 		B678A454290625BE000358BA /* RxCocoaExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaExampleViewController.swift; sourceTree = "<group>"; };
 		B678A45629077A4E000358BA /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 		B678A458290788A1000358BA /* SubjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewModel.swift; sourceTree = "<group>"; };
+		B678A45B2908CBAE000358BA /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		B6C93E3128FE2DA400F2F96F /* SeSACWeek1617.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek1617.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C93E3428FE2DA400F2F96F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C93E3628FE2DA400F2F96F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				B678A454290625BE000358BA /* RxCocoaExampleViewController.swift */,
 				B678A45629077A4E000358BA /* SubjectViewController.swift */,
 				B678A458290788A1000358BA /* SubjectViewModel.swift */,
+				B678A45B2908CBAE000358BA /* SubscribeViewController.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				B6C93E3928FE2DA400F2F96F /* SimpleTableViewController.swift in Sources */,
 				B678A42F2900D133000358BA /* NewsViewController.swift in Sources */,
 				B6C93E3528FE2DA400F2F96F /* AppDelegate.swift in Sources */,
+				B678A45C2908CBAE000358BA /* SubscribeViewController.swift in Sources */,
 				B678A43B2900EF7D000358BA /* SearchPhoto.swift in Sources */,
 				B6C93E3728FE2DA400F2F96F /* SceneDelegate.swift in Sources */,
 				B678A4312900D242000358BA /* NewsViewModel.swift in Sources */,

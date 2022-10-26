@@ -6,14 +6,16 @@
 //
 
 import UIKit
-import Kingfisher
+import RxSwift
+import RxCocoa
 
 class DiffableCollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var viewModel = DiffableViewModel()
+    let viewModel = DiffableViewModel()
+    let disposeBag = DisposeBag()
     private var dataSource: UICollectionViewDiffableDataSource<Int, SearchResult>! // = <섹션, 데이터> 에 대한 정보
     
     override func viewDidLoad() {
@@ -21,23 +23,43 @@ class DiffableCollectionViewController: UIViewController {
 
         collectionView.collectionViewLayout = createLayout()
         configureDataSource()
+        bindData()
         collectionView.delegate = self
-        searchBar.delegate = self
+    }
+    
+    func bindData() {
+        viewModel.photoList
+            .withUnretained(self)
+            .subscribe { vc, photo in
+                var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
+                snapshot.appendSections([0])
+                snapshot.appendItems(photo.results)
+                vc.dataSource.apply(snapshot)
+            } onError: { error in
+                print("====error: \(error)")
+            } onCompleted: {
+                print("completed")
+            } onDisposed: {
+                print("disposed")
+            }
+            .disposed(by: disposeBag)
         
-        viewModel.photoList.bind { photo in
-            var snapshot = NSDiffableDataSourceSnapshot<Int, SearchResult>()
-            snapshot.appendSections([0])
-            snapshot.appendItems(photo.results)
-            self.dataSource.apply(snapshot)
-        }
+        searchBar.rx.text.orEmpty
+            .debounce(.seconds(1), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .withUnretained(self)
+            .subscribe { vc, value in
+                vc.viewModel.requestSearchPhoto(query: value)
+            }
+            .disposed(by: disposeBag)
     }
 }
 
 extension DiffableCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = DetailsViewController()
-        vc.id = viewModel.photoList.value.results[indexPath.row].id
-        present(vc, animated: true)
+//        let vc = DetailsViewController()
+//        vc.id = viewModel.photoList.value.results[indexPath.row].id
+//        present(vc, animated: true)
         
         // dataSource.itemIdentifier 를 활용해 현재 snapshot 에 대응하는 정보를 자동으로 가져오기
 //        guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
@@ -46,12 +68,6 @@ extension DiffableCollectionViewController: UICollectionViewDelegate {
 //        let ok = UIAlertAction(title: "확인", style: .cancel)
 //        alert.addAction(ok)
 //        present(alert, animated: true)
-    }
-}
-
-extension DiffableCollectionViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.requestSearchPhoto(query: searchBar.text!)
     }
 }
 
