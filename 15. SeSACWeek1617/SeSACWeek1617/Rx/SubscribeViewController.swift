@@ -23,6 +23,7 @@ class SubscribeViewController: UIViewController {
     }
     
     func bindData() {
+        
         // 1. subscribe [weak self]
         button.rx.tap
             .subscribe { [weak self] _ in
@@ -38,7 +39,7 @@ class SubscribeViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
-        // 3. observe : 네트워크 통신이나 파일 다운로드 등 백그라운드 작업
+        // 3. subscribe -> observe : 네트워크 통신이나 파일 다운로드 등 백그라운드 작업
         button.rx.tap
             .observe(on: MainScheduler.instance) // 다른 쓰레드로 동작하게 변경
             .withUnretained(self)
@@ -55,7 +56,7 @@ class SubscribeViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
-        // 5. operator로 데이터의 stream 조작
+        // 5. bind -> operator로 데이터의 stream 조작
         button.rx.tap
             .map { "안녕 반가워" }
             .bind(to: label.rx.text)

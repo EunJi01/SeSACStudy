@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class DetailsViewController: UIViewController {
     
@@ -16,6 +18,7 @@ class DetailsViewController: UIViewController {
     let likesLabel = UILabel()
     
     let viewModel = DetailsViewModel()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +54,13 @@ class DetailsViewController: UIViewController {
     }
     
     func bindData() {
-        viewModel.details.bind { details in
-            self.idLbabel.text = details.id
-            self.descriptionLabel.text = details.description
-            self.likesLabel.text = "\(details.likes ?? 0)"
-        }
+        viewModel.details
+            .withUnretained(self)
+            .subscribe { vc, details in
+                vc.idLbabel.text = details.id
+                vc.descriptionLabel.text = details.description
+                vc.likesLabel.text = "\(details.likes ?? 0)"
+            }
+            .disposed(by: disposeBag)
     }
 }

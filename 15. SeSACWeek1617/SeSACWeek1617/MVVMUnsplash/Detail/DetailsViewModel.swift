@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import RxSwift
 
 class DetailsViewModel {
-    var details: CObservable<PhotoDetails> = CObservable(PhotoDetails(id: "", description: "", likes: nil))
+    var details = PublishSubject<PhotoDetails>()
     
     func requestPhotoDetails(id: String) {
-        APIService.photoDetails(id: id) { details, statusCode, error in
+        APIService.photoDetails(id: id) { [weak self] details, statusCode, error in
             guard let details = details else { return }
-            self.details.value = details
+            self?.details.onNext(details)
         }
     }
 }

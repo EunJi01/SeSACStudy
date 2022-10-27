@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4jZ-7K-1Ty">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C6X-Id-nRT">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -328,6 +328,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ib-t9-woC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5668" y="18"/>
+        </scene>
+        <!--Validation View Controller-->
+        <scene sceneID="9mP-21-a4J">
+            <objects>
+                <viewController id="C6X-Id-nRT" customClass="ValidationViewController" customModule="SeSACWeek1617" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C67-Eb-BTh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKj-tf-N83">
+                                <rect key="frame" x="20" y="67" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DmJ-sm-B6M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xex-fN-huO">
+                                <rect key="frame" x="20" y="137" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tey-eE-hFN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgL-48-dCT">
+                                <rect key="frame" x="20" y="207" width="350" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aAY-rI-flu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="otJ-Ja-Oas"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="otJ-Ja-Oas" firstAttribute="trailing" secondItem="bgL-48-dCT" secondAttribute="trailing" constant="20" id="IkP-xO-MVn"/>
+                            <constraint firstItem="bgL-48-dCT" firstAttribute="top" secondItem="xex-fN-huO" secondAttribute="bottom" constant="20" id="MwJ-7z-FHl"/>
+                            <constraint firstItem="bgL-48-dCT" firstAttribute="leading" secondItem="otJ-Ja-Oas" secondAttribute="leading" constant="20" id="ZX4-jX-Uem"/>
+                            <constraint firstItem="otJ-Ja-Oas" firstAttribute="trailing" secondItem="bKj-tf-N83" secondAttribute="trailing" constant="20" id="elv-S6-b6y"/>
+                            <constraint firstItem="xex-fN-huO" firstAttribute="leading" secondItem="otJ-Ja-Oas" secondAttribute="leading" constant="20" id="f6c-nj-rAu"/>
+                            <constraint firstItem="bKj-tf-N83" firstAttribute="leading" secondItem="otJ-Ja-Oas" secondAttribute="leading" constant="20" id="hQd-2I-3gP"/>
+                            <constraint firstItem="xex-fN-huO" firstAttribute="top" secondItem="bKj-tf-N83" secondAttribute="bottom" constant="20" id="l46-yL-AaN"/>
+                            <constraint firstItem="otJ-Ja-Oas" firstAttribute="trailing" secondItem="xex-fN-huO" secondAttribute="trailing" constant="20" id="l4V-eD-ZbC"/>
+                            <constraint firstItem="bKj-tf-N83" firstAttribute="top" secondItem="otJ-Ja-Oas" secondAttribute="top" constant="20" id="oz2-RQ-CBM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="bKj-tf-N83" id="8Gz-Xn-Rwq"/>
+                        <outlet property="stepButton" destination="bgL-48-dCT" id="P4Y-60-O56"/>
+                        <outlet property="validationLabel" destination="xex-fN-huO" id="WfH-e6-ULk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mg3-HD-bxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6442" y="18"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="Age-Ar-iPt">

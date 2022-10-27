@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B65685B2290A07AD00E76637 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65685B1290A07AD00E76637 /* ValidationViewController.swift */; };
+		B65685B4290A228E00E76637 /* ValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65685B3290A228E00E76637 /* ValidationViewModel.swift */; };
 		B678A42D2900CF8B000358BA /* CObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A42C2900CF8B000358BA /* CObservable.swift */; };
 		B678A42F2900D133000358BA /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A42E2900D133000358BA /* NewsViewController.swift */; };
 		B678A4312900D242000358BA /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A4302900D242000358BA /* NewsViewModel.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B65685B1290A07AD00E76637 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
+		B65685B3290A228E00E76637 /* ValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewModel.swift; sourceTree = "<group>"; };
 		B678A42C2900CF8B000358BA /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
 		B678A42E2900D133000358BA /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		B678A4302900D242000358BA /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				B678A45629077A4E000358BA /* SubjectViewController.swift */,
 				B678A458290788A1000358BA /* SubjectViewModel.swift */,
 				B678A45B2908CBAE000358BA /* SubscribeViewController.swift */,
+				B65685B1290A07AD00E76637 /* ValidationViewController.swift */,
+				B65685B3290A228E00E76637 /* ValidationViewModel.swift */,
 			);
 			path = Rx;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 				B678A42F2900D133000358BA /* NewsViewController.swift in Sources */,
 				B6C93E3528FE2DA400F2F96F /* AppDelegate.swift in Sources */,
 				B678A45C2908CBAE000358BA /* SubscribeViewController.swift in Sources */,
+				B65685B2290A07AD00E76637 /* ValidationViewController.swift in Sources */,
 				B678A43B2900EF7D000358BA /* SearchPhoto.swift in Sources */,
 				B6C93E3728FE2DA400F2F96F /* SceneDelegate.swift in Sources */,
 				B678A4312900D242000358BA /* NewsViewModel.swift in Sources */,
@@ -270,6 +277,7 @@
 				B678A44A2901616E000358BA /* PhotoDetails.swift in Sources */,
 				B678A44829016132000358BA /* DetailsViewModel.swift in Sources */,
 				B678A44529016105000358BA /* DetailsViewController.swift in Sources */,
+				B65685B4290A228E00E76637 /* ValidationViewModel.swift in Sources */,
 				B678A455290625BE000358BA /* RxCocoaExampleViewController.swift in Sources */,
 				B678A459290788A1000358BA /* SubjectViewModel.swift in Sources */,
 			);

@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class NewsViewModel {
-    var pageNumber = BehaviorSubject(value: "3,000")
+    var pageNumber = BehaviorRelay(value: "3,000")
     
     //var sample = BehaviorSubject(value: News.items)
     var sample = BehaviorRelay(value: News.items)
@@ -23,7 +23,7 @@ class NewsViewModel {
         guard let number = Int(text) else { return }
         guard let result = numberFormatter.string(for: number) else { return }
         
-        pageNumber.onNext(result)
+        pageNumber.accept(result)
     }
     
     func resetSample() {
