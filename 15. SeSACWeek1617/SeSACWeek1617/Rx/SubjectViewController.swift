@@ -31,36 +31,37 @@ class SubjectViewController: UIViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ContactCell")
         
-        viewModel.list
-            .bind(to: tableView.rx.items(cellIdentifier: "ContactCell", cellType: UITableViewCell.self)) { row, element, cell in
+        let input = SubjectViewModel.Input(addTap: addButton.rx.tap, resetTap: resetButton.rx.tap, newTap: newButton.rx.tap, searchText: searchBar.rx.text)
+        let output = viewModel.transform(input: input)
+        
+        output.list // VM -> VC (Output)
+            .drive(tableView.rx.items(cellIdentifier: "ContactCell", cellType: UITableViewCell.self)) { row, element, cell in
                 cell.textLabel?.text = "\(element.name): \(element.age)세 (\(element.number))"
             }
             .disposed(by: disposeBag)
             
-        addButton.rx.tap
+        output.addTap // VC -> VM (Input)
             .withUnretained(self)
             .subscribe { vc, _ in
                 vc.viewModel.fetchData()
             }
             .disposed(by: disposeBag)
         
-        resetButton.rx.tap
+        output.resetTap
             .withUnretained(self)
             .subscribe { vc, _ in
                 vc.viewModel.resetData()
             }
             .disposed(by: disposeBag)
         
-        newButton.rx.tap
+        output.newTap
             .withUnretained(self)
             .subscribe { vc, _ in
                 vc.viewModel.newData()
             }
             .disposed(by: disposeBag)
         
-        searchBar.rx.text.orEmpty
-            .debounce(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance) // wait
-            //.distinctUntilChanged() // 같은 값을 받지 않음
+        output.searchText // VC -> VM (Input)
             .withUnretained(self) // self => [weak self] = vc
             .subscribe { vc, value in
                 print("====\(value)")

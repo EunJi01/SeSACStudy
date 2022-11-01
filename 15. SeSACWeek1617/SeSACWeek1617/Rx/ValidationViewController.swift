@@ -27,14 +27,42 @@ class ValidationViewController: UIViewController {
     func bind() {
         // Stream == Sequence
         
-        viewModel.validText
+        // After
+        let input = ValidationViewModel.Input(text: nameTextField.rx.text, tap: stepButton.rx.tap)
+        let output = viewModel.transform(input: input)
+        
+        output.text
+            .drive(validationLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        output.validation
+            .bind(to: stepButton.rx.isEnabled, validationLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        output.validation
+            .withUnretained(self)
+            .bind { vc, value in
+                let color: UIColor = value ? .systemPink : .lightGray
+                vc.stepButton.backgroundColor = color
+            }
+            .disposed(by: disposeBag)
+        
+        output.tap // Input
+            .bind {
+                print("SHOW ALERT")
+            }
+            .disposed(by: disposeBag)
+        
+        // Before
+        viewModel.validText// Output
             .asDriver()
             .drive(validationLabel.rx.text)
             .disposed(by: disposeBag)
         
-        let validation = nameTextField.rx.text.orEmpty
-            .map { $0.count >= 8 } // Bool
-            .share() // share가 내부적으로 구현되있는 객체가 Subject, Relay
+        let validation = nameTextField.rx.text // Input
+            .orEmpty
+            .map { $0.count >= 8 }
+            .share()
 
         validation
             .bind(to: stepButton.rx.isEnabled, validationLabel.rx.isHidden)
@@ -48,7 +76,7 @@ class ValidationViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
-        stepButton.rx.tap
+        stepButton.rx.tap // Input
             .bind {
                 print("SHOW ALERT")
             }
