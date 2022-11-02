@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class ProfileViewController: ViewController {
     
-    let api = APIService()
     let imageView = UIImageView()
     let emailLabel = UILabel()
     let nameLabel = UILabel()
     let logoutButton = UIBarButtonItem(title: "로그아웃", style: .plain, target: ProfileViewController.self, action: nil)
+    
+    let api = APIService()
+    let disposeBag = DisposeBag()
+    // MARK: 로그아웃 기능 구현 필요
     
     override func viewDidLoad() {
         super.viewDidLoad()
