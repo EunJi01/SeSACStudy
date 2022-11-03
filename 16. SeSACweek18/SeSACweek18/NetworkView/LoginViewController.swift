@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class LoginViewController: ViewController {
+final class LoginViewController: UIViewController {
     // MARK: 자동 로그인 구현 필요
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
@@ -27,7 +27,7 @@ class LoginViewController: ViewController {
         bind()
     }
     
-    func bind() {
+    private func bind() {
         loginButton.rx.tap
             .withUnretained(self)
             .bind { vc, _ in
@@ -37,8 +37,8 @@ class LoginViewController: ViewController {
             }
             .disposed(by: disposeBag)
     }
-    
-    func requestLogin(email: String, password: String) {
+
+    private func requestLogin(email: String, password: String) {
         api.login(email: email, password: password) { [weak self] result in
             print(result)
             guard result == true else { return }
@@ -46,7 +46,7 @@ class LoginViewController: ViewController {
         }
     }
     
-    func setConstraints() {
+    private func setConstraints() {
         emailTextField.textAlignment = .center
         passwordTextField.textAlignment = .center
         emailTextField.placeholder = "이메일을 입력해주세요"

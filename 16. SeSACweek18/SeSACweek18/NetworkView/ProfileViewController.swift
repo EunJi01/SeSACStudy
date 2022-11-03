@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class ProfileViewController: ViewController {
+final class ProfileViewController: UIViewController {
     
     let imageView = UIImageView()
     let emailLabel = UILabel()
@@ -30,7 +30,7 @@ class ProfileViewController: ViewController {
         requestProfile()
     }
     
-    func requestProfile() {
+    private func requestProfile() {
         api.profile { [weak self] user, error in
             guard let user = user else { return }
             self?.emailLabel.text = user.email
@@ -47,7 +47,7 @@ class ProfileViewController: ViewController {
         }
     }
     
-    func setConstraints() {
+    private func setConstraints() {
         [imageView, emailLabel, nameLabel].forEach {
             view.addSubview($0)
         }

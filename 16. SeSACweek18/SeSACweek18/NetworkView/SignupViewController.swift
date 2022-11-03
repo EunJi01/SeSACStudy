@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SignupViewController: ViewController {
+final class SignupViewController: UIViewController {
     
     let nameTextField = UITextField()
     let emailTextField = UITextField()
@@ -30,7 +30,7 @@ class SignupViewController: ViewController {
         bind()
     }
     
-    func bind() {
+    private func bind() {
         signupButton.rx.tap
             .withUnretained(self)
             .bind { vc, _ in
@@ -40,7 +40,7 @@ class SignupViewController: ViewController {
                 vc.requestSignup(userName: userName, email: email, password: password)
             }
             .disposed(by: disposeBag)
-        
+
         loginButton.rx.tap
             .withUnretained(self)
             .bind { vc, _ in
@@ -49,7 +49,7 @@ class SignupViewController: ViewController {
             .disposed(by: disposeBag)
     }
     
-    func requestSignup(userName: String, email: String, password: String) {
+    private func requestSignup(userName: String, email: String, password: String) {
         api.signup(userName: userName, email: email, password: password) { result in
             guard result == true else { return }
 
@@ -61,7 +61,7 @@ class SignupViewController: ViewController {
         }
     }
     
-    func setConstraints() {
+    private func setConstraints() {
         nameTextField.textAlignment = .center
         emailTextField.textAlignment = .center
         passwordTextField.textAlignment = .center

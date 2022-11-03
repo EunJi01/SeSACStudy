@@ -13,6 +13,9 @@
 		B63D94B329122A4C0042D11C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B63D94B229122A4C0042D11C /* SnapKit */; };
 		B63D94B629122F770042D11C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B63D94B529122F770042D11C /* RxCocoa */; };
 		B63D94B829122F770042D11C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B63D94B729122F770042D11C /* RxSwift */; };
+		B63D94BA291351D20042D11C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63D94B9291351D20042D11C /* Network.swift */; };
+		B63D94BC291352F90042D11C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63D94BB291352F90042D11C /* ProfileViewModel.swift */; };
+		B692E3C62913628700BEAF22 /* SubscriptExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692E3C52913628700BEAF22 /* SubscriptExample.swift */; };
 		B6D354B829120A1D0083DB6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D354B729120A1D0083DB6D /* AppDelegate.swift */; };
 		B6D354BA29120A1D0083DB6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D354B929120A1D0083DB6D /* SceneDelegate.swift */; };
 		B6D354BC29120A1D0083DB6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D354BB29120A1D0083DB6D /* ViewController.swift */; };
@@ -28,6 +31,9 @@
 		B63D94AA2912224B0042D11C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B63D94AC291222970042D11C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B63D94AE291222A60042D11C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B63D94B9291351D20042D11C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		B63D94BB291352F90042D11C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		B692E3C52913628700BEAF22 /* SubscriptExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptExample.swift; sourceTree = "<group>"; };
 		B6D354B429120A1D0083DB6D /* SeSACweek18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACweek18.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D354B729120A1D0083DB6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6D354B929120A1D0083DB6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 				B6D354B729120A1D0083DB6D /* AppDelegate.swift */,
 				B6D354B929120A1D0083DB6D /* SceneDelegate.swift */,
 				B6D354BB29120A1D0083DB6D /* ViewController.swift */,
+				B63D94BB291352F90042D11C /* ProfileViewModel.swift */,
+				B692E3C52913628700BEAF22 /* SubscriptExample.swift */,
 				B6D354BD29120A1D0083DB6D /* Main.storyboard */,
 				B6D354C029120A1E0083DB6D /* Assets.xcassets */,
 				B6D354C229120A1E0083DB6D /* LaunchScreen.storyboard */,
@@ -100,6 +108,7 @@
 		B6D354CE29120EEC0083DB6D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B63D94B9291351D20042D11C /* Network.swift */,
 				B6D354CF29120F030083DB6D /* APIService.swift */,
 				B6D354D129121BE40083DB6D /* Endpont.swift */,
 			);
@@ -188,11 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B692E3C62913628700BEAF22 /* SubscriptExample.swift in Sources */,
 				B63D94AB2912224B0042D11C /* LoginViewController.swift in Sources */,
 				B63D94AD291222970042D11C /* SignupViewController.swift in Sources */,
 				B6D354BC29120A1D0083DB6D /* ViewController.swift in Sources */,
 				B6D354B829120A1D0083DB6D /* AppDelegate.swift in Sources */,
+				B63D94BC291352F90042D11C /* ProfileViewModel.swift in Sources */,
 				B6D354D029120F030083DB6D /* APIService.swift in Sources */,
+				B63D94BA291351D20042D11C /* Network.swift in Sources */,
 				B6D354D229121BE40083DB6D /* Endpont.swift in Sources */,
 				B63D94AF291222A60042D11C /* ProfileViewController.swift in Sources */,
 				B6D354BA29120A1D0083DB6D /* SceneDelegate.swift in Sources */,
