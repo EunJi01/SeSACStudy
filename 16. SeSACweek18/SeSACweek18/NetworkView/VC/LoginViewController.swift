@@ -10,18 +10,18 @@ import RxSwift
 import RxCocoa
 
 final class LoginViewController: UIViewController {
-    // MARK: 자동 로그인 구현 필요
+
     let emailTextField = UITextField()
     let passwordTextField = UITextField()
     let loginButton = UIButton()
     
-    let api = APIService()
+    let vm = LoginViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationController?.navigationBar.topItem?.title = "로그인"
+        navigationItem.title = "로그인"
         
         setConstraints()
         bind()
@@ -33,17 +33,9 @@ final class LoginViewController: UIViewController {
             .bind { vc, _ in
                 guard let email = vc.emailTextField.text else { return }
                 guard let password = vc.passwordTextField.text else { return }
-                vc.requestLogin(email: email, password: password)
+                vc.vm.requestLogin(selfVC: self, email: email, password: password)
             }
             .disposed(by: disposeBag)
-    }
-
-    private func requestLogin(email: String, password: String) {
-        api.login(email: email, password: password) { [weak self] result in
-            print(result)
-            guard result == true else { return }
-            self?.navigationController?.pushViewController(ProfileViewController(), animated: true)
-        }
     }
     
     private func setConstraints() {

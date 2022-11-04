@@ -17,13 +17,13 @@ final class SignupViewController: UIViewController {
     let signupButton = UIButton()
     let loginButton = UIBarButtonItem(title: "로그인", style: .plain, target: SignupViewController.self, action: nil)
     
-    let api = APIService()
+    let vm = SignupViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationController?.navigationBar.topItem?.title = "회원가입"
+        navigationItem.title = "회원가입"
         navigationItem.rightBarButtonItem = loginButton
         
         setConstraints()
@@ -37,7 +37,7 @@ final class SignupViewController: UIViewController {
                 guard let userName = vc.nameTextField.text else { return }
                 guard let email = vc.emailTextField.text else { return }
                 guard let password = vc.passwordTextField.text, password.count > 7 else { return }
-                vc.requestSignup(userName: userName, email: email, password: password)
+                vc.vm.requestSignup(selfVC: self,userName: userName, email: email, password: password)
             }
             .disposed(by: disposeBag)
 
@@ -47,18 +47,6 @@ final class SignupViewController: UIViewController {
                 vc.navigationController?.pushViewController(LoginViewController(), animated: true)
             }
             .disposed(by: disposeBag)
-    }
-    
-    private func requestSignup(userName: String, email: String, password: String) {
-        api.signup(userName: userName, email: email, password: password) { result in
-            guard result == true else { return }
-
-            // MARK: 회원가입 후 바로 로그인 -> 프로필로 이동 구현 필요
-            self.api.login(email: email, password: password) { [weak self] result in
-                guard result == true else { return }
-                self?.navigationController?.pushViewController(ProfileViewController(), animated: true)
-            }
-        }
     }
     
     private func setConstraints() {

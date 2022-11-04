@@ -14,14 +14,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
         
-//        window = UIWindow(windowScene: windowScene)
-//        let vc = SignupViewController()
-//        let nav = UINavigationController(rootViewController: vc)
-//        window?.rootViewController = nav
-//        window?.makeKeyAndVisible()
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
+        if UserDefaults.standard.string(forKey: "token") == nil {
+            window = UIWindow(windowScene: windowScene)
+            let vc = SignupViewController()
+            let nav = UINavigationController(rootViewController: vc)
+            window?.rootViewController = nav
+            window?.makeKeyAndVisible()
+        } else {
+            window = UIWindow(windowScene: windowScene)
+            let vc = ProfileViewController()
+            let nav = UINavigationController(rootViewController: vc)
+            window?.rootViewController = nav
+            window?.makeKeyAndVisible()
+        }
+
+        //guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

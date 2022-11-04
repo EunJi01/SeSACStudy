@@ -16,30 +16,50 @@ final class ProfileViewController: UIViewController {
     let nameLabel = UILabel()
     let logoutButton = UIBarButtonItem(title: "로그아웃", style: .plain, target: ProfileViewController.self, action: nil)
     
-    let api = APIService()
+    let vm = ProfileViewModel2()
     let disposeBag = DisposeBag()
-    // MARK: 로그아웃 기능 구현 필요
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationController?.navigationBar.topItem?.title = "프로필"
+        navigationItem.title = "프로필"
         navigationItem.rightBarButtonItem = logoutButton
         
         setConstraints()
         requestProfile()
+        bing()
+    }
+    
+    private func bing() {
+        logoutButton.rx.tap
+            .withUnretained(self)
+            .bind { vc, _ in
+                vc.logout()
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    private func logout() {
+        UserDefaults.standard.removeObject(forKey: "token")
+        
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        let vc = SignupViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        
+        sceneDelegate?.window?.rootViewController = nav
+        sceneDelegate?.window?.makeKeyAndVisible()
     }
     
     private func requestProfile() {
-        api.profile { [weak self] user, error in
+        vm.api.profile { [weak self] user, error in
             guard let user = user else { return }
             self?.emailLabel.text = user.email
             self?.nameLabel.text = user.username
             
             DispatchQueue.global().async {
-                guard let url = URL(string: user.photo) else { return }
-                guard let data = try? Data(contentsOf: url) else { return }
-                
+                guard let data = self?.vm.imageFormat(url: user.photo) else { return }
+
                 DispatchQueue.main.async {
                     self?.imageView.image = UIImage(data: data)
                 }

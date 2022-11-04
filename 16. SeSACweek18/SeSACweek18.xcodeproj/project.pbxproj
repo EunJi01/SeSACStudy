@@ -16,6 +16,9 @@
 		B63D94BA291351D20042D11C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63D94B9291351D20042D11C /* Network.swift */; };
 		B63D94BC291352F90042D11C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63D94BB291352F90042D11C /* ProfileViewModel.swift */; };
 		B692E3C62913628700BEAF22 /* SubscriptExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692E3C52913628700BEAF22 /* SubscriptExample.swift */; };
+		B692E3CA2914A38E00BEAF22 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692E3C92914A38E00BEAF22 /* SignupViewModel.swift */; };
+		B692E3CC2914A39700BEAF22 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692E3CB2914A39700BEAF22 /* LoginViewModel.swift */; };
+		B692E3CE2914A3A000BEAF22 /* ProfileViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692E3CD2914A3A000BEAF22 /* ProfileViewModel2.swift */; };
 		B6D354B829120A1D0083DB6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D354B729120A1D0083DB6D /* AppDelegate.swift */; };
 		B6D354BA29120A1D0083DB6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D354B929120A1D0083DB6D /* SceneDelegate.swift */; };
 		B6D354BC29120A1D0083DB6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D354BB29120A1D0083DB6D /* ViewController.swift */; };
@@ -34,6 +37,9 @@
 		B63D94B9291351D20042D11C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B63D94BB291352F90042D11C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		B692E3C52913628700BEAF22 /* SubscriptExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptExample.swift; sourceTree = "<group>"; };
+		B692E3C92914A38E00BEAF22 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		B692E3CB2914A39700BEAF22 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B692E3CD2914A3A000BEAF22 /* ProfileViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel2.swift; sourceTree = "<group>"; };
 		B6D354B429120A1D0083DB6D /* SeSACweek18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACweek18.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D354B729120A1D0083DB6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6D354B929120A1D0083DB6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,11 +70,30 @@
 		B63D94A9291221AD0042D11C /* NetworkView */ = {
 			isa = PBXGroup;
 			children = (
+				B692E3C8291491DD00BEAF22 /* VM */,
+				B692E3C7291491D600BEAF22 /* VC */,
+			);
+			path = NetworkView;
+			sourceTree = "<group>";
+		};
+		B692E3C7291491D600BEAF22 /* VC */ = {
+			isa = PBXGroup;
+			children = (
 				B63D94AC291222970042D11C /* SignupViewController.swift */,
 				B63D94AA2912224B0042D11C /* LoginViewController.swift */,
 				B63D94AE291222A60042D11C /* ProfileViewController.swift */,
 			);
-			path = NetworkView;
+			path = VC;
+			sourceTree = "<group>";
+		};
+		B692E3C8291491DD00BEAF22 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				B692E3C92914A38E00BEAF22 /* SignupViewModel.swift */,
+				B692E3CB2914A39700BEAF22 /* LoginViewModel.swift */,
+				B692E3CD2914A3A000BEAF22 /* ProfileViewModel2.swift */,
+			);
+			path = VM;
 			sourceTree = "<group>";
 		};
 		B6D354AB29120A1D0083DB6D = {
@@ -203,7 +228,10 @@
 				B6D354BC29120A1D0083DB6D /* ViewController.swift in Sources */,
 				B6D354B829120A1D0083DB6D /* AppDelegate.swift in Sources */,
 				B63D94BC291352F90042D11C /* ProfileViewModel.swift in Sources */,
+				B692E3CE2914A3A000BEAF22 /* ProfileViewModel2.swift in Sources */,
+				B692E3CA2914A38E00BEAF22 /* SignupViewModel.swift in Sources */,
 				B6D354D029120F030083DB6D /* APIService.swift in Sources */,
+				B692E3CC2914A39700BEAF22 /* LoginViewModel.swift in Sources */,
 				B63D94BA291351D20042D11C /* Network.swift in Sources */,
 				B6D354D229121BE40083DB6D /* Endpont.swift in Sources */,
 				B63D94AF291222A60042D11C /* ProfileViewController.swift in Sources */,
