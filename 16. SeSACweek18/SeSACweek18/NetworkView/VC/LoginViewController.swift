@@ -28,7 +28,10 @@ final class LoginViewController: UIViewController {
     }
     
     private func bind() {
-        loginButton.rx.tap
+        let input = LoginViewModel.Input(loginButtonTap: loginButton.rx.tap)
+        let output = vm.transform(input: input)
+        
+        output.loginButtonTap
             .withUnretained(self)
             .bind { vc, _ in
                 guard let email = vc.emailTextField.text else { return }

@@ -31,7 +31,10 @@ final class SignupViewController: UIViewController {
     }
     
     private func bind() {
-        signupButton.rx.tap
+        let input = SignupViewModel.Input(signupButtonTap: signupButton.rx.tap, loginButtonTap: loginButton.rx.tap)
+        let output = vm.transform(input: input)
+        
+        output.signupButtonTap
             .withUnretained(self)
             .bind { vc, _ in
                 guard let userName = vc.nameTextField.text else { return }
@@ -41,7 +44,7 @@ final class SignupViewController: UIViewController {
             }
             .disposed(by: disposeBag)
 
-        loginButton.rx.tap
+        output.loginButtonTap
             .withUnretained(self)
             .bind { vc, _ in
                 vc.navigationController?.pushViewController(LoginViewController(), animated: true)

@@ -12,6 +12,20 @@ import RxCocoa
 class SignupViewModel {
     let api = APIService()
     
+    struct Input {
+        let signupButtonTap: ControlEvent<Void>
+        let loginButtonTap: ControlEvent<Void>
+    }
+    
+    struct Output {
+        let signupButtonTap: ControlEvent<Void>
+        let loginButtonTap: ControlEvent<Void>
+    }
+    
+    func transform(input: Input) -> Output {
+        return Output(signupButtonTap: input.signupButtonTap, loginButtonTap: input.loginButtonTap)
+    }
+    
     func requestSignup(selfVC: SignupViewController, userName: String, email: String, password: String) {
         api.signup(userName: userName, email: email, password: password) { [weak self] result in
             guard result == true else { return }

@@ -31,7 +31,10 @@ final class ProfileViewController: UIViewController {
     }
     
     private func bing() {
-        logoutButton.rx.tap
+        let input = ProfileViewModel2.Input(logoutButtonTap: logoutButton.rx.tap)
+        let output = vm.transform(input: input)
+        
+        output.logoutButtonTap
             .withUnretained(self)
             .bind { vc, _ in
                 vc.logout()
