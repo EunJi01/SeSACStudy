@@ -26,25 +26,38 @@ final class ProfileViewController: UIViewController {
         navigationItem.rightBarButtonItem = logoutButton
         
         setConstraints()
-        requestProfile()
-        bing()
+        bind()
     }
     
-    private func bing() {
-        let input = ProfileViewModel2.Input(logoutButtonTap: logoutButton.rx.tap)
+    private func bind() {
+        let input = ProfileViewModel2.Input(logoutButtonTap: logoutButton.rx.tap.asSignal())
         let output = vm.transform(input: input)
         
-        output.logoutButtonTap
-            .withUnretained(self)
-            .bind { vc, _ in
-                vc.logout()
+        // MARK: 잭님 헬프... requestProfile는 UI 관련 코드가 아닌데 ViewController에 써도 될지? profileRelay를 직접 bind 해도 되는지???
+        vm.requestProfile()
+        vm.profileRelay
+            .bind { [weak self] user in
+                self?.emailLabel.text = user.email
+                self?.nameLabel.text = user.username
+                
+                DispatchQueue.global().async {
+                    guard let data = self?.vm.imageFormat(url: user.photo) else { return }
+
+                    DispatchQueue.main.async {
+                        self?.imageView.image = UIImage(data: data)
+                    }
+                }
             }
+            .disposed(by: disposeBag)
+        
+        output.logout
+            .emit(onNext: { [weak self] _ in
+                self?.logout()
+            })
             .disposed(by: disposeBag)
     }
     
     private func logout() {
-        UserDefaults.standard.removeObject(forKey: "token")
-        
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
         let vc = SignupViewController()
@@ -52,22 +65,6 @@ final class ProfileViewController: UIViewController {
         
         sceneDelegate?.window?.rootViewController = nav
         sceneDelegate?.window?.makeKeyAndVisible()
-    }
-    
-    private func requestProfile() {
-        vm.api.profile { [weak self] user, error in
-            guard let user = user else { return }
-            self?.emailLabel.text = user.email
-            self?.nameLabel.text = user.username
-            
-            DispatchQueue.global().async {
-                guard let data = self?.vm.imageFormat(url: user.photo) else { return }
-
-                DispatchQueue.main.async {
-                    self?.imageView.image = UIImage(data: data)
-                }
-            }
-        }
     }
     
     private func setConstraints() {

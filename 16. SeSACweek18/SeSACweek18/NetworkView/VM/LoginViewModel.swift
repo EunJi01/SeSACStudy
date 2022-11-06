@@ -11,24 +11,32 @@ import RxCocoa
 
 class LoginViewModel {
     let api = APIService()
+    let disposeBag = DisposeBag()
     
     struct Input {
-        let loginButtonTap: ControlEvent<Void>
+        let loginButtonTap: Signal<(String, String)>
     }
     
     struct Output {
-        let loginButtonTap: ControlEvent<Void>
+        let pushProfileVC: Signal<Void>
     }
+    
+    let pushProfileVCRelay = PublishRelay<Void>()
     
     func transform(input: Input) -> Output {
-        return Output(loginButtonTap: input.loginButtonTap)
+        input.loginButtonTap
+            .emit { [weak self] email, password in
+                self?.requestLogin(email: email, password: password)
+            }
+            .disposed(by: disposeBag)
+        
+        return Output(pushProfileVC: pushProfileVCRelay.asSignal())
     }
     
-    func requestLogin(selfVC: LoginViewController, email: String, password: String) {
-        api.login(email: email, password: password) { result in
+    func requestLogin(email: String, password: String) {
+        api.login(email: email, password: password) { [weak self] result in
             guard result == true else { return }
-            let vc = ProfileViewController()
-            selfVC.navigationController?.pushViewController(vc, animated: true)
+            self?.pushProfileVCRelay.accept(())
         }
     }
 }

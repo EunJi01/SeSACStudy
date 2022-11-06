@@ -11,22 +11,40 @@ import RxCocoa
 
 class ProfileViewModel2 {
     let api = APIService()
+    let disposeBag = DisposeBag()
     
     struct Input {
-        let logoutButtonTap: ControlEvent<Void>
+        let logoutButtonTap: Signal<Void>
     }
     
     struct Output {
-        let logoutButtonTap: ControlEvent<Void>
+        let profile: Signal<User>
+        let logout: Signal<Void>
     }
+    
+    let profileRelay = PublishRelay<User>()
+    let logoutRelay = PublishRelay<Void>()
     
     func transform(input: Input) -> Output {
-        return Output(logoutButtonTap: input.logoutButtonTap)
+        input.logoutButtonTap
+            .emit { _ in
+                UserDefaults.standard.removeObject(forKey: "token")
+            }
+            .disposed(by: disposeBag)
+        
+        return Output(profile: profileRelay.asSignal(), logout: logoutRelay.asSignal())
     }
-    
+
     func imageFormat(url: String) -> Data {
         guard let url = URL(string: url) else { return Data() }
         guard let data = try? Data(contentsOf: url) else { return Data() }
         return data
+    }
+    
+    func requestProfile() {
+        api.profile { user, error in
+            guard let user = user else { return }
+            self.profileRelay.accept(user)
+        }
     }
 }

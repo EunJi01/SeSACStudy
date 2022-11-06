@@ -31,24 +31,34 @@ final class SignupViewController: UIViewController {
     }
     
     private func bind() {
-        let input = SignupViewModel.Input(signupButtonTap: signupButton.rx.tap, loginButtonTap: loginButton.rx.tap)
+        let input = SignupViewModel.Input(
+            signupButtonTap: signupButton.rx.tap
+                .withLatestFrom(
+                    Observable.combineLatest(
+                        nameTextField.rx.text.orEmpty,
+                        emailTextField.rx.text.orEmpty,
+                        passwordTextField.rx.text.orEmpty
+                    ) {($0, $1, $2)}
+                )
+                .asSignal(onErrorJustReturn: ("", "", "")),
+            
+            loginButtonTap: loginButton.rx.tap.asSignal()
+        )
+        
         let output = vm.transform(input: input)
         
-        output.signupButtonTap
+        output.pushProfileVC
             .withUnretained(self)
-            .bind { vc, _ in
-                guard let userName = vc.nameTextField.text else { return }
-                guard let email = vc.emailTextField.text else { return }
-                guard let password = vc.passwordTextField.text, password.count > 7 else { return }
-                vc.vm.requestSignup(selfVC: self,userName: userName, email: email, password: password)
+            .emit { vc, _ in
+                vc.navigationController?.pushViewController(ProfileViewController(), animated: true)
             }
             .disposed(by: disposeBag)
 
-        output.loginButtonTap
+        output.pushLoginVC
             .withUnretained(self)
-            .bind { vc, _ in
+            .emit(onNext: { vc, _ in
                 vc.navigationController?.pushViewController(LoginViewController(), animated: true)
-            }
+            })
             .disposed(by: disposeBag)
     }
     

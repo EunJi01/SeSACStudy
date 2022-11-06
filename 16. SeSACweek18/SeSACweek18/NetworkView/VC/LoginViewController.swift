@@ -28,17 +28,18 @@ final class LoginViewController: UIViewController {
     }
     
     private func bind() {
-        let input = LoginViewModel.Input(loginButtonTap: loginButton.rx.tap)
-        let output = vm.transform(input: input)
+        let input = LoginViewModel.Input(
+            loginButtonTap: loginButton.rx.tap
+                .withLatestFrom(
+                    Observable.combineLatest(
+                        emailTextField.rx.text.orEmpty,
+                        passwordTextField.rx.text.orEmpty
+                    ) {($0, $1)}
+                )
+                .asSignal(onErrorJustReturn: ("", ""))
+        )
         
-        output.loginButtonTap
-            .withUnretained(self)
-            .bind { vc, _ in
-                guard let email = vc.emailTextField.text else { return }
-                guard let password = vc.passwordTextField.text else { return }
-                vc.vm.requestLogin(selfVC: self, email: email, password: password)
-            }
-            .disposed(by: disposeBag)
+        let output = vm.transform(input: input)
     }
     
     private func setConstraints() {

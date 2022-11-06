@@ -9,32 +9,46 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class SignupViewModel {
+final class SignupViewModel {
     let api = APIService()
+    let disposeBag = DisposeBag()
     
     struct Input {
-        let signupButtonTap: ControlEvent<Void>
-        let loginButtonTap: ControlEvent<Void>
+        let signupButtonTap: Signal<(String, String, String)>
+        let loginButtonTap: Signal<Void>
     }
     
     struct Output {
-        let signupButtonTap: ControlEvent<Void>
-        let loginButtonTap: ControlEvent<Void>
+        let pushLoginVC: Signal<Void>
+        let pushProfileVC: Signal<Void>
     }
+    
+    let pushLoginVCRelay = PublishRelay<Void>()
+    let pushProfileVCRelay = PublishRelay<Void>()
     
     func transform(input: Input) -> Output {
-        return Output(signupButtonTap: input.signupButtonTap, loginButtonTap: input.loginButtonTap)
+        input.signupButtonTap
+            .emit { [weak self] name, email, password in
+                guard !(name.isEmpty && email.isEmpty && password.isEmpty) else { return }
+                guard password.count > 7 else { return }
+                self?.requestSignup(userName: name, email: email, password: password)
+            }
+            .disposed(by: disposeBag)
+        
+        return Output(
+            pushLoginVC: pushLoginVCRelay.asSignal(),
+            pushProfileVC: pushProfileVCRelay.asSignal()
+        )
     }
     
-    func requestSignup(selfVC: SignupViewController, userName: String, email: String, password: String) {
+    func requestSignup(userName: String, email: String, password: String) {
         api.signup(userName: userName, email: email, password: password) { [weak self] result in
             guard result == true else { return }
-            guard let self = self else { return }
+            guard let vm = self else { return }
             
-            self.api.login(email: email, password: password) { result in
+            vm.api.login(email: email, password: password) { result in
                 guard result == true else { return }
-                let vc = ProfileViewController()
-                selfVC.navigationController?.pushViewController(vc, animated: true)
+                vm.pushProfileVCRelay.accept(())
             }
         }
     }
