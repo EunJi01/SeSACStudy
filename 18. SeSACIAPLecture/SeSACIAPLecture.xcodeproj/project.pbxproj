@@ -7,15 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B665148F29359F1B00B634C9 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665148E29359F1B00B634C9 /* LoginUITests.swift */; };
+		B665149729359F6900B634C9 /* SeSACIAPLectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665149629359F6900B634C9 /* SeSACIAPLectureTests.swift */; };
+		B665149E2935AB5D00B634C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665149D2935AB5D00B634C9 /* LoginViewController.swift */; };
 		B6B7DE622934551E007B2D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE612934551E007B2D29 /* AppDelegate.swift */; };
 		B6B7DE642934551E007B2D29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE632934551E007B2D29 /* SceneDelegate.swift */; };
 		B6B7DE662934551E007B2D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE652934551E007B2D29 /* ViewController.swift */; };
 		B6B7DE692934551E007B2D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B7DE672934551E007B2D29 /* Main.storyboard */; };
 		B6B7DE6B29345520007B2D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B7DE6A29345520007B2D29 /* Assets.xcassets */; };
 		B6B7DE6E29345520007B2D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B7DE6C29345520007B2D29 /* LaunchScreen.storyboard */; };
+		B6B7DE8429359D89007B2D29 /* SeSACIAPLectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE8329359D89007B2D29 /* SeSACIAPLectureUITests.swift */; };
+		B6B7DE8629359D89007B2D29 /* SeSACIAPLectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE8529359D89007B2D29 /* SeSACIAPLectureUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B665149829359F6900B634C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6B7DE562934551E007B2D29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6B7DE5D2934551E007B2D29;
+			remoteInfo = SeSACIAPLecture;
+		};
+		B6B7DE8729359D89007B2D29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6B7DE562934551E007B2D29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6B7DE5D2934551E007B2D29;
+			remoteInfo = SeSACIAPLecture;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B665148E29359F1B00B634C9 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		B665149429359F6900B634C9 /* SeSACIAPLectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACIAPLectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B665149629359F6900B634C9 /* SeSACIAPLectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACIAPLectureTests.swift; sourceTree = "<group>"; };
+		B665149D2935AB5D00B634C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B6B7DE5E2934551E007B2D29 /* SeSACIAPLecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACIAPLecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B7DE612934551E007B2D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6B7DE632934551E007B2D29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,10 +50,27 @@
 		B6B7DE6A29345520007B2D29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6B7DE6D29345520007B2D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6B7DE6F29345520007B2D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6B7DE8129359D89007B2D29 /* SeSACIAPLectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACIAPLectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6B7DE8329359D89007B2D29 /* SeSACIAPLectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACIAPLectureUITests.swift; sourceTree = "<group>"; };
+		B6B7DE8529359D89007B2D29 /* SeSACIAPLectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACIAPLectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B665149129359F6900B634C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B6B7DE5B2934551E007B2D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6B7DE7E29359D89007B2D29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,10 +80,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B665149529359F6900B634C9 /* SeSACIAPLectureTests */ = {
+			isa = PBXGroup;
+			children = (
+				B665149629359F6900B634C9 /* SeSACIAPLectureTests.swift */,
+			);
+			path = SeSACIAPLectureTests;
+			sourceTree = "<group>";
+		};
 		B6B7DE552934551E007B2D29 = {
 			isa = PBXGroup;
 			children = (
 				B6B7DE602934551E007B2D29 /* SeSACIAPLecture */,
+				B6B7DE8229359D89007B2D29 /* SeSACIAPLectureUITests */,
+				B665149529359F6900B634C9 /* SeSACIAPLectureTests */,
 				B6B7DE5F2934551E007B2D29 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				B6B7DE5E2934551E007B2D29 /* SeSACIAPLecture.app */,
+				B6B7DE8129359D89007B2D29 /* SeSACIAPLectureUITests.xctest */,
+				B665149429359F6900B634C9 /* SeSACIAPLectureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +114,7 @@
 				B6B7DE612934551E007B2D29 /* AppDelegate.swift */,
 				B6B7DE632934551E007B2D29 /* SceneDelegate.swift */,
 				B6B7DE652934551E007B2D29 /* ViewController.swift */,
+				B665149D2935AB5D00B634C9 /* LoginViewController.swift */,
 				B6B7DE672934551E007B2D29 /* Main.storyboard */,
 				B6B7DE6A29345520007B2D29 /* Assets.xcassets */,
 				B6B7DE6C29345520007B2D29 /* LaunchScreen.storyboard */,
@@ -67,9 +123,37 @@
 			path = SeSACIAPLecture;
 			sourceTree = "<group>";
 		};
+		B6B7DE8229359D89007B2D29 /* SeSACIAPLectureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B6B7DE8329359D89007B2D29 /* SeSACIAPLectureUITests.swift */,
+				B6B7DE8529359D89007B2D29 /* SeSACIAPLectureUITestsLaunchTests.swift */,
+				B665148E29359F1B00B634C9 /* LoginUITests.swift */,
+			);
+			path = SeSACIAPLectureUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B665149329359F6900B634C9 /* SeSACIAPLectureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B665149A29359F6900B634C9 /* Build configuration list for PBXNativeTarget "SeSACIAPLectureTests" */;
+			buildPhases = (
+				B665149029359F6900B634C9 /* Sources */,
+				B665149129359F6900B634C9 /* Frameworks */,
+				B665149229359F6900B634C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B665149929359F6900B634C9 /* PBXTargetDependency */,
+			);
+			name = SeSACIAPLectureTests;
+			productName = SeSACIAPLectureTests;
+			productReference = B665149429359F6900B634C9 /* SeSACIAPLectureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B6B7DE5D2934551E007B2D29 /* SeSACIAPLecture */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6B7DE7229345520007B2D29 /* Build configuration list for PBXNativeTarget "SeSACIAPLecture" */;
@@ -87,6 +171,24 @@
 			productReference = B6B7DE5E2934551E007B2D29 /* SeSACIAPLecture.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B6B7DE8029359D89007B2D29 /* SeSACIAPLectureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6B7DE8B29359D89007B2D29 /* Build configuration list for PBXNativeTarget "SeSACIAPLectureUITests" */;
+			buildPhases = (
+				B6B7DE7D29359D89007B2D29 /* Sources */,
+				B6B7DE7E29359D89007B2D29 /* Frameworks */,
+				B6B7DE7F29359D89007B2D29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6B7DE8829359D89007B2D29 /* PBXTargetDependency */,
+			);
+			name = SeSACIAPLectureUITests;
+			productName = SeSACIAPLectureUITests;
+			productReference = B6B7DE8129359D89007B2D29 /* SeSACIAPLectureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,8 +199,16 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					B665149329359F6900B634C9 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = B6B7DE5D2934551E007B2D29;
+					};
 					B6B7DE5D2934551E007B2D29 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					B6B7DE8029359D89007B2D29 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = B6B7DE5D2934551E007B2D29;
 					};
 				};
 			};
@@ -116,11 +226,20 @@
 			projectRoot = "";
 			targets = (
 				B6B7DE5D2934551E007B2D29 /* SeSACIAPLecture */,
+				B6B7DE8029359D89007B2D29 /* SeSACIAPLectureUITests */,
+				B665149329359F6900B634C9 /* SeSACIAPLectureTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B665149229359F6900B634C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B6B7DE5C2934551E007B2D29 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,20 +250,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6B7DE7F29359D89007B2D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B665149029359F6900B634C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B665149729359F6900B634C9 /* SeSACIAPLectureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B6B7DE5A2934551E007B2D29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B665149E2935AB5D00B634C9 /* LoginViewController.swift in Sources */,
 				B6B7DE662934551E007B2D29 /* ViewController.swift in Sources */,
 				B6B7DE622934551E007B2D29 /* AppDelegate.swift in Sources */,
 				B6B7DE642934551E007B2D29 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6B7DE7D29359D89007B2D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6B7DE8629359D89007B2D29 /* SeSACIAPLectureUITestsLaunchTests.swift in Sources */,
+				B6B7DE8429359D89007B2D29 /* SeSACIAPLectureUITests.swift in Sources */,
+				B665148F29359F1B00B634C9 /* LoginUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B665149929359F6900B634C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6B7DE5D2934551E007B2D29 /* SeSACIAPLecture */;
+			targetProxy = B665149829359F6900B634C9 /* PBXContainerItemProxy */;
+		};
+		B6B7DE8829359D89007B2D29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6B7DE5D2934551E007B2D29 /* SeSACIAPLecture */;
+			targetProxy = B6B7DE8729359D89007B2D29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B6B7DE672934551E007B2D29 /* Main.storyboard */ = {
@@ -166,6 +324,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B665149B29359F6900B634C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2RFRSG9M26;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lia.AppstoreTest.SeSACIAPLectureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeSACIAPLecture.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SeSACIAPLecture";
+			};
+			name = Debug;
+		};
+		B665149C29359F6900B634C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2RFRSG9M26;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lia.AppstoreTest.SeSACIAPLectureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeSACIAPLecture.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SeSACIAPLecture";
+			};
+			name = Release;
+		};
 		B6B7DE7029345520007B2D29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -336,9 +530,52 @@
 			};
 			name = Release;
 		};
+		B6B7DE8929359D89007B2D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2RFRSG9M26;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lia.AppstoreTest.SeSACIAPLectureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SeSACIAPLecture;
+			};
+			name = Debug;
+		};
+		B6B7DE8A29359D89007B2D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2RFRSG9M26;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lia.AppstoreTest.SeSACIAPLectureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SeSACIAPLecture;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B665149A29359F6900B634C9 /* Build configuration list for PBXNativeTarget "SeSACIAPLectureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B665149B29359F6900B634C9 /* Debug */,
+				B665149C29359F6900B634C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B6B7DE592934551E007B2D29 /* Build configuration list for PBXProject "SeSACIAPLecture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -353,6 +590,15 @@
 			buildConfigurations = (
 				B6B7DE7329345520007B2D29 /* Debug */,
 				B6B7DE7429345520007B2D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6B7DE8B29359D89007B2D29 /* Build configuration list for PBXNativeTarget "SeSACIAPLectureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6B7DE8929359D89007B2D29 /* Debug */,
+				B6B7DE8A29359D89007B2D29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
