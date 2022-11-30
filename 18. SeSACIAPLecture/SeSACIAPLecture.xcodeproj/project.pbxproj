@@ -10,6 +10,7 @@
 		B665148F29359F1B00B634C9 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665148E29359F1B00B634C9 /* LoginUITests.swift */; };
 		B665149729359F6900B634C9 /* SeSACIAPLectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665149629359F6900B634C9 /* SeSACIAPLectureTests.swift */; };
 		B665149E2935AB5D00B634C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665149D2935AB5D00B634C9 /* LoginViewController.swift */; };
+		B66514A02936FAF900B634C9 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665149F2936FAF900B634C9 /* ValidatorTests.swift */; };
 		B6B7DE622934551E007B2D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE612934551E007B2D29 /* AppDelegate.swift */; };
 		B6B7DE642934551E007B2D29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE632934551E007B2D29 /* SceneDelegate.swift */; };
 		B6B7DE662934551E007B2D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE652934551E007B2D29 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		B665149429359F6900B634C9 /* SeSACIAPLectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeSACIAPLectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B665149629359F6900B634C9 /* SeSACIAPLectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACIAPLectureTests.swift; sourceTree = "<group>"; };
 		B665149D2935AB5D00B634C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B665149F2936FAF900B634C9 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
 		B6B7DE5E2934551E007B2D29 /* SeSACIAPLecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACIAPLecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B7DE612934551E007B2D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6B7DE632934551E007B2D29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B665149629359F6900B634C9 /* SeSACIAPLectureTests.swift */,
+				B665149F2936FAF900B634C9 /* ValidatorTests.swift */,
 			);
 			path = SeSACIAPLectureTests;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66514A02936FAF900B634C9 /* ValidatorTests.swift in Sources */,
 				B665149729359F6900B634C9 /* SeSACIAPLectureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

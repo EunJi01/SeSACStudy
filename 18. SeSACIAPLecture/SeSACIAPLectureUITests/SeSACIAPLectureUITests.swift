@@ -31,6 +31,10 @@ final class SeSACIAPLectureUITests: XCTestCase {
         app.textFields["emailTextField"].typeText("jack@jack.com")
     }
     
+    /*
+     Code Coverage(코드 커버리지) : 테스트 가치
+     */
+    
     func testLoginExample() throws {
         let app = XCUIApplication() // MARK: 앱의 실행과 종료
         app.launch()
