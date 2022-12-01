@@ -11,6 +11,8 @@
 		B665149729359F6900B634C9 /* SeSACIAPLectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665149629359F6900B634C9 /* SeSACIAPLectureTests.swift */; };
 		B665149E2935AB5D00B634C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665149D2935AB5D00B634C9 /* LoginViewController.swift */; };
 		B66514A02936FAF900B634C9 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B665149F2936FAF900B634C9 /* ValidatorTests.swift */; };
+		B66514A52938396600B634C9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66514A42938396600B634C9 /* APIService.swift */; };
+		B66514A729383BD000B634C9 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66514A629383BD000B634C9 /* APIServiceTests.swift */; };
 		B6B7DE622934551E007B2D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE612934551E007B2D29 /* AppDelegate.swift */; };
 		B6B7DE642934551E007B2D29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE632934551E007B2D29 /* SceneDelegate.swift */; };
 		B6B7DE662934551E007B2D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B7DE652934551E007B2D29 /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 		B665149629359F6900B634C9 /* SeSACIAPLectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACIAPLectureTests.swift; sourceTree = "<group>"; };
 		B665149D2935AB5D00B634C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B665149F2936FAF900B634C9 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
+		B66514A42938396600B634C9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B66514A629383BD000B634C9 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		B6B7DE5E2934551E007B2D29 /* SeSACIAPLecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACIAPLecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B7DE612934551E007B2D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6B7DE632934551E007B2D29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			children = (
 				B665149629359F6900B634C9 /* SeSACIAPLectureTests.swift */,
 				B665149F2936FAF900B634C9 /* ValidatorTests.swift */,
+				B66514A629383BD000B634C9 /* APIServiceTests.swift */,
 			);
 			path = SeSACIAPLectureTests;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				B6B7DE6A29345520007B2D29 /* Assets.xcassets */,
 				B6B7DE6C29345520007B2D29 /* LaunchScreen.storyboard */,
 				B6B7DE6F29345520007B2D29 /* Info.plist */,
+				B66514A42938396600B634C9 /* APIService.swift */,
 			);
 			path = SeSACIAPLecture;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66514A729383BD000B634C9 /* APIServiceTests.swift in Sources */,
 				B66514A02936FAF900B634C9 /* ValidatorTests.swift in Sources */,
 				B665149729359F6900B634C9 /* SeSACIAPLectureTests.swift in Sources */,
 			);
@@ -277,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B665149E2935AB5D00B634C9 /* LoginViewController.swift in Sources */,
+				B66514A52938396600B634C9 /* APIService.swift in Sources */,
 				B6B7DE662934551E007B2D29 /* ViewController.swift in Sources */,
 				B6B7DE622934551E007B2D29 /* AppDelegate.swift in Sources */,
 				B6B7DE642934551E007B2D29 /* SceneDelegate.swift in Sources */,
